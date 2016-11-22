@@ -1,0 +1,69 @@
+/*----------------------------------
+		Theme_# 426
+		Cat 	Showcase Yourself
+		Name	Polished
+----------------------------------*/
+.sf_header_wrapper {
+	background-image:url(images/header_repeater_1.jpg);
+}
+.sf_main_header {
+	color:#031B62;
+	background-image:url(images/header_1.jpg);
+}
+a:link {
+	color:#04237E;
+}
+a:visited {
+	color:#04237E;
+}
+a:hover {
+	color:#999999;
+}
+#Nav1 li ul {
+	border-color:#04237E;
+}
+#Nav1 li ul li a {
+	background-color:#031B62;
+	border-color:#04237E;
+}
+#Nav1 li ul li a:visited {
+	background-color:#031B62;
+}
+#Nav1 li ul li a:hover {
+	background-color:#04237E;
+}
+/** 
+ * ------------------------------------------------------------------
+ * @section DBNow
+ * ------------------------------------------------------------------
+ */
+
+.Data_Central_color7 {
+	background-color:#021b66;
+	color:#fff;
+}
+
+.Data_Central_color1 {
+	background-color:#04237E;
+	color:#fff;
+}
+
+.Data_Central_color2 {
+	background-color:#c6c6c6;
+}
+
+.Data_Central_color3 {
+	background-color:#d5d5d5;
+}
+
+.Data_Central_color6 {
+	background-color:#e3e3e3;
+}
+
+.Data_Central_color4 {
+	background-color:#F1F1F1;
+}
+
+.Data_Central_color5 {
+	border-color:#e3e3e3;
+}

@@ -1,0 +1,440 @@
+<html>
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<style>
+	* {font-family: arial, verdana;}
+	.wrap {padding: 10px 10px 10px 10px;}
+	.head {font-size: 10pt;}
+	.cipher {width: 396px; table-layout: fixed; background-color: #fff; border-collapse: collapse;}
+	.cipher tr {height: 22px;}
+	.cipher td { 
+		width: 22px; padding: 1px 1px 1px 1px; margin: 0px 0px 0px 0px;
+		  font-family: arial, verdana; font-size: 12pt; font-weight: bold; color: #c00;
+		  background-position: center center; background-repeat: no-repeat;
+		 }
+	.letter {
+		width: 20px; height: 20px; margin: 0 0 0 0; padding: 0 0 0 0;
+			  font-family: arial, verdana; font-size: 10pt; font-weight: bold; color: #090;
+			}
+	.lettertable td {
+	  background-position: center center; background-repeat: no-repeat;
+		margin: 0 0 0 0; padding: 0 0 0 0;
+	}
+	.lettertable tr { height: 20px;}
+
+	.outer {width: 350px;}
+	
+	.found {width: 300px;}
+	#decoder { font-family: courier; font-size: 8pt; color: #999;}
+	.interesting { font-size: 10pt; color: #090;}
+	.statbar img { border: thin solid #ddd;}
+	.normal { font-size: 8pt}
+
+  .blank { }
+  .a { background-image: url(alphabet2/a.jpg) }
+  .b { background-image: url(alphabet2/b.jpg) }
+  .c { background-image: url(alphabet2/c.jpg) }
+  .d { background-image: url(alphabet2/d.jpg) }
+  .e { background-image: url(alphabet2/e.jpg) }
+  .f { background-image: url(alphabet2/f.jpg) }
+  .g { background-image: url(alphabet2/g.jpg) }
+  .h { background-image: url(alphabet2/h.jpg) }
+  .i { background-image: url(alphabet2/i.jpg) }
+  .j { background-image: url(alphabet2/j.jpg) }
+  .k { background-image: url(alphabet2/k.jpg) }
+  .l { background-image: url(alphabet2/l.jpg) }
+  .m { background-image: url(alphabet2/m.jpg) }
+  .n { background-image: url(alphabet2/n.jpg) }
+  .o { background-image: url(alphabet2/o.jpg) }
+  .p { background-image: url(alphabet2/p.jpg) }
+  .q { background-image: url(alphabet2/q.jpg) }
+  .r { background-image: url(alphabet2/r.jpg) }
+  .s { background-image: url(alphabet2/s.jpg) }
+  .t { background-image: url(alphabet2/t.jpg) }
+  .u { background-image: url(alphabet2/u.jpg) }
+  .v { background-image: url(alphabet2/v.jpg) }
+  .w { background-image: url(alphabet2/w.jpg) }
+  .x { background-image: url(alphabet2/x.jpg) }
+  .y { background-image: url(alphabet2/y.jpg) }
+  .z { background-image: url(alphabet2/z.jpg) }
+
+  .ba { background-image: url(alphabet2/ba.jpg) }
+  .bb { background-image: url(alphabet2/bb.jpg) }
+  .bc { background-image: url(alphabet2/bc.jpg) }
+  .bd { background-image: url(alphabet2/bd.jpg) }
+  .be { background-image: url(alphabet2/be.jpg) }
+  .bf { background-image: url(alphabet2/bf.jpg) }
+  .bg { background-image: url(alphabet2/bg.jpg) }
+  .bh { background-image: url(alphabet2/bh.jpg) }
+  .bi { background-image: url(alphabet2/bi.jpg) }
+  .bj { background-image: url(alphabet2/bj.jpg) }
+  .bk { background-image: url(alphabet2/bk.jpg) }
+  .bl { background-image: url(alphabet2/bl.jpg) }
+  .bm { background-image: url(alphabet2/bm.jpg) }
+  .bn { background-image: url(alphabet2/bn.jpg) }
+  .bo { background-image: url(alphabet2/bo.jpg) }
+  .bp { background-image: url(alphabet2/bp.jpg) }
+  .bq { background-image: url(alphabet2/bq.jpg) }
+  .br { background-image: url(alphabet2/br.jpg) }
+  .bs { background-image: url(alphabet2/bs.jpg) }
+  .bt { background-image: url(alphabet2/bt.jpg) }
+  .bu { background-image: url(alphabet2/bu.jpg) }
+  .bv { background-image: url(alphabet2/bv.jpg) }
+  .bw { background-image: url(alphabet2/bw.jpg) }
+  .bx { background-image: url(alphabet2/bx.jpg) }
+  .by { background-image: url(alphabet2/by.jpg) }
+  .bz { background-image: url(alphabet2/bz.jpg) }
+
+
+  .n1 { background-image: url(alphabet2/n1.jpg) }
+  .n2 { background-image: url(alphabet2/n2.jpg) }
+  .n3 { background-image: url(alphabet2/n3.jpg) }
+  .n4 { background-image: url(alphabet2/n4.jpg) }
+  .n5 { background-image: url(alphabet2/n5.jpg) }
+  .n6 { background-image: url(alphabet2/n6.jpg) }
+  .n7 { background-image: url(alphabet2/n7.jpg) }
+  .n8 { background-image: url(alphabet2/n8.jpg) }
+  .n9 { background-image: url(alphabet2/n9.jpg) }
+
+  .caret { background-image: url(alphabet2/caret.jpg) }
+  .sq { background-image: url(alphabet2/sq.jpg) }
+
+  .sq { background-image: url(alphabet2/sq.jpg) }
+  .sqe { background-image: url(alphabet2/sqe.jpg) }
+  .sqd { background-image: url(alphabet2/sqd.jpg) }
+  .sql { background-image: url(alphabet2/sql.jpg) }
+  .sqr { background-image: url(alphabet2/sqr.jpg) }
+  .phi { background-image: url(alphabet2/phi.jpg) }
+  .theta { background-image: url(alphabet2/theta.jpg) }
+  .zodiac { background-image: url(alphabet2/zodiac.jpg) }
+  .perp { background-image: url(alphabet2/perp.jpg) }
+  .pf { background-image: url(alphabet2/pf.jpg) }
+  .idl { background-image: url(alphabet2/idl.jpg) }
+  .idr { background-image: url(alphabet2/idr.jpg) }
+  .gt { background-image: url(alphabet2/gt.jpg) }
+  .dot { background-image: url(alphabet2/dot.jpg) }
+  .lt { background-image: url(alphabet2/lt.jpg) }
+  .plus { background-image: url(alphabet2/plus.jpg) }
+  .slash { background-image: url(alphabet2/slash.jpg) }
+  .dash { background-image: url(alphabet2/dash.jpg) }
+  .funnyi { background-image: url(alphabet2/funnyi.jpg) }
+  .backslash { background-image: url(alphabet2/backslash.jpg) }
+  .tao { background-image: url(alphabet2/tao.jpg) }
+  .sidek { background-image: url(alphabet2/sidek.jpg) }
+  .bar { background-image: url(alphabet2/bar.jpg) }
+
+
+.a_darker { background-image: url(alphabet/darker/a.jpg) }
+.b_darker { background-image: url(alphabet/darker/b.jpg) }
+.c_darker { background-image: url(alphabet/darker/c.jpg) }
+.d_darker { background-image: url(alphabet/darker/d.jpg) }
+.e_darker { background-image: url(alphabet/darker/e.jpg) }
+.f_darker { background-image: url(alphabet/darker/f.jpg) }
+.g_darker { background-image: url(alphabet/darker/g.jpg) }
+.h_darker { background-image: url(alphabet/darker/h.jpg) }
+.i_darker { background-image: url(alphabet/darker/i.jpg) }
+.j_darker { background-image: url(alphabet/darker/j.jpg) }
+.k_darker { background-image: url(alphabet/darker/k.jpg) }
+.l_darker { background-image: url(alphabet/darker/l.jpg) }
+.m_darker { background-image: url(alphabet/darker/m.jpg) }
+.n_darker { background-image: url(alphabet/darker/n.jpg) }
+.o_darker { background-image: url(alphabet/darker/o.jpg) }
+.p_darker { background-image: url(alphabet/darker/p.jpg) }
+.q_darker { background-image: url(alphabet/darker/q.jpg) }
+.r_darker { background-image: url(alphabet/darker/r.jpg) }
+.s_darker { background-image: url(alphabet/darker/s.jpg) }
+.t_darker { background-image: url(alphabet/darker/t.jpg) }
+.u_darker { background-image: url(alphabet/darker/u.jpg) }
+.v_darker { background-image: url(alphabet/darker/v.jpg) }
+.w_darker { background-image: url(alphabet/darker/w.jpg) }
+.x_darker { background-image: url(alphabet/darker/x.jpg) }
+.y_darker { background-image: url(alphabet/darker/y.jpg) }
+.z_darker { background-image: url(alphabet/darker/z.jpg) }
+.ba_darker { background-image: url(alphabet/darker/ba.jpg) }
+.bb_darker { background-image: url(alphabet/darker/bb.jpg) }
+.bc_darker { background-image: url(alphabet/darker/bc.jpg) }
+.bd_darker { background-image: url(alphabet/darker/bd.jpg) }
+.be_darker { background-image: url(alphabet/darker/be.jpg) }
+.bf_darker { background-image: url(alphabet/darker/bf.jpg) }
+.bg_darker { background-image: url(alphabet/darker/bg.jpg) }
+.bh_darker { background-image: url(alphabet/darker/bh.jpg) }
+.bi_darker { background-image: url(alphabet/darker/bi.jpg) }
+.bj_darker { background-image: url(alphabet/darker/bj.jpg) }
+.bk_darker { background-image: url(alphabet/darker/bk.jpg) }
+.bl_darker { background-image: url(alphabet/darker/bl.jpg) }
+.bm_darker { background-image: url(alphabet/darker/bm.jpg) }
+.bn_darker { background-image: url(alphabet/darker/bn.jpg) }
+.bo_darker { background-image: url(alphabet/darker/bo.jpg) }
+.bp_darker { background-image: url(alphabet/darker/bp.jpg) }
+.bq_darker { background-image: url(alphabet/darker/bq.jpg) }
+.br_darker { background-image: url(alphabet/darker/br.jpg) }
+.bs_darker { background-image: url(alphabet/darker/bs.jpg) }
+.bt_darker { background-image: url(alphabet/darker/bt.jpg) }
+.bu_darker { background-image: url(alphabet/darker/bu.jpg) }
+.bv_darker { background-image: url(alphabet/darker/bv.jpg) }
+.bw_darker { background-image: url(alphabet/darker/bw.jpg) }
+.bx_darker { background-image: url(alphabet/darker/bx.jpg) }
+.by_darker { background-image: url(alphabet/darker/by.jpg) }
+.bz_darker { background-image: url(alphabet/darker/bz.jpg) }
+.n1_darker { background-image: url(alphabet/darker/n1.jpg) }
+.n2_darker { background-image: url(alphabet/darker/n2.jpg) }
+.n3_darker { background-image: url(alphabet/darker/n3.jpg) }
+.n4_darker { background-image: url(alphabet/darker/n4.jpg) }
+.n5_darker { background-image: url(alphabet/darker/n5.jpg) }
+.n6_darker { background-image: url(alphabet/darker/n6.jpg) }
+.n7_darker { background-image: url(alphabet/darker/n7.jpg) }
+.n8_darker { background-image: url(alphabet/darker/n8.jpg) }
+.n9_darker { background-image: url(alphabet/darker/n9.jpg) }
+.caret_darker { background-image: url(alphabet/darker/caret.jpg) }
+.sq_darker { background-image: url(alphabet/darker/sq.jpg) }
+.sq_darker { background-image: url(alphabet/darker/sq.jpg) }
+.sqe_darker { background-image: url(alphabet/darker/sqe.jpg) }
+.sqd_darker { background-image: url(alphabet/darker/sqd.jpg) }
+.sql_darker { background-image: url(alphabet/darker/sql.jpg) }
+.sqr_darker { background-image: url(alphabet/darker/sqr.jpg) }
+.phi_darker { background-image: url(alphabet/darker/phi.jpg) }
+.theta_darker { background-image: url(alphabet/darker/theta.jpg) }
+.zodiac_darker { background-image: url(alphabet/darker/zodiac.jpg) }
+.perp_darker { background-image: url(alphabet/darker/perp.jpg) }
+.pf_darker { background-image: url(alphabet/darker/pf.jpg) }
+.idl_darker { background-image: url(alphabet/darker/idl.jpg) }
+.idr_darker { background-image: url(alphabet/darker/idr.jpg) }
+.gt_darker { background-image: url(alphabet/darker/gt.jpg) }
+.dot_darker { background-image: url(alphabet/darker/dot.jpg) }
+.lt_darker { background-image: url(alphabet/darker/lt.jpg) }
+.plus_darker { background-image: url(alphabet/darker/plus.jpg) }
+.slash_darker { background-image: url(alphabet/darker/slash.jpg) }
+.dash_darker { background-image: url(alphabet/darker/dash.jpg) }
+.funnyi_darker { background-image: url(alphabet/darker/funnyi.jpg) }
+.backslash_darker { background-image: url(alphabet/darker/backslash.jpg) }
+.tao_darker { background-image: url(alphabet/darker/tao.jpg) }
+.sidek_darker { background-image: url(alphabet/darker/sidek.jpg) }
+.bar_darker { background-image: url(alphabet/darker/bar.jpg) }
+
+.show td { font-family: courier, monospace; color: #090; font-weight: bold; font-size: 16pt; padding-left: 4px; text-align: center;}
+
+  .index { color: gray; font-size: 8pt; font-weight: normal;}
+	</style>
+</head>
+
+<body onload="init()" onkeypress="return keypress(event)"> 
+<center> 
+
+<script type="text/javascript" src="zodiac.js"> </script> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-163688-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  function showUpdates() {
+	var e = document.getElementById("updates");
+	if (e.style.display == "none") e.style.display="block";
+	else e.style.display="none";
+  }
+
+</script>
+</center>
+
+<div id="ad">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2102076319100660";
+/* webtoy */
+google_ad_slot = "0855136330";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+<hr/>
+<span id="top"><i>Can you crack this famous unsolved cipher, created by the <a href="http://en.wikipedia.org/wiki/Zodiac_Killer">Zodiac Killer</a> over 40 years ago?  Try it!  
+Click a cipher symbol, then type the letter you want to substitute.  I'll show you common words and
+statistics.  Go to <a href="http://zodiackillerciphers.com">zodiackillerciphers.com</a> for more info.</i></span>
+
+	<table class="outer">
+		<tr valign="top">
+			<td rowspan="3">
+				<div id="stats"></div>
+			</td>
+			<td class="wrap" align="right" width="340px">
+				<div id="cipher">Please wait... Loading images... This should not take long...</div>
+				<div id="cipherAfter"></div>
+				<p>
+				
+					<a href="javascript:randomize()">Randomize</a> |
+					<a href="javascript:reset()">Reset</a> |
+					<a href="javascript:toggleStats()">Toggle stats</a> |
+					<a href="javascript:switchCipher(1)">Switch to 408 cipher</a> | 
+					<a href="javascript:switchCipher(0)">Switch to 340 cipher</a> |
+					<a href="javascript:cipher[which]=flipH(cipher[which]);render();">Flip horizontally</a> |
+					<a href="javascript:cipher[which]=flipV(cipher[which]);render();">Flip vertically</a> |
+					<a href="javascript:cipher[which]=rotateCCW(cipher[which]);render();">Rotate left</a> |
+					<a href="javascript:cipher[which]=rotateCW(cipher[which]);render();">Rotate right</a> |
+					<a href="javascript:repeatsfind()">Find repeated sequences</a> |
+					<a href="javascript:dumpNGrams(true)">Dump n-grams (all)</a> |
+					<a href="javascript:dumpNGrams(false)">Dump n-grams (repeats only)</a> |
+					<a href="javascript:dumpAlphabetStats()">Dump alphabet stats</a> |
+					<a href="stats.html">CryptoScope</a> (NEW!) |
+					<a href="http://zodiackillerciphers.com/typewriter">Zodiac Typewriter</a> (NEW!) |
+					
+					<div id="seq">
+					</div>
+					
+					<div class="interesting" id="interesting">
+					</div>
+				</p>
+			</td>
+			<td class="found">
+				<div id="key"></div>
+				<div id="found"></div>
+				<div id="decoder"></div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><a name="ngrams"><div id="ngrams">
+			</div>
+			</td>
+		</tr>
+	</table>
+	
+<div style="visibility: hidden">
+	<img src="alphabet2/a.jpg">
+	<img src="alphabet2/b.jpg">
+	<img src="alphabet2/bb.jpg">
+	<img src="alphabet2/bc.jpg">
+	<img src="alphabet2/bd.jpg">
+	<img src="alphabet2/bf.jpg">
+	<img src="alphabet2/bj.jpg">
+	<img src="alphabet2/bk.jpg">
+	<img src="alphabet2/bl.jpg">
+	<img src="alphabet2/bp.jpg">
+	<img src="alphabet2/bq.jpg">
+	<img src="alphabet2/by.jpg">
+	<img src="alphabet2/c.jpg">
+	<img src="alphabet2/caret.jpg">
+	<img src="alphabet2/d.jpg">
+	<img src="alphabet2/dash.jpg">
+	<img src="alphabet2/dot.jpg">
+	<img src="alphabet2/e.jpg">
+	<img src="alphabet2/f.jpg">
+	<img src="alphabet2/g.jpg">
+	<img src="alphabet2/gt.jpg">
+	<img src="alphabet2/h.jpg">
+	<img src="alphabet2/i.jpg">
+	<img src="alphabet2/idl.jpg">
+	<img src="alphabet2/idr.jpg">
+	<img src="alphabet2/j.jpg">
+	<img src="alphabet2/k.jpg">
+	<img src="alphabet2/l.jpg">
+	<img src="alphabet2/lt.jpg">
+	<img src="alphabet2/m.jpg">
+	<img src="alphabet2/n.jpg">
+	<img src="alphabet2/n1.jpg">
+	<img src="alphabet2/n2.jpg">
+	<img src="alphabet2/n3.jpg">
+	<img src="alphabet2/n4.jpg">
+	<img src="alphabet2/n5.jpg">
+	<img src="alphabet2/n6.jpg">
+	<img src="alphabet2/n7.jpg">
+	<img src="alphabet2/n8.jpg">
+	<img src="alphabet2/n9.jpg">
+	<img src="alphabet2/o.jpg">
+	<img src="alphabet2/p.jpg">
+	<img src="alphabet2/perp.jpg">
+	<img src="alphabet2/pf.jpg">
+	<img src="alphabet2/phi.jpg">
+	<img src="alphabet2/plus.jpg">
+	<img src="alphabet2/r.jpg">
+	<img src="alphabet2/s.jpg">
+	<img src="alphabet2/slash.jpg">
+	<img src="alphabet2/sq.jpg">
+	<img src="alphabet2/sqd.jpg">
+	<img src="alphabet2/sqe.jpg">
+	<img src="alphabet2/sql.jpg">
+	<img src="alphabet2/sqr.jpg">
+	<img src="alphabet2/t.jpg">
+	<img src="alphabet2/theta.jpg">
+	<img src="alphabet2/u.jpg">
+	<img src="alphabet2/v.jpg">
+	<img src="alphabet2/w.jpg">
+	<img src="alphabet2/x.jpg">
+	<img src="alphabet2/y.jpg">
+	<img src="alphabet2/z.jpg">
+	<img src="alphabet2/zodiac.jpg">
+	<img src="alphabet2/br.jpg">
+	<img src="alphabet2/backslash.jpg">
+	<img src="alphabet2/q.jpg">
+	<img src="alphabet2/be.jpg">
+	<img src="alphabet2/funnyi.jpg">
+	<img src="alphabet2/tao.jpg">
+	</div>
+	<hr>
+	<p style="color: #aaa"><i>Technical caveat: I am assuming this is a simple monoalphabetic <a href="http://en.wikipedia.org/wiki/Substitution_cipher#Homophonic_substitution">homophonic substitution cipher</a>, and not something much harder like a <a href="http://en.wikipedia.org/wiki/Transposition_cipher">transposition cipher</a> or a <a href="http://en.wikipedia.org/wiki/Polyalphabetic_cipher">polyalphabetic substitution cipher</a>.  The only reason I am assuming this is because the first 3-part cipher Zodiac sent to the newspaper was <a href="http://www.crimelibrary.com/serial_killers/notorious/zodiac/8.html">solved</a> using homophonic substitution with a single alphabet (to see this, click the "Switch to 408 cipher" link above, and click the decoder named "The correct one").</i></p>
+	<p>
+		<a href="340hr.jpg">Click here</a> to view a high-resolution image of the 340 cipher.
+	</p>
+	<p>
+		<a href="http://zodiackillerciphers.com/wiki">Click here</a> to read the Zodiac Ciphers wiki, a new repository of information related to the Zodiac ciphers.
+	</p>
+	
+	
+	<hr><a name="updates">
+	<a href="javascript:showUpdates()">Update History</a><br>
+	<div id="updates" style="display: none">
+	<b>08/01/2012:</b>
+	<ul>
+		<li>Added <a href="http://zodiackillerciphers.com/typewriter">Zodiac Typewriter</a></li>
+	</ul>
+	<b>06/01/2012:</b>
+	<ul>
+		<li>Minor cleanup</li>
+	</ul>
+	<b>09/30/2011:</b>
+	<ul>
+		<li>Boatload of <a href="stats.html">new CryptoScope features</a></li>
+	</ul>
+	<b>09/19/2011:</b>
+	<ul>
+	  <li>Fixed zkdecrypto link</li>
+	  <li>Fixed letter assignment/delete bug</li>
+	  <li>Improved contrast of plaintext letters vs cipher symbols</li>
+	</ul>
+	<b>12/31/2010:</b>
+	<ul>
+	  <li>Added <a href="stats.html">CipherScope</a>, an advanced ciphertext exploration utility.</li>
+	</ul>
+	<b>12/11/2010:</b>
+	<ul>
+	  <li>Fixed transcription errors in the 408 ciphertext</li>
+	  <li>In the 340, replaced <b style="font-family: times">I</b> with bar symbol, since it looks different enough from the <b style="font-family: times">I</b> in the 408.</li>
+	  <li>Added link for displaying the cipher symbol statistics</li>
+	  <li>Added this update section</li>
+	  <li>Added link to Zodiac Ciphers wiki</li>
+	</ul>
+	<b>Older updates:</b>
+	<ul>
+	  <li>Added links to dump n-gram statistics for repeated and non-repeated inline sequences</li>
+	  <li>Added link to find repeated sequences that occur in any orientation in the current ciphertext</li>
+	</ul>	
+	</div>
+	<hr>
+   
+<center>
+<a href="http://zodiackillerciphers.com">ZodiacKillerCiphers.com</a> | <a href="stats.html">CryptoScope</a> | 
+<a 
+href="old-version/index.html">Old version of webtoy</a> | <a 
+href="http://code.google.com/p/zkdecrypto/downloads/list">zkdecrypto cipher-cracking software</a> | Email me at <i>doranchak at gmail 
+dot com</i> if you find anything interesting or have any comments/suggestions! | <a href="http://oranchak.com">Oranchak.com</a>
+	
+<p><i><a href="http://oranchak.com">(go back to Oranchak.com)</a></i></p>
+</html>

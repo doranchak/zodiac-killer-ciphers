@@ -1,0 +1,571 @@
+H H
+E E
+R R
+> C
+p E
+l A
+^ N
+V B
+P A
+k S
+| H
+1 O
+L L
+T T
+G G
+2 O
+d O
+N N
+p E
++ E
+B B
+( N
+# L
+O O
+% L
+D N
+W E
+Y Y
+. .
+
+HERB CEAN HAS BEEN LONELY TOO LONG
+
+   2 A  2 A
+   2 B  2 B
+   1 C  1 C
+   5 E  5 E
+   1 G  1 G
+   2 H  2 H
+   3 L  3 L
+   4 N  4 N
+   4 O  4 O
+        1 P
+   1 R  1 R
+   1 S  1 S
+   1 T  2 T
+   1 Y  1 Y
+
+(He used A instead of P, and H instead of T)
+   
+
+< T
+* L
+K S
+f D
+) C
+B L
+y Y
+: O
+c V
+M C
++ E
+U I
+Z Z
+G A
+W W
+( N
+) H
+L L
+# L
+z D
+H H
+J O
+S S
+p I
+p I
+7 S
+^ V
+l A
+8 E
+* E
+V V
+3 S
+p E
+O N
++ E
++ A
+R R
+K K
+2 O
+_ L
+9 I
+M M
++ F
+z D
+t R
+j P
+d O
+| U
+5 T
+F S
+P I
++ E
+& I
+4 T
+k S
+/ B
+p D
+8 A
+R R
+^ N
+F S
+l R
+O O
+- .
+
+THE CITY WILL HOLD ZODIAC'S SEVEN SLAVES NEAR RKO'S FILM DROP OUTSIDE ITS BARN
+
+   4 A  4 A
+   1 B  1 B
+   2 C  2 C
+   4 D  4 D
+   6 E  6 E
+   1 F  1 F
+   2 H  2 H
+   6 I  6 I
+   1 K  1 K
+   5 L  5 L
+   1 M  1 M
+   3 N  3 N
+   5 O  5 O
+   1 P  1 P
+   4 R  4 R
+   7 S  7 S
+   4 T  3 T
+   1 U  1 U
+   2 V  3 V
+   1 W  1 W
+   1 Y  1 Y
+   1 Z  1 Z
+
+He uses one extra T, and leaves out a V.   
+   
+* L
+d D
+C E
+k S
+F S
+> I
+2 O
+D D
+( N
+# L
+5 T
++ E
+K K
+q M
+% L
+; I
+2 E
+U Y
+c V
+X O
+G A
+V B
+. .
+
+I'VE KILLED MOSTLY BAD ONES
+
+   1 A 1 A
+   1 B 1 B
+   2 D 2 D
+   3 E 3 E
+   2 I 2 I
+   1 K 1 K
+   3 L 3 L
+   1 M 1 M
+   1 N 1 N
+   2 O 2 O
+   2 S 2 S
+   1 T 1 T
+   1 V 1 V
+   1 Y 1 Y
+
+Matches
+
+z D
+L T
+| I
+( N
+G G
+2 O
+J M
+f F
+j H
+# L
+O N
++ I
+_ L
+N E
+Y A
+z G
++ E
+@ S
+L T
+9 I
+d G
+< A
+M M
++ E
+b L
++ S
+Z A
+R R
+2 D
+F M
+B L
+c K
+y U
+A A
+6 E
+4 O
+K S
+- .
+
+KILLING MAN IS THE MOST DANGEROUS GAME OF ALL
+
+   4 A  4 A
+   1 D  2 D
+   3 E  4 E
+   1 F  1 F
+   3 G  3 G
+   1 H  1 H
+   3 I  3 I
+   1 K  1 K
+   4 L  4 L
+   3 M  3 M
+   3 N  2 N
+   3 O  2 O
+   1 R  1 R
+   3 S  3 S
+   2 T  2 T
+   1 U  1 U
+
+He missed a D, and an E.
+He used one extra N, and one extra O.
+
+z D
+l A
+U I
+V B
++ E
+^ N
+J F
++ E
+O N
+p I
+7 O
+< T
+F S
+B L
+y Y
+- .
+
+BEEN INTO S.F. DAILY
+
+ 1 A  1 A
+ 1 B  1 B
+ 1 D  1 D
+ 2 E  2 E
+ 1 F  1 F
+ 2 I  2 I
+ 1 L  1 L
+ 2 N  2 N
+ 1 O  1 O
+ 1 S  1 S
+ 1 T  1 T
+ 1 Y  1 Y
+
+Matches.
+
+
+U I
++ N
+R G
+/ K
+5 T
+t R
+E E
+| I
+D D
+Y O
+B B
+p E
+b B
+T O
+M M
+K S
+O N
+2 A
+< A
+c C
+l L
+R R
+J F
+| I
+* L
+5 E
+T H
+4 T
+M M
+. .
+
+TIRED OF MAKING BOMBS IN THE CELLAR
+   
+ 2 A  2 A
+ 2 B  2 B
+ 1 C  1 C
+ 1 D  1 D
+ 3 E  3 E
+ 1 F  1 F
+ 1 G  1 G
+ 1 H  1 H
+ 3 I  3 I
+ 1 K  1 K
+ 2 L  2 L
+ 2 M  2 M
+ 2 N  2 N
+ 2 O  2 O
+ 2 R  2 R
+ 1 S  1 S
+ 2 T  2 T
+
+Matches
+
++ F
+& I
+B L
+F S
+z L
+6 E
+9 W
+S S
+y K
+# L
++ O
+N I
+| I
+5 L
+F S
+B L
+c V
+( N
+; I
+8 A
+R R
+l A
+G G
+F F
+N E
+^ N
+f I
+5 T
+2 O
+4 T
+b L
+. .
+
+I WILL KILL A TOTAL OF SEVEN GIRLS IN S.F.
+(HE DID + POSSIBLY MORE - '71 - '73 ...)
+
+ 2 A  2 A
+ 2 E  2 E
+ 2 F  2 F
+ 1 G  1 G
+ 5 I  5 I
+ 1 K  1 K
+ 6 L  6 L
+ 2 N  2 N
+ 2 O  2 O
+ 1 R  1 R
+ 3 S  3 S
+ 2 T  2 T
+ 1 V  1 V
+ 1 W  1 W
+
+Matches
+
+c C
+V B
+4 D
+t R
++ E
++ N
+y N
+B S
+X O
+1 E
+* L
+: I
+4 A
+9 I
+C C
+E E
+> O
+V B
+U U
+Z Z
+5 K
+- .
+
+ZODIAC'S BEEN IN BLUE ROCK
+
+ 1 A  1 A
+ 2 B  2 B
+ 2 C  2 C
+ 1 D  1 D
+ 3 E  3 E
+ 2 I  2 I
+ 1 K  1 K
+ 1 L  1 L
+ 2 N  2 N
+ 2 O  2 O
+ 1 R  1 R
+ 1 S  1 S
+ 1 U  1 U
+ 1 Z  1 Z
+
+
++ O
+| R
+c K
+. .
+
+RKO 
+(1932 RKO RADIO-PICTURE THE MOST DANGEROUS GAME)
+
+3 A
+z D
+B B
+K S
+( D
+O N
+p E
+^ W
+. .
+
+BADD NEWS
+
+ 1 A  1 A
+ 1 B  1 B
+ 2 D  2 D
+ 1 E  1 E
+ 1 N  1 N
+ 1 S  1 S
+ 1 W  1 W
+
+
+f D
+M M
+q N
+G A
+2 O
+R R
+c K
+T O
++ S
+L T
+1 L
+6 O
+C E
+< T
++ E
+F S
+l T
+W E
+B V
+| I
+) D
+L E
++ E
++ N
+) C
+W S
+C I
+z D
+W A
+c C
+P I
+O O
+S S
+H H
+T T
+/ T
+( N
+) H
+p E
+| N
+F F
+k I
+d D
+W E
+< T
+7 S
+t R
+B L
+_ E
+Y E
+O O
+B N
+* L
+- .
+
+DAMN RKO (ROOK) STOLE TEST EVIDENCE SAID TOSCHI - THEN FIND STOLEN REEL!  (ROOK <== STEVE KEE'S SHIP)
+
+KEE - PG 466, 470, 481 ZODIAC UNMASKED
+
+ 2 A  2 A
+ 2 C  2 C
+ 4 D  4 D
+ 9 E  9 E
+ 1 F  1 F
+ 2 H  2 H
+ 4 I  4 I
+ 1 K  1 K
+ 3 L  3 L
+ 1 M  1 M
+ 5 N  5 N
+ 4 O  5 O
+ 2 R  2 R
+ 5 S  5 S
+ 6 T  6 T
+ 1 V  1 V
+
+He left out one O.
+
+C C
+c I
+> T
+M M
+D D
+H H
+N N
+p E
+k S
+S S
+z D
+Z Z
+O O
+8 A
+A A
+| I
+K S
+; O
++ E
+
+ZODIAC'S SHOE IS A TEN D. M.
+D - WIDTH
+M - MEDIUM
+
+ 2 A  2 A
+ 1 C  1 C
+ 2 D  2 D
+ 2 E  2 E
+ 1 H  1 H
+ 2 I  2 I
+ 1 M  1 M
+ 1 N  1 N
+ 2 O  2 O
+ 3 S  3 S
+ 1 T  1 T
+ 1 Z  1 Z

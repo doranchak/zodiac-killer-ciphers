@@ -1,0 +1,116 @@
+GENERAL PARAMETERS
+Arguments used in this run: 
+Maximum number of generations in this run: 100
+Size of population in this run: 50
+Number of Chromosomes per individual: 1
+Number of genes per chromosome: 2
+Size of gene head: 5
+Seed(s) used in this job: 431903606
+Problem type: functionfinding
+Fitness function: RH
+Fitness function param 1: 2.0
+
+BEST INDIVIDUAL OF GENERATION
+Generation: 0
+Evaluated: T
+Fitness: 2.0
+Linking function: Add
+
+GEP-MODEL
+KARVA
+Gene 0
+-.*./.x.*.y.x.y.x.y.x
+Gene 1
+/.-.-.+.x.y.x.y.y.y.x
+
+MATH
+(((x*(y*x))-(y/x))+(((y+y)-x)/(y-x)))
+
+MATH (SIMPLIFIED)
+(x^2-3*x*y+x^4*y+y^2-x^3*y^2)/(x^2-x*y)
+
+
+BEST INDIVIDUAL OF GENERATION
+Generation: 2
+Evaluated: T
+Fitness: 3.0
+Linking function: Add
+
+GEP-MODEL
+KARVA
+Gene 0
+-.*.*.x.y.x.x.x.x.y.x
+Gene 1
+-.y.-.x.x.y.x.x.x.x.y
+
+MATH
+(((x*y)-(x*x))+(y-(x-x)))
+
+MATH (SIMPLIFIED)
+-x^2+y+x*y
+
+
+BEST INDIVIDUAL OF GENERATION
+Generation: 14
+Evaluated: T
+Fitness: 4.0
+Linking function: Add
+
+GEP-MODEL
+KARVA
+Gene 0
+-.y.-.x.x.y.x.x.x.y.y
+Gene 1
+*.x.x.-.x.x.x.y.x.y.x
+
+MATH
+((y-(x-x))+(x*x))
+
+MATH (SIMPLIFIED)
+x^2+y
+
+
+
+BEST INDIVIDUAL 1
+Found at Generation: 14
+Raw Fitness: 249.0
+Evaluated: T
+Fitness: 4.0
+Linking function: Add
+
+GEP-MODEL
+KARVA
+Gene 0
+-.y.-.x.x.y.x.x.x.y.y
+Gene 1
+*.x.x.-.x.x.x.y.x.y.x
+
+MATH
+((y-(x-x))+(x*x))
+
+MATH (SIMPLIFIED)
+x^2+y
+
+
+MODEL COMPOSITION
+Size of program: 8
+Variables used(variable count) 2: x 4, y 1
+Functions used(function count) 2: - 2, * 1
+
+Size of program (MATH simplified): 4
+Variables used(variable count) 2: y 1, x 1
+Functions used(function count) 2: ^ 1, + 1
+
+MODEL QUALITY MEASURES (TRAINING)
+Statistics: 
+MSE:  0.0    	RAE:  0.0    	RSE:  0.0
+RMSE: 0.0    	MAE:  0.0    	RRSE: 0.0
+Corr Coeff: 1.0
+
+OBSERVED	AND COMPUTED (TRAINING)
+#Observed GEP-Model
+1.25	1.25
+3.0	3.0
+8.0	8.0
+21.0	21.0
+#----------

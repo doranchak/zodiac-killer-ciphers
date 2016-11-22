@@ -1,0 +1,217 @@
+<style>
+#html {
+	font-family: courier;
+	color: #aaa;
+}
+.match {
+	color: #000;
+}
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-163688-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+
+	var shifts = [-9, -6, -3, 0, 3, 6, 9];
+	var count; var pointers;
+	// look for given message in given text using akwilks 0,3,6,9 method
+	// if first is true, fn will exit upon first match.   otherwise, it will return all matches.
+	function find(text, message, first) {
+		text = text.toLowerCase();
+		message = message.toLowerCase();
+		pointers = []; // each points to current position in the shift selections
+		for (var i=0; i<message.length; i++) pointers[i] = -1;
+		
+		// try all possible valid shift selections
+		var go = true;
+		var found = false;
+		var i = 0;
+		var num = 0;
+		var shifts = [];
+		var shiftsresults = [];
+		count = 0;
+		while (go) {
+			count++;
+			var n = next(text, pointers[i]+1, pointers, message.charAt(i)); // get next match for this letter
+			pointers[i] = n[0];
+			shifts[i] = n;
+			if (pointers[i] == -1 || prune(text, message, shifts)) { // did not find a match, so we need to backtrack.  or, prune the search if the count of remaining letters makes it impossible to find a match
+				shifts[i] = null;
+				i--;
+				if (i<0) break; // can't back track any more so we are done.
+				continue;
+			}
+			i++; // we found a match, so keep looking
+			if (i >= pointers.length) { // reached the end, so we have a match!
+				found = true;
+				// keep looking until max number of matches found
+				shiftsresults.push(shifts);
+				shifts = shifts.slice(0);
+				i--;
+				num++;
+				if (num >= first) break; 
+			}
+		}
+//		if (!found) shiftsresults.push(shifts); // add the empty match so we can at least display the caesar shift matrix
+		return shiftsresults;
+	}
+	
+	function prune(text, message, s) {
+		// count the number of unmatched letters remaining in the message
+		// count the number of unmatched letters remaining in the text to search
+		var pointedText = {};
+		var pointedMessage = {};
+		
+		var countText = {};
+		var countMessage = {};
+		
+		for (var i=0; i<s.length; i++) {
+			if (s[i]) {
+				pointedMessage[i] = true;
+				pointedText[s[i][0]] = true;
+			}
+		}
+		
+		for (var i=0; i<message.length; i++) {
+			if (pointedMessage[i]) continue;
+			var ch = message.charAt(i);
+			if (countMessage[ch]) countMessage[ch]++;
+			else countMessage[ch] = 1;
+		}
+		for (var i=0; i<text.length; i++) {
+			if (pointedText[i]) continue;
+			for (var j=0; j<shifts.length; j++) {
+				var ch = shift(text.charAt(i),shifts[j]);
+				if (countText[ch]) countText[ch]++;
+				else countText[ch] = 1;
+			}
+		}
+		
+//		for (var ch in countMessage) shit += "cm [" + ch + "," + countMessage[ch] + "] ";
+//		for (var ch in countText) shit += "ct [" + ch + "," + countText[ch] + "] ";
+		
+		
+		for (var ch in countMessage) {
+			if (!countText[ch]) {
+//				alert(shit);
+				return true;
+			}
+			if (countMessage[ch] > countText[ch]) {
+//				alert(shit);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	// return next matching shifted letter at or beyond position pos in the given text. ignore any positions that are already pointed to.  also returns which shift value produced the match.
+	function next(text, pos, pointers, letter) {
+		for (var i=pos; i<text.length; i++) {
+			var found = false;
+			for (var k=0; k<pointers.length; k++) if (pointers[k] == i) { found = true; break; }
+			if (found) continue;
+			for (var j=0; j<shifts.length; j++) {
+				if (shift(text.charAt(i), shifts[j]) == letter) {
+					return [i, j];
+				}
+			}
+		}
+		return [-1, -1]; // no match
+	}
+	
+	function num(ch) {
+		return ch.charCodeAt(0)-97;
+	}
+	function shift(ch, val) {
+		var n = (num(ch) + val + 26) % 26;
+		return String.fromCharCode(n+97);
+	}
+	
+	function render(text, results, message) {
+		var html = "[" + results.length + "] results for [" + message + "] in [" + text + "]<br>";
+		for (var k=0; k<results.length; k++) {
+			var match = "";
+			for (var s = 0; s<shifts.length; s++) { 
+				for (var i=0; i<text.length; i++) {
+					var ch = shift(text.charAt(i), shifts[s]);
+					var found = false;
+					for (var j=0; j<results[k].length; j++) {
+						if (results[k][j][0] == i && results[k][j][1] == s) {
+							html += "<span class=\"match\">[" + ch + "]</span>";
+							match += ch;
+							found = true; 
+							break;
+						} 
+					}
+					if (!found) html += "&nbsp;" + ch + "&nbsp;";
+				}
+				html += " (Shift: " + shifts[s] + ")<br>";
+			}
+			html += "Shifts: ";
+			results[k].sort(function(a,b){return a[0]-b[0]});
+			for (var j=0; j<results[k].length; j++) if (results[k][j] && results[k][j][1] > -1) html += shifts[results[k][j][1]] + " ";
+			html += "<br>Match: " + match + "<br>";
+			
+		}
+		html += "<br>Iterations: " + count;
+		html += "<br><br>";
+		document.getElementById("html").innerHTML =	html + document.getElementById("html").innerHTML;
+	}
+	
+	function clearhtml() {
+		document.getElementById("html").innerHTML = "";
+	}
+	
+	function go() {
+		var message = document.getElementById("message").value.toLowerCase();
+		var text = document.getElementById("text").value.toLowerCase();
+		var splittext = document.getElementById("shifts").value.replace(/ /g,"").split(",");
+		shifts = [];
+		for (var i=0; i<splittext.length; i++) shifts[i] = parseInt(splittext[i]);
+//		alert(message+","+text+","+splittext);
+		render(text, find(text, message, document.getElementById("first").value), message);
+	}
+	
+	function slide(i) {
+//		var z = "ilikekillingpeoplebecauseitissomuchfunitismorefunthankillingwildgameintheforrestbecausemanisthemoatdangertueanamalofalltokillsomethinggivesmethemoatthrillingexperenceitisevenbetterthangettingyourrocksoffwithagirlthebestpartofitiathaewhenidieiwillbereborninparadicesndalltheihavekilledwillbecomemyslavesiwillnotgiveyoumynamebecauseyouwilltrytosloidownorstopmycollectingofslavesformyafterlifeebeorietemethhpiti";
+		var z = "callmeishmaelsomeyearsagonevermindhowlongpreciselyhavinglittleornomoneyinmypurseandnothingparticulartointerestmeonshoreithoughtiwouldsailaboutalittleandseethewaterypartoftheworlditisawayihaveofdrivingoffthespleenandregulatingthecirculationwheneverifindmyselfgrowinggrimaboutthemouthwheneveritisadampdrizzlynovemberinmysoulwheneverifindmyselfinvoluntarilypausingbeforecoffinwarehousesandbringinguptherearofeveryfuneralimeetandespeciallywhenevermyhyposgetsuchanupperhandofmethatitrequiresastrongmoralprincipletopreventmefromdeliberatelysteppingintothestreetandmethodicallyknockingpeopleshatsofftheniaccountithightimetogettoseaassoonasicanthisismysubstituteforpistolandballwithaphilosophicalflourishcatothrowshimselfuponhisswordiquietlytaketotheshipthereisnothingsurprisinginthisiftheybutknewitalmostallmenintheirdegreesometimeorothercherishverynearlythesamefeelingstowardstheoceanwithmetherenowisyourinsularcityofthemanhattoesbeltedroundbywharvesasindianislesbycoralreefscommercesurroundsitwithhersurfrightandleftthestreetstakeyouwaterwarditsextremedowntownisthebatterywherethatnoblemoleiswashedbywavesandcooledbybreezeswhichafewhourspreviouswereoutofsightoflandlookatthecrowdsofwatergazersthere";
+		var text = z.substring(i,i+18);
+		var msg = "theodorejkaczynski";
+		render(text, find(text, msg, 1), msg);
+		if (i+18+1>=z.length) return;
+		i++;
+		setTimeout("slide(" + i + ");", 250);
+	}
+	
+	function randomize() {
+		var message = document.getElementById("message").value.toLowerCase();
+		var text = document.getElementById("text").value.toLowerCase();
+		var L = text.length;
+		if (L==0) L = message.length;
+		var s = "";
+		for (var i=0; i<L; i++) s += String.fromCharCode(Math.random()*26+97);
+		document.getElementById("text").value = s.toUpperCase();
+	}
+</script>
+
+Look for this message: <input type="text" size="40" id="message" value="THEODOREJKACZYNSKI"><br>
+In this text: <input type="text" size="40" id="text" value="EBEORIETEMETHHPITI"><input type="button" id="randomize" value="Randomize" onclick="randomize()"><br>
+Using these available Caesar shifts: <input type="text" size="40" id="shifts" value="-9, -6, -3, 0, 3, 6, 9"><br>
+Show only the first <input type="text" id="first" size="3" value="1"> matches.<br>
+<input type="button" onclick="go()" value="Search"><input type="button" onclick="clearhtml()" value="Clear results">
+<p id="html">
+</p>
+
+
+

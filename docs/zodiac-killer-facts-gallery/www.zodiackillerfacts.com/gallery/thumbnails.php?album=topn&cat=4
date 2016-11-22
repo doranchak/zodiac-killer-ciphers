@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<title>Most viewed - Zodiac Killer Facts Image Gallery</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="css/coppermine.css" type="text/css" />
+<link rel="stylesheet" href="themes/curve/style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<!-- Begin IE6 support -->
+<!--[if lt IE 7]>
+<style>
+body {behavior: url(themes/curve/csshover3.htc );}
+.dropmenu li {width: 1px;} .dropmenu li a.firstlevel span.firstlevel {white-space: nowrap;} .main_menu {overflow: auto;}
+</style>
+<![endif]-->
+<!-- End IE6 support -->
+<script type="text/javascript">
+/* <![CDATA[ */
+    var js_vars = {"site_url":"http:\/\/www.zodiackillerfacts.com\/gallery","debug":false,"icon_dir":"images\/icons\/","lang_close":"Close","icon_close_path":"images\/icons\/close.png"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/jquery.greybox.js"></script>
+<script type="text/javascript" src="js/jquery.elastic.js"></script>
+
+<!--
+  SVN version info:
+  Coppermine version: 1.5.9
+  $HeadURL: https://svn.code.sf.net/p/coppermine/code/trunk/cpg1.5.x/themes/curve/template.html $
+  $Revision: 7809 $
+-->
+</head>
+<body>
+    
+    <div id="cpg_logo_block_outer">
+        <div class="cpg_logo_block_inner">
+            <div id="cpg_logo_block_logo">
+                <a href="index.php">
+                    <img src="themes/curve/images/coppermine-logo.png" border="0" width="260" height="60" alt="" />
+                </a>
+            </div>
+            <div id="cpg_logo_block_name">
+                <h1>Zodiac Killer Facts Image Gallery</h1>
+                <h3>The Most Inclusive Gallery of Zodiac Killer Related Images</h3>
+            </div>
+            <div class="clearer"></div>
+        </div>
+    </div>
+    <div id="cpg_header_block_outer">
+        <div class="cpg_header_block_inner">
+            <div id="main_menu">
+                    <ul class="dropmenu">
+          
+                        <!-- BEGIN home -->
+                        <li>
+                            <a href="index.php" title="Go to the home page" class="firstlevel" ><span class="firstlevel"><img src="images/icons/home.png" border="0" alt="" width="16" height="16" class="icon" />Home</span></a>
+                            
+                        </li>
+                        <!-- END home -->
+                        
+                        
+                        
+                        <!-- BEGIN login -->
+                        <li>
+                            <a href="login.php?referer=thumbnails.php%3Falbum%3Dtopn%26cat%3D4" title="Log me in"  class="firstlevel" ><span class="firstlevel"><img src="images/icons/login.png" border="0" alt="" width="16" height="16" class="icon" />Login</span></a>
+                        </li>
+                        <!-- END login -->
+                        
+</ul>
+                    <ul class="dropmenu">
+          
+                        
+                        <!-- BEGIN album_list -->
+                        <li>
+                            <a href="index.php?cat=4" title="Go to the album list" class="firstlevel" ><span class="firstlevel"><img src="images/icons/alb_mgr.png" border="0" alt="" width="16" height="16" class="icon" />Album list</span></a>
+                            <ul>
+                                <!-- BEGIN lastup -->
+                                <li>
+                                    <a href="thumbnails.php?album=lastup&amp;cat=4" title="Show most recent uploads" rel="nofollow"><span><img src="images/icons/last_uploads.png" border="0" alt="" width="16" height="16" class="icon" />Last uploads</span></a>
+                                </li>
+                                <!-- END lastup -->
+                                <!-- BEGIN lastcom -->
+                                <li>
+                                    <a href="thumbnails.php?album=lastcom&amp;cat=4" title="Show most recent comments" rel="nofollow"><span><img src="images/icons/comment.png" border="0" alt="" width="16" height="16" class="icon" />Last comments</span></a>
+                                </li>
+                                <!-- END lastcom -->
+                                <!-- BEGIN topn -->
+                                <li>
+                                    <a href="thumbnails.php?album=topn&amp;cat=4" title="Show most viewed items" rel="nofollow"><span><img src="images/icons/most_viewed.png" border="0" alt="" width="16" height="16" class="icon" />Most viewed</span></a>
+                                </li>
+                                <!-- END topn -->
+                                <!-- BEGIN toprated -->
+                                <li>
+                                    <a href="thumbnails.php?album=toprated&amp;cat=4" title="Show top rated items" rel="nofollow"><span><img src="images/icons/top_rated.png" border="0" alt="" width="16" height="16" class="icon" />Top rated</span></a>
+                                </li>
+                                <!-- END toprated -->
+                                <!-- BEGIN favpics -->
+                                <li>
+                                    <a href="thumbnails.php?album=favpics" title="Go to my favorites" rel="nofollow"><span><img src="images/icons/favorites.png" border="0" alt="" width="16" height="16" class="icon" />My Favorites</span></a>
+                                </li>
+                                <!-- END favpics -->
+                            </ul>
+                        </li>
+                        <!-- END album_list -->
+                        <!-- BEGIN search -->
+                        <li>
+                            <a href="search.php" title="Search the gallery"  class="firstlevel" ><span class="firstlevel"><img src="images/icons/search.png" border="0" alt="" width="16" height="16" class="icon" />Search</span></a>
+                        </li>
+                        <!-- END search -->
+</ul>
+                    
+            </div><!-- Begin IE7 support --><img src="images/spacer.gif" class="menuheight" alt="" /><!-- End IE7 support -->
+            <div class="clearer"></div>
+            
+        </div>
+    </div>
+    <div id="cpg_main_block_outer">
+        <div class="cpg_main_block_inner">
+            
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr>
+            <td colspan="3" align="left">
+                <div class="cpg_starttable_outer">
+                    <div class="cpg_starttable_inner">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="statlink">
+                                    <a href="index.php">Home</a> > <a href="index.php?cat=4">Letters</a>
+                                </td>
+                                <td class="statlink">
+                                    <img src="images/spacer.gif" width="1" height="25" border="0" alt="" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+        <tr>
+                <td class="" colspan="4">
+                    <div class="cpg_starttable_outer">
+                        <div class="cpg_starttable_inner">
+                            <img src="images/icons/most_viewed.png" border="0" alt="" width="16" height="16" class="icon" />Most viewed - Letters
+                        </div>
+                    </div>
+                </td>
+        </tr>
+
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=114#top_display_media"><img src="albums/userpics/10001/thumb_1abcdef_-_Vallejo_Times_Herald_letter_page_2_July_31_1969_ALT.jpg" class="image thumbnail" width="128" height="120" border="0" alt="1abcdef_-_Vallejo_Times_Herald_letter_page_2_July_31_1969_ALT.jpg" title="Filename=1abcdef_-_Vallejo_Times_Herald_letter_page_2_July_31_1969_ALT.jpg
+Filesize=54KiB
+Dimensions=432x407
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">1756 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=112#top_display_media"><img src="albums/userpics/10001/thumb_1abcd_-_ZODIAC_-_July_69_Cipher_part_1_Vallejo_Times-Herald_w_Harden_worksheet.jpg" class="image thumbnail" width="76" height="128" border="0" alt="1abcd_-_ZODIAC_-_July_69_Cipher_part_1_Vallejo_Times-Herald_w_Harden_worksheet.jpg" title="Filename=1abcd_-_ZODIAC_-_July_69_Cipher_part_1_Vallejo_Times-Herald_w_Harden_worksheet.jpg
+Filesize=91KiB
+Dimensions=377x630
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">1450 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=113#top_display_media"><img src="albums/userpics/10001/thumb_1abcde_-_Vallejo_Times_Herald_letter_page_1_July_31_1969_ALT.jpg" class="image thumbnail" width="93" height="128" border="0" alt="1abcde_-_Vallejo_Times_Herald_letter_page_1_July_31_1969_ALT.jpg" title="Filename=1abcde_-_Vallejo_Times_Herald_letter_page_1_July_31_1969_ALT.jpg
+Filesize=64KiB
+Dimensions=432x594
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">1396 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=111#top_display_media"><img src="albums/userpics/10001/thumb_1abc_-_Vallejo_Times_Herald_letter_page_2_July_31_1969.jpg" class="image thumbnail" width="98" height="128" border="0" alt="1abc_-_Vallejo_Times_Herald_letter_page_2_July_31_1969.jpg" title="Filename=1abc_-_Vallejo_Times_Herald_letter_page_2_July_31_1969.jpg
+Filesize=137KiB
+Dimensions=640x833
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">1029 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=141#top_display_media"><img src="albums/userpics/10001/thumb_17_a_-_San_Francisco_Chronicle_Badlands_card_May_8_1974.jpg" class="image thumbnail" width="76" height="128" border="0" alt="17_a_-_San_Francisco_Chronicle_Badlands_card_May_8_1974.jpg" title="Filename=17_a_-_San_Francisco_Chronicle_Badlands_card_May_8_1974.jpg
+Filesize=488KiB
+Dimensions=598x1000
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">992 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=135#top_display_media"><img src="albums/userpics/10001/thumb_18_a_-_San_Francisco_Chronicle_Count_Marco_Red_Phantom_July_8_1974_BW.jpg" class="image thumbnail" width="128" height="118" border="0" alt="18_a_-_San_Francisco_Chronicle_Count_Marco_Red_Phantom_July_8_1974_BW.jpg" title="Filename=18_a_-_San_Francisco_Chronicle_Count_Marco_Red_Phantom_July_8_1974_BW.jpg
+Filesize=64KiB
+Dimensions=504x465
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">982 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=139#top_display_media"><img src="albums/userpics/10001/thumb_15_a_-_San_Francisco_Chronicle_Exorcist_letter_January_29_1974.jpg" class="image thumbnail" width="95" height="128" border="0" alt="15_a_-_San_Francisco_Chronicle_Exorcist_letter_January_29_1974.jpg" title="Filename=15_a_-_San_Francisco_Chronicle_Exorcist_letter_January_29_1974.jpg
+Filesize=388KiB
+Dimensions=745x999
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">880 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=161#top_display_media"><img src="albums/userpics/10001/thumb_7a_-_San_Francisco_Chronicle_My_Name_Is_letter_April_20_1970_COLOR.jpg" class="image thumbnail" width="90" height="128" border="0" alt="7a_-_San_Francisco_Chronicle_My_Name_Is_letter_April_20_1970_COLOR.jpg" title="Filename=7a_-_San_Francisco_Chronicle_My_Name_Is_letter_April_20_1970_COLOR.jpg
+Filesize=119KiB
+Dimensions=407x576
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">751 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=109#top_display_media"><img src="albums/userpics/10001/thumb_1a_-_Vallejo_Times_Herald_envelope_Back_July_31_1969.jpg" class="image thumbnail" width="128" height="67" border="0" alt="1a_-_Vallejo_Times_Herald_envelope_Back_July_31_1969.jpg" title="Filename=1a_-_Vallejo_Times_Herald_envelope_Back_July_31_1969.jpg
+Filesize=21KiB
+Dimensions=640x335
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">750 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=177#top_display_media"><img src="albums/userpics/10001/thumb_5abcde_-_San_Francisco_Chronicle_letter_November_9_1969_Page_5.jpg" class="image thumbnail" width="94" height="128" border="0" alt="5abcde_-_San_Francisco_Chronicle_letter_November_9_1969_Page_5.jpg" title="Filename=5abcde_-_San_Francisco_Chronicle_letter_November_9_1969_Page_5.jpg
+Filesize=434KiB
+Dimensions=738x1000
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">704 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=162#top_display_media"><img src="albums/userpics/10001/thumb_7ab_-_San_Francisco_Chronicle_My_Name_Is_Bomb_Diagram_April_20_1970.jpg" class="image thumbnail" width="96" height="128" border="0" alt="7ab_-_San_Francisco_Chronicle_My_Name_Is_Bomb_Diagram_April_20_1970.jpg" title="Filename=7ab_-_San_Francisco_Chronicle_My_Name_Is_Bomb_Diagram_April_20_1970.jpg
+Filesize=130KiB
+Dimensions=648x864
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">668 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=topn&amp;cat=4&amp;pid=129#top_display_media"><img src="albums/userpics/10001/thumb_2_-_September_27_1969_Door_of_Bryan_Hartnell_car.jpg" class="image thumbnail" width="128" height="50" border="0" alt="2_-_September_27_1969_Door_of_Bryan_Hartnell_car.jpg" title="Filename=2_-_September_27_1969_Door_of_Bryan_Hartnell_car.jpg
+Filesize=86KiB
+Dimensions=864x341
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">642 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+
+        <tr>
+                <td colspan="4" style="padding: 0px;">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                       <td width="100%" align="left" valign="middle" class="tableh1" style="white-space: nowrap">136 files on 12 page(s)</td>
+<td align="center" valign="middle" style="white-space: nowrap; padding-right: 10px;" class="navmenu">            <span id="tabs_dropdown_span4"></span>
+            <script type="text/javascript"><!--
+                $('#tabs_dropdown_span4').html('Jump to page <select id="tabs_dropdown_select4" onchange="if (this.options[this.selectedIndex].value != -1) { window.location.href = this.options[this.selectedIndex].value; }"><\/select>');
+                for (page = 1; page <= 12; page++) {
+                    var page_link = 'thumbnails.php?album=topn&amp;cat=4&amp;page=%d';
+                    var selected = '';
+                    if (page == 1) {
+                        selected = ' selected="selected"';
+                    }
+                    $('#tabs_dropdown_select4').append('<option value="' + page_link.replace( /%d/, page ) + '"' + selected + '>' + page + '<\/option>');
+                }
+         --></script></td>
+<td align="center" valign="middle" class="tableb tableb_alternate">1</td><td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=2">2</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=3">3</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=4">4</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=5">5</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=6">6</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=7">7</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=8">8</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=9">9</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=10">10</a></td>
+<td><img src="images/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=11">11</a></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=12">12</a></td>
+<td align="center" valign="middle" class="navmenu"><a href="thumbnails.php?album=topn&amp;cat=4&amp;page=2"><img src="images/icons/tab_right.png" border="0" alt="" width="16" height="16" title="Next" class="icon" /></a></td>
+
+                                </tr>
+                        </table>
+                </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+
+            <br /> <!-- workaround for issue 64492 - do not remove the line break! -->
+        </div>
+    </div>
+    <div id="cpg_footer_block_outer">
+        <div class="cpg_footer_block_inner">
+            
+            
+<div class="footer" align="center" style="padding:10px;display:block;visibility:visible; font-family: Verdana,Arial,sans-serif;">Powered by <a href="http://coppermine-gallery.net/" title="Coppermine Photo Gallery" rel="external">Coppermine Photo Gallery</a></div>
+        </div>
+    </div>
+<!--Coppermine Photo Gallery 1.5.40 (stable)-->
+</body>
+</html>

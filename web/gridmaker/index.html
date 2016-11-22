@@ -1,0 +1,116 @@
+<head>
+<style> 
+td { border: solid thin #ccc; padding: 3px; text-align: right; }
+table {border-collapse: collapse;}
+
+</style>
+<script>
+
+var array;
+var sumrows;
+var sumcols;
+var sumdiags;
+
+function grid(rows, cols, startNum, startNumRow, startNumCol, deltaNum, deltaRow, deltaCol, deltaStopRow, deltaStopCol) {	
+	array = new Array();
+	for (var row = 0; row < rows; row++) array[row] = new Array();
+	
+	for (var row = 0; row < rows; row++)
+		for (var col = 0; col < cols; col++)
+			array[row][col] = "*";
+	
+	var go = true;
+	while (go) {
+		if (array[startNumRow][startNumCol] != "*") break;
+		array[startNumRow][startNumCol] = startNum;
+		startNum += deltaNum;
+		var newstartNumRow = (startNumRow + deltaRow + rows) % rows;
+		var newstartNumCol = (startNumCol + deltaCol + cols) % cols;
+		if (array[newstartNumRow][newstartNumCol] != "*") {
+			newstartNumRow = (startNumRow + deltaStopRow + rows) % rows;
+			newstartNumCol = (startNumCol + deltaStopCol + cols) % cols;
+		}
+		startNumRow = newstartNumRow;
+		startNumCol = newstartNumCol;		
+	}
+	
+	// compute sums
+	sumrows = new Array();
+	for (var row=0; row<rows; row++) {
+		sumrows[row] = 0;
+		for (var col = 0; col < cols; col++) {
+			if (array[row][col] != '*') sumrows[row] += array[row][col];
+		}
+	}
+	sumcols = new Array();
+	for (var col=0; col<cols; col++) {
+		sumcols[col] = 0;
+		for (var row = 0; row < rows; row++) {
+			if (array[row][col] != '*') sumcols[col] += array[row][col];
+		}
+	}
+
+	if (rows == cols) {
+		sumdiags = new Array();
+		sumdiags[0] = 0; sumdiags[1] = 0;
+		for (var i=0; i<cols; i++) {
+			if (array[i][i] != '*') sumdiags[0] += array[i][i];
+			if (array[i][cols-1-i] != '*') sumdiags[1] += array[i][cols-1-i];
+		}
+	}
+	
+}
+
+function magic() {
+	var n = sumrows[0];
+	for (var i=0; i<sumrows.length; i++) {
+		if (sumrows[i] != n) return false;
+	}
+	for (var i=0; i<sumcols.length; i++) {
+		if (sumcols[i] != n) return false;
+	}
+	
+	if (sumrows.length != sumcols.length) return true;
+	
+	return (sumdiags[0] == n && sumdiags[1] == n);
+}
+
+function render() {
+    var rows = parseInt(document.forms[0].elements["rows"].value);
+    var cols = parseInt(document.forms[0].elements["cols"].value);
+grid(rows, cols, parseInt(document.forms[0].elements["startNum"].value), parseInt(document.forms[0].elements["startNumRow"].value), parseInt(document.forms[0].elements["startNumCol"].value), parseInt(document.forms[0].elements["deltaNum"].value), parseInt(document.forms[0].elements["deltaRow"].value), parseInt(document.forms[0].elements["deltaCol"].value), parseInt(document.forms[0].elements["deltaStopRow"].value), parseInt(document.forms[0].elements["deltaStopCol"].value));	
+	var html = "<table>";
+	for (var row = 0; row < array.length; row++) {
+		html += "<tr>";
+		for (var col = 0; col < array[0].length; col++) {
+			html += "<td>" + array[row][col] + "</td>";
+		}
+		html += "<td><b>" + sumrows[row] + "</b></td>";
+		html += "</tr>";
+	}
+	html += "<tr>";
+	for (var col=0; col < sumcols.length; col++) html += "<td><b>" + sumcols[col] + "</b></td>";
+	html += "</tr>";
+	html += "</table>";
+	if (rows == cols) html += "<b>Diagonal sums: " + sumdiags[0] + ", " + sumdiags[1] + "</b>";
+	
+	if (magic()) html += "<br><b><u><i>All sums are the same, so this is a magic square!</i></u></b>";
+	
+	document.getElementById("grid").innerHTML = html;
+}
+
+</script>
+</head>
+
+<body onload="render()">
+
+<form><input size="2" type="button" value="Make Grid" onclick="render()"> with <input size="2" type="text" name="rows" value="21"> rows, <input size="2" type="text" name="cols" value="21"> columns, and start filling out the grid with the number <input size="2" type="text" name="startNum" value="1"> positioned at row <input size="2" type="text" name="startNumRow" value="0"> column <input size="2" type="text" name="startNumCol" value="10">.  At each step, increment the number by <input size="2" type="text" name="deltaNum" value="1">, and move to the next cell by <input size="2" type="text" name="deltaRow" value="-1"> rows and <input size="2" type="text" name="deltaCol" value="2"> columns.  If the next cell is already filled, then offset the position by <input size="2" type="text" name="deltaStopRow" value="1"> rows and <input size="2" type="text" name="deltaStopCol" value="0"> columns.</form>
+<p>
+Boldfaced values are sums.  
+</p>
+
+<div id="grid"></div>
+
+<p><i><a href="/">(back to ZodiacKillerCiphers.com)</a></i></p>
+
+</body>	

@@ -1,0 +1,908 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Zodiac Murders--Solved!
+my other website: _Z_o_d_i_a_c_ _K_i_l_l_e_r_ _T_i_m_e_l_i_n_e
+you tube videos:_Z_o_d_i_a_c_ _k_i_l_l_e_r_ _s_o_l_v_e_d
+Your Subtitle text
+    * _H_o_m_e_ _P_a_g_e
+    * _I_n_t_r_o_ _S_e_c_t_i_o_n
+    * _R_i_v_e_r_s_i_d_e
+    * _V_a_l_l_e_j_o
+    * _C_r_y_p_t_o_g_r_a_m
+    * _L_a_k_e_ _B_e_r_r_y_e_s_s_a
+    * _P_r_e_s_i_d_i_o_ _H_e_i_g_h_t_s
+    * _S_h_e_l_l_y_ _H_o_l_m_b_o_e
+    * _3_4_0
+    * _J_o_h_n_s_ _&_ _S_a_l_e_m
+    * _1_9_7_0_ _L_e_t_t_e_r_s
+    * _D_o_n_n_a_ _L_a_s_s
+    * _1_9_7_4
+    * _1_9_8_0_/_1_9_8_1
+    * _G_a_r_e_t_h_ _P_e_n_n_ _L_e_t_t_e_r_s
+    * _G_a_r_e_t_h_ _P_e_n_n_ _A_r_t_i_c_l_e_s
+    * _T_Z_M_S_ _1_9_9_3_-_1
+    * _T_Z_M_S_ _1_9_9_3_-_2
+    * _T_Z_M_S_ _1_9_9_4
+    * _W_h_a_t_'_s_ _N_e_w
+************ CCrryyppttooggrraamm ************
+
+
+I divide all cryptography into three categories:
+
+a. SSeerriioouuss CCrryyppttooggrraapphhyy, which is the kind used by intelligence bureaus of
+governments and by security departments of big companies. The Purple Code and
+The Japanese Naval Code are examples of Serious Cryptography, which The Zodiac
+Project isn't . . . as far as I can tell.
+
+b. BBaabbyy BBlloocckk CCrryyppttooggrraapphhyy, which is the kind found on the puzzle page of most
+newspapers. Most of the cryptographic insights made in this book are examples
+of Baby Block (for example, the most basic kind of letter-to-number code is
+A=1, B=2, C=3, and this very simple conversion is what's used for most of the
+Zodiac killer's major points).
+
+and c. DDeeccooddeerr RRiinngg CCrryyppttooggrraapphhyy, which is Baby Block taken a step or two
+further, of which The Cryptogram is an example.
+
+Earlier versions of this book contained Decoder Ring Analysis of all the Zodiac
+documents. I literally digitized every single Zodiac letter and message,
+scanned them using the SEARCH function of my word processor, and highlighted
+the most interesting results in a grid on the page. If I end up doing anything
+like that in this edition, it will be in the form of an image scan of the
+earlier material. In any case, I've come to the conclusion, after twenty years
+and several editions of this book, that my time is better served trying to
+explain:
+
+a, WHAT the Zodiac killer was doing;
+
+b, WHY he was doing it; and
+
+c, in some cases, HOW he was doing it.
+
+But I do have to take out my Decoder Ring to deal with The Cryptogram, so I'll
+try to make this chapter as painless as possible (it may still hurt, though).
+
+
+
+Cryptogram Facts
+
+1. On August 1, 1969, The Vallejo Times-Herald, The San Francisco Examiner, and
+The San Francisco Chronicle each received one-third of a cryptogram, postmarked
+the day before. The cover letter for each was essentially the same message with
+minor variations.
+
+2. Each third was 8 lines by 17 columns, the total cipher consisting of 24
+lines of 17 characters.
+
+3. The language of the cover letters lacked verbal sophistication, yet the
+cipher itself was clever enough to frustrate the CIA, FBI, NSA, and other
+experts.
+
+4. The Salinas couple who did come up with the solution--Donald Harden and his
+wife Bettye--commented on how cleverly The Cryptogram was constructed, in such
+a way as to discourage easy deciphering. A local expert on codes agreed that
+the Zodiac killer obviously &#8220;knew his business&#8221; when it came to
+constructing ciphers.
+
+5. Nonetheless, the solution disappointed both the Hardens and police. The
+plaintext message was nothing more than a theme-and-variations on his motives
+for murder (I LIKE KILLING PEOPLE BECAUSE IT IS SO MUCH FUN . . . ),
+
+6. The Zodiac killer had apparently been bluffing about the cipher containing
+his name, unless the gibberish at the end (EBEORIETEMETHHPITI) was an anagram
+for his signature.
+
+
+Cryptogram Non-Facts
+
+Four aspects of The Cryptogram were misunderstood at the time of its
+publication:
+
+11.. TThhee cciipphheerr aass ppuubblliisshheedd wwaassnn&&##88221177;;tt wwhhaatt tthhee ZZooddiiaacc kkiilllleerr sseenntt..
+
+22.. TThhee ZZooddiiaacc kkiilllleerr nneevveerr aaccttuuaallllyy ssaaiidd hhiiss nnaammee wwaass iinn tthhee cciipphheerr..
+
+33.. TThhee MMOOSSTT mmiisslleeaaddiinngg aassppeecctt ooff tthhee cciipphheerr wwaass tthhee &&##88222200;;ssoollvveedd&&##88222211;; ppaarrtt..
+
+44.. TThhee ffoorrmm ooff tthhee cciipphheerr wwaass aallmmoosstt mmoorree iimmppoorrttaanntt tthhaann iittss ccoonntteenntt..
+
+
+Cryptogram Non-Solution
+
+If The Cryptogram contained clues to its solution, it also featured many hints
+about the kind of person(s) who composed it. For example, The Cryptogram was a
+multiple-substitution cipher with seven different symbols representing the most
+common letter, &#8216;E&#8217;.
+
+The &#8220;solved&#8221; message, on the other hand, was childlike in its
+simplicity.
+
+II LLIIKKEE KKIILLLLIINNGG PPEEOOPPLLEE BBEECCAAUUSSEE IITT IISS SSOO MMUUCCHH FFUUNN .. .. ..
+
+Shouldn&#8217;t someone have come out and said, &#8220;It can&#8217;t be that
+simple?&#8221; No one goes to that much trouble to convey such an idiotic
+message!
+
+When NASA sent Voyager out beyond the solar system, the accompanying disc
+didn&#8217;t consist entirely of a sound recording of &#8220;When You Wish Upon
+A Star.&#8221;
+
+Maybe it should have? Voyager might land on a planet like ours, be confiscated
+by the local police, and they may not &#8220;get&#8221; the BINARY message that
+was on the real disc!
+
+
+Whose Puzzle?
+
+I can&#8217;t present the Harden solution to The Cryptogram . . . because
+it&#8217;s wrong.
+
+It&#8217;s not that the Hardens themselves did anything wrong, they were just
+working on something that WASN&#8217;T the Zodiac&#8217;s Cryptogram. Here is
+what I believe the Zodiac killer actually sent, as copied from Gareth Penn's
+TTiimmeess 1177:
+
+
+
+Apparently, between the time The Cryptogram was received (Friday, August 1,
+1969) and when the entire thing was published (Sunday, August 3, 1969), police
+changed at least 19 symbols of the original grid:
+
+
+
+Whoever did it did a good job--the rank and file of the cipher grid was
+maintained, and more than half the changes involved simply filling in empty
+square symbols. My guess is, the substitution was done by a police sketch
+artist. Police do things like this so that if the real Zodiac comes forward and
+says, &#8220;Hey that&#8217;s not what I sent you,&#8221; they&#8217;ve got
+him!
+
+I know this because Gareth Penn used a slightly different set of symbols from
+the ones shown in Graysmith&#8217;s ZZooddiiaacc, presumably because his father was
+in law enforcement and had access to the originals (though I don&#8217;t recall
+Gareth ever actually explaining this):
+
+
+
+ I&#8217;m doing the method of change here off the top of my head, so I
+don&#8217;t swear by the accuracy of each individual change. Remember,
+Gareth&#8217;s symbols were the originals; Graysmith&#8217;s were post-change.
+
+VVTTHH
+11.. LLiinnee 44,, CCoolluummnn 55:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+22.. LLiinnee 55,, CCoolluummnn 1166:: DDootttteedd ttrriiaannggllee ffiilllleedd iinn..
+33.. LLiinnee 77,, CCoolluummnn 44:: CCaappiittaall &&##88221166;;II&&##88221177;; wwiitthh ssttrrookkeess mmaaddee ccuurrvviieerr..
+44.. LLiinnee 77,, CCoolluummnn 99:: BBllaannkk ttrriiaannggllee ffiilllleedd iinn..
+55.. LLiinnee 77,, CCoolluummnn 1144:: DDootttteedd cciirrccllee ttuurrnneedd iinnttoo aa &&##88221166;;QQ&&##88221177;;..
+66.. LLiinnee 77,, CCoolluummnn 1166:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+77.. LLiinnee 88,, CCoolluummnn 55:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+
+SSFFEE
+88.. LLiinnee 11,, CCoolluummnn 1177:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+99.. LLiinnee 55,, CCoolluummnn 44:: DDootttteedd ttrriiaannggllee ffiilllleedd iinn..
+1100.. LLiinnee 77,, CCoolluummnn 77:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+
+SSFFCC
+1111.. LLiinnee 11,, CCoolluummnn 1155:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+1122.. LLiinnee 22,, CCoolluummnn 99:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+1133.. LLiinnee 22,, CCoolluummnn 1100:: DDootttteedd ttrriiaannggllee ffiilllleedd iinn..
+1144.. LLiinnee 33,, CCoolluummnn 11:: &&##88221166;;ZZ&&##88221177;; ttuurrnneedd ((cclluummssiillyy)) iinnttoo hhaallff--ffiilllleedd
+ssqquuaarree..
+1155.. LLiinnee 44,, CCoolluummnn 1144:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+1166.. LLiinnee 55,, CCoolluummnn 1133:: BBllaacckk ttrriiaannggllee wwhhiitteedd--iinn aanndd ((cclluummssiillyy)) ddootttteedd..
+1177.. LLiinnee 66,, CCoolluummnn 44:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+1188.. LLiinnee 66,, CCoolluummnn 55:: HHaallff--ffiilllleedd ssqquuaarree ffiilllleedd iinn..
+1199.. LLiinnee 77,, CCoolluummnn 88:: DDootttteedd ttrriiaannggllee ffiilllleedd iinn..
+
+Two quick quibbles:
+
+1, Gareth Penn has backward-F in Line 6, Columns 2 and 7 of The SFC; Graysmith
+has backward-E. As you can see, I circled the second instance in my earlier
+editions (scanned above). I'm inclined to think Gareth simply mistyped, since
+otherwise one would have to substitute DOLLEDTING for COLLECTING. Further
+analysis is called for here, but I don't have time to do it right now, and I
+doubt that the difference would be worth my delaying the rest of the book for
+(but I've been wrong before).
+
+2, Michael Rodelli has made the interesting suggestion that police may have
+solved The Cryptogram on Friday or Saturday and THEN changed the symbol grid
+for the Sunday paper to trick the killer into coming forward with his own
+(corrected) solution. Mike bases this insight on the fact that at least one of
+the changes (WILE to WILL) corrects a misspelling in the cipher text. If he's
+right, it makes the script of David Fincher's movie, which makes fun of the
+cipher being solved in the breakfast nook of the Hardens, look foolish.
+
+In any case, without going into cryptographic detail, it&#8217;s clear that
+Gareth&#8217;s version of The Cryptogram is more internally consistent, so
+that&#8217;s what I&#8217;m going with:
+
+II LLIIKKEE KKIILLLLIINNGG PPEEOOPPLLEE BBEECCAAUUSSEE IITT IISS SSOO MMUUCCHH FFUUNN.. IITT IISS MMOORREE FFUUNN TTHHAANN KKIILLLLIINNGG
+WWIILLDD GGAAMMEE IINN TTHHEE FFOORRRREESSTT BBEECCAAUUSSEE MMAANN IISS TTHHEE MMOOSSTT DDAANNGGEERRTTUUEE AANNIIMMAALL OOEE AALLLL.. TTOO
+KKIILLLL SSOOMMEETTHHIINNGG GGIIVVEESS MMEE TTHHEE MMOOSSTT TTHHRRIILLLLIINNGG EEXXPPEERREENNCCEE.. IITT IISS EEVVEENN BBEETTTTEERR TTHHAANN
+GGEETTTTIINNGG YYOOUURR RROOCCKKSS OOFFFF WWIITTHH AA GGIIRRLL.. TTHHEE BBEESSTT PPAARRTT OOFF IITT IISS TTHHAAEE WWHHEENN II DDIIEE II
+WWIILLLL BBEE RREEBBOORRNN IINN PPAARRAADDIICCEE AANNDD AALLLL TTHHEE II HHAAVVEE KKIILLLLEEDD WWIILLLL BBEECCOOMMEE MMYY SSLLAAVVEESS.. II
+WWIILLEE NNOOTT GGIIVVEE YYOOUU MMYY NNAAMMEE BBEECCAAUUSSEE YYOOUU WWIILLLL TTRRYY TTOO SSLLOOII DDOOWWNN OORR SSTTOOPP MMYY
+CCOOLLLLEECCTTIINNGG OOFF SSLLAAVVEESS FFOORR MMYY AAFFTTEERRLLIIFFEE.. EEBBEEOORRIIEETTEEMMEETTHHHHPPIITTII
+
+I realize some readers are going to drily remark, after a quick comparison,
+that the difference between versions wasn&#8217;t worth commenting on. And for
+the purposes of this book, they&#8217;re right. The differences are subtle
+enough that I won&#8217;t end up discussing them here. But since we&#8217;re
+dealing with what cryptographers call a &#8220;two-step cipher&#8221;, where
+the apparent solution is just the middle step in the process, even a small
+change could affect the final reading. And since I&#8217;m going to use the
+correct solution, I thought I&#8217;d explain why.
+
+
+Cipher Identity
+
+Sometimes the Zodiac killer sent the most important clue to one of his
+mysteries in the next mailing or shortly thereafter. For instance, he sent The
+Mt. Diablo Code in his letter of June 26, 1970, and then mentioned radians in
+the postscript of a letter the following month (July 25, 1970). In the very
+next letter after The Cryptogram (August 7, 1969), he called himself &#8216;the
+Zodiac&#8217; for the first time:
+
+TThhiiss iiss tthhee ZZooddiiaacc ssppeeaakkiinngg..
+
+One would assume he reserved this nominal coming-out party for some significant
+information. True to form, he gave it to us parenthetically:
+
+BByy tthhee wwaayy,, aarree tthhee ppoolliiccee
+hhaavveeiinngg aa ggoooodd ttiimmee wwiitthh tthhee
+ccooddee?? IIff nnoott,, tteellll tthheemm ttoo cchheeeerr
+uupp;; wwhheenn tthheeyy ddoo ccrraacckk iitt
+tthheeyy wwiillll hhaavvee mmee..
+
+In the four decades since this letter was sent, people have assumed that the
+Zodiac killer was merely amusing himself. After all, the last full sentence of
+The Cryptogram solution says, like a surprise punchline, that he will NOT give
+his name.
+
+II WWIILLEE NNOOTT GGIIVVEE YYOOUU MMYY NNAAMMEE BBEECCAAUUSSEE YYOOUU WWIILLLL TTRRYY TTOO SSLLOOII DDOOWWNN OORR SSTTOOPP MMYY
+CCOOLLLLEECCTTIINNGG OOFF SSLLAAVVEESS FFOORR MMYY AAFFTTEERRLLIIFFEE..
+
+But he never said The Cryptogram contained his NAME. He said
+
+IInn tthhiiss cciipphheerr iiss mmyy iiddeennttiittyy..
+
+Your identity can consist of any number of things besides your name.
+The Zodiac killer isn&#8217;t telling us his name. He&#8217;s telling us who he
+is.
+
+aarree tthhee ppoolliiccee
+hhaavveeiinngg aa ggoooodd ttiimmee wwiitthh tthhee
+ccooddee??
+
+Note that he uses the word &#8216;code&#8217;. The Cryptogram isn&#8217;t a
+code; it&#8217;s an independently encrypted document--a &#8216;cipher&#8217;. A
+code is a general system of encryption. So he&#8217;s not really talking about
+The Cryptogram itself. He&#8217;s saying, "Have you figured out my language
+yet?" Figure out his language, and you&#8217;ll figure out who he is.
+
+
+Two-Step Ciphers
+
+So The Cryptogram was just a big joke, right? A big build-up to an idiotic
+payoff?
+
+Not exactly. Remember, both the Hardens and the professional codebreakers who
+studied The Cryptogram found it to be cryptographically sophisticated. So . . .
+does it make sense that someone smart enough to construct a multiple
+substitution cipher--one using seven different symbols for the letter E in a
+meticulously repeating sequence--would then make use of that complex mechanism
+to gush ungrammatically about the joys of multiple murder?
+
+No. But he might do that if The Cryptogram were really a two-step cipher.
+
+A two-step cipher has three layers. On top is the cipher text, also called the
+cover text. Even when you decipher it correctly, the solution is disappointing,
+because it&#8217;s only the first stage of a two-step process. You either get
+what looks like gibberish (EBEORIETEMETHHPITI), or you get an innocuous message
+(I LIKE KILLING PEOPLE . . . ). You only get the real solution when you go that
+second step.
+
+CCIIPPHHEERR TTEEXXTT TThhee CCrryyppttooggrraamm ssyymmbboollss
+AAPPPPAARREENNTT SSOOLLUUTTIIOONN II LLIIKKEE KKIILLLLIINNGG PPEEOOPPLLEE .. .. ..
+PPLLAAIINN TTEEXXTT ((RREEAALL SSOOLLUUTTIIOONN)) ??????
+
+So . . . why don&#8217;t we try out this revolutionary idea? Let&#8217;s use
+some of our decoding methods on The Cryptogram&#8217;s &#8220;solution&#8221;,
+and see if we get a different message entirely!
+
+
+LIKE
+
+II LLIIKKEE KKIILLLLIINNGG PPEEOOPPLLEE
+
+Oddly enough, I don&#8217;t think this is true. In the one non-shooting murder
+for which we have a witness, Lake Berryessa, the Zodiac killer seems almost to
+be forcing himself to go through with it. Bryan Hartnell describes a Zodiac who
+says little, acts mechanically, and breathes hard throughout his stabbing
+attack. Hardly the impression a cackling, orgiastic killer would make!
+
+Nevertheless, something about those first two words is familiar!
+
+II LLIIKKEE
+
+II LL II KK EE
+99 1122 ++ 99 ++ 1111 ++ 55 == 3377
+
+II LLIIKKEE
+99 ++ 3377 == 4466
+
+The first thing we notice is that I LIKE adds up to 46 in alphabet numbers. So
+he&#8217;s starting off the document with a form of 2 x 23. That in itself
+would seem to indicate we&#8217;re on the right track! But let&#8217;s look
+again. Remember what we said about the scorecard number at the bottom of the
+Zodiac killer&#8217;s Exorcist Letter?
+
+MMee -- 3377
+
+The Zodiac killer usually uses one of two numbers, 6 or 9, to equate himself to
+something. The number 6 is Morse/binary ME; the number 9 is the 9th letter,
+&#8216;I&#8217;.
+
+II LLIIKKEE
+99 3377
+
+Again, he&#8217;s making the same statement he made to equate himself to pi:
+
+II ((aamm)) 3377..
+
+I. e., &#8220; I am pi,&#8221; or 3 followed by 7 decimal digits which spells
+ZODIAC. I will come back to this in a moment.
+
+
+KILLING PEOPLE
+
+Let&#8217;s look at the next two words, using the same approach:
+
+KKIILLLLIINNGG PPEEOOPPLLEE
+
+KK II LL LL II NN GG
+1111 ++ 99 ++ 1122 ++ 1122 ++ 99 ++ 1144 ++ 77 == 7744
+
+PP EE OO PP LL EE
+1166 ++ 55 ++ 1155 ++ 1166 ++ 1122 ++ 55 == 6699
+
+KKIILLLLIINNGG PPEEOOPPLLEE just happens to add up to 7744--6699. Or, to add a dash of emphasis,
+77--44--6699.
+
+77--44--6699 would indicate JJuullyy 44tthh,, 11996699.
+
+Remember, I said the Darlene Ferrin murder actually took place a few minutes
+after midnight on July 5th, 1969, but the Zodiac killer kept insisting in his
+letters that it happened on July 4th? Now you know why the Zodiac killer wanted
+the Ferrin murder to happen on July 4th, 1969.
+
+So that, on that day, he would be KILLING PEOPLE!
+
+
+Mistakes
+
+Gareth Penn once said that the Zodiac killer intended to kill Darlene Ferrin on
+July 4, 1969, but wasn&#8217;t quite able to manage it. I now suspect the
+Zodiac intentionally waited until after midnight to shoot the couple in the
+Blue Rock Springs parking lot. If you watch David Fincher&#8217;s movie ZZooddiiaacc_,
+you will see the Zodiac killer pull into the parking lot behind them, then
+drive off, then come back and start shooting. Partly this is because there has
+to be some voluntary aspect to what the victims do, in keeping with the pagan
+sacrifice rituals, a subject which I will cover in a later section. I. e., he
+has to give them a chance to drive away.
+
+Since the victims don&#8217;t know he&#8217;s about to start shooting them,
+he&#8217;s not giving them much of a chance, but there has to be at least the
+appearance of compliance on their part (in keeping with their being voluntary
+passengers).
+
+The same is true of other victims. Cheri Bates appears to have walked off with
+her killer. Her killer even says, in The Confession Letter, &#8220;SHE WENT
+VERY WILLINGLY.&#8221; David Faraday and Betty Lou Jensen apparently chose to
+park in that spot along Lake Herman Road. Paul Stine let the Zodiac killer into
+his car and then went where the Zodiac killer told him to go. Again, these
+victims were unaware of what was in store for them, so their actions
+weren&#8217;t really voluntary, but they SEEMED to cooperate in their fate.
+
+But the more immediate reason to wait until after midnight to begin shooting is
+that it allows him to call attention to his mistake. Thus, neither of the
+&#8220;dates&#8221; given in The Cryptogram cover letters, or in the follow-up
+&#8220;This is the Zodiac speaking" Letter of August 4, 1969, is accurate.
+
+CChhrriissttmmaassss 44tthh JJuullyy
+
+Those are both wrong. The &#8220;Christmas&#8221; murders actually took place
+on December 20, 1968.
+And the July 4th murder took place in the early minutes of July 5, 1969.
+
+The Zodiac killer used apparent mistakes to call attention to some aspect of
+his scheme.
+I will point out other such &#8220;mistakes&#8221; as we stumble over them.
+
+
+Three Parts
+
+Just in case you were wondering, he divides The Cryptogram into 3 parts because
+the Devil in DDaannttee&&##88221177;;ss IInnffeerrnnoo has three heads. Metaphorically, it&#8217;s
+just that simple.
+
+But another, more practical reason to do it is that newspapers are in
+competition with one another. When The Vallejo Times-Herald, The San Francisco
+Examiner, and The San Francisco Chronicle all receive a third of a
+killer&#8217;s cryptogram, one of the three papers is bound to publish it. And
+once that happens, the other two will follow suit.
+
+The Zodiac killer could not take the chance with this, his most important piece
+of information, that the publication might come down to editorial whim. So he
+divides The Cryptogram into three pieces and sends it off to the three major
+newspapers in the San Francisco Bay Area. David Fincher&#8217;s movie has
+several scenes devoted to the editorial decision, on the part of The San
+Francisco Chronicle, to publish the letter.
+
+
+390 18
+
+I mentioned that the Zodiac killer never said The Cryptogram contained his
+name, i. e., it doesn&#8217;t contain 'Michael O&#8217;Hare'. However, he did
+say The Cryptogram contained his identity.
+
+&&##88222200;;II ((aamm)) ppii..&&##88222211;;
+
+Again, he is pi because the binary/Morse form of pi spells out
+
+MM..EERRAAHHOO.
+
+So there must be a reference to pi in The Cryptogram. And there is. I already
+mentioned that the first two words of the solution,
+
+II LLIIKKEE,
+
+--actually means
+
+&&##88222200;;II ((aamm)) ppii..&&##88222211;;
+
+But the FORM of The Cryptogram says the same thing. It consists of 390
+characters of a statement (I LIKE KILLING PEOPLE . . .), followed by 18
+characters of apparent gibberish (EBEORIETEMETHHPITI). The closest one can come
+to the relationship between 3 and .1415926 in 408 characters is to divide them
+390/18.
+
+33 //&&nnbbsspp;; ..11441155992266 == 2211..11887755 .. .. ..
+
+389 /&nbsp; 19 = 20.4737
+
+339900 //&&nnbbsspp;; 1188 == 2211..66666666
+
+391 /&nbsp; 17 = 23
+
+
+The form of The Cryptogram is itself a representation of pi.
+
+
+Cryptogram Review
+
+I&#8217;m doing the final 18 letters, EBEORIETEMETHHPITI, as a separate
+chapter, so this review is for The Cryptogram itself.
+
+
+11.. TThhee cciipphheerr ggrriidd wwaass cchhaannggeedd bbyy ppoolliiccee;; tthhaatt cchhaannggeedd tthhee ssoolluuttiioonn..
+
+22.. TThhee ZZooddiiaacc kkiilllleerr ssaaiidd TThhee CCrryyppttooggrraamm ccoonnttaaiinneedd hhiiss iiddeennttiittyy,, nnoott hhiiss nnaammee..
+
+33.. TThhee HHaarrddeenn SSoolluuttiioonn ((II LLIIKKEE KKIILLLLIINNGG PPEEOOPPLLEE .. .. ..)) wwaass tthhee ffiirrsstt ooff ttwwoo
+sstteeppss..
+
+44.. II LLIIKKEE iiss 4466,, oorr 22 xx 2233;; iitt iiss aallssoo &&##88222200;;II ((aamm)) 3377,,&&##88222211;; oorr ppii..
+
+55.. KKIILLLLIINNGG PPEEOOPPLLEE iiss 7744--6699;; tthhee BBlluuee RRoocckk SSpprriinnggss aattttaacckk wwaass oonn 77--44--6699..
+
+66.. TThhee ZZooddiiaacc kkiilllleerr uusseedd mmiissttaakkeess ((CChhrriissttmmaassss,, JJuullyy 44tthh)) aass rreedd ffllaaggss..
+
+77.. TThhee cciipphheerr wwaass iinn tthhrreeee ppaarrttss bbeeccaauussee DDaannttee&&##88221177;;ss ddeevviill hhaass tthhrreeee hheeaaddss..
+
+88.. TThhee ffoorrmm ooff TThhee CCrryyppttooggrraamm ((339900//1188)) iiss iittsseellff aann eexxpprreessssiioonn ooff ppii..
+
+
+Ready for something a bit more challenging?
+
+It&#8217;s time we tackled one of the great unsolved mysteries of the Zodiac
+case&#8212;those final 18 letters of The Cryptogram, EBEORIETEMETHHPITI.
+
+
+
+18 Letters
+
+One could argue that the entire Zodiac mystery comes down to a group of 18
+seemingly random letters at the end of The Cryptogram.
+
+EEBBEEOORRIIEETTEEMMEETTHHHHPPIITTII
+
+If you Google those 18 letters, you will be escorted to various "Zodiac
+killer"-related sites, most of which simply report that the passage was found
+at the end of the first Zodiac killer cipher, some of which actually attempt to
+decipher it . . . or at least, make the first rudimentary steps toward a
+solution. Let&#8217;s therefore make some basic assumptions about it:
+
+1, That the Zodiac killer might sign the message with an anagram of his own
+name is perfectly reasonable. For example, one group of
+&#8220;Zodiologists&#8221; believes the Zodiac killer was also The Unabomber.
+They believe the 18 letters convert to his name (including his middle initial):
+
+TTHHEEOODDOORREE JJ.. KKAACCZZYYNNSSKKII
+
+2, The idea that the letters at the end simply fill out the grid is also
+reasonable.
+
+I believe that, like all messages from the Zodiac killer, there was a dual
+purpose to those 18 letters. The sudden intrusion, following 390 characters
+that make some sort of sense, of 18 letters that don&#8217;t, may serve as the
+most blatant indicator that what the reader assumed WAS a solution WASN&#8217;T
+a solution. It also follows that the perfect misdirection would be to have the
+public breathlessly read the apparent solution, then dismiss it because it
+contained no significant information, only to have the significant information
+hidden underneath.
+
+There&#8217;s a term for this in the world of cryptography. It&#8217;s called a
+Two-Step Cipher.
+And the 18 letters are a blinking neon sign advertising its presence.
+
+
+Final Message
+
+Why go to the trouble of composing a multiple substitution cipher which has a
+straightforward--if anticlimactic--solution, and then dividing it into three
+parts and mailing it to three newspapers in the metropolitan area with as much
+menacing fanfare as you can drum up . . . if you&#8217;re going to leave 18
+letters at the end that don&#8217;t mean anything?
+
+EEBBEEOORRIIEETTEEMMEETTHHHHPPIITTII
+
+Obviously, you wouldn&#8217;t want to do that. So we have to assume, unless the
+Zodiac killer was just &#8220;haveing some fun&#8221; with us (as he did at the
+phone booth with the Vallejo cop), that The 18 Letters are perhaps even more
+significant than anything else he&#8217;s told us.
+
+The odd thing about The 18 Letters is that they&#8217;re designed to mean
+nothing on the surface--their apparent lack of meaning is itself a clue--but
+beneath the surface, they reveal the ultimate ends of The Zodiac Project.
+
+The 18 Letters are meant, first of all, to indicate that what follows The
+Cryptogram will not be a superficially straightforward message as the first 390
+characters are. In other words, they are a blatant indication that what I said
+in the previous chapter is true, that The Cryptogram is a two-step cipher. Any
+attempt to solve it using conventional methods will eventually break down, and
+leave you with an inane message which seems to say very little.
+
+This essentially prepares the way for The 340-Character Cipher, which never had
+a straightforward solution . . . and wasn&#8217;t even meant to be deciphered.
+
+I will discuss The 340 when we get to it. For now, let&#8217;s decipher The 18
+Letters.
+
+
+Three Sections
+
+And now, as we used to say back in the &#8216;50s, the $64,000 Question:
+
+What do The 18 Letters at the end of The Cryptogram really mean?
+
+EEBBEEOORRIIEETTEEMMEETTHHHHPPIITTII
+
+Okay, this is a mystery that&#8217;s lasted 40 years. My high school class
+didn&#8217;t even wait that long to hold its 40th reunion! It&#8217;s time
+somebody solved this thing!
+
+And no, it&#8217;s NOT an anagram of the killer&#8217;s name.
+
+The 18 Letters come at the end of the Zodiac killer&#8217;s very first cipher.
+They tell you what&#8217;s going to happen at the end of The Zodiac Project.
+
+EEBBEEOORRIIEETTEEMMEETTHHHHPPIITTII
+
+Like The Cryptogram itself, I&#8217;m going to divide the 18 Letters into three
+parts, but in this case they&#8217;re not equal:
+
+EE BBEEOORRIIEETT EEMMEETTHHHHPPIITTII
+11 77 1100
+
+There are three sections but only two significant expressions. Note,
+incidentally, that the final two sections add up to 17, and represent the same
+number of stab wounds administered to Bryan Hartnell (7) and Cecelia Ann
+Shepard (10) at Lake Berryessa a couple of months later.
+
+And no, that&#8217;s NOT a coincidence.
+
+
+First Letter
+
+EE
+00
+
+The initial E is actually just a place-holder, though it may also be intended
+to provide symmetry with the final Morse/binary character (a zero). Remember,
+The Cryptogram, once its three parts were put together, consisted of 24 lines
+of 17 characters apiece.
+
+In the cipher text of The Cryptogram, this first character is the last symbol
+at the end of line 23. It is character 17 of line 23. Since we know that the
+fundamental design of The Zodiac Project is a dichotomy of 23/23, a closing
+message that begins at the very end of Line 23 would seem appropriate,
+particularly since we're dealing with someone who led a normal life for his
+first 23 years, and then intended to be a notorious killer for his remaining 23
+years. There has to be a connection, however brief, to that first half of his
+life, so that we're aware of the dichotomy.
+
+Note, also, that this symbol occurs immediately following the word
+
+AAFFTTEERRLLIIFFEE..
+
+If the Zodiac Project&#8217;s fundamental design element is symmetry, then a
+message that concerns events at the end of his life would be appropriate
+following the word AFTERLIFE, correct?
+
+
+Next Seven Letters
+
+Let&#8217;s look at the second section of the message:
+
+BB EE OO RR II EE TT
+11000000 00 111111 001100 0000 00 11
+
+110000 00 0011 11
+
+DD EE AA TT ((HH))
+110000 00 0011 11 ((00000000))
+
+The Zodiac killer sometimes used shortened forms of his favorite Morse/binary
+expressions; I think this is the only example I cite in this book, but
+I&#8217;m calling attention to it because it&#8217;s crucial to the reading.
+The justification for using any such shortened form is that what follows it are
+binary zeroes, which are just two-multipliers. In other words, eliminate all
+trailing zeroes and you have the Morse/binary &#8220;root&#8221; of the word.
+
+DEATH isn&#8217;t used in its normal Morse/binary form (10000110000) because
+the Zodiac killer wants it to overlap with another expression in binary math:
+
+BB EE OO RR II EE TT
+11000000 00 111111 001100 0000 00 11
+
+1100000000 111111 001100 0000 00 11
+
+11111100110000000011 == 992299
+
+So--long story short--the first of two messages is:
+
+BBEEOORRIIEETT == DDEEAATTHH//992299
+
+
+DEATH 929
+
+Anyone familiar with the Zodiac killer should know what DEATH means by now, but
+what does &#8216;929&#8217; mean? Is it a date, or a time? If &#8216;929&#8217;
+were a date, 9-29, it would be September 29th, which is the day on the Catholic
+Calendar reserved for St. Michael, Michaelmas. Since our suspect&#8217;s first
+name is Michael, that might indicate we&#8217;re on the right track. However,
+for a killer who draws designs on USGS quadrangles, 929 seems more likely to be
+a destination than a date or time--Highway 929 to Hell.
+
+DDEEAATTHH//992299really means&&##88222200;;DDeeaatthh iinn RRoooomm 992299,, MMIITT TToowweerr&&##88222211;;..
+
+And yes, I&#8217;m talking about the same MIT Tower featured so prominently in
+Michael O&#8217;Hare&#8217;s Progressive Architecture article.
+
+
+
+Like a railroad track, a train of thought connecting Riverside to The Terminus
+Event, and scheduling a final stop at The MIT Tower, is another example of
+temporal symmetry.
+What you see at The Beginning, you see at The End.
+
+
+
+Final Ten Letters
+
+Now let&#8217;s look at the 3rd section:
+
+EE MM EE TT HH HH PP II TT II
+00 1111 00 11 00000000 00000000 00111100 0000 11 0000
+
+Although I&#8217;m expressing the Morse code values here with binary digits
+(instead of dots and dashes), I&#8217;m going to translate this passage using
+straightforward Morse redivision, except for the final binary zero.
+
+Does the reader understand what I mean by redivision?
+If not, here&#8217;s an example, in English, from my childhood:
+
+There was a local Pittsburgh kid&#8217;s show back in the late 50s or early 60s
+called The Paul Shannon Show, which featured shorts by The Three Stooges and a
+character who resembled Claude Rains in The Invisible Man, with airplane
+goggles and a trench coat. The character&#8217;s name was Nosmo King, and
+between shorts the character would be seen sneaking onto the set and scrawling
+the message NOSMO WAS HERE on a wall. I suppose the message was supposed to be
+subliminal, but it wasn&#8217;t until I was in my 30s that I finally realized
+
+NNOOSSMMOO KKIINNGGwas actuallyNNOO SSMMOOKKIINNGG!!
+
+It&#8217;s the same set of letters in the same sequence, but divided
+differently, as a result of which, you get a completely different message.
+That&#8217;s all we&#8217;re doing with Morse redivision; the same sequence,
+but divided differently so that it spells something completely different.
+
+EE MM EE TT HH HH PP II TT II
+00 1111 00 11 00000000 00000000 00111100 0000 11 0000
+
+0011 1100 110000 0000 000000 00 00 111100 00 001100 00
+AA NN DD II,, SS EE EE GG EE RR ((xx22))
+
+So the 3rd expression is:
+
+EEMMEETTHHHHPPIITTII == AANNDD II,, SSEEEEGGEERR ((xx22))
+
+The (x2) is there after SEEGER because there&#8217;s a trailing 0 after the
+SEEGER digits, and trailing 0s in binary math are two-multipliers.
+
+
+
+Rendezvous With Death
+
+AANNDD II,, SSEEEEGGEERR ((xx22)) is yet another literary reference.
+
+Alan Seeger was an American poet born in 1888. Like Michael O&#8217;Hare, he
+was born in New York City, and like Michael O'Hare, he went to Harvard. Unlike
+Michael O&#8217;Hare, he fought and died in WWI and was buried in a mass grave
+in France. Alan Seeger&#8217;s nephew is the folk singer Pete Seeger, who wrote
+&#8220;Where Have All The Flowers Gone?&#8221;, an anti-war song about soldiers
+dying for nothing.
+
+Alan Seeger&#8217;s most famous poem was also JFK&#8217;s favorite, the
+appropriately (for both men) fatalistic &#8220;I Have A Rendezvous With
+Death&#8221;. Because the poem figures so prominently at this point in the
+Zodiac killer literature, I&#8217;m going to quote the entire thing:
+
+II HHaavvee AA RReennddeezzvvoouuss WWiitthh DDeeaatthh bbyy AAllaann SSeeeeggeerr
+
+11 II hhaavvee aa rreennddeezzvvoouuss wwiitthh DDeeaatthh
+22 AAtt ssoommee ddiissppuutteedd bbaarrrriiccaaddee,,
+33 WWhheenn SSpprriinngg ccoommeess bbaacckk wwiitthh rruussttlliinngg sshhaaddee
+44 AAnndd aappppllee--bblloossssoommss ffiillll tthhee aaiirr
+55 II hhaavvee aa rreennddeezzvvoouuss wwiitthh DDeeaatthh
+66 WWhheenn SSpprriinngg bbrriinnggss bbaacckk bblluuee ddaayyss aanndd ffaaiirr..
+77 IItt mmaayy bbee hhee sshhaallll ttaakkee mmyy hhaanndd
+88 AAnndd lleeaadd mmee iinnttoo hhiiss ddaarrkk llaanndd
+99 AAnndd cclloossee mmyy eeyyeess aanndd qquueenncchh mmyy bbrreeaatthh
+1100 IItt mmaayy bbee II sshhaallll ppaassss hhiimm ssttiillll..
+1111 II hhaavvee aa rreennddeezzvvoouuss wwiitthh DDeeaatthh
+1122 OOnn ssoommee ssccaarrrreedd ssllooppee ooff bbaatttteerreedd hhiillll,,
+1133 WWhheenn SSpprriinngg ccoommeess rroouunndd aaggaaiinn tthhiiss yyeeaarr
+1144 AAnndd tthhee ffiirrsstt mmeeaaddooww--fflloowweerrss aappppeeaarr..
+
+1155 GGoodd kknnoowwss ''ttwweerree bbeetttteerr ttoo bbee ddeeeepp
+1166 PPiilllloowweedd iinn ssiillkk aanndd sscceenntteedd ddoowwnn,,
+1177 WWhheerree LLoovvee tthhrroobbss oouutt iinn bblliissssffuull sslleeeepp,,
+1188 PPuullssee nniigghh ttoo ppuullssee,, aanndd bbrreeaatthh ttoo bbrreeaatthh,,
+1199 WWhheerree hhuusshheedd aawwaakkeenniinnggss aarree ddeeaarr......
+2200 BBuutt II''vvee aa rreennddeezzvvoouuss wwiitthh DDeeaatthh
+2211 AAtt mmiiddnniigghhtt iinn ssoommee ffllaammiinngg ttoowwnn,,
+2222 WWhheenn SSpprriinngg ttrriippss nnoorrtthh aaggaaiinn tthhiiss yyeeaarr,,
+2233 AAnndd II ttoo mmyy pplleeddggeedd wwoorrdd aamm ttrruuee,,
+2244 II sshhaallll nnoott ffaaiill tthhaatt rreennddeezzvvoouuss..
+
+
+SEEGER
+
+I believe the Zodiac killer is referring to the beginning of Line 23 (of all
+lines!) when he says AND I, SEEGER. Note, incidentally, the symmetry in a
+message that begins at the end of one Line 23 (the last character of The
+Cryptogram's next-to-last line), and ends at the beginning of another Line 23
+(the first character of the Seeger poem's next-to-last line). In other words,
+the source for the allusion is bracketed by two 23s.
+
+There can be no mistake about his intention.
+
+AAnndd II ttoo mmyy pplleeddggeedd wwoorrdd aamm ttrruuee,,
+II sshhaallll nnoott ffaaiill tthhaatt rreennddeezzvvoouuss..
+
+I. e., the Zodiac killer has a rendezvous with death.
+At a specific time, on a specific day.
+And he intends to go out with a very big bang!
+
+The police and public only saw the preliminary solution of a two-step cipher,
+and decided that the Zodiac killer was playing some silly game with them. The
+correct, second-step solution shows that he is deadly serious.
+
+SSeeeeggeerr ((xx22))
+
+As it happens, Alan Seeger was born on 73rd Street in NYC. Remember the
+trailing binary zero after his name? 73rd Street (times two) equals 146. Since
+&#8216;146&#8217; is the last thing he says in The Cryptogram, the reader may
+rest assured that &#8220;146&#8221; is his final destination.
+
+But wait--he intends DEATH in Room 929 of The MIT Tower?
+
+And then schedules a rendezvous with DEATH at &#8220;146&#8221;?
+
+If you can&#8217;t be in two places at once, how can you die in two places?
+
+I will address this issue in The April 1970 Letters. But suffice it to say that
+if the chief design element of The Zodiac Project is symmetry, where everything
+happens in twos, and the project will come to an end with a very big bang in
+1989, then logically that end would come in not one, but two, places.
+
+
+
+Anagrams?
+
+Meanwhile, to those of you who were disappointed when I said that The 18
+Letters were NOT an anagram of the killer&#8217;s name, do what the Zodiac
+killer suggests and cheer up! The Zodiac killer DID spell out his name . . .
+just not in The Cryptogram.
+
+He did it in a much more prominent place.
+
+All right, I&#8217;ll give you a hint. There&#8217;s something he&#8217;s doing
+here in The Cryptogram cover letters that doesn&#8217;t make any sense, if you
+think about it. In fact, he&#8217;s about to risk arrest at a crime scene in
+the very near future, just to cover up the fact that he&#8217;s spelling out
+his name.
+
+I&#8217;ll give you another hint. It&#8217;s the first thing I ever noticed
+about the Zodiac murders, and I noticed it in 1986, long before I suspected
+Gareth Penn of being involved. It&#8217;s the thing that made me think other
+people following the case just weren&#8217;t paying attention. So--if
+you&#8217;re paying attention, see if you can find it before I show it to you!
+
+
+
+18 Letters Review
+
+Although the solution to the mystery of The 18 Letters isn&#8217;t as
+straightforward as some people might have liked&#8212;it isn&#8217;t an anagram
+of the killer&#8217;s name&#8212;it&#8217;s also not at all complicated.
+
+
+11.. TThhee 1188 LLeetttteerrss aarree tthheerree ttoo tteellll uuss TThhee CCrryyppttooggrraamm iiss aa 22--SStteepp CCiipphheerr..
+
+22.. TThhee 1188 LLeetttteerrss aarree sspplliitt iinnttoo 33 sseeccttiioonnss:: EE,, BBEEOORRIIEETT,, aanndd EEMMEETTHHHHPPIITTII..
+
+33.. TThhee lleetttteerr EE iiss ssiimmppllyy aa ppllaaccee--hhoollddeerr wwhhiicchh mmiirrrroorrss tthhee ffiinnaall bbiinnaarryy 00..
+
+44.. TThhee lleetttteerr EE ddooeess,, hhoowweevveerr,, ccoommee aatt tthhee eenndd ooff LLiinnee 2233 ooff tthhee cciipphheerr..
+
+55.. BBEEOORRIIEETT ttrraannssllaatteess ttoo tthhee oovveerrllaappppiinngg pphhrraassee DDEEAATTHH//992299..
+
+66.. DDEEAATTHH//992299 mmeeaannss &&##88222200;;DDeeaatthh iinn RRoooomm 992299 ooff TThhee MMIITT TToowweerr..&&##88222211;;
+
+77.. EEMMEETTHHHHPPIITTII ttrraannssllaatteess bbyy MMoorrssee rreeddiivviissiioonn ttoo AANNDD II,, SSEEEEGGEERR ((xx22))..
+
+88.. AANNDD II,, SSEEEEGGEERR ((xx22)) mmeeaannss &&##88222200;;II HHaavvee AA RReennddeezzvvoouuss WWiitthh DDeeaatthh,,&&##88222211;; aatt
+114466..
+
+99.. AANNDD II ccoommeess aatt tthhee bbeeggiinnnniinngg ooff LLiinnee 2233 ooff tthhee ppooeemm..
+
+1100.. TThhee ZZooddiiaacc kkiilllleerr WWAASS ssppeelllliinngg oouutt hhiiss nnaammee&&##88221122;;bbuutt iinn aannootthheerr pprroommiinneenntt
+ppllaaccee!!
+
+
+For more clues to this last point, we move to the murder at Lake Berryessa.
+
+
+
+_L_a_k_e_ _B_e_r_r_y_e_s_s_a
+
+Content copyright
+. Raymond Grant. All rights reserved.
+
+_[_W_e_b_ _H_o_s_t_i_n_g_]

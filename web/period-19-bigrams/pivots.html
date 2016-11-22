@@ -1,0 +1,322 @@
+<style>
+.cipher { font-family: courier; color: #999;}
+</style>
+<script>
+
+var ciphers = [ 
+	"HER>pl^VPk|1LTG2d"+
+"Np+B(#O%DWY.<*Kf)"+
+"By:cM+UZGW()L#zHJ"+
+"Spp7^l8*V3pO++RK2"+
+"_9M+ztjd|5FP+&4k/"+
+"p8R^FlO-*dCkF>2D("+
+"#5+Kq%;2UcXGV.zL|"+
+"(G2Jfj#O+_NYz+@L9"+
+"d<M+b+ZR2FBcyA64K"+
+"-zlUV+^J+Op7<FBy-"+
+"U+R/5tE|DYBpbTMKO"+
+"2<clRJ|*5T4M.+&BF"+
+"z69Sy#+N|5FBc(;8R"+
+"lGFN^f524b.cV4t++"+
+"yBX1*:49CE>VUZ5-+"+
+"|c.3zBK(Op^.fMqG2"+
+"RcT+L16C<+FlWB|)L"+
+"++)WCzWcPOSHT/()p"+
+"|FkdW<7tB_YOB*-Cc"+
+">MDHNpkSzZO8A|K;+",
+
+"9%P/Z/UB%kOR=pX=B"+
+"WV+eGYF69HP@K!qYe"+
+"MJY^UIk7qTtNQYD5)"+
+"S(/9#BPORAU%fRlqE"+
+"k^LMZJdr\\pFHVWe8Y"+
+"@+qGD9KI)6qX85zS("+
+"RNtIYElO8qGBTQS#B"+
+"Ld/P#B@XqEHMU^RRk"+
+"cZKqpI)Wq!85LMr9#"+
+"BPDR+j=6\\N(eEUHkF"+
+"ZcpOVWI5+tL)l^R6H"+
+"I9DR_TYr\\de/@XJQA"+
+"P5M8RUt%L)NVEKH=G"+
+"rI!Jk598LMlNA)Z(P"+
+"zUpkA9#BVW\\+VTtOP"+
+"^=SrlfUe67DzG%%IM"+
+"Nk)ScE/9%%ZfAP#BV"+
+"peXqWq_F#8c+@9A9B"+
+"%OT5RUc+_dYq_^SqW"+
+"VZeGYKE_TYA9%#Lt_"+
+"H!FBX9zXADd\\7L!=q"+
+"_ed##6e5PORXQF%Gc"+
+"Z@JTtq_8JI+rBPQW6"+
+"VEXr9WI6qEHM)=UIk"];
+
+var W = 17;
+var H = 20;
+var which = 0;
+
+var ciphertext = ciphers[which];
+var shuffleall = true;
+
+function init() {
+	var c = [];
+	ciphertext = ciphers[which];
+	
+	for (var i=0; i<ciphertext.length; i++) {
+		c[i] = [0, ciphertext[i]];
+	}
+	return c;
+}
+var count = 0;
+
+var c = init(0);
+var num, L, ngram, pulln;
+var total = 0;
+function go() {
+	which = 0; c=init();
+	total = 0; count = 0;
+	num = parseInt(document.getElementById("num").value);
+	L = parseInt(document.getElementById("L").value) - 1;
+	var found;
+	
+	loop();
+}
+
+function goNgrams() {
+	which = 0; c=init();
+
+	total = 0; count = 0;
+	num = parseInt(document.getElementById("num2").value);
+	ngram = parseInt(document.getElementById("ngram").value);
+	
+	loopNgram();
+}
+
+function goPull() {
+	shuffleall = document.getElementById("pulls").selectedIndex == 0;
+	which = 1;
+	c=init(1);
+	total = 0; count = 0;
+	num = parseInt(document.getElementById("num3").value);
+	pulln = parseInt(document.getElementById("pulln").value);
+	
+	loopPull();
+}
+
+function loop() {
+	for (var i=0; i<1000; i++) {
+		shuffle(c);
+		found = find(c, L);
+		count++;
+		if (found.length > 1) {
+			render(c, found, count);
+			total++;
+			if (total == num) {
+				document.getElementById("status").innerHTML = count + " shuffles inspected.  We're done shuffling.<br>";
+				return;
+			}
+		}
+	}
+	document.getElementById("status").innerHTML = count + " shuffles inspected...<br>";
+	setTimeout("loop()", 50);
+}
+
+function loopNgram() {
+	for (var i=0; i<1000; i++) {
+		shuffle(c);
+		var bc = toBlock(c);
+		found = findNgram(bc);
+		count++;
+		if (found.length > 0) {
+			render(c, found, count);
+			total++;
+			if (total == num) {
+				document.getElementById("status").innerHTML = count + " shuffles inspected.  We're done shuffling.<br>";
+				return;
+			}
+		}
+	}
+	document.getElementById("status").innerHTML = count + " shuffles inspected...<br>";
+	setTimeout("loopNgram()", 50);
+}
+
+function loopPull() {
+	for (var i=0; i<1000; i++) {
+		shuffle(c);
+		var bc = toBlock(c);
+		found = findPull(bc);
+		count++;
+		if (found.length > 0) {
+			render(c, found, count);
+			total++;
+			if (total == num) {
+				document.getElementById("status").innerHTML = count + " shuffles inspected.  We're done shuffling.<br>";
+				return;
+			}
+		}
+	}
+	document.getElementById("status").innerHTML = count + " shuffles inspected...<br>";
+	setTimeout("loopPull()", 50);
+}
+
+
+function render(c, found, count) {
+	var html = "After " + count + " iterations: <br><span class=\"cipher\">";
+	
+	for (var i=0; i<c.length; i++) {
+		var b1 = forPos(i);
+		var match = false;
+		for (var j=0; j<found.length; j++) {
+			var b2 = found[j];
+			
+			if (b1[0] == b2[0] && b1[1] == b2[1]) {
+				match = true;
+				break;
+			}
+		}
+		if (match) html += "<span style=\"color: black; font-weight: bold; background-color: #f3f;\">";
+		else html += "<span>";
+		html += encodestr(c[i][1]);
+		html += "</span>";
+		if (b1[1] == 16) html += "<br>";
+	}
+	
+	html += "</span><br>";
+	html += document.getElementById("html").innerHTML;
+	
+	document.getElementById("html").innerHTML = html 
+	
+}
+
+function shuffle(c) {
+	if (shuffleall) {
+		for (var i=0; i<c.length; i++) c[i][0] = Math.random();
+		return c.sort(function(a,b){return a[0]-b[0];})
+	}
+	else { // shuffle only the last 18 symbols of the 408
+		for (var i=0; i<c.length; i++) {
+			if (i<390) c[i][0] = i-390;
+			else c[i][1] = c[Math.floor(Math.random()*390)][1];
+		}
+		return c;
+	}
+}
+
+function find(c, L) {
+	// look for pivots
+	var found = [];
+	for (var row=L; row<H; row++) {
+		for (var col=L; col<W; col++) {
+			var go = true;
+			for (var i=0; i<L; i++) {
+				var c1 = c[posFor(row, col-i-1)][1];
+				var c2 = c[posFor(row-i-1, col)][1];
+				if (c1 != c2 || c1 == '+' || c2 == '+') {
+					go = false;
+					break;
+				}
+			}
+			if (go) found[found.length] = [row, col];
+		}
+	}
+	return found;
+}
+
+function toBlock(c) {
+	var block = []; 
+	var row=0; var col=0; var i=0;
+	block[row] = "";
+	while (i<ciphertext.length) {
+		block[row] += c[i][1];
+		col++;
+		if (col==17) { row++; col = 0; block[row] = ""; }
+		i++;
+	}
+	return block;
+}
+
+function findNgram(bc) {
+	// look for ngrams in the same column
+	var found = [];
+	for (var row=0; row<bc.length; row++) {
+		for (var col=0; col<bc[0].length-ngram+1; col++) {
+			var ng1 = bc[row].substring(col, col+ngram);
+			for (var row1=row+1; row1<bc.length; row1++) {
+				var ng2 = bc[row1].substring(col, col+ngram);
+				if (ng1 == ng2) {
+					found[found.length] = [row, col];
+					found[found.length] = [row1, col];
+					return found;
+				}
+			}
+		}
+	}
+	return found;
+}
+
+function findPull(bc) {
+	// look for pulldowns
+	var found = [];
+	for (var row1=0; row1<bc.length; row1++) {
+		var count = 0; var hits = [];
+		for (var col=0; col<bc[0].length; col++) {
+			for (var row2=0; row2<bc.length; row2++) {
+				if (row2 == row1) continue;
+				if (bc[row1][col] == bc[row2][col]) {
+					count++;
+					hits.push([row1, col]);
+					hits.push([row2, col]);
+					break;
+				}
+			}
+			if (count >= pulln) {
+				
+				var c = 0; var prev = hits[1][0]; var go = false;
+				for (var i=1; i<hits.length; i+=2) {
+					if (hits[i][0] == prev && (i==1 || hits[i][1]-hits[i-2][1] == 1)) {
+						c++;
+						if (c==4) { go = true; break; }
+					} else c = 0;
+					prev = hits[i][0];
+				}
+				if (go) {
+					for (var i=0; i<hits.length; i++) 
+						found.push(hits[i]);
+					return found;
+				}
+			}
+		}
+	}
+	return found;
+}
+
+
+function posFor(row, col) {
+	return W*row + col;
+}
+
+function forPos(i) {
+	return [Math.floor(i/W), i % W];
+}
+
+function encodestr(str) {
+	if (!str) return null;
+	var s1 = str.replace(/[&]/g,"&amp;");
+	return s1.replace(/[<]/g,"&lt;");
+}
+
+
+</script>
+
+<body>
+	Keep shuffling the 340 cipher until <input type="text" value="10" size="3" id="num"> ciphers are found each with a pair of pivots of length <input type="text" value="4" size="3" id="L">.
+	<br><input type="button" onclick="go()" value="Go">
+	<hr>
+	Keep shuffling the 340 cipher until <input type="text" value="1" size="3" id="num2"> ciphers are found each with a pair of <input type="text" value="3" size="1" id="ngram">-grams that appear in the same column.
+	<br><input type="button" onclick="goNgrams()" value="Go">
+	<hr>
+	Keep shuffling the <select id="pulls"><option>entire</option><option>last 18 symbols of the</option></select> 408 cipher until <input type="text" value="1" size="3" id="num3"> ciphers are found each with at least one row containing at least <input type="text" value="12" size="1" id="pulln"> pulled-down symbols in the same columns.
+	<br><input type="button" onclick="goPull()" value="Go">
+	<hr>
+	<span id="status"></span>
+	<span id="html"></span>
+</body>

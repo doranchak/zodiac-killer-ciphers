@@ -1,0 +1,16 @@
+div#content1{
+	width: 95%;
+}
+
+div#content2{
+	display: none;
+}
+div#content3{
+	display: none;
+}
+
+div#content1 {
+	padding: 5px 10px;
+	overflow: hidden;
+	position: relative;
+}

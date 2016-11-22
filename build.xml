@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+
+    <property file="build.properties"/>
+
+	<path id="cp_build">
+		<fileset dir="lib" includes="*.jar"/>
+	</path>
+	
+	<path id="cp_run">
+		<pathelement location="bin"/>
+		<fileset dir="lib" includes="*.jar"/>
+	</path>
+
+	<target name="build">
+		<mkdir dir="bin"/>
+		<javac verbose="false" srcdir="src" destdir="bin" classpathref="cp_build" debug="true" encoding="ISO-8859-1">
+			<include name="**/*.java"/>
+			<include name="**/*.java"/>
+			<exclude name="cgp/**/*"/>
+			<exclude name="**/old/**/*.java"/>
+			<exclude name="**/old/*.java"/>
+		</javac>
+	</target>
+
+
+    <target name="test_reader_list_gutenberg" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.Reader" classpathref="cp_run">
+			<arg value="${reader.corpus.gutenberg}"/>
+		</java>
+    </target>
+
+    <target name="test_reader_list_zodiac" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.Reader" classpathref="cp_run">
+			<arg value="${reader.corpus.zodiac}"/>
+		</java>
+    </target>
+	
+    <target name="test_processor_zodiac" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.Processor" classpathref="cp_run">
+			<arg value="${reader.corpus.zodiac}"/>
+			<arg value="${reader.max.substring.length}"/>
+			<arg value="${reader.min.substring.length}"/>
+			<jvmarg value="-Xmx1024M"/>
+		</java>
+    </target>
+
+    <target name="reappear_test" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.tests.ReAppear" classpathref="cp_run">
+			<arg value="${cipher}"/>
+		</java>
+    </target>
+
+	<!-- search a big collection of text for substrings in common with the Zodiac correspondences --> 
+    <target name="corpus_search" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.Search" classpathref="cp_run">
+			<arg value="${reader.corpus.gutenberg}"/>
+			<arg value="${reader.corpus.zodiac}"/>
+			<arg value="${reader.corpus.tmp}"/>
+			<arg value="${reader.min.substring.length}"/>
+			<arg value="${reader.max.substring.length}"/>
+			<jvmarg value="-Xmx2048M"/>
+		</java>
+    </target>
+
+	<!-- search a big collection of text for misspellings / unique words in common with the Zodiac correspondences --> 
+    <target name="corpus_misspell" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.Misspellings" classpathref="cp_run">
+			<arg value="${reader.corpus.gutenberg}"/>
+			<arg value="${reader.corpus.tmp}"/>
+			<arg value="${processor.prefix.gutenberg}"/>
+			<jvmarg value="-Xmx2048M"/>
+		</java>
+    </target>
+
+	<!-- search a big collection of text for substrings that match cipher substring constraints --> 
+    <target name="corpus_search_constraints" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.SearchConstraints" classpathref="cp_run">
+			<arg value="${cipher}"/>
+			<arg value="${reader.corpus.gutenberg}"/>
+			<arg value="${reader.corpus.tmp}"/>
+			<arg value="${constraints.maxlength}"/>
+			<arg value="${constraints.maxprobability}"/>
+			<jvmarg value="-Xmx2048M"/>
+		</java>
+    </target>
+	
+	
+    <target name="letter_frequencies" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.tests.LetterFrequencies" classpathref="cp_run">
+			<arg value="${letter.frequencies.n}"/>
+		</java>
+    </target>
+	
+    <target name="snippets" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.Snippet" classpathref="cp_run">
+			<arg value="${cipher}"/>
+		</java>
+    </target>
+	
+    <target name="constraints" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.constraints.Compute" classpathref="cp_run">
+			<arg value="${cipher}"/>
+			<arg value="${constraints.maxlength}"/>
+			<arg value="${constraints.maxprobability}"/>
+		</java>
+    </target>
+	
+    <target name="names" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.names.Census" classpathref="cp_run">
+		</java>
+    </target>
+	
+    <target name="lafferty" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.anagram.LaffertyZ13" classpathref="cp_run">
+		</java>
+    </target>
+	                                    
+	<!-- process the large corpus search results file -->
+    <target name="process_search_results" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.SearchResultsProcessor" classpathref="cp_run">
+			<arg value="${processor.index}"/>
+			<arg value="${processor.prefix.gutenberg}"/>
+			<arg value="${processor.length.min}"/>
+			<arg value="${reader.corpus.tmp}"/>
+			<arg value="${reader.corpus.zodiac}"/>
+			<jvmarg value="-Xmx2048M"/>
+		</java>
+    </target>
+
+    <target name="k4" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.kryptos.Process" classpathref="cp_run">
+			<jvmarg value="-Xmx2048M"/>
+		</java>
+    </target>
+	
+	<!-- process the constraints search results file -->
+    <target name="process_search_constraints_results" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.SearchConstraintsProcessor" classpathref="cp_run">
+			<arg value="${processor.constraints.results}"/>
+			<jvmarg value="-Xmx4192M"/>
+		</java>
+    </target>
+
+	<!-- make lucene index for gutenberg string patterns --> 
+    <target name="gutenberg_lucene_indexer" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.corpus.GutenbergLuceneIndexer" classpathref="cp_run">
+			<arg value="${lucene.index.gutenberg.nospaces}"/>
+			<arg value="${reader.corpus.tmp}"/>
+			<arg value="${reader.corpus.gutenberg}"/>
+			<arg value="${lucene.min.substring.length}"/>
+			<arg value="${lucene.max.substring.length}"/>
+			<jvmarg value="-Xmx2048M"/>                  
+			<jvmarg value="-XX:-UseGCOverheadLimit"/>
+		</java>
+    </target>
+	
+    <target name="heap_test" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.constraints.TopHeap" classpathref="cp_run">
+			<jvmarg value="-Xmx2048M"/>                  
+		</java>
+    </target>
+
+    <target name="primer_transpositions" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.ciphers.PrimerTranspositions" classpathref="cp_run">
+			<jvmarg value="-Xmx2048M"/>                  
+		</java>
+    </target>
+
+    <target name="boggle" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.dictionary.BogglePuzzle" classpathref="cp_run">
+			<jvmarg value="-Xmx2048M"/>                  
+		</java>
+    </target>
+
+    <target name="morse" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.morse.Morse" classpathref="cp_run">
+			<jvmarg value="-Xmx2048M"/>                  
+		</java>
+    </target>
+
+    <target name="ak" depends="build">
+        <java fork="true" classname="com.zodiackillerciphers.ak.AKSearch" classpathref="cp_run">
+			<jvmarg value="-Xmx2048M"/>                  
+		</java>
+    </target>
+
+	
+</project>

@@ -1,0 +1,31 @@
+1,000,000 shuffles were performed.
+
+In each shuffle, every shift value is tested, and the one producing the largest number of repeated symbols is retained.
+
+First number is maximum repeats observed.  Second number is number of shuffles having exactly that number of repeats.
+
+	9 486
+	10 33527
+	11 202275
+	12 320453
+	13 241319
+	14 123010
+	15 51176
+	16 18514
+	17 6458
+	18 1971
+	19 570
+	20 172
+	21 55
+	22 10
+	23 2
+	24 2
+
+Min repeats: 9.0
+Max repeats: 24.0
+Mean: 12.494258999999992
+Std Dev: 1.3652702680680797
+
+Z340 has max repeats of 18 at a shift of 78.  This is about 4 standard deviations from the mean.
+
+Of the 1,000,000 shuffles, only 2,782 of them (0.28%) had equal or better number of repeats.

@@ -1,0 +1,1177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<title>Home > Letters - Zodiac Killer Facts Image Gallery</title>
+
+<link rel="stylesheet" href="css/coppermine.css" type="text/css" />
+<link rel="stylesheet" href="themes/curve/style.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<!-- Begin IE6 support -->
+<!--[if lt IE 7]>
+<style>
+body {behavior: url(themes/curve/csshover3.htc );}
+.dropmenu li {width: 1px;} .dropmenu li a.firstlevel span.firstlevel {white-space: nowrap;} .main_menu {overflow: auto;}
+</style>
+<![endif]-->
+<!-- End IE6 support -->
+<script type="text/javascript">
+/* <![CDATA[ */
+    var js_vars = {"site_url":"http:\/\/www.zodiackillerfacts.com\/gallery","debug":false,"icon_dir":"images\/icons\/","lang_close":"Close","icon_close_path":"images\/icons\/close.png"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/jquery.greybox.js"></script>
+<script type="text/javascript" src="js/jquery.elastic.js"></script>
+
+<!--
+  SVN version info:
+  Coppermine version: 1.5.9
+  $HeadURL: https://svn.code.sf.net/p/coppermine/code/trunk/cpg1.5.x/themes/curve/template.html $
+  $Revision: 7809 $
+-->
+</head>
+<body>
+    
+    <div id="cpg_logo_block_outer">
+        <div class="cpg_logo_block_inner">
+            <div id="cpg_logo_block_logo">
+                <a href="index.php">
+                    <img src="themes/curve/images/coppermine-logo.png" border="0" width="260" height="60" alt="" />
+                </a>
+            </div>
+            <div id="cpg_logo_block_name">
+                <h1>Zodiac Killer Facts Image Gallery</h1>
+                <h3>The Most Inclusive Gallery of Zodiac Killer Related Images</h3>
+            </div>
+            <div class="clearer"></div>
+        </div>
+    </div>
+    <div id="cpg_header_block_outer">
+        <div class="cpg_header_block_inner">
+            <div id="main_menu">
+                    <ul class="dropmenu">
+          
+                        <!-- BEGIN home -->
+                        <li>
+                            <a href="index.php" title="Go to the home page" class="firstlevel" ><span class="firstlevel"><img src="images/icons/home.png" border="0" alt="" width="16" height="16" class="icon" />Home</span></a>
+                            
+                        </li>
+                        <!-- END home -->
+                        
+                        
+                        
+                        <!-- BEGIN login -->
+                        <li>
+                            <a href="login.php?referer=index.php%3Fcat%3D4" title="Log me in"  class="firstlevel" ><span class="firstlevel"><img src="images/icons/login.png" border="0" alt="" width="16" height="16" class="icon" />Login</span></a>
+                        </li>
+                        <!-- END login -->
+                        
+</ul>
+                    <ul class="dropmenu">
+          
+                        
+                        <!-- BEGIN album_list -->
+                        <li>
+                            <a href="index.php?cat=4" title="Go to the album list" class="firstlevel" ><span class="firstlevel"><img src="images/icons/alb_mgr.png" border="0" alt="" width="16" height="16" class="icon" />Album list</span></a>
+                            <ul>
+                                <!-- BEGIN lastup -->
+                                <li>
+                                    <a href="thumbnails.php?album=lastup&amp;cat=4" title="Show most recent uploads" rel="nofollow"><span><img src="images/icons/last_uploads.png" border="0" alt="" width="16" height="16" class="icon" />Last uploads</span></a>
+                                </li>
+                                <!-- END lastup -->
+                                <!-- BEGIN lastcom -->
+                                <li>
+                                    <a href="thumbnails.php?album=lastcom&amp;cat=4" title="Show most recent comments" rel="nofollow"><span><img src="images/icons/comment.png" border="0" alt="" width="16" height="16" class="icon" />Last comments</span></a>
+                                </li>
+                                <!-- END lastcom -->
+                                <!-- BEGIN topn -->
+                                <li>
+                                    <a href="thumbnails.php?album=topn&amp;cat=4" title="Show most viewed items" rel="nofollow"><span><img src="images/icons/most_viewed.png" border="0" alt="" width="16" height="16" class="icon" />Most viewed</span></a>
+                                </li>
+                                <!-- END topn -->
+                                <!-- BEGIN toprated -->
+                                <li>
+                                    <a href="thumbnails.php?album=toprated&amp;cat=4" title="Show top rated items" rel="nofollow"><span><img src="images/icons/top_rated.png" border="0" alt="" width="16" height="16" class="icon" />Top rated</span></a>
+                                </li>
+                                <!-- END toprated -->
+                                <!-- BEGIN favpics -->
+                                <li>
+                                    <a href="thumbnails.php?album=favpics" title="Go to my favorites" rel="nofollow"><span><img src="images/icons/favorites.png" border="0" alt="" width="16" height="16" class="icon" />My Favorites</span></a>
+                                </li>
+                                <!-- END favpics -->
+                            </ul>
+                        </li>
+                        <!-- END album_list -->
+                        <!-- BEGIN search -->
+                        <li>
+                            <a href="search.php" title="Search the gallery"  class="firstlevel" ><span class="firstlevel"><img src="images/icons/search.png" border="0" alt="" width="16" height="16" class="icon" />Search</span></a>
+                        </li>
+                        <!-- END search -->
+</ul>
+                    
+            </div><!-- Begin IE7 support --><img src="images/spacer.gif" class="menuheight" alt="" /><!-- End IE7 support -->
+            <div class="clearer"></div>
+            
+        </div>
+    </div>
+    <div id="cpg_main_block_outer">
+        <div class="cpg_main_block_inner">
+            
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr>
+            <td colspan="3" align="left">
+                <div class="cpg_starttable_outer">
+                    <div class="cpg_starttable_inner">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td class="statlink">
+                                    <a href="index.php">Home</a> > <a href="index.php?cat=4">Letters</a>
+                                </td>
+                                <td class="statlink">
+                                    <img src="images/spacer.gif" width="1" height="25" border="0" alt="" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr>
+                <td class="tableh1" width="80%" align="left">Category</td>
+                <td class="tableh1" width="10%" align="center">Albums</td>
+                <td class="tableh1" width="10%" align="center">Files</td>
+        </tr>
+
+        <tr>
+                <td class="catrow" align="left"><table border="0"><tr><td><a href="index.php?cat=2"><img src="albums/userpics/10001/thumb_1d_-_San_Francisco_Examiner_letter_Received_August_4_1969_1st_use_of_Zodiac_name.jpg" class="image thumbnail" width="40" height="50" border="0" alt="" /></a></td><td><span class="catlink"><a href="index.php?cat=2">The Zodiac: Letters, Cards, Notes, Codes and Other Material</a></span>Letters which are believed to be authentic Zodiac Communication.</td></tr></table></td>
+                <td class="catrow" align="center">22</td>
+                <td class="catrow" align="center">89</td>
+        </tr>
+        <tr>
+            <td class="tableb tableb_alternate" colspan="3">
+<!-- Start standard table -->
+<table align="center" width="99%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=2">Vallejo Times - Herald Letter - July 31 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=2" class="albums"><img src="albums/userpics/10001/thumb_1_-_Vallejo_Times_Herald_envelope_Front_July_31_1969.jpg" class="image thumbnail" width="50" height="25" border="0" alt="1_-_Vallejo_Times_Herald_envelope_Front_July_31_1969.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">7 files, last one added on Aug 04, 2010<br />Album viewed 13318 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=3">San Francisco Examiner Letter - July 31 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=3" class="albums"><img src="albums/userpics/10001/thumb_1c_-_San_Francisco_Examiner_envelope_July_31_1969.jpg" class="image thumbnail" width="50" height="39" border="0" alt="1c_-_San_Francisco_Examiner_envelope_July_31_1969.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">5 files, last one added on Aug 07, 2010<br />Album viewed 6257 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=4">San Francisco Chronicle Letter - July 31 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=4" class="albums"><img src="albums/userpics/10001/thumb_1b_-_San_Francisco_Chronicle_envelope_Front_July_31_1969.jpg" class="image thumbnail" width="50" height="27" border="0" alt="1b_-_San_Francisco_Chronicle_envelope_Front_July_31_1969.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">7 files, last one added on Aug 07, 2010<br />Album viewed 5282 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=5">San Francisco Examiner Letter - Received: August 4 1969 (?)</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=5" class="albums"><img src="albums/userpics/10001/thumb_1d_-_San_Francisco_Examiner_letter_Received_August_4_1969_1st_use_of_Zodiac_name.jpg" class="image thumbnail" width="40" height="50" border="0" alt="1d_-_San_Francisco_Examiner_letter_Received_August_4_1969_1st_use_of_Zodiac_name.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">3 files, last one added on Aug 04, 2010<br />Album viewed 6675 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=6">Zodiac Message on Car Door - Lake Berryessa - September 27 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=6" class="albums"><img src="albums/userpics/10001/thumb_2a_-_September_27_1969_Door_of_Bryan_Hartnell_car_Crossed_Circle.jpg" class="image thumbnail" width="50" height="37" border="0" alt="2a_-_September_27_1969_Door_of_Bryan_Hartnell_car_Crossed_Circle.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">3 files, last one added on Aug 04, 2010<br />Album viewed 8232 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=7">San Francisco Chronicle Letter - October 13 1969 Re: Murder of Paul Stine</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=7" class="albums"><img src="albums/userpics/10001/thumb_3a_-_San_Francisco_Chronicle_letter_October_13_1969.jpg" class="image thumbnail" width="34" height="50" border="0" alt="3a_-_San_Francisco_Chronicle_letter_October_13_1969.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">2 files, last one added on Aug 04, 2010<br />Album viewed 6454 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=8">San Francisco Chronicle Dripping Pen Card &amp; 340 Cipher - November 8 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=8" class="albums"><img src="albums/userpics/10001/thumb_4a_-_San_Francisco_Chronicle_Dripping_Pen_Card_November_8_1969.jpg" class="image thumbnail" width="41" height="50" border="0" alt="4a_-_San_Francisco_Chronicle_Dripping_Pen_Card_November_8_1969.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">7 files, last one added on Nov 23, 2013<br />Album viewed 8559 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=9">San Francisco Chronicle Letter - November 9 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=9" class="albums"><img src="albums/userpics/10001/thumb_5_-_San_Francisco_Chronicle_letter_November_9_1969_envelope_BW_Front_Back.jpg" class="image thumbnail" width="50" height="49" border="0" alt="5_-_San_Francisco_Chronicle_letter_November_9_1969_envelope_BW_Front_Back.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">8 files, last one added on Aug 04, 2010<br />Album viewed 5436 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=10">Melvin Belli Letter - December 20 1969</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=10" class="albums"><img src="albums/userpics/10001/thumb_6a_-_Melvin_Belli_letter_December_20_1969.jpg" class="image thumbnail" width="31" height="50" border="0" alt="6a_-_Melvin_Belli_letter_December_20_1969.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">2 files, last one added on Aug 04, 2010<br />Album viewed 5362 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=11">San Francisco Chronicle &quot;My Name Is&quot; Letter - April 20 1970</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=11" class="albums"><img src="albums/userpics/10001/thumb_7_-_San_Francisco_Chronicle_envelope_April_20_1970.jpg" class="image thumbnail" width="50" height="49" border="0" alt="7_-_San_Francisco_Chronicle_envelope_April_20_1970.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">3 files, last one added on Aug 04, 2010<br />Album viewed 6956 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=146">San Francisco Chronicle &quot;Dragon Card&quot; - April 28, 1970</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=146" class="albums"><img src="albums/userpics/10001/thumb_8a_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR.jpg" class="image thumbnail" width="50" height="40" border="0" alt="8a_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">3 files, last one added on Jun 27, 2012<br />Album viewed 833 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=14">San Francisco Chronicle Map Code Letter - June 26 1970</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=14" class="albums"><img src="albums/userpics/10001/thumb_9ab_-_San_Francisco_Chronicle_Zodiac_MAP_June_26_1970_SMALL.jpg" class="image thumbnail" width="44" height="50" border="0" alt="9ab_-_San_Francisco_Chronicle_Zodiac_MAP_June_26_1970_SMALL.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">5 files, last one added on Aug 04, 2010<br />Album viewed 4314 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+
+        <tr>
+                <td colspan="2" style="padding: 0px;">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                       <td width="100%" align="left" valign="middle" class="tableh1" style="white-space: nowrap">22 albums on 2 page(s)</td>
+<td align="center" valign="middle" style="white-space: nowrap; padding-right: 10px;" class="navmenu">            <span id="tabs_dropdown_span2"></span>
+            <script type="text/javascript"><!--
+                $('#tabs_dropdown_span2').html('Jump to page <select id="tabs_dropdown_select2" onchange="if (this.options[this.selectedIndex].value != -1) { window.location.href = this.options[this.selectedIndex].value; }"><\/select>');
+                for (page = 1; page <= 2; page++) {
+                    var page_link = 'index.php?cat=2&amp;page=%d';
+                    var selected = '';
+                    if (page == 1) {
+                        selected = ' selected="selected"';
+                    }
+                    $('#tabs_dropdown_select2').append('<option value="' + page_link.replace( /%d/, page ) + '"' + selected + '>' + page + '<\/option>');
+                }
+         --></script></td>
+<td align="center" valign="middle" class="tableb tableb_alternate">1</td><td align="center" valign="middle" class="navmenu"><a href="index.php?cat=2&amp;page=2">2</a></td>
+<td align="center" valign="middle" class="navmenu"><a href="index.php?cat=2&amp;page=2"><img src="images/icons/tab_right.png" border="0" alt="" width="16" height="16" title="Next" class="icon" /></a></td>
+
+                                </tr>
+                        </table>
+                </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+</td>
+        </tr>
+
+        <tr>
+                <td class="catrow" align="left"><table border="0"><tr><td><a href="index.php?cat=3"><img src="albums/userpics/10001/thumb_21_abcde_-_Riverside_Press_Enterprise_April_30_1967_letter.jpg" class="image thumbnail" width="40" height="50" border="0" alt="" /></a></td><td><span class="catlink"><a href="index.php?cat=3">The Zodiac: Letters Linked to the Zodiac By Handwriting Experts and Other Possible Communications</a></span></td></tr></table></td>
+                <td class="catrow" align="center">2</td>
+                <td class="catrow" align="center">22</td>
+        </tr>
+        <tr>
+            <td class="tableb tableb_alternate" colspan="3">
+<!-- Start standard table -->
+<table align="center" width="99%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=24">Riverside Documents Linked To Unsolved Murder of Cheri Jo Bates</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=24" class="albums"><img src="albums/userpics/10001/thumb_20_a_-_Riverside_Bates_Confession_and_Envelope_November_29_1966.jpg" class="image thumbnail" width="50" height="39" border="0" alt="20_a_-_Riverside_Bates_Confession_and_Envelope_November_29_1966.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">14 files, last one added on May 31, 2014<br />Album viewed 3488 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=25">Secret Pal Card - December 1990</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=25" class="albums"><img src="albums/userpics/10001/thumb_19_abc_-San_Francisco_Chronicle_1990_Secret_Pal_card.jpg" class="image thumbnail" width="33" height="50" border="0" alt="19_abc_-San_Francisco_Chronicle_1990_Secret_Pal_card.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">8 files, last one added on Aug 04, 2010<br />Album viewed 5355 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+
+        <tr>
+                <td colspan="2" style="padding: 0px;">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                       <td width="100%" align="left" valign="middle" class="tableh1" style="white-space: nowrap">2 albums on 1 page(s)</td>
+
+                                </tr>
+                        </table>
+                </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+</td>
+        </tr>
+
+        <tr>
+                <td class="catrow" align="left"><table border="0"><tr><td><a href="index.php?cat=5"><img src="albums/userpics/10001/thumb_23_abc_-_San_Francisco_Chronicle_letter_April_24_1978.jpg" class="image thumbnail" width="50" height="46" border="0" alt="" /></a></td><td><span class="catlink"><a href="index.php?cat=5">Zodiac Forgeries, Hoaxes and Other Questioned Documents</a></span>Letters which are believed to be fraudulent Zodiac communications.</td></tr></table></td>
+                <td class="catrow" align="center">4</td>
+                <td class="catrow" align="center">20</td>
+        </tr>
+        <tr>
+            <td class="tableb tableb_alternate" colspan="3">
+<!-- Start standard table -->
+<table align="center" width="99%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=23">Letters and Other Communications Attributed to Zodiac Imposters</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=23" class="albums"><img src="albums/userpics/10001/thumb_23_abc_-_San_Francisco_Chronicle_letter_April_24_1978.jpg" class="image thumbnail" width="50" height="46" border="0" alt="23_abc_-_San_Francisco_Chronicle_letter_April_24_1978.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">9 files, last one added on Aug 04, 2010<br />Album viewed 2846 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=144">The &quot;You Are Next&quot; Card - October, 1970</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=144" class="albums"><img src="albums/userpics/10001/thumb_YouAreNext_Card_FBI_3.jpg" class="image thumbnail" width="37" height="50" border="0" alt="YouAreNext_Card_FBI_3.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">5 files, last one added on May 28, 2011<br />Album viewed 1287 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=143">The &quot;Equinox&quot; Letter - 1972</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=143" class="albums"><img src="albums/userpics/10001/thumb_Equinox_letter.jpg" class="image thumbnail" width="42" height="50" border="0" alt="Equinox_letter.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">1 files, last one added on May 28, 2011<br />Album viewed 1395 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=142">&quot;Zodiac&quot; Letter - March 8, 1981</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=142" class="albums"><img src="albums/userpics/10001/thumb_Zodiac_suspected_letter_-_Atlanta2C_GA_March_82C_1981.jpg" class="image thumbnail" width="37" height="50" border="0" alt="Zodiac_suspected_letter_-_Atlanta2C_GA_March_82C_1981.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">5 files, last one added on Jul 22, 2011<br />Album viewed 3598 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+
+        <tr>
+                <td colspan="2" style="padding: 0px;">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                       <td width="100%" align="left" valign="middle" class="tableh1" style="white-space: nowrap">4 albums on 1 page(s)</td>
+
+                                </tr>
+                        </table>
+                </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+</td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+
+        <tr class="tableb tableb_alternate">
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td colspan="3" height="1" align="left" valign="top" class="tableh2">
+                        <span class="alblink"><a href="thumbnails.php?album=145">Other Documents of Interest</a></span>
+                </td>
+        </tr>
+        <tr>
+                <td colspan="3">
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td align="center" valign="middle" class="thumbnails">
+                        <img src="images/spacer.gif" width="52" height="1" style="margin-top: 0px; margin-bottom: 0px; border: none;" alt="" /><br />
+                        <a href="thumbnails.php?album=145" class="albums"><img src="albums/userpics/10001/thumb_Z_code_key_8-10-69_card.jpg" class="image thumbnail" width="50" height="34" border="0" alt="Z_code_key_8-10-69_card.jpg" /><br /></a>
+                </td>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" />
+                </td>
+                <td width="100%" valign="top" align="left" class="tableb tableb_alternate">
+                        
+                        <p></p>
+                        <p class="album_stat">5 files, last one added on Jul 22, 2011<br />Album viewed 1419 times</p>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        <td width="50%" valign="top">
+        <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+                <td height="1" valign="top" class="tableh2">
+                        &nbsp;
+                </td>
+        </tr>
+        <tr>
+                <td>
+                        <img src="images/spacer.gif" width="1" height="1" border="0" alt="" /><br />
+                </td>
+        </tr>
+        <tr>
+                <td width="100%" valign="top" class="tableb tableb_alternate">
+                    <div class="thumbnails" style="background-color:transparent"><img src="images/spacer.gif" width="1" height="1" border="0" class="image" style="border:0;margin-top:1px;margin-bottom:0" alt="" /></div>
+                </td>
+        </tr>
+        </table>
+        </td>
+
+        </tr>
+
+        <tr>
+                <td colspan="2" style="padding: 0px;">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                                <tr>
+                                       <td width="100%" align="left" valign="middle" class="tableh1" style="white-space: nowrap">1 albums on 1 page(s)</td>
+
+                                </tr>
+                        </table>
+                </td>
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+        <tr>
+                <td class="" colspan="4">
+                    <div class="cpg_starttable_outer">
+                        <div class="cpg_starttable_inner">
+                            <img src="images/icons/random.png" border="0" alt="" width="16" height="16" class="icon" />Random files - Letters
+                        </div>
+                    </div>
+                </td>
+        </tr>
+
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=157#top_display_media"><img src="albums/userpics/10001/thumb_10_-_San_Francisco_Chronicle_Envelope_July_24_1970_Black_and_White.jpg" class="image thumbnail" width="128" height="80" border="0" alt="10_-_San_Francisco_Chronicle_Envelope_July_24_1970_Black_and_White.jpg" title="Filename=10_-_San_Francisco_Chronicle_Envelope_July_24_1970_Black_and_White.jpg
+Filesize=69KiB
+Dimensions=576x361
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">123 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=227#top_display_media"><img src="albums/userpics/10001/thumb_4abbb_-_San_Francisco_Chronicle_Dripping_Pen_Card_November_8_1969_INSIDE_COLOR_High_Res_LARGE_RESIZED_16X12.jpg" class="image thumbnail" width="99" height="128" border="0" alt="4abbb_-_San_Francisco_Chronicle_Dripping_Pen_Card_November_8_1969_INSIDE_COLOR_High_Res_LARGE_RESIZED_16X12.jpg" title="Filename=4abbb_-_San_Francisco_Chronicle_Dripping_Pen_Card_November_8_1969_INSIDE_COLOR_High_Res_LARGE_RESIZED_16X12.jpg
+Filesize=749KiB
+Dimensions=774x1000
+Date added=Aug 06, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">402 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=132#top_display_media"><img src="albums/userpics/10001/thumb_6_-_Melvin_Belli_envelope_December_20_1969_and_Belli_Home.jpg" class="image thumbnail" width="66" height="128" border="0" alt="6_-_Melvin_Belli_envelope_December_20_1969_and_Belli_Home.jpg" title="Filename=6_-_Melvin_Belli_envelope_December_20_1969_and_Belli_Home.jpg
+Filesize=120KiB
+Dimensions=449x864
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">325 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=184#top_display_media"><img src="albums/userpics/10001/thumb_11_abcd_-_San_Francisco_Chronicle_Little_List_letter_July_26_1970_page_3.jpg" class="image thumbnail" width="83" height="128" border="0" alt="11_abcd_-_San_Francisco_Chronicle_Little_List_letter_July_26_1970_page_3.jpg" title="Filename=11_abcd_-_San_Francisco_Chronicle_Little_List_letter_July_26_1970_page_3.jpg
+Filesize=653KiB
+Dimensions=651x1000
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">194 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=125#top_display_media"><img src="albums/userpics/10001/thumb_1bcde_-_San_Francisco_Chronicle_letter_page_2_July_31_1969.jpg" class="image thumbnail" width="96" height="128" border="0" alt="1bcde_-_San_Francisco_Chronicle_letter_page_2_July_31_1969.jpg" title="Filename=1bcde_-_San_Francisco_Chronicle_letter_page_2_July_31_1969.jpg
+Filesize=249KiB
+Dimensions=751x1000
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">346 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=178#top_display_media"><img src="albums/userpics/10001/thumb_5abcdef_-_San_Francisco_Chronicle_letter_November_9_1969_Page_6.jpg" class="image thumbnail" width="86" height="128" border="0" alt="5abcdef_-_San_Francisco_Chronicle_letter_November_9_1969_Page_6.jpg" title="Filename=5abcdef_-_San_Francisco_Chronicle_letter_November_9_1969_Page_6.jpg
+Filesize=52KiB
+Dimensions=368x546
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">630 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=208#top_display_media"><img src="albums/userpics/10001/thumb_20_ab_-_Riverside_Bates_Confession_Black_and_White.jpg" class="image thumbnail" width="128" height="87" border="0" alt="20_ab_-_Riverside_Bates_Confession_Black_and_White.jpg" title="Filename=20_ab_-_Riverside_Bates_Confession_Black_and_White.jpg
+Filesize=181KiB
+Dimensions=720x493
+Date added=Aug 04, 2010" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">182 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?pid=1178#top_display_media"><img src="albums/userpics/10001/thumb_YouAreNext_Card_FBI_2.jpg" class="image thumbnail" width="128" height="32" border="0" alt="YouAreNext_Card_FBI_2.jpg" title="Filename=YouAreNext_Card_FBI_2.jpg
+Filesize=36KiB
+Dimensions=504x126
+Date added=May 28, 2011" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">57 views</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+
+<!-- Start standard table -->
+<table align="center" width="100%" cellspacing="1" cellpadding="0" class="maintable ">
+        <tr>
+                <td class="" colspan="4">
+                    <div class="cpg_starttable_outer">
+                        <div class="cpg_starttable_inner">
+                            <img src="images/icons/last_uploads.png" border="0" alt="" width="16" height="16" class="icon" />Last additions - Letters
+                        </div>
+                    </div>
+                </td>
+        </tr>
+
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1920#top_display_media"><img src="albums/userpics/10001/thumb_Zodiac_LA_TIMES_Letter_March_1971~0.jpg" class="image thumbnail" width="88" height="128" border="0" alt="Zodiac_LA_TIMES_Letter_March_1971~0.jpg" title="Filename=Zodiac_LA_TIMES_Letter_March_1971~0.jpg
+Filesize=101KiB
+Dimensions=688x1000
+Date added=May 31, 2014" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">191 views</span><span class="thumb_caption thumb_caption_ctime">May 31, 2014</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1919#top_display_media"><img src="albums/userpics/10001/thumb_Zodiac_LA_TIMES_Letter_March_1971.jpg" class="image thumbnail" width="88" height="128" border="0" alt="Zodiac_LA_TIMES_Letter_March_1971.jpg" title="Filename=Zodiac_LA_TIMES_Letter_March_1971.jpg
+Filesize=101KiB
+Dimensions=688x1000
+Date added=May 31, 2014" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">412 views</span><span class="thumb_caption thumb_caption_ctime">May 31, 2014</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1918#top_display_media"><img src="albums/userpics/10001/thumb_a408k.jpg" class="image thumbnail" width="128" height="111" border="0" alt="a408k.jpg" title="Filename=a408k.jpg
+Filesize=273KiB
+Dimensions=643x562
+Date added=Nov 23, 2013" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">455 views</span><span class="thumb_caption thumb_caption_ctime">Nov 23, 2013</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1835#top_display_media"><img src="albums/userpics/10001/thumb_8ab_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR_Inside.jpg" class="image thumbnail" width="128" height="102" border="0" alt="8ab_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR_Inside.jpg" title="Filename=8ab_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR_Inside.jpg
+Filesize=102KiB
+Dimensions=500x402
+Date added=Jun 27, 2012" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">235 views</span><span class="thumb_caption thumb_caption_ctime">Jun 27, 2012</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+        <tr>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1834#top_display_media"><img src="albums/userpics/10001/thumb_8a_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR.jpg" class="image thumbnail" width="128" height="103" border="0" alt="8a_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR.jpg" title="Filename=8a_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_COLOR.jpg
+Filesize=130KiB
+Dimensions=501x405
+Date added=Jun 27, 2012" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">256 views</span><span class="thumb_caption thumb_caption_ctime">Jun 27, 2012</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1833#top_display_media"><img src="albums/userpics/10001/thumb_8_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_BandW_w_envelope.jpg" class="image thumbnail" width="104" height="128" border="0" alt="8_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_BandW_w_envelope.jpg" title="Filename=8_-_San_Francisco_Chronicle_Dragon_Card_April_28_1970_BandW_w_envelope.jpg
+Filesize=140KiB
+Dimensions=816x999
+Date added=Jun 27, 2012" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">229 views</span><span class="thumb_caption thumb_caption_ctime">Jun 27, 2012</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1832#top_display_media"><img src="albums/userpics/10001/thumb_SFC_Aug_9_1969.jpg" class="image thumbnail" width="128" height="113" border="0" alt="SFC_Aug_9_1969.jpg" title="Filename=SFC_Aug_9_1969.jpg
+Filesize=173KiB
+Dimensions=612x544
+Date added=Jul 22, 2011" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">208 views</span><span class="thumb_caption thumb_caption_ctime">Jul 22, 2011</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        <td valign="top" class="thumbnails" width ="25%" align="center">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                                <td align="center">
+                                        <a href="displayimage.php?album=lastup&amp;cat=4&amp;pid=1831#top_display_media"><img src="albums/userpics/10001/thumb_Atlanta_Envelope_1981.jpg" class="image thumbnail" width="128" height="55" border="0" alt="Atlanta_Envelope_1981.jpg" title="Filename=Atlanta_Envelope_1981.jpg
+Filesize=75KiB
+Dimensions=1000x437
+Date added=Jul 22, 2011" /><br /></a>
+                                        <span class="thumb_title thumb_title_views">244 views</span><span class="thumb_caption thumb_caption_ctime">Jul 22, 2011</span>
+                                        
+                                </td>
+                        </tr>
+                </table>
+        </td>
+
+        </tr>
+</table>
+<!-- End standard table -->
+
+        <img src="images/spacer.gif" width="1" height="7" border="" alt="" /><br />
+
+            <br /> <!-- workaround for issue 64492 - do not remove the line break! -->
+        </div>
+    </div>
+    <div id="cpg_footer_block_outer">
+        <div class="cpg_footer_block_inner">
+            
+            
+<div class="footer" align="center" style="padding:10px;display:block;visibility:visible; font-family: Verdana,Arial,sans-serif;">Powered by <a href="http://coppermine-gallery.net/" title="Coppermine Photo Gallery" rel="external">Coppermine Photo Gallery</a></div>
+        </div>
+    </div>
+<!--Coppermine Photo Gallery 1.5.40 (stable)-->
+</body>
+</html>

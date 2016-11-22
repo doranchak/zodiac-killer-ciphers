@@ -1,0 +1,31 @@
+parent.0 = ../../gp/push/push.params
+
+# Regression
+eval.problem.size = 20
+push.erc.float.min = -1.0
+push.erc.float.max = 1.0
+
+# The problem
+eval.problem = ec.app.push.Regression
+eval.problem.max-steps = 1000
+
+
+# The "instruction set"
+
+push.in.size = 8
+push.in.0 = float.*
+push.in.1 = float.+
+push.in.2 = float.%
+push.in.3 = float.-
+push.in.4 = float.dup
+push.in.5 = float.swap
+push.in.6 = float.pop
+push.in.7 = float.erc
+
+
+# For grins, optionally we could do:
+# push.in.4 = float.print
+# push.in.4.func = ec.app.push.Print
+# push.in.5 = float.atan
+# push.in.5.func = ec.app.push.Atan
+

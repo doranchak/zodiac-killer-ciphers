@@ -1,0 +1,48 @@
+.chart td.value {
+	background-image: url(gridline58.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+	padding:0;
+	border-bottom: none;
+	background-color:transparent;
+}
+.chart td {
+	padding: 4px 6px;
+	border-bottom:1px solid #e5e5e5;
+	border-left:1px solid #e5e5e5;
+	background-color:#fff;
+	font-family:courier;
+}
+.chart td.value img {
+	vertical-align: middle;
+	margin: 5px 5px 5px 0;
+	font-family:courier;
+}
+.chart th {
+	text-align: left;
+	vertical-align:top;
+}
+.chart td.last {
+	border-bottom:1px solid #e5e5e5;
+}
+.chart td.first {
+	border-top:1px solid #e5e5e5;
+}
+.auraltext
+{
+   position: absolute;
+   font-size: 0;
+   left: -1000px;
+}
+.chart table {
+	background-image:url(bg_fade.png);
+	background-repeat:repeat-x;
+	background-position:left top;
+	width: 3em;
+}
+.chart caption {
+	font-size:90%;
+	font-style:italic;
+}

@@ -1,0 +1,306 @@
+/*----------------------------------
+		Theme_# 426
+		Cat 	Showcase Yourself
+		Name	Polished
+----------------------------------*/
+html {	
+}
+body {
+	margin:0;
+	color:#5e5e5e;
+	background-color:#4A4A4A;
+	padding:0;
+	font-family:Arial, Helvetica, FreeSans, sans-serif;
+	font-size: 11px;
+	background-image:url(images/body_repeater.jpg);
+}
+/* Correctly displays second inline-break tag for IEs */
+br {
+	letter-spacing:normal;
+}
+.sf_outer_wrapper { }
+.sf_extra1 { }
+.sf_wrapper {
+	width:980px !important;
+	background-image:url(images/wrapper_repeater.jpg);
+	background-repeat:repeat-y;
+}
+/*--------------------------------
+		Top Navigation
+---------------------------------*/
+.sf_navigation_top {
+	display: none;
+}
+.sf_navigation_top ul { }
+.sf_navigation_top ul:after { }
+.sf_navigation_top ul li { }
+.sf_navigation_top ul li.sf_last_nav_item { }
+.sf_navigation_top ul li.sf_first_nav_item { }
+.sf_navigation_top ul li a { }
+.sf_navigation_top ul li a:visited { }
+.sf_navigation_top ul li a:hover { }
+/*--------------------------------
+		End Top Navigation
+---------------------------------*/
+
+.sf_extra10 { }
+/*--------------------------------
+		Header
+---------------------------------*/
+.sf_header_wrapper {
+	background-repeat:repeat-y;
+}
+.sf_main_header {
+	background-repeat: no-repeat;
+	background-position:left bottom;
+	text-align: right;
+	width:720px;
+	font-size: 36px;
+	font-weight:bold;	
+	letter-spacing:-.05em;
+	text-transform:uppercase;
+	padding:15px 15px 0 245px;
+	min-height:49px;
+	height:auto !important;
+	height:49px;
+}
+.sf_extra3 { }
+.sf_sub_header {
+	display: none;
+}
+.sf_main_header p, .sf_sub_header p {
+	margin: 0;
+	padding: 0;
+}
+/*--------------------------
+		End Header
+--------------------------*/
+.sf_extra4 { }
+/*--------------------------------
+		Bottom Navigation
+---------------------------------*/
+.sf_navigation {
+	font-weight:bold;
+	font-size:20px;
+	letter-spacing:-.05em;
+	text-transform:lowercase;
+	float: left;
+	width:222px;
+	margin:10px 0px 10px 5px;
+	.margin:10px 0px 10px 2px;
+	height: auto !important;
+	background-image:url(images/widget_repeater.jpg);
+	background-repeat:repeat-y;
+}
+.sf_navigation ul {
+	height:auto !important;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-image:url(images/widget_btm.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom;
+}
+.sf_navigation ul li {
+	height:1%;
+}
+.sf_first_nav_item {
+	background-image:url(images/widget_top.jpg);
+	background-repeat:no-repeat;
+	padding-top:9px;
+}
+.sf_last_nav_item {
+	padding-bottom:10px;
+}
+.sf_navigation ul li a {
+	margin:0px 8px;
+	padding:5px 8px;
+	text-decoration: none;
+	height:1%;
+	color:#ffffff;
+}
+.sf_navigation ul li a:visited {
+	text-decoration: none;
+	display: block;
+	color:#ffffff;
+}
+.sf_navigation ul li a:hover {
+	text-decoration: none;
+	background-color:#212121;
+	display: block;
+	color:#ffffff;
+}
+/*------------------------------------
+	Flyout - Left Aligned Menu
+------------------------------------*/
+#Nav1 iframe {
+	position: absolute;
+	/* account for the border */
+	left: -0.25em;
+	top: -0.25em;
+	z-index: 0;
+ filter: progid:DXImageTransform.Microsoft.Alpha(style=0, opacity=0);
+	margin-left: 3px;
+}
+#Nav1 li ul {
+	position:absolute;
+	left: -999em;
+	width:130px;
+	float:left;
+	border:solid 7px;
+	margin:-34px 0 0 154px;
+	z-index:1000;
+}
+#Nav1 li a {
+	display : block;
+}
+#Nav1 li ul li {
+	margin:0;
+	padding:0;
+	float:left;
+}
+#Nav1 li ul li a {
+	font-size:.68em;
+	display : block;
+	padding:2px 5px;
+	margin:0;
+	width:120px;
+}
+#Nav1 li ul li a:hover { }
+#Nav1 li:hover ul, #Nav1 li.sfhover ul {
+	left: auto;
+}
+#Nav1 li:hover, #Nav1 li.hover {
+	position: static;
+}
+/*--------------------------------
+		End Bottom Navigation
+---------------------------------*/
+
+.sf_extra5 { }
+/*--------------------------------
+		 	Page Title
+---------------------------------*/
+.sf_pagetitle {
+	font-size:22px;
+	text-transform:lowercase;
+	color:#717070;
+	float:right;
+	margin:1px 0 0 0;
+	padding:0 15px;
+	text-align:right;
+	text-transform:lowercase;
+	width:720px;
+	overflow:visible;
+}
+
+.sf_pagetitle h1 {
+	font-size:22px;
+	font-weight:normal;
+	margin:0px;
+}
+
+/*--------------------------------
+		 End Page Title
+---------------------------------*/
+
+.sf_extra6 { }
+/*--------------------------------
+		 Sub Navigation
+---------------------------------*/
+.sf_subnavigation {
+	display: none;
+}
+.sf_subnavigation ul { }
+.sf_subnavigation ul:after { }
+.sf_subnavigation ul li { }
+.sf_subnavigation ul li.sf_last_nav_item { }
+.sf_subnavigation ul li.sf_first_nav_item { }
+.sf_subnavigation ul li a { }
+.sf_subnavigation ul li a:visited { }
+.sf_subnavigation ul li a:hover { }
+/*--------------------------------
+		 End Sub Navigation
+---------------------------------*/
+.sf_extra11 { }
+/*--------------------------
+		Content
+--------------------------*/
+.sf_content {
+	float:right;
+	clear:right;
+	display:block;
+	width:725px;
+	padding:15px 10px 50px;
+}
+.sf_content img { }
+/*--------------------------
+		End Content
+--------------------------*/
+
+.sf_extra12 { }
+/*--------------------------------
+		 Sub Navigation2
+---------------------------------*/
+.sf_subnavigation2 {
+	display: none;
+}
+.sf_subnavigation2 ul { }
+.sf_subnavigation2 ul:after { }
+.sf_subnavigation2 ul li { }
+.sf_subnavigation2 ul li.sf_last_nav_item { }
+.sf_subnavigation2 ul li.sf_first_nav_item { }
+.sf_subnavigation2 ul li a { }
+.sf_subnavigation2 ul li a:visited { }
+.sf_subnavigation2 ul li a:hover { }
+/*--------------------------------
+		 End Sub Navigation2
+---------------------------------*/
+
+.sf_extra7 { }
+.sf_extra7 span { }
+/*--------------------------
+		 Footer
+--------------------------*/
+.sf_footer {
+	background-image:url(images/footer_repeat.jpg);
+	background-color:#4C4C4C;
+	background-repeat:repeat-x;
+	color:#999999;
+	text-align:center;
+	min-height:60px;
+	height:auto !important;
+	height:60px;
+	clear:both;
+	padding:10px 10px 10px 234px;
+	font-size:11px;
+	border-right:1px solid #454141;
+	border-bottom:1px solid #454141;
+}
+/*--------------------------
+		End Footer
+--------------------------*/
+
+.sf_extra8 { }
+.sf_extra9 { }
+/*--------------------------
+		Extra Stuff
+--------------------------*/
+
+a:link { }
+a:visited { }
+a:hover { }
+.sf_banner {
+	text-align: center;
+	letter-spacing:normal;
+	bottom:0;
+	font-size:9px;
+	padding:50px 10px 10px 234px;;
+	width:725px;
+}
+#bannerLink {
+	padding: 5px;
+}
+#bannerLink a, a:visited, a:hover {
+	color: #999999;
+}

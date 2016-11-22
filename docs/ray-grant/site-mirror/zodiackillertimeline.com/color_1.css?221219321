@@ -1,0 +1,41 @@
+/**
+ * @file
+ * @project 743
+ * @package sftheme
+ * @site app1
+ */
+
+a:link { color:#22749a; }
+a:visited { color:#22749a; }
+a:hover { color:#000000; }
+.sf_main_header {
+	background:rgb(22, 101, 136);
+	background:rgba(22, 101, 136, 0.9);
+	border-top:solid 1px #3287ae;
+	border-right:solid 1px #3287ae;
+	border-bottom:solid 1px #3287ae;
+}
+.widgetset .widget_header a {
+	background: #22749a; /* Old browsers */
+	background: -moz-linear-gradient(top, #22749a 0%, #125b7d 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #22749a), color-stop(99%, #125b7d)); /* Chrome,Safari4+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22749a', endColorstr='#125b7d', GradientType=0 ); /* IE6-9 */
+	border-color:#125b7d;
+}
+.widgetset .widget_header a:hover { color:#22749a; }
+/*--------------------------------
+	DBNow
+--------------------------------*/
+.Data_Central_color7 {
+	background-color:#125b7d;
+	color:#fff;
+}
+.Data_Central_color1 {
+	background-color:#22749a;
+	color:#fff;
+}
+.Data_Central_color2 { background-color:#ffffff; }
+.Data_Central_color3 { background-color:#f2f2f2; }
+.Data_Central_color6 { background-color:#e3e2e2; }
+.Data_Central_color4 { background-color:#d7d7d7; }
+.Data_Central_color5 { border-color:#e3e2e2; }

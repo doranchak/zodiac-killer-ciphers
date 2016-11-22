@@ -1,0 +1,228 @@
+Vallejo Times Herald, Mon Aug 4, 1969
+"Meanwhile, an amateur cryptogram fan in San Francisco made progress in decoding the three ciphers sent to newspapers while working all Sunday night on them."
+"The cryptogram fan in San Francisco who is succeeding in decoding the ciphers is a 25-year-old San Francisco State graduate student in marine biology who works on two 
+jobs as a bank messenger and a night watchman during the summer.
+
+LINK LETTERS
+
+He asks to stay anonymous but he managed to link the letters received by Gibson Publications and the Examiner.  He first correlated portions of line six in the former cipher with portions
+of lines one and two in the letter.  He then linked with lines three and four of the former.  The pattern beginning to take shape apparently will end up in
+a three-tiered diagonal structure composed of sections of each of the three ciphers, he said.
+
+	Work with the patterns of the ciphers, which he calls complex and the work of a 'very intelligent' person,
+has yielded eight doublets of symbols which are equals, he said.  For example, the circle with the dot in the
+center and the letter W are equal, as are D and zero, theta and the backward Q, the letter E and the filled-in
+triangle, the filled circle and backwards P, and I and the empty square and the Z and the plus sign.
+	In addition to Greek letters theta, phi, sigma and delta, other symbols are used such as that for 
+perpendicular in geometry, similar to an inverted T, and the circle with a dot in the center, used to
+represent electrical current or conduit wire, he said.
+
+MUCH EFFORT
+
+	He did not feel the ciphers are a hoax because they are too complicated and required too much effort to devise.
+A computer may have been used, he said.
+	He thinks the person who made them is 'intelligent, scheming and imaginative, but not really unusual.  'I know kids
+in school who could do better' on cryptograms.  'He must be extremely upset and probably is trying to keep himself
+busy, spending all his time constructing the codes because of what he's done.'"
+
+---
+
+Chronicle, 8/9/1969, "A Murder Code Broken"
+
+I like killing people because it is so much fun it is more fun than killing wild game in the
+forrest because man is the most hongertue animal of all to kill something give eryetheyo
+a thrilling experience it is even better than getting your rocks off with a girl the best part of it
+I athae when I die I will be reborn in paradice and all the I have killed will become my slaves I will
+not give you my name because you will trs to sloi down or atop my collecting of slaves for my afterlife
+ebeo riet emeth hpiti
+
+harden says 12 different symbols for "e".  is this true?  VTH and STH both say he used 18 different symbols for "e".
+I only count seven:
+	8 E+
+	8 E6
+	9 EE
+	6 EN
+	9 EW
+	8 EZ
+	6 Ep
+
+---
+   cipher: 9%P/Z/UB%kOR=pX=BWV+eGYF69HP@K!qYeMJY^UIk7qTtNQYD5)S(/9#BPORAU%fRlqEk^LMZJdr\pFHVWe8Y@+qGD9KI)6qX85zS(RNtIYElO8qGBTQS#BLd/P#B@XqEHMU^RRkcZKqp I)Wq!85LMr9#BPDR+j=6\ N(eEUHkFZcpOVWI5+tL)l^R6HI9DR_TYr\de/@XJQAP5M8RUt%L)NVEKH=GrI!Jk598LMlNA)Z(PzUpkA9#BVW\+VTtOP^=SrlfUe67DzG%%IMNk)ScE/9%%ZfAP#BVpeXqWq_F#8c+@9A9B%OT5RUc+_dYq_^SqWVZeGYKE_TYA9%#Lt_H!FBX9zXADd\7L!=q_ed##6e5PORXQF%GcZ@JTtq_8JI+rBPQW6VEXr9WI6qEHM)=UIk
+worksheet: ILIKEKILLINGPEOPLEBECAUSEITISSOMUCHFUNITISMOREFUNTHANKILLINGWILDGAMEINTHEFORRESTBECAUSEMANISTHEMOATDANGEROUEANAMALOFALLTOKILLSOMETHINGGIVESME THEMOATTHRILLINGEXPER ENCEITISEVENBETTERTHANGETTINGYOURROCKSOFFWITHAGIRLTHEBESTPARTOFITIATHAEWHENIDIEIWILLBEREBORNINPARADICESNDALLTHEIHAVEKILLEDWILLBECOMEMYSLAVESIWILLNOTGIVEYOUMYNAMEBECAUSEYOUWILLTRYTOSLOIDOWNORSTOPMYCOLLECTINGOFSLAVESFORMYAFTERLIFEEBEORIETEMETHHPITI
+chronicle: ILIKEKILLINGPEOPLEBECAUSEITISSOMUCHFUNITISMOREFUNTHANKILLINGWILDGAMEINTHEFORRESTBECAUSEMANISTHEMOSTHONGERTUEANIMALOFALLTOKILLSOMETHINGGIVEERYETHEYOA THRILLINGEXPERIENCEITISEVENBETTERTHANGETTINGYOURROCKSOFFWITHAGIRLTHEBESTPARTOFITIATHAEWHENIDIEIWILLBEREBORNINPARADICEANDALLTHEIHAVEKILLEDWILLBECOMEMYSLAVESIWILLNOTGIVEYOUMYNAMEBECAUSEYOUWILLTRSTOSLOIDOWNORATOPMYCOLLECTINGOFSLAVESFORMYAFTERLIFEEBEORIETEMETHHPITI
+                                                                                                              **                                     ****   *  *              *                                                                                                                                                                                 *            
+      vth: ILIKEKILLINGPEOPLEBECAUSEITISSOMUCHFUNITISMOREFUNTHANKILLINGWILDGAMEINTHEFORRESTBECAUSEMANISTHEMOSTHONGERTUEANIMALOFALLTOKILLSOMETHING    ERYETHEYOA THRILLINGEXPER ENCEITISEVENBETTERTHANGETTINGYOUR THRILLSWITHAGIRLTHEBESTPARTOFITIATHAEWHENIDIEIWILLBEREBORNINPARADICEANDALLTHEIHAVEKILLEDWILLBECOMEMYSLAVESIWILLNOTGIVEYOUMYNAMEBECAUSEYOUWILLTRSTOSLOIDOWNORATOPMYCOLLECTINGOFSLAVESFORMYAFTERLIFEEBEORIETEMETHHPITI
+                                                                                                                                                 ****                                                           ********
+      sth: ILIKEKILLINGPEOPLEBECAUSEIT             INMOREFUNTHANKILLINGWILDGAMEINTHEFORRESTBECAUSEMANISTHEMOATDANGER UEANAMALOFALLTOKILLSOMETHINGGIVESME THEMOSTTHRILLINGEXPEERENCE                                              THEBESTPARTOFITIATHAEWHENIDIEIWILLBEREBORNINPARADICEANDALLTHEIHAVEKILLEDWILLBECOMEMYSLAVESIWILLNOTGIVEYOUMYNAMEBECAUSEYOUWILLTRSTOSLOIDOWNORSTOPMYCOLLECTINGOFSLAVESFORMYAFTERLIFE
+                                      *************                                                                 *                                                        *
+      tnc: ILIKEKILLINGPEOPLEBECAUSEIT             INMOREFUNTHANKILLINGWILDGAMEINTHEFORRESTBECAUSEMANISTHEMOATDANGERU  ANAMALOFALLTOKILLSOMETHINGGIVESME THEMOSTTHRILLINGEXPERIENCE                                              THEBESTPARTOFITISTHATWHENIDIEIWILLBEREBORNINPARADICEANDALLTHEIHAVEKILLEDWILLBECOMEMYSLAVESIWILLNOTGIVEYOUMYNAMEBECAUSEYOUWILLTRSTOSLOIDOWNORSTOPMYCOLLECTINGOFSLAVESFORMYAFTERLIFE
+                                                                                                                    **                                                        *
+solutions in FBI reports?
+
+
+VTH 8/9/1969, "Cryptogram Deciphered By Teacher"
+I like killing people because it is so much fun it is more fun than killing wild game in the
+forrest because man is the most hongertue (hungry?) animal of all to kill something eryetheyo
+a thrilling experence it is even better than getting your (thrills) with a girl the best part of it
+I athae (is that) when I die I will be reborn in paradice and all the I have killed will become my slaves I will
+not give you my name because you will trs (try) to sloi (slow) down or atop (stop) my collecting of slaves for my afterlife
+ebeo riet emeth hpiti
+
+---
+Sunday Times-Herald 8/10/1969, "Code Author Not Of High Intellect"
+
+"Third, the Salinas teacher thinks the killer may be in the middle-age bracket, basing this guess 
+on the fact that one code term (not to be revealed) is not in contemporary usage by today's younger set."
+
+(News Chronicle 8/13/1969 "Switchboard girl tells of killer's call" says: "He used a vulgarity indicating he is middle-aged")
+
+Must be "getting your rocks off".
+Some web research on early references:
+	- The New Partridge Dictionary of Slang and Unconventional English has a citation from 1969, but Bob Dylan wrote a song entitled Get Your Rocks Off earlier that was covered by Manfred Mann in the '70s.
+
+	Erik has the explanation for GET YOUR ROCK S OFF pretty much right. And I’ll provide confirmation from a few sources (and the OED's from-on-high pontifications) and also some further meanings that Cassell’s includes.
+
+	Dylan, however, was not the first to use the expression, although he helped popularize it. 
+
+	BREWER’S DICTIONARY OF MODERN PHRASE & FABLE
+
+	GET ONE’S ROCKS OFF: To experience an orgasm, ‘rocks’ here being the testicles, as a pun on medieval ‘stones’ in this sense. The vulgar expression, which originated in U.S. slang, has gained a wider and more generally acceptable meaning ‘to enjoy oneself,’ ‘to obtain satisfaction [[Jagger can’t get no]].’ Both senses date from the 1940s. Alternative formulations include ‘get one’s nuts off’ and the euphemism ‘get on’s cookies off.’ The Rolling Stones had a song ‘Rocks Off.’
+	______________________________________
+
+	CASSELL’S DICTIONARY OF SLANG
+
+	GET ONE’S ROCKS OFF verb [1940s and still in use]: 
+
+	1) To have sexual intercourse, to experience orgasm. (cf. ‘get one’s ashes hauled,’ verb)
+	2) To enjoy one’s self.
+	3) To obtain any form of satisfaction; thus get someone’s rocks off, to satisfy, to please (cf. ‘give someone rocks,’ verb).
+	4) To masturbate.
+	5) ( drugs) To binge pleasurably on drugs.
+
+	[literal/figurative uses of ‘rocks,’ noun The testicles]
+	______________________________________
+
+	OXFORD ENGLISH DICTIONARY
+
+	TO GET ONE’S ROCKS OFF slang (originally U.S.): To achieve sexual satisfaction; (in weakened sense) to obtain enjoyment.
+	Quote:
+	<1948 “Get your rocks off, an expression used to denote extreme enjoyment.”—American Speech, Vol. 23, page 249/1> 
+
+	<1953 “In a glass house I wouldn't get my rocks off, if I was you.”—City of Anger by W. Manchester, page 368> 
+
+	<1967 “If you are going to tell me some broad is going to lay out five-hundred frog-skins to get her rocks off, say it.”—Pimp (1998) by ‘Iceberg Slim,’ iii. page 47>
+
+	<1971 “Get yer rocks off Seymour. OK. But there are limits. Surely.”—Frendz, 5 August, page 5> 
+
+	<1978 “I don't get my rocks off by humiliating myself, you know.”—The World According to Garp by J. Irving, xi. Page 205>
+
+	<1984 “That's the way he gets his rocks off. It isn't the tights, it's the thought of you getting lifted.”—Blow Your House Down by P. Barker, vi. page 31> 
+
+	<1997 “Someone who can get her rocks off doing the household chores is not to be trusted to give good advice, whether it be ‘wear this costume madam,’ or ‘step out of this window’”—The Independent (London), 12 January>
+
+	<2001 “I'm not some Klan fuck who gets his rocks off bombing churches.”—Cold Six Thousand by J. Ellroy, xciv. Page 508>
+
+	<2003 “But Denise Knowles, a Relate counsellor, is more skeptical about people who blame their serial cheating on a sex addiction. 'Anything has the potential to become an addiction - cleaning the house, drugs, drink - if you've got an addictive personality. But then there's the person who's always happy to get his rocks off as regularly as he can, who hasn't got a problem. I think there's a danger of labelling these kinds of things as addictions.’”—Daily Post (Liverpool, England), 7 October>
+
+	<2004 “The gender-bending Portugeezer [[Nadia Almada]] who confounded her critics when she snatched the reality TV show title and pounds 63,500 prize raunchily revealed what will really get her rocks off. She said: ‘I want straight guys with big willies.’”—People, 8 August>
+
+	<2007 “It's still a pretty effective date movie, preferably with someone you've already seen naked. . . . , ‘Exterminating Angels’ concerns the efforts of a handsome middle-aged filmmaker named Francois . . . to capture female bliss on celluloid while maintaining his aesthetic distance. This is a foolhardy notion at worst, at best a way to get one's rocks off . . .”—Exterminating Angels,written and directed by Jean-Claude Brisseau, Boston Globe, 16 March>
+
+	<2009 “. . . yesterday his wife was said to be ‘mortified’ and ‘smiling through the pain’ following the revelation. Clearly, Jacqui Smith must now go round with a fixed grin, aware that half the country is sniggering at the idea of her husband watching Lesbian Hell Sluts (or something similar) behind her back. It's even been said that the Home Secretary's job is on the line, ostensibly because the cost of the movies appeared on her expenses - which she has promised to pay back - but really for the much more serious offence of being an overweight, middle-aged woman whose husband needs to get his rocks off elsewhere.”—The Independent (London), 31 March>
+
+	<2010 “My Rocks: I had to get my rocks off so I called my man— / he is diverse and every time I ask he does not say I’ll try, but says I can. / I had to get my rocks off, so I took a pill / I called my man and said I will. / I had to get my rocks off, so I took a shot / I called my man and he said I got a lot. / I had to get my rocks off, . . .”—My Life in Poetry by Carmen R. Glover, page 53> [[A poet definitely headed for international recognition]]
+	(quotes from the Oxford English Dictionary and archived sources)
+	________________
+
+	Ken – October, 18, 2010
+                                   
+
+	Google ngrams:  http://books.google.com/ngrams/graph?content=get+your+rocks+off&year_start=1950&year_end=1970&corpus=15&smoothing=3&share=
+
+"Harden told the Times-Herald by telephone Saturday he had refined his earlier work, with the help of his wife, and had
+come up with something like this (errors are part of the cipher):"
+
+I LIKE KILLING PEOPLE BECAUSE IT IN MORE FUN THAN KILLING WILD GAME IN THE FORREST BECAUSE MAN IS THE MOAT
+DANGERUE ANAMAL OF ALL TO KILL SOMETHING GIVES ME THE MOST THRILLING EXPEERENCE THE BEST PART OF IT IA
+THAE WHEN I DIE I WILL BE REBORN IN PARADICE AND ALL THE I HAVE KILLED WILL BECOME MY SLAVES I WILL NOT
+GIVE YOU MY NAME BECAUSE YOU WILL TRS TO SLOI DOWN OR STOP MY COLLECTING OF SLAVES FOR MY AFTERLIFE
+
+Harden:  "I don't think the author is a man of very high intelligence because there is no continuity, no
+fidelity, in his code.  As a matter of fact, I think he may have borrowed it from a not-too-high level
+of detective story."
+
+---
+The News Chronicle 8/12/1969, "Is 'Robert Emmet' in Cipher?"
+
+original: ebeo riet emeth hpiti    beeeeehhiiim o pr ttt               
+ anagram: robert emmet the hippie  beeeeehhii mmopprrttt   (there's an extra m, extra p, extra r)
+                     
+---
+
+The News Chronicle 8/27/1979, "Fresh clue offered to killer name"
+
+"Vallejo police revealed today another talented woman, this time from San Francisco, has cracked the 
+conclusion of the avowed slayer's cryptograms.
+
+"Left over after the Salinas couple solved the three cryptograms mailed to newspapers were the following
+letters:
+
+"EBFO RIET EMETH IPYTI"  (not quite right) 
+
+"The San Francisco woman, who has a Latin name but asked to remain anonymous, ingeniously determined
+the puzzle-minded killer had made mistakes in drafting his coded messages.  She pointed out he had
+erred in changing his regular alphabetical words into the cipher symbols.  This combined with the
+planned transposition enabled her to come up with the following letters:"
+
+"EBO RIET EMETH IPYTI"
+
+"This is an anagram which adds another hideous twist to the story of the three "lovers lanes" slayings:"
+
+"Before I meet them I pity (them)"
+
+Transcription of solution from article:
+
+I like killing people because it in more fun than killing wild game in the forrest because man is 
+the moat dangeru anamal of all.  To kill something gives me the most thrilling experience.  The
+best part of it is tha(t) when I die I will be reborn in paradice and all the I have killed will become
+my slaves.  I will not give you my name because you will trs to sloi down or stop my collecting of
+slaves for my afterlife.
+
+---
+
+8/1969, "Salinas teacher doubtful of names picked from note"
+
+Best quote from Harden: "I'll leave that to the psychiatrists," he said.  "After all, I'm not even a cryptographer."
+
+
+
+
+
+
+                                                
+<pre>
+Show plain-to-cipher
+The show plain-to-cipher-sequences
+
+
+Concerned citizen key matches, except for:
+
+* Cipher symbol E maps to both E and S.  Compare to Harden worksheet.
+* Q: F, K, L, M.  wtf?  Confusing Q and backwards Q, and some others?  Does this rule in/out Harden as author?
+* Plaintext S mapping is slightly different
+* Plaintext T mapping is missing two symbols
+* Plaintext W mapping is missing a symbol
+* Dotted triangle should be mapped to A and S due to Zodiac's error
+
+Concerned citizen postmarked 8/10/69 to Sgt (Lynch?) @ Vallejo Police Department
+
+
+Are homophone sequences improved when corrections are applied?
+
+
+
+Put annotations in numerical order
+
+
+</pre>
+

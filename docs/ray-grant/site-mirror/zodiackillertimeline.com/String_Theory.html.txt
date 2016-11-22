@@ -1,0 +1,281 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+******** MMaaiinn NNaavviiggaattiioonn ********
+    * _H_o_m_e_ _P_a_g_e
+    * _I_n_c_e_p_t_i_o_n
+    * _E_n_o_u_g_h_ _A_b_o_u_t_ _M_e
+    * _T_e_r_m_i_n_o_l_o_g_y
+    * _R_i_v_e_r_s_i_d_e
+    * _R_i_v_e_r_s_i_d_e_ _R_e_v_i_s_i_t_e_d
+    * _B_a_t_e_s_ _A_u_t_o_p_s_y
+    * _A_u_t_o_p_s_y_ _C_o_n_f_e_s_s_i_o_n
+    * _B_u_t_t_e_r_f_i_e_l_d_ _P_D_F
+    * _H_o_r_a_n_ _T_i_m_e_l_i_n_e
+    * _R_i_v_e_r_s_i_d_e_ _T_i_m_e_l_i_n_e_ _A
+    * _H_o_r_a_n_ _R_e_v_i_s_i_t_e_d
+    * _M_o_s_t_l_y_ _M_o_r_f
+    * _V_o_i_c_e_ _B_o_x
+    * _D_a_v_e_ _O_r_a_n_c_h_a_k
+    * _S_t_r_i_n_g_ _T_h_e_o_r_y
+Zodiac Killer Timeline
+************ SSttrriinngg TThheeoorryy ************
+Dave Oranchak replied to my article. Ordinarily I copy-and-paste the post Im
+replying to, interspersed with my own comments. In this case, Im going to
+copy-and-paste Daves entire message first, since I think his argument deserves
+to stand on its own, and then reply to it.
+
+Convert a document the size of The Confession Letter to Morse code, and then
+check it for the strings I found in The Confession Letter, using the SEARCH
+function of your computer. Its a fairly simple exercise for someone of your
+expertise. The strings are cited at TZMS 1993-1, pages 118-125. Let me tell you
+what youre going to discover for yourself. Youll type in a given string, hit
+the SEARCH button . . . and nothing. Over and over and over again.
+
+TThhaatt''ss nnoott wwhhaatt II ffoouunndd aatt aallll.. OOuutt ooff ccuurriioossiittyy,, II rraann ssoommee eexxppeerriimmeennttss,, aanndd
+ffoouunndd tthhee ffoolllloowwiinngg pprroobblleemmss wwiitthh yyoouurr aapppprrooaacchh::
+
+11)) CCoonnvveerrttiinngg tteexxtt ttoo mmoorrssee ccooddee,, aanndd ssttrreeaammiinngg tthhee zzeerrooeess aanndd oonneess ttooggeetthheerr,,
+aalllloowwss ffoorr tthhee ddiissccoovveerryy ooff aa vvaasstt nnuummbbeerr ooff wwoorrddss wwiitthhiinn aa ssiinnggllee ddooccuummeenntt..
+22)) WWiitthh ssuucchh aa llaarrggee ppooooll ooff wwoorrddss ttoo sseelleecctt ffrroomm,, iitt iiss eeaassyy ttoo ddiissccoovveerr wwoorrddss
+tthhaatt ffiitt ssoommee pprree--ddeetteerrmmiinneedd nnaarrrraattiivvee
+33)) TThheerreeffoorree,, wwee hhaavvee ttoo ttaakkee oonn ffaaiitthh tthhaatt yyoouu''vvee sseelleecctteedd oonnllyy tthhee wwoorrddss tthhaatt
+aarree ttrruullyy ppllaanntteedd tthheerree bbyy tthhee aauutthhoorr ooff tthhee lleetttteerrss..
+
+FFiirrsstt,, lleett''ss llooookk aatt tthhee ccoonnffeessssiioonn lleetttteerr.. II uusseedd tthhiiss ttrraannssccrriippttiioonn ooff tthhee
+lleetttteerr:: _hh_tt_tt_pp_::_//_//_cc_oo_dd_ee_.._gg_oo_oo_gg_ll_ee_.._cc_oo_mm_//_pp_//_zz_oo_dd_ii_aa_cc_--_kk_ii_ll_ll_ee_rr_--_cc_ii_pp_hh_ee_rr_ss_//_ss_oo_uu_rr_cc_ee_//_bb_rr_oo_ww_ss_ee_//_tt_rr_uu_nn_kk_//
+_ll_ee_tt_tt_ee_rr_ss_//_11_99_66_66_--_11_11_--_22_99_--_tt_hh_ee_--_cc_oo_nn_ff_ee_ss_ss_ii_oo_nn_.._tt_xx_tt
+
+HHeerree iiss wwhhaatt iitt llooookkss lliikkee wwhheenn II ccoonnvveerrtteedd iitt ttoo ddiiggiittiizzeedd MMoorrssee:: _hh_tt_tt_pp_::_//_//
+_zz_oo_dd_ii_aa_cc_kk_ii_ll_ll_ee_rr_cc_ii_pp_hh_ee_rr_ss_.._cc_oo_mm_//_rr_aa_yy_--_gg_rr_aa_nn_tt_//_cc_oo_nn_ff_ee_ss_ss_ii_oo_nn_--_ll_ee_tt_tt_ee_rr_--_tt_oo_--_mm_oo_rr_ss_ee_.._tt_xx_tt
+
+II rraann aa wwoorrdd sseeaarrcchh aallggoorriitthhmm oonn tthhee ddiiggiittiizzeedd MMoorrssee.. IItt ssccaannss aa llaarrggee
+ddiiccttiioonnaarryy ffiillee aanndd llooookkss ffoorr eeaacchh wwoorrdd.. AAnnyy wwoorrdd tthhaatt iiss aallrreeaaddyy iinn tthhee
+oorriiggiinnaall ppllaaiinn tteexxtt iiss iiggnnoorreedd..
+
+TThhee aallggoorriitthhmm ffoouunndd aarroouunndd 7766,,000000 wwoorrddss:: _hh_tt_tt_pp_::_//_//_zz_oo_dd_ii_aa_cc_kk_ii_ll_ll_ee_rr_cc_ii_pp_hh_ee_rr_ss_.._cc_oo_mm_//_rr_aa_yy_--
+_gg_rr_aa_nn_tt_//_cc_oo_nn_ff_ee_ss_ss_ii_oo_nn_--_ll_ee_tt_tt_ee_rr_--_ff_oo_uu_nn_dd_ss_--_ww_oo_rr_dd_ss_.._tt_xx_tt TThhee ffoorrmmaatt ooff tthhiiss ffiillee iiss:: WWoorrdd
+lleennggtthh,, wwoorrdd,, wwoorrdd--ttoo--mmoorrssee,, aanndd llooccaattiioonn iinn ffiillee..
+
+TToo ddeemmoonnssttrraattee tthhee eeaassee aatt wwhhiicchh wwoorrddss aarree ffoouunndd uussiinngg tthhee mmoorrssee ccooddee sscchheemmee,,
+lleett''ss llooookk aatt tthhee aarrttiiccllee yyoouu ppoosstteedd iinn rreessppoonnssee ttoo mmyy eemmaaiill.. TThhee ccoonnffeessssiioonn
+lleetttteerr iiss 11662255 cchhaarraacctteerrss lloonngg iiff yyoouu rreemmoovvee aallll ooff tthhee nnoonn--aallpphhaabbeett ssttuuffff.. SSoo,,
+II ccrreeaatteedd aa vveerrssiioonn ooff yyoouurr aarrttiiccllee tthhaatt iiss aallssoo 11662255 cchhaarraacctteerrss lloonngg:: _hh_tt_tt_pp_::_//_//
+_zz_oo_dd_ii_aa_cc_kk_ii_ll_ll_ee_rr_cc_ii_pp_hh_ee_rr_ss_.._cc_oo_mm_//_rr_aa_yy_--_gg_rr_aa_nn_tt_//_rr_aa_yy_--_aa_rr_tt_ii_cc_ll_ee_.._tt_xx_tt
+
+HHeerree iitt iiss ccoonnvveerrtteedd ttoo MMoorrssee:: _hh_tt_tt_pp_::_//_//_zz_oo_dd_ii_aa_cc_kk_ii_ll_ll_ee_rr_cc_ii_pp_hh_ee_rr_ss_.._cc_oo_mm_//_rr_aa_yy_--_gg_rr_aa_nn_tt_//_rr_aa_yy_--
+_aa_rr_tt_ii_cc_ll_ee_--_tt_oo_--_mm_oo_rr_ss_ee_.._tt_xx_tt
+
+WWhheenn II rraann tthhee wwoorrdd sseeaarrcchh aallggoorriitthhmm oonn iitt,, iitt ffoouunndd aarroouunndd 7733,,000000 wwoorrddss:: _hh_tt_tt_pp_::
+_//_//_zz_oo_dd_ii_aa_cc_kk_ii_ll_ll_ee_rr_cc_ii_pp_hh_ee_rr_ss_.._cc_oo_mm_//_rr_aa_yy_--_gg_rr_aa_nn_tt_//_rr_aa_yy_--_aa_rr_tt_ii_cc_ll_ee_--_ff_oo_uu_nn_dd_--_ww_oo_rr_dd_ss_.._tt_xx_tt
+
+IIff yyoouu llooookk aatt bbootthh lliissttss,, yyoouu''llll ffiinndd tthhaatt oovveerr 1111,,000000 wwoorrddss ccaann bbee ffoouunndd iinn
+bbootthh ddiiggiittiizzaattiioonnss.. HHeerree aarree tthhoossee wwoorrddss:: _hh_tt_tt_pp_::_//_//_zz_oo_dd_ii_aa_cc_kk_ii_ll_ll_ee_rr_cc_ii_pp_hh_ee_rr_ss_.._cc_oo_mm_//_rr_aa_yy_--
+_gg_rr_aa_nn_tt_//_ww_oo_rr_dd_ss_--_ff_oo_uu_nn_dd_--_ii_nn_--_bb_oo_tt_hh_.._tt_xx_tt YYoouu ccaann eeaassiillyy sseeee iinntteerreessttiinngg wwoorrddss iinn tthheerree
+ssuucchh aass SSaattuurrnn,, MMaarrss,, eeaarrtthh,, ddrruuiidd,, ddeeaatthh,, ssnnaarree,, ssnneeaakk,, ddaannttee,, eeiigghhtt,, eelleevveenn,,
+zzeeuuss,, wwiittcchh,, eettcc..
+
+IItt''ss cclleeaarr ttoo mmee tthhaatt tthhee aappppeeaarraannccee ooff aannyy wwoorrddss uussiinngg tthhiiss sscchheemmee iiss tthhee
+rreessuulltt ooff ppuurree cchhaannccee..
+
+WWhhaatt ddoo yyoouu tthhiinnkk ooff tthheessee pprroobblleemmss??
+RReeggaarrddss,,
+--DDaavvee
+
+In 1970, I took an American History course at Pitt from _P_r_o_f_e_s_s_o_r_ _R_o_n_a_l_d_ _T_o_b_e_y.
+Although he gave me an A, Dr. Tobey told me I had an annoying habit of ignoring
+the essay questions he asked and, instead, giving very meticulous answers to
+questions that were superficially similar to but not the same as the ones hed
+actually asked.
+
+Heres the passage from my article that you quoted:
+
+Convert a document the size of The Confession Letter to Morse code, and then
+check it for the strings I found in The Confession Letter, using the SEARCH
+function of your computer. Its a fairly simple exercise for someone of your
+expertise. The strings are cited at TZMS 1993-1, pages 118-125. Let me tell you
+what youre going to discover for yourself. Youll type in a given string, hit
+the SEARCH button . . . and nothing. Over and over and over again.
+
+1, You DID convert a document the size of The Confession Letter to Morse code.
+Thank you for getting that far with my instructions. I think thats the record
+for a ZKF poster.
+
+However, you did NOT
+
+2, then check it for THE STRINGS I FOUND in The Confession Letter . . . The
+strings are cited at TZMS 1993-1, pages 118-125.
+
+Since you did not follow my instructions to the letter, the whole point of the
+exercise was lost on you. I will, however, do what Professor Tobey did with me,
+and comment on the unasked question that you did choose to answer:
+
+OOuutt ooff ccuurriioossiittyy,, II rraann ssoommee eexxppeerriimmeennttss,, aanndd ffoouunndd tthhee ffoolllloowwiinngg pprroobblleemmss wwiitthh
+yyoouurr aapppprrooaacchh::
+
+11)) CCoonnvveerrttiinngg tteexxtt ttoo mmoorrssee ccooddee,, aanndd ssttrreeaammiinngg tthhee zzeerrooeess aanndd oonneess ttooggeetthheerr,,
+aalllloowwss ffoorr tthhee ddiissccoovveerryy ooff aa vvaasstt nnuummbbeerr ooff wwoorrddss wwiitthhiinn aa ssiinnggllee ddooccuummeenntt..
+
+Morse needs to be capitalized because its someones name. I dont recall
+suggesting that only a small number of words was available when you convert a
+document to Morse code and then streamed the zeroes and ones together. Maybe I
+implied it unintentionally?
+
+22)) WWiitthh ssuucchh aa llaarrggee ppooooll ooff wwoorrddss ttoo sseelleecctt ffrroomm,, iitt iiss eeaassyy ttoo ddiissccoovveerr wwoorrddss
+tthhaatt ffiitt ssoommee pprree--ddeetteerrmmiinneedd nnaarrrraattiivvee
+
+Then its your job to demonstrate something along those lines, particularly if
+its easy.
+
+Its exasperating to have to keep saying this, but, in cryptography, CONTEXT IS
+EVERYTHING.
+
+Thus, someone who chose to do what youre suggesting COULD NOT simply select
+words to fit a pre-determined narrative, because his interpretation would still
+have to be consistent on some level with the Zodiac literature and crimes. To
+cite two examples of this sort of thing, both Robert Graysmith and Corey
+Starliper proposed solutions to The 340 that are similar in tone and language
+to the Zodiac letters. I dont agree with their methodology, and Im sure you
+dont, either, but its telling that they made sure their solutions read like
+Zodiac text.
+
+33)) TThheerreeffoorree,, wwee hhaavvee ttoo ttaakkee oonn ffaaiitthh tthhaatt yyoouu''vvee sseelleecctteedd oonnllyy tthhee wwoorrddss tthhaatt
+aarree ttrruullyy ppllaanntteedd tthheerree bbyy tthhee aauutthhoorr ooff tthhee lleetttteerrss..
+
+This statement illustrates a basic fallacy about cryptography in the real
+world, which is that messages in the field are never subject to interpretation.
+As Ive pointed out in numerous places, including answering posts on _Z_K_F  (Curt
+Rowlett section),
+the American high command was barely convinced that JN-25 predicted an invasion
+of Midway Island in 1942. As William Manchester pointed out in TThhee GGlloorryy AAnndd
+TThhee DDrreeaamm, The Purple Code predicted the attack on Pearl Harbor, and the
+Americans didnt fail to act because of any conspiracy but because they didnt
+take seriously what their own cryptographers were telling them.
+
+IItt''ss cclleeaarr ttoo mmee tthhaatt tthhee aappppeeaarraannccee ooff aannyy wwoorrddss uussiinngg tthhiiss sscchheemmee iiss tthhee
+rreessuulltt ooff ppuurree cchhaannccee..
+
+I dont think this is QUITE as clear as you think it is, Dave. Lets take a
+look at your examples.
+
+YYoouu ccaann eeaassiillyy sseeee iinntteerreessttiinngg wwoorrddss iinn tthheerree ssuucchh aass SSaattuurrnn,, MMaarrss,, eeaarrtthh,,
+ddrruuiidd,, ddeeaatthh,, ssnnaarree,, ssnneeaakk,, ddaannttee,, eeiigghhtt,, eelleevveenn,, zzeeuuss,, wwiittcchh,, eettcc..
+
+SATURN is a 14-digit string (Morse code/binary digits), MARS is 10 digits,
+EARTH is 11 digits, DRUID is 14, DEATH is 11, DANTE is 11, EIGHT is 11, ELEVEN
+is 13, WITCH is 14.
+
+A 14-digit string will show up once every 16,384 chances. Your example cites
+TWO instances of hits within documents of 1625 digits. 14 digits, which is the
+longest of the interesting strings you cite, should show up in ONE of those
+documents, purely by chance, about 1 out of every 10 times. If you have TWO
+such instances, now youre talking about 1 out of 100. That sort of, kind of,
+approximates what Ray Grant is talking about, in a matter of speaking,
+exceptand keep in mind, Im not a statistician any more than I am a
+cryptographerIm guessing that 1 out of 100 is well within the scatterplot for
+this type of data.
+
+Here, offered merely for contrast, is a list of terms I cite in TZMS 1993, just
+from scanning the physical copy in my lap:
+
+TThhee CCoonnffeessssiioonn LLeetttteerr
+AATTLLAASS FFIIRREE ((2222)) 44119944330044 TTHHRREEEE FFAATTEESS ((2211)) 22009977115522 OOBBEELLIISSKK ((2200)) 11004488557766
+
+TThhee CCrryyppttooggrraamm
+DDAANNTTEESS AANNTTAAEEUUSS ((2266)) 6677,,110088,,886644,, TTHHRREEEE FFAATTEESS ((2211)) 22009977115522
+
+DANTES ANTAEUS, which was cited by Gareth Penn in TTiimmeess 1177, should appear once
+every 67,108,864 digits. Since there are roughly 40,000 digits in the entire
+Zodiac literature, that means we should see that string once in 1677 Zodiacs.
+
+Getting TWO instances of THREE FATES would require 2778 Zodiacs. Imagine that
+many Zodiacs running around, Dave. Its frightening.
+
+The word ROGATION appears in the VTH cover letter (7/31/69) and in both April
+1970 letters. The Major Rogation was on April 25th, which those two letters
+(April 20th and 28th) flank. ROGATION is a 19-digit string which should appear
+once in 20 Zodiac literatures; it appears 3 times.
+
+I already mentioned ALIGHIERI, which appears in The Mikado Letter twice.
+
+To me, the most striking example of textual tampering can be found in The
+Confession Letter.
+
+Ive mentioned DDaanntteess IInnffeerrnnoo numerous times, as did Gareth Penn. As Ive
+said, and as Gareth failed to point out, The Desk Poems first four lines are a
+paraphrase of the initial quatrain from TThhee IInnffeerrnnoo.
+
+The most cryptographic utterance in DDaanntteess IInnffeerrnnoo is the brief speech of
+Nimrod from Canto 31, Line 67:
+
+RRAAPPHHEELL MMAAII AAMMEECCCCHHEE ZZAABBII AALLMMII
+
+In a sense, Nimrods speech is symbolic of the Zodiacs literature, and in
+particular his ciphers, since they remain untranslated.
+
+RAPHEL appears twice in The Confession Letter, which itself consists of 4138
+Morse digits.
+
+The first instance begins with digit #2212. Oddly enough, 2212 is a backward
+form of the Timex watch time in Riverside12:22.
+
+But the single most striking placement can be found in the covertext character
+numbers for RAPHEL #2:
+
+MMAAKKIINNGG HHEERR PPAAYY FFOORR TTHHEE BBRRUUSSHHOOFFFFSS
+
+      KK      II    NN  GG      HH   EE   RR    PP
+      110011 0000 1100 111100 00000000 00 001100 00111100
+
+        001100001100111100000000000000110000
+
+        001100 0011 00111100 00000000 00 00110000
+          RR    AA    PP      HH    EE    LL
+
+This placement is so remarkable that Im going to number my points to highlight
+it:
+
+11,, RRAAPPHHEELL iiss tthhee ffiirrsstt tthhiinngg oouutt ooff NNiimmrrooddss mmoouutthh;;
+22,, IItt iiss nnoott tthhee ffiirrsstt tthhiinngg wwee kknnooww aabboouutt hhiimmhheess bbuurriieedd iinn tthhee ssooiill ooff tthhee
+99tthh CCiirrccllee && cchhaaiinneedd;;
+33,, TThhee CCoonnffeessssiioonn LLeetttteerr iiss nnoott tthhee ffiirrsstt tthhiinngg wwee kknnooww aabboouutt tthhee ZZooddiiaacctthhee
+BBaatteess mmuurrddeerr iiss;;
+44,, BBuutt TThhee CCoonnffeessssiioonn LLeetttteerr IISS tthhee ffiirrsstt tthhiinngg hhee SSAAYYSS;;
+55,, IInn ootthheerr wwoorrddss,, RRAAPPHHEELL aanndd TThhee CCoonnffeessssiioonn LLeetttteerr aarree ffiigguurraattiivveellyy ssyynnoonnyymmss;;
+66,, TThhee CCoonnffeessssiioonn LLeetttteerr wwaass ppoossttmmaarrkkeedd NNoovveemmbbeerr 22991111--2299;;
+77,, TThhee KK ooff MMAAKKIINNGG iiss tthhee ssttaarrtt ooff tthhee ccoovveerrtteexxtt ffoorr tthhee bbeeggiinnnniinngg ooff RRAAPPHHEELL
+iinn tthhee uunnddeerrtteexxtt;;
+88,, TThhee KK ooff MMAAKKIINNGG iiss cchhaarraacctteerr ##11112299 ooff TThhee CCoonnffeessssiioonn LLeetttteerr..
+
+All of this can be found on page 334 of TZMS 1993-2.
+
+The no context approach of Dave Oranchak might make sense if the Zodiac had
+only sent conventional messages to the newspapers. But he also sent ciphers,
+three of which remain untranslated, his other communications contain cryptic
+passages, and even his crimes featured odd notes that seemed to have some
+secret meaning. Why is it so hard to believe that his letters contained
+undertexts?
+
+Check out _T_h_e_ _V_o_y_n_i_c_h_ _M_a_n_u_s_c_r_i_p_t:
+
+See, if I were going to try to dope out The Voynich Manuscript, this is just my
+take on it, Id probably try a brute force computer attack before I did any
+research on the history or background (why bother doing any of that?).
+
+Speaking of people feeling the need to "bash" other people, remember how ZKF
+used to bash OPORD?
+
+And now ZKF is OPORD Lite . . .
+Content copyright
+. ZODIACKILLERTIMELINE.COM. All rights reserved.
+_[_W_e_b_ _H_o_s_t_i_n_g_]

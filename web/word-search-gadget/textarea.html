@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <script src="http://www.google.com/jsapi"></script>
+  <script language="javascript">
+  google.load('prototype', '1.6.0.2');
+  </script>
+</head>
+<body>
+  <textarea id="text-area" rows="1" cols="1"></textarea>
+
+  <script type="text/javascript" language="javascript">
+  resizeIt = function() {
+    var str = $('text-area').value;
+    var cols = $('text-area').cols;
+
+    var linecount = 0;
+    $A(str.split("\n")).each( function(l) {
+      linecount += Math.ceil( l.length / cols ); // take into account long lines
+    } )
+    $('text-area').rows = linecount + 1;
+  };
+
+  Event.observe('text-area', 'keydown', resizeIt ); // you could attach to keyUp or whatever if keydown doesn't work
+  resizeIt(); //initial on load
+  </script>
+</body>
+</html>

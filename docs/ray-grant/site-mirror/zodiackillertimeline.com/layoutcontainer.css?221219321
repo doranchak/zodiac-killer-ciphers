@@ -1,0 +1,44 @@
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+
+.ColumnMarginBox.ColumnFirst
+{
+    margin-right:5px !important;
+}
+
+.ColumnMarginBox.ColumnInner
+{
+    margin-right:5px !important;
+    margin-left:5px !important;
+}
+
+.ColumnMarginBox.ColumnLast
+{
+    margin-left:5px !important;
+}
+
+.LayoutContainer
+{
+	overflow: hidden;
+	padding: 5px 10px;
+	position: relative;
+}
