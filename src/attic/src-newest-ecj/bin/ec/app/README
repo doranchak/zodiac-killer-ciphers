@@ -1,0 +1,108 @@
+This is the traditional top-level directory holding ECJ's demo applications.
+When building new apps for research purposes, we find it convenient to stick
+them here as well.
+
+Here's what we've got so far:
+
+
+
+BOOLEAN VECTOR REPRESENTATIONS
+
+hiff		Hierarchical if-and-only-if Functions
+sat		3CNF boolean satisfiability problems
+nk		N-K Landscapes
+majority	Majority Classification problem
+			-- both GA and GP versions
+
+
+INTEGER VECTOR REPRESENTATIONS
+
+sum		Simple sum demo
+
+
+FLOATING POINT VECTOR REPRESENTATIONS
+
+ecsuite		A host of common floating-point fitness functions
+			-- includes GA, ES, DE, and steady-state code
+			-- includes a meta-evolution example
+bbob		Black Box Optimization 2010 code converted to ECJ
+
+
+GENETIC PROGRAMMING AND GRAMMATICAL EVOLUTION
+
+ant		Artificial Ant
+			-- includes grammatical evolution code
+edge		Edge Encoding
+gpsemantics     The GP Semantics (Order, Majority) benchmarks
+klandscapes     The K-Landscapes GP benchmark
+lawnmower	Lawnmower
+			-- includes ADF and non-ADF code
+			-- includes grammatical evolution code
+lid		The Lid benchmark
+majority	Majority Classification problem
+			-- both GA and GP versions
+mona		Mona Lisa problem
+multiplexer	"Fast" Multiplexer
+multiplexerslow	Easy to understand Multiplexer
+ordertree	The ORDERTREE problem
+parity		Parity
+			-- includes ADF and non-ADF code
+regression	Various Symbolic Regression examples
+			-- includes ERC and non-ERC code	
+			-- includes steady-state code
+			-- includes grammatical evolution code
+			-- includes the GP2012 benchmark suite
+royaltree	The Royal Tree problem
+twobox		Two Box
+			-- includes ADF and non-ADF code
+
+
+COMPETITIVE 1-POPULATION COEVOLUTION
+
+coevolve1	Competitive MaxOnes example
+
+
+COOPERATIVE COEVOLUTION
+
+coevolve2	Cooperative Rosenbrock example
+
+
+ASYNCHRONOUS EVOLUTION
+
+async		Asynchronous evolution demo
+
+
+MULTIOBJECTIVE OPTIMIZATION
+
+moosuite	A host of multiobjective optimization benchmarks
+
+
+SPATIAL EVOLUTION
+
+spatial		A simple spatial evolution demonstration
+
+
+TUTORIAL CODE
+
+tutorial1	-- for the tutorials proper, see the ecj/docs/ directory
+tutorial2
+tutorial3
+tutorial4
+
+
+DISTRIBUTED EVALUATION
+
+star		A distributed evaluation demo
+			-- Also includes both cooperative and competitive
+			   coevolution examples
+			-- also includes a distributed meta-evolution
+			   example
+
+ISLAND MODELS
+
+-- all island model demonstrations are found not here but instead
+   in the ecj/ec/exchange directory (see 2-Island-Server, 3-Island,
+   and 8-Island)
+
+
+
