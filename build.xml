@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- NO LONGER USING ANT TO BUILD - ONLY USING MAVEN -->
 <project default="build">
 
     <property file="build.properties"/>

@@ -1,4 +1,0 @@
-grant codeBase "file:${drm.home}/lib/-" {
-   permission java.security.AllPermission;
-};
-

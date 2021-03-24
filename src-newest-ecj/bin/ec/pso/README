@@ -1,3 +1,0 @@
-This package implements a basic version of the Particle Swarm Optimization
-algorithm.  For an example of its use, see the file ec/app/ecsuite/pso.params
-

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.zodiackillerciphers.io.FileUtil;
 
+
 /**
  * http://scienceblogs.de/klausis-krypto-kolumne/2016/08/31/an-encrypted-
  * notebook-that-waits-to-be-solved/
@@ -33,7 +34,7 @@ public class RussianNotebook {
 			char c2 = word.charAt(4);
 			char c3 = word.charAt(5);
 			char c4 = word.charAt(6);
-			if (c1 == c3 && (c2 == 'п' || c2 == 'p') && (c4 == 'o' || c4 == 'п')) {
+			if (c1 == c3 && (c2 == '\u043f' || c2 == 'p') && (c4 == 'o' || c4 == '\u043f')) {
 				System.out.println(word);
 			}
 		}
