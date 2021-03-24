@@ -1,0 +1,47 @@
+<style>
+tt {font-size: 13pt; color: #060;}
+.noreps {color: #999; padding-left: 2em;}
+.noreps tt {color: #999; }
+
+</style>
+<script>
+	function ngrams() {
+		var cipher = document.getElementById("cipher").value.replace(/ /g,"");
+		var output = document.getElementById("output");
+		var html = "";
+		var go = true;
+		var n = 1;
+		while (go) {
+			var counts = [];
+			for (var i=0; i<cipher.length-n+1; i++) {
+				var ng = cipher.substring(i,i+n);
+				var count = counts[ng];
+				if (!count) count = 0;
+				count++;
+				counts[ng] = count;
+			}
+			html += "<br><b><u>Ngram size: " + n + "</u></b><br/>";
+			
+			var found = false;
+//			var noreps = "<div class=\"noreps\">No repeats: <tt>";
+			for (var key in counts) {
+				if (counts[key] > 1) {
+					html += (found ? ", " : "") + "<tt>" + key + "</tt>: " + counts[key];
+					found = true;
+				} //else {
+				//	noreps += key + " ";
+				//}
+			}
+			//noreps += "</tt></div>";
+			//html += noreps;
+			if (!found) go = false;
+			n++;
+		}
+		output.innerHTML = html;
+	}
+</script>
+
+<textarea id="cipher" rows="10" cols="100"></textarea>
+<br>
+<input type="button" onclick="ngrams()" value="Show ngrams"/>
+<div id="output"/>

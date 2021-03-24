@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher {
+				font-family: 'untitled2regular';
+				line-height: 0.8em;
+				font-size: 20pt;
+				color: #666;
+				padding: 5px;
+							}
+				td, th { padding: 0px; padding-left: 1em; text-align: center;}
+				.n { font-size: 125%;}
+				
+				th { text-decoration: underline;}
+				.u { color: #000; border: thin solid #999; padding: 5px; }
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+<span>
+	<table>
+		<tr><th>Sequence</th><th>Count</th><th>Full sequence</th><th>Length</th><th>Score</th></tr>
+		<tr><td class="cipher">#%#</td><td>2</td><td class="cipher">#%##%##</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">#.#</td><td>2</td><td class="cipher">#.##.#.#...</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">#D#</td><td>2</td><td class="cipher">#D#D##D#D</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">#L#</td><td>2</td><td class="cipher">L#L##L#L#LL</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">#U#</td><td>2</td><td class="cipher">#U##U#UU#U</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">#c#</td><td>2</td><td class="cipher">#c##c#cc#cccccc</td><td>15</td><td>3.2</td></tr>
+		<tr><td class="cipher">#f#</td><td>2</td><td class="cipher">#f##f##ff</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">(%(</td><td>2</td><td class="cipher">(%((%((((</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">(.(</td><td>2</td><td class="cipher">(.((.(.(..(.(</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">(D(</td><td>2</td><td class="cipher">(D(D((D(((D</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">(U(</td><td>2</td><td class="cipher">(U((U(UU(U((</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">*/*</td><td>2</td><td class="cipher">**/*/**/*</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">*8*</td><td>2</td><td class="cipher">*8*8**8**8</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">*_*</td><td>2</td><td class="cipher">**_*_**_*</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">*f*</td><td>2</td><td class="cipher">*f**f*f*f*</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">-6-</td><td>2</td><td class="cipher">-6--6-6-</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">-;-</td><td>2</td><td class="cipher">-;--;--;</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">->-</td><td>2</td><td class="cipher">>->-->--></td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">-C-</td><td>2</td><td class="cipher">-C--C-CC-C</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">-D-</td><td>2</td><td class="cipher">D-D--D--D</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">-X-</td><td>2</td><td class="cipher">-X--X--</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">-Y-</td><td>2</td><td class="cipher">Y-Y--Y-Y-</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">-Z-</td><td>2</td><td class="cipher">Z-Z--Z--Z</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">-f-</td><td>2</td><td class="cipher">f-f--f-f-</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">.&amp;.</td><td>2</td><td class="cipher">.&amp;..&amp;...</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">.*.</td><td>2</td><td class="cipher">.***.*..*..*</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">.;.</td><td>2</td><td class="cipher">.;..;...;</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">.S.</td><td>2</td><td class="cipher">.S..S...SS</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">.Z.</td><td>2</td><td class="cipher">.Z.Z..Z..Z</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">.t.</td><td>2</td><td class="cipher">.t.t..t..t</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">2%2</td><td>2</td><td class="cipher">2%22%222222</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">2b2</td><td>2</td><td class="cipher">22222b2b22b2</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">464</td><td>2</td><td class="cipher">464464446</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">484</td><td>2</td><td class="cipher">8484484448</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">494</td><td>2</td><td class="cipher">9494494449</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">4;4</td><td>2</td><td class="cipher">4;44;444;</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">4b4</td><td>2</td><td class="cipher">4b4b44b44</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">4f4</td><td>2</td><td class="cipher">f4f44f444f</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">545</td><td>2</td><td class="cipher">5454554554445</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">5D5</td><td>2</td><td class="cipher">D5D55D5555D</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">5c5</td><td>2</td><td class="cipher">c55cc5c55c5c5cccc</td><td>17</td><td>2.8235295</td></tr>
+		<tr><td class="cipher">838</td><td>2</td><td class="cipher">838838</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">8P8</td><td>2</td><td class="cipher">P8P88P8</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">989</td><td>2</td><td class="cipher">89899898</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">9;9</td><td>2</td><td class="cipher">9;99;9;</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">9X9</td><td>2</td><td class="cipher">9X99X9</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">9f9</td><td>2</td><td class="cipher">f9f99f9f</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">&lt;D&lt;</td><td>2</td><td class="cipher">D&lt;D&lt;&lt;D&lt;&lt;&lt;D</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">&lt;J&lt;</td><td>2</td><td class="cipher">&lt;JJ&lt;J&lt;&lt;J&lt;&lt;</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">&lt;Y&lt;</td><td>2</td><td class="cipher">Y&lt;Y&lt;&lt;Y&lt;&lt;&lt;Y</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">&lt;Z&lt;</td><td>2</td><td class="cipher">&lt;Z&lt;Z&lt;&lt;Z&lt;&lt;Z</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">>3></td><td>2</td><td class="cipher">>3>>3></td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">>H></td><td>2</td><td class="cipher">H>H>>H>H</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">B4B</td><td>2</td><td class="cipher">BB4B4BB4BB44B4BBBB</td><td>18</td><td>2.6666667</td></tr>
+		<tr><td class="cipher">BJB</td><td>2</td><td class="cipher">BBJJBJBBJBBBBBBB</td><td>16</td><td>3.0</td></tr>
+		<tr><td class="cipher">BYB</td><td>2</td><td class="cipher">BYBYBBYBBBBBBBYB</td><td>16</td><td>3.0</td></tr>
+		<tr><td class="cipher">BpB</td><td>2</td><td class="cipher">ppBBppppBpBBpBBBBpBpBBp</td><td>23</td><td>2.0869565</td></tr>
+		<tr><td class="cipher">CzC</td><td>2</td><td class="cipher">zzCzzzzCzCCzCz</td><td>14</td><td>3.4285715</td></tr>
+		<tr><td class="cipher">D&amp;D</td><td>2</td><td class="cipher">D&amp;DD&amp;D</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">D3D</td><td>2</td><td class="cipher">D3DD3D</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">D:D</td><td>2</td><td class="cipher">D:DD:D</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">DHD</td><td>2</td><td class="cipher">HDHDDHDH</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">DPD</td><td>2</td><td class="cipher">PDPDDPD</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">G.G</td><td>2</td><td class="cipher">G.GG.G.G...G</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">GDG</td><td>2</td><td class="cipher">GDGDGGDGGD</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">J/J</td><td>2</td><td class="cipher">J/JJ/J/</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">J7J</td><td>2</td><td class="cipher">J7JJ7J7</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">JDJ</td><td>2</td><td class="cipher">DJDJJDJD</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">JtJ</td><td>2</td><td class="cipher">JtJJtJtt</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">KJK</td><td>2</td><td class="cipher">KJKKJKJKJKK</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">KUK</td><td>2</td><td class="cipher">KUKKUKUUKUKK</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">KVK</td><td>2</td><td class="cipher">VKVKKVKVKVVKK</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">KYK</td><td>2</td><td class="cipher">YKKKYKYKKYK</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">KyK</td><td>2</td><td class="cipher">KyKKyKyKyyKK</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">LDL</td><td>2</td><td class="cipher">LDLDLLDLLD</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">LNL</td><td>2</td><td class="cipher">LNLLNLNNLLN</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">LfL</td><td>2</td><td class="cipher">LfLLfLffLL</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">N/N</td><td>2</td><td class="cipher">N/N/NN/N</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">N7N</td><td>2</td><td class="cipher">N7N7NN7N</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">N;N</td><td>2</td><td class="cipher">N;NN;NN;</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">NDN</td><td>2</td><td class="cipher">NDDNDNNDN</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">NSN</td><td>2</td><td class="cipher">NSNSNNSNS</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">NZN</td><td>2</td><td class="cipher">NZNZNNZNZ</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">O%O</td><td>2</td><td class="cipher">O%OO%OOOOOOO</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">O.O</td><td>2</td><td class="cipher">O.OO.OOO...O.OOO</td><td>16</td><td>3.0</td></tr>
+		<tr><td class="cipher">R%R</td><td>2</td><td class="cipher">R%RR%RRRRR</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">R&lt;R</td><td>2</td><td class="cipher">R&lt;RR&lt;R&lt;R&lt;RRR&lt;&lt;</td><td>14</td><td>3.4285715</td></tr>
+		<tr><td class="cipher">R>R</td><td>2</td><td class="cipher">R>RR>RRRR>R></td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">RUR</td><td>2</td><td class="cipher">RURRURUURRRUR</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">RZR</td><td>2</td><td class="cipher">RZRRZRRRRZRZ</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">RfR</td><td>2</td><td class="cipher">RfRRfRRRRffR</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">T&amp;T</td><td>2</td><td class="cipher">T&amp;TT&amp;TT</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">T3T</td><td>2</td><td class="cipher">T3TT3TT</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">T6T</td><td>2</td><td class="cipher">T6TT6T6T</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">T:T</td><td>2</td><td class="cipher">T:TT:TT</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">T;T</td><td>2</td><td class="cipher">T;TT;TT;</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">T&lt;T</td><td>2</td><td class="cipher">T&lt;&lt;&lt;T&lt;TT&lt;T&lt;</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">T>T</td><td>2</td><td class="cipher">>T>TT>TT></td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">TCT</td><td>2</td><td class="cipher">TCTTCTCCTC</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">TET</td><td>2</td><td class="cipher">ETETTETT</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">TST</td><td>2</td><td class="cipher">TSTTSTSTS</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">TXT</td><td>2</td><td class="cipher">TXTTXTT</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">TqT</td><td>2</td><td class="cipher">TqTTqTT</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">U7U</td><td>2</td><td class="cipher">U7UU7UU7</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">V*V</td><td>2</td><td class="cipher">V**V*VV*V*V*</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">V.V</td><td>2</td><td class="cipher">V.VV.V..VV..</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">V8V</td><td>2</td><td class="cipher">V8V8VV8VV8</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">V&lt;V</td><td>2</td><td class="cipher">V&lt;VV&lt;V&lt;&lt;VV&lt;&lt;</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">VDV</td><td>2</td><td class="cipher">VDVDVVDVVD</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">VJV</td><td>2</td><td class="cipher">VJVVJVJJVV</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">VNV</td><td>2</td><td class="cipher">VNVVNVNNVVN</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">VZV</td><td>2</td><td class="cipher">VZVVZVVVZZ</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">VyV</td><td>2</td><td class="cipher">VyVVyVyyVyV</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">Y&amp;Y</td><td>2</td><td class="cipher">Y&amp;YY&amp;Y</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">Y3Y</td><td>2</td><td class="cipher">Y3YY3Y</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">Y:Y</td><td>2</td><td class="cipher">Y:YY:Y</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">Y;Y</td><td>2</td><td class="cipher">Y;YY;Y;</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">Y>Y</td><td>2</td><td class="cipher">>Y>YY>Y></td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">YHY</td><td>2</td><td class="cipher">HYHYYHYH</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">YPY</td><td>2</td><td class="cipher">PYPYYPY</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">YXY</td><td>2</td><td class="cipher">YXYYXY</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">YqY</td><td>2</td><td class="cipher">YqYYqY</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">Z3Z</td><td>2</td><td class="cipher">Z3ZZ3Z</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">ZPZ</td><td>2</td><td class="cipher">PZPZZPZ</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">ZqZ</td><td>2</td><td class="cipher">ZqZZqZ</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">^%^</td><td>2</td><td class="cipher">^%^^%^^^</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">^.^</td><td>2</td><td class="cipher">^.^^.^.^..^.</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">^&lt;^</td><td>2</td><td class="cipher">^&lt;^^&lt;^&lt;&lt;^^&lt;&lt;</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">^J^</td><td>2</td><td class="cipher">^J^^J^JJ^^</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">^N^</td><td>2</td><td class="cipher">^N^^N^NN^^N</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">^y^</td><td>2</td><td class="cipher">^y^^y^yy^y^</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">c/c</td><td>2</td><td class="cipher">c/cc/cccccc/c</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">c7c</td><td>2</td><td class="cipher">c7cc7cccccc7c</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">cDc</td><td>2</td><td class="cipher">DcDccDcccccccD</td><td>14</td><td>3.4285715</td></tr>
+		<tr><td class="cipher">cbc</td><td>2</td><td class="cipher">ccbcbccbccccc</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">cyc</td><td>2</td><td class="cipher">ycccyycyccycccc</td><td>15</td><td>3.2</td></tr>
+		<tr><td class="cipher">d%d</td><td>2</td><td class="cipher">d%dd%dd</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">d.d</td><td>2</td><td class="cipher">d.dd.d....d</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">d8d</td><td>2</td><td class="cipher">d8d8dd8d8</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">d9d</td><td>2</td><td class="cipher">d9dd9d99d</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">dDd</td><td>2</td><td class="cipher">dDddDdDdD</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">dJd</td><td>2</td><td class="cipher">dJddJdJJd</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">dNd</td><td>2</td><td class="cipher">dNddNdNNdN</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">dUd</td><td>2</td><td class="cipher">dUddUdUUUd</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">dVd</td><td>2</td><td class="cipher">VdVddVdVVVd</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">dYd</td><td>2</td><td class="cipher">dYddYdYdY</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">d_d</td><td>2</td><td class="cipher">d_dd_dd_</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">dcd</td><td>2</td><td class="cipher">dcddcdcccccccdc</td><td>15</td><td>3.2</td></tr>
+		<tr><td class="cipher">dfd</td><td>2</td><td class="cipher">dfddfdffd</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">djd</td><td>2</td><td class="cipher">djddjdd</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">f3f</td><td>2</td><td class="cipher">f3ff3f</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">f:f</td><td>2</td><td class="cipher">f:ff:f</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">f>f</td><td>2</td><td class="cipher">>f>ff>f></td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">fCf</td><td>2</td><td class="cipher">fCffCfCCC</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">fXf</td><td>2</td><td class="cipher">fXffXf</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">k%k</td><td>2</td><td class="cipher">k%kk%kk</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">k&amp;k</td><td>2</td><td class="cipher">k&amp;kk&amp;kk</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">k3k</td><td>2</td><td class="cipher">k3kk3kk</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">k7k</td><td>2</td><td class="cipher">k7kk7k7k</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">k:k</td><td>2</td><td class="cipher">k:kk:kk</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">kHk</td><td>2</td><td class="cipher">HkHkkHkHk</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">kPk</td><td>2</td><td class="cipher">PkPkkPkk</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">k_k</td><td>2</td><td class="cipher">k_kk_k_k</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">kjk</td><td>2</td><td class="cipher">kjkkjkk</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">l%l</td><td>2</td><td class="cipher">l%ll%llll</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">l-l</td><td>2</td><td class="cipher">lll--l-ll-l-</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">lDl</td><td>2</td><td class="cipher">lDllDlDlllD</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">lJl</td><td>2</td><td class="cipher">lJllJlJlJll</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">lUl</td><td>2</td><td class="cipher">lUllUlUUllUl</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">lYl</td><td>2</td><td class="cipher">lYllYlYlllY</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">l^l</td><td>2</td><td class="cipher">l^^l^ll^ll^^l</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">lbl</td><td>2</td><td class="cipher">lllblbllbl</td><td>10</td><td>4.8</td></tr>
+		<tr><td class="cipher">lfl</td><td>2</td><td class="cipher">lfllflllffl</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">t7t</td><td>2</td><td class="cipher">7t7tt7t</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">t>t</td><td>2</td><td class="cipher">>t>tt>t></td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">tPt</td><td>2</td><td class="cipher">PtPttPt</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">tXt</td><td>2</td><td class="cipher">tXttXt</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">tZt</td><td>2</td><td class="cipher">ZtZttZtZ</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">tqt</td><td>2</td><td class="cipher">tqttqt</td><td>6</td><td>8.0</td></tr>
+		<tr><td class="cipher">y&amp;y</td><td>2</td><td class="cipher">y&amp;yy&amp;yy</td><td>7</td><td>6.857143</td></tr>
+		<tr><td class="cipher">y.y</td><td>2</td><td class="cipher">.y.yy.y.y..</td><td>11</td><td>4.3636365</td></tr>
+		<tr><td class="cipher">y/y</td><td>2</td><td class="cipher">y/yy/yy/</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">yDy</td><td>2</td><td class="cipher">DyDyyDyyD</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">ySy</td><td>2</td><td class="cipher">ySyySyySS</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">yYy</td><td>2</td><td class="cipher">YyYyyYyyY</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">yby</td><td>2</td><td class="cipher">ybyybyby</td><td>8</td><td>6.0</td></tr>
+		<tr><td class="cipher">yty</td><td>2</td><td class="cipher">ytyytytyt</td><td>9</td><td>5.3333335</td></tr>
+		<tr><td class="cipher">zJz</td><td>2</td><td class="cipher">zJzzJzzJJzzzz</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">z_z</td><td>2</td><td class="cipher">z_zz_zzzzz_z</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">|5|</td><td>2</td><td class="cipher">||55|5||5|555||||</td><td>17</td><td>2.8235295</td></tr>
+		<tr><td class="cipher">|7|</td><td>2</td><td class="cipher">|7||7||||||7|</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">|D|</td><td>2</td><td class="cipher">|D|D||D|||||D|</td><td>14</td><td>3.4285715</td></tr>
+		<tr><td class="cipher">|Y|</td><td>2</td><td class="cipher">|Y||Y|Y|||||Y|</td><td>14</td><td>3.4285715</td></tr>
+		<tr><td class="cipher">|_|</td><td>2</td><td class="cipher">|_||_||||||_|</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">|b|</td><td>2</td><td class="cipher">|||b|b||b||||</td><td>13</td><td>3.6923077</td></tr>
+		<tr><td class="cipher">|j|</td><td>2</td><td class="cipher">|j||j|||||||</td><td>12</td><td>4.0</td></tr>
+		<tr><td class="cipher">*7*</td><td>3</td><td class="cipher">*7**7**7*</td><td>9</td><td>18.0</td></tr>
+		<tr><td class="cipher">*Z*</td><td>3</td><td class="cipher">*Z**Z**Z*Z</td><td>10</td><td>16.199999</td></tr>
+		<tr><td class="cipher">&lt;/&lt;</td><td>3</td><td class="cipher">&lt;/&lt;&lt;/&lt;&lt;/&lt;</td><td>9</td><td>18.0</td></tr>
+		<tr><td class="cipher">FzF</td><td>3</td><td class="cipher">zzFFFzzFzFFzFFzFzFz</td><td>19</td><td>8.526316</td></tr>
+		<tr><td class="cipher">KZK</td><td>3</td><td class="cipher">KZKKZKKZKZK</td><td>11</td><td>14.727272</td></tr>
+		<tr><td class="cipher">KfK</td><td>3</td><td class="cipher">KfKKfKKfKfK</td><td>11</td><td>14.727272</td></tr>
+		<tr><td class="cipher">MZM</td><td>3</td><td class="cipher">MZMMZMMZMMZ</td><td>11</td><td>14.727272</td></tr>
+		<tr><td class="cipher">ODO</td><td>3</td><td class="cipher">ODOODOODOOOODO</td><td>14</td><td>11.571429</td></tr>
+		<tr><td class="cipher">O^O</td><td>3</td><td class="cipher">^O^O^OO^OO^O^OOO</td><td>16</td><td>10.125</td></tr>
+		<tr><td class="cipher">RDR</td><td>3</td><td class="cipher">RDRRDRRDRRRD</td><td>12</td><td>13.5</td></tr>
+		<tr><td class="cipher">RYR</td><td>3</td><td class="cipher">RYRRYRRYRRRY</td><td>12</td><td>13.5</td></tr>
+		<tr><td class="cipher">^Z^</td><td>3</td><td class="cipher">^Z^^Z^^Z^Z</td><td>10</td><td>16.199999</td></tr>
+		<tr><td class="cipher">^f^</td><td>3</td><td class="cipher">^f^^f^^f^f</td><td>10</td><td>16.199999</td></tr>
+		<tr><td class="cipher">c2c</td><td>3</td><td class="cipher">2c222c22c2cc2cc2ccc</td><td>19</td><td>8.526316</td></tr>
+		<tr><td class="cipher">c9c</td><td>3</td><td class="cipher">c9c9cc9cc9cccc</td><td>14</td><td>11.571429</td></tr>
+		<tr><td class="cipher">l.l</td><td>3</td><td class="cipher">l.ll.ll.l...l</td><td>13</td><td>12.461539</td></tr>
+		<tr><td class="cipher">lNl</td><td>3</td><td class="cipher">lNllNllNlNlN</td><td>12</td><td>13.5</td></tr>
+		<tr><td class="cipher">|9|</td><td>3</td><td class="cipher">|9||9||9|9||||</td><td>14</td><td>11.571429</td></tr>
+		<tr><td class="cipher">|M|</td><td>3</td><td class="cipher">|MM||M|M|M||M||M|</td><td>17</td><td>9.529412</td></tr>
+		<tr><td class="cipher">|N|</td><td>3</td><td class="cipher">|N||N||N|N|||N|</td><td>15</td><td>10.8</td></tr>
+		<tr><td class="cipher">BlB</td><td>4</td><td class="cipher">lBBllBlBBlBBlBBlBBB</td><td>19</td><td>20.210526</td></tr>
+		
+</table>
+</span>		
+
+</body>
+</html>

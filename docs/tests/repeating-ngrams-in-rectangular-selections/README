@@ -1,0 +1,5 @@
+Method:
+
+com.zodiackillerciphers.tests.ngrams.rectangularNgramsShuffle
+
+Finds all anomalous repeating bigrams within rectangular regions, compared to shuffles.

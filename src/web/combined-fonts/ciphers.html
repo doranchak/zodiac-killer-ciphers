@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher {
+				font-family: 'untitled2regular';
+				line-height: 0.8em;
+				font-size: 24pt;
+							}
+				td { padding: 5px; };
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+<table><tr><td>
+<h1 style="color: #090; font-family: arial">Z408</h1>
+<span class="cipher">
+9%P/Z/UB%kOR=pX=B<br>
+WV+eGYF69HP@K!qYe<br>
+MJY^UIk7qTtNQYD5)<br>
+S(/9#BPORAU%fRlqE<br>
+k^LMZJdr\pFHVWe8Y<br>
+@+qGD9KI)6qX85zS(<br>
+RNtIYElO8qGBTQS#B<br>
+Ld/P#B@XqEHMU^RRk<br>
+cZKqpI)Wq!85LMr9#<br>
+BPDR+j=6\N(eEUHkF<br>
+ZcpOVWI5+tL)l^R6H<br>
+I9DR_TYr\de/@XJQA<br>
+P5M8RUt%L)NVEKH=G<br>
+rI!Jk598LMlNA)Z(P<br>
+zUpkA9#BVW\+VTtOP<br>
+^=SrlfUe67DzG%%IM<br>
+Nk)ScE/9%%ZfAP#BV<br>
+peXqWq_F#8c+@9A9B<br>
+%OT5RUc+_dYq_^SqW<br>
+VZeGYKE_TYA9%#Lt_<br>
+H!FBX9zXADd\7L!=q<br>
+_ed##6e5PORXQF%Gc<br>
+Z@JTtq_8JI+rBPQW6<br>
+VEXr9WI6qEHM)=UIk</span></td>
+<td>
+	<h1 style="color: #090; font-family: arial">Z340</h1>
+	<span class="cipher">HER&#62;pl^VPk|1LTG2d<br>
+Np+B(#O%DWY.&#60;*Kf)<br>
+By:cM+UZGW()L#zHJ<br>
+Spp7^l8*V3pO++RK2<br>
+_9M+ztjd|5FP+&#38;4k/<br>
+p8R^FlO-*dCkF&#62;2D(<br>
+#5+Kq%;2UcXGV.zL|<br>
+(G2Jfj#O+_NYz+@L9<br>
+d&#60;M+b+ZR2FBcyA64K<br>
+-zlUV+^J+Op7&#60;FBy-<br>
+U+R/5tE|DYBpbTMKO<br>
+2&#60;clRJ|*5T4M.+&#38;BF<br>
+z69Sy#+N|5FBc(;8R<br>
+lGFN^f524b.cV4t++<br>
+yBX1*:49CE&#62;VUZ5-+<br>
+|c.3zBK(Op^.fMqG2<br>
+RcT+L16C&#60;+FlWB|)L<br>
+++)WCzWcPOSHT/()p<br>
+|FkdW&#60;7tB_YOB*-Cc<br>
+&#62;MDHNpkSzZO8A|K;+<br></span></td>
+<td>
+	<h1 style="color: #090; font-family: arial">Z13</h1>
+	<span class="cipher">AENz0K0M0[NAM</span><br><br>
+<h1 style="color: #090; font-family: arial">Z32</h1>
+<span class="cipher">
+C9J|#Ok[AMf8?ORTG<br>
+X6FDVj%HCELzPW9</span>
+</td>	
+</tr>
+
+	
+</body>
+</html>

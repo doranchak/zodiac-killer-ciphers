@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 3.0.2 (195746)"/><meta name="keywords" content="zodiac"/><meta name="created" content="2011-09-28 17:21:48 -0400"/><meta name="updated" content="2011-09-30 06:09:12 -0400"/><title>new cryptoscope features</title>
+<style>
+img { border: thin solid #ccc; padding: 1em 1em 1em 1em;}
+</style>	
+	</head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+<div><font size="5"><span style="font-size: 18px;"><b>New CryptoScope Features</b></span></font></div>
+<div><font size="5"><span style="font-size: 18px;"><b>September 30, 2011</b></span></font></div>
+<div><font size="5"><span style="font-size: 18px;"><b><br/></b></span></font></div>
+<div>
+<hr/></div>
+Table of contents:
+<ul>
+	<li><a href="#quadrant">Quadrant tool</a></li>
+	<li><a href="#hom">Homophone candidate score map</a></li>
+	<li><a href="#rep">Repeated sequences (any direction)</a></li>
+	<li><a href="#first">Highlight first occurrences of symbols</a></li>
+	<li><a href="#chartsmax">Charts for "Max non-repeating sequence lengths by position"</a></li>
+	<li><a href="#chartreps">Reps chart</a></li>
+	<li><a href="#yield">Yield analysis</a></li>
+	<li><a href="#hide">Hide frequent or rare symbols</a></li>
+	<li><a href="#intersections">Intersections of repeating symbols</a></li>
+	<li><a href="#env">Environment analysis</a></li>
+	<li><a href="#align">Alignment analysis</a></li>
+	<li><a href="#gaps">Find repeating ngrams with gaps</a></li>
+	<li><a href="#dist">Symbol distances grid</a></li>
+	<li><a href="#sym">Symmetry analysis</a></li>
+	<li><a href="#high">N-grams: Highlight all</a></li>
+</ul>
+<hr>
+<div><font size="5"><span style="font-size: 18px;"><b><br/></b></span></font></div>
+<a name="quadrant"></a>
+<div><font size="5"><span style="font-size: 18px;"><b>Quadrant tool:</b></span></font></div>
+<div><br/></div>
+<div>Click this symbol:  <en-media type="image/png" hash="49eff1259cb2bef29cbeec7ceb149e14"/></div>
+<div><br/></div>
+<div>Mouse over the cipher block to select quadrants:</div>
+<div><br/></div>
+     <img src="new_cryptoscope_features.resources/screenshot_15.png" height="445" width="219"/>
+<div><br/></div>
+<div>Quadrant dimensions are displayed at the bottom.  When done selecting your quadrants, click the left mouse button, and the cipher block will be re-written as if each quadrant was read as a separate block.  The above example becomes:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_36.png" height="398" width="204"/><br/></div>
+<div><br/></div>
+<a name="hom"></a>
+<div><span style="font-size: 18px;"><b>Homophone candidate score map:</b></span><br/></div>
+<div><br/></div>
+<div>Now when you run one of the brute force sequence homophone searches, two new links appear at the top:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_14.png" height="150" width="674"/><br/></div>
+<div><br/></div>
+<div>Clicking them will turn the cipher block into a density map showing concentrations of symbols that scored highly during the brute force search.  This may help you visualize where strong homophone sequences are occurring in the cipher text.  Example for "using sum":</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_43.png" height="408" width="215"/><br/></div>
+<div><br/></div>
+<div>The homophone score is computed at each position of the cipher text by adding the candidate score for any candidates that cover the position.  In the above example, notice how dark the M's are at the beginning.  This is because two different candidates, "lM" and "KM", are contributing to the scores at those positions.  The M's towards the end are a bit lighter, because their scores are not as high.</div>
+<div><br/></div>
+<div>Notice how the "+" symbols have white or very light squares.  They are not involved in any high-scoring candidate homophone sequences.</div>
+<div><br/></div>
+<div>Here is the density map for "using max":</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_20.png" height="411" width="213"/><br/></div>
+<div><br/></div>
+<div>In this map, only the maximum candidate score is considered for each position of cipher text.</div>
+<div><br/></div>
+<a name="rep"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Repeated sequences (any direction):</span></font></b></div>
+<div><br/></div>
+<div>Now it shows you a breakdown and tally of sequences in each direction.  Example for the 340 cipher:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_6.png" height="236" width="840"/><br/></div>
+<div><br/></div>
+<div><br/></div>
+<a name="first"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Highlight first occurrences of symbols:</span></font></b></div>
+<div><br/></div>
+<div>Clicking this link will show where in the cipher text the each symbol first occurs.  Example for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_18.png" height="24" width="245"/></div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_21.png" height="416" width="213"/></div>
+<div><br/></div>
+<div>(I stole this idea from Smithy)</div>
+<div><br/></div>
+<a name="chartsmax"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Charts for "Max non-repeating sequence lengths by position"</span></font></b></div>
+<div><br/></div>
+<div>In the section "Largest non-repeating sequences", the "Show All" link has been changed to "Show All and Chart":</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_3.png" height="200" width="456"/><br/></div>
+<div><br/></div>
+<div>Click the link to reveal all non-repeating sequences, and a chart that tracks the largest non-repeating sequence length that covers each position of the cipher text.  Example for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_22.png" height="316" width="695"/><br/></div>
+<div><br/></div>
+<div>The chart gives you an idea of where the cipher text has few repetitions, and where there are many.  Hover over the plot to show the maximum.  Click the "row #" link to convert the X-axis labels to row numbers.  Click "position #" link to convert the X-axis labels to position numbers.</div>
+<div><br/></div>
+<a name="chartreps"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Reps</span></font></b><b><font size="5"><span style="font-size: 18px;"> chart:</span></font></b></div>
+<div><br/></div>
+<div>After the N-grams section, the Reps Chart is displayed.  Example for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_26.png" height="295" width="780"/><br/></div>
+<div><br/></div>
+<div>In this example, the chart is looking at each position of the cipher text, and counting the number of repeated symbols that occur within 20 positions from the current position.  This is a way to give you an idea of where the cipher text repeats symbols a lot.  You can change the sensitivity of the chart by adjusting N using the pulldown list, or using the Increase and Decrease links.  By default the chart only looks at individual symbols (1-grams).  But you can change the ngram size using the pulldown list.  For example, here is the reps chart for the 340  using ngram size 2 and N=60:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_17.png" height="293" width="774"/><br/></div>
+<div><br/></div>
+<div>This chart shows the high number of repeated 2-grams that occur near rows 3 through 7.</div>
+<div><br/></div>
+<div>You can toggle the X-axis labels between Row # and Position # using the x-axis dropdown list.</div>
+<div><br/></div>
+<a name="yield"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Yield analysis:</span></font></b></div>
+<div><br/></div>
+<div>Yield analysis is the search for cipher text sections that, when decoded, will yield the maximum percentage of overall cipher text.  After clicking the Yield button for the 340 cipher, for example, you'll see this:</div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_19.png" height="557" width="778"/><br/></div>
+<div><br/></div>
+<div>Each entry is the answer to this question:  Which cipher text section of length L will, when decoded, yield the largest percentage of overall cipher text?  For instance, the cipher text segment "3zBK(Op^.fMqG2RcT+L16C&lt;+FlWB|)" at position 258 of the 340 cipher contains symbols that, when decoded, will reveal 206 positions, or 61%, of the overall cipher text.<br/></div>
+<div><br/></div>
+<div>This is possibly useful for decryption attacks.  For example, in the 340 cipher, you can locate a section of cipher text that is only 74 symbols long, but will reveal 90% of the entire cipher text when decoded:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_31.png" height="16" width="422"/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_30.png" height="19" width="767"/></div>
+<div><br/></div>
+<div>Here is an explanation of the numbers:</div>
+<ul>
+<li><b>74</b>: The length of the cipher text section</li>
+<li><b>22%</b>: The proportion of this cipher text section to the overall cipher text length</li>
+<li><b>307</b>: The total number of positions of overall cipher text that will be decrypted if the 74 symbol section is decrypted.</li>
+<li><b>90%</b>: The proportion of overall cipher text that will be decrypted if the 74 symbol section is decrypted.</li>
+<li><b>52</b>: The number of distinct symbols within the 74 symbol section.</li>
+<li><b>11</b>: The position # where the 74 symbol section begins</li>
+</ul>
+<div>Click the cipher text section links to highlight them in the cipher text.<br/></div>
+<div><br/></div>
+<div>The yield percentage has also been added to the results generated by "Ciphertext segments with the most repeated symbols":</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_7.png" height="123" width="796"/></div>
+<div><br/></div>
+<a name="hide"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Hide frequent or rare symbols:</span></font></b></div>
+<div><br/></div>
+<div>You can hide symbols that occur less than a specified number of times in the cipher text:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_5.png" height="23" width="374"/></div>
+<div><br/></div>
+<div>Result for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_1.png" height="406" width="213"/><br/></div>
+<div><br/></div>
+<div>You can also hide symbols that occur more than a specified number of times in the cipher text:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_41.png" height="24" width="371"/></div>
+<div><br/></div>
+<div>Result for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_42.png" height="410" width="215"/></div>
+<div><br/></div>
+<div>Click the "Reset" button to return the cipher block to normal.</div>
+<div><br/></div>
+<a name="intersections"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Intersections of repeating symbols:</span></font></b></div>
+<div><br/></div>
+<div>This tool will search the cipher text for any groupings of symbols that repeat, and intersect.  Sample results for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_8.png" height="216" width="345"/><br/></div>
+<div><br/></div>
+<div>The segments can be oriented horizontally, vertically, or diagonally.  Matches can wrap over cipher text block boundaries.  Click the segment links to highlight the found segments in the cipher text.</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_10.png" height="418" width="215"/><br/></div>
+<div><br/></div>
+<div>The symbols in each segment are not required to be in exactly the same order.  Here's an example showing an intersection of [<font face="'Andale Mono'">-d*</font>] and [<font face="'Andale Mono'">-*d</font>]:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot.png" height="103" width="62"/></div>
+<div> </div>
+<a name="env"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Environment analysis:</span></font></b></div>
+<div><br/></div>
+<div>Jurgen Koller told me of a technique he uses called "environment analysis", where he looks at repeating symbols, and determines which other symbols repeat nearby.  These kinds of repetitions reveal internal structure of the cipher text, and may suggest whether some symbols represent more than one plaintext symbol.  I reproduced his analysis technique in CryptoScope.</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_28.png" height="29" width="274"/></div>
+<div><br/></div>
+<div>Click the "Compute" button to perform environment analysis of distance 5.  Here is an excerpt of the results for the 408 cipher:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_37.png" height="333" width="815"/><br/></div>
+<div><br/></div>
+<div>The grid shows excerpts of the cipher text at each occurrence of the <b>9</b> symbol.  Five symbols to the right and to the left are shown.  Symbols highlighted in green are symbols that are found to repeat within the same columns.  Symbols highlighted in red are found to repeat within mirrored columns.</div>
+<div><br/></div>
+<div>The repetition results are tabulated below each grid.    "In-column sum" reflects the total number of green highlights.  "Symmetry column sum" reflects the total number of red highlights.  Both totals are summed to produce a grand total (59 in the above example).</div>
+<div><br/></div>
+<div>You can try other values besides 5 by entering it in the box before clicking "Compute".</div>
+<div><br/></div>
+<a name="align"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Alignment analysis:</span></font></b></div>
+<div><br/></div>
+<div>Jurgen Koller noticed that some of the symbols of the 340 match the same symbols in the 408, at the exact same positions.  Example:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_39.png" height="359" width="363"/><br/></div>
+<div><br/></div>
+<div>I added an alignment analysis feature to CryptoScope to investigate this phenomenon.</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_34.png" height="27" width="227"/><br/></div>
+<div><br/></div>
+<div>Click "Toggle form" and you'll see:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_38.png" height="398" width="457"/><br/></div>
+<div><br/></div>
+<div>This form will let you compare two cipher texts, to see where the coinciding symbols are located.  After you put a cipher in each box and click Compute, the tool will compare the ciphers and look for coinciding symbols.  It will also "slide" the 2nd cipher around using all possible offset values, to see if other alignments appear.  As an example, let's perform alignment analysis on the 408 and 340 ciphers.  Click the "Load 340 and 408" button:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_4.png" height="400" width="456"/><br/></div>
+<div><br/></div>
+<div>Click "Compute", and you'll see a grid:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_44.png" height="490" width="425"/><br/></div>
+<div><br/></div>
+<div>The grid indicates the count of coinciding symbols for each offset combination.  For example, when column offset is zero and row offset is zero, then the 408 is compared to the 340 as is.  Click the "7" value in the square for column offset 0 and row offset 0, and you'll see the coinciding symbols that Jurgen noticed:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_32.png" height="512" width="368"/><br/></div>
+<div><br/></div>
+<div>Note that the bottom of the second cipher text is padded with the first few lines of the 340.  This is done to make the two cipher text blocks equal in size.</div>
+<div><br/></div>
+<div>So, those coincidences look interesting, but they aren't unusual, because if we slide the second cipher text around with various offsets, more coincidences appear.  Click one of the darker squares to see them (darker squares reflect larger numbers of coincidences).  For example, if we click "13" for column offset 5 and row offset 3, these coincidences are shown:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_33.png" height="506" width="366"/><br/></div>
+<div><br/></div>
+<div>A useful side effect of this analysis is that you can put the same cipher text in both boxes, and the offset alignment analysis will reveal interesting repeated patterns.  For example, if you load the 408 into both boxes and click "Compute", you'll see this for column offset 1, row offset 6:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_40.png" height="474" width="369"/><br/></div>
+<div><br/></div>
+<div>The "V_eGY" pattern is easily visible.</div>
+<div><br/></div>
+<div>The maximum number of coincidences for the 340 when it is compared to itself is 20:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_9.png" height="433" width="368"/><br/></div>
+<div><br/></div>
+<a name="gaps"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Find repeating ngrams with gaps:</span></font></b></div>
+<div><br/></div>
+<div>This feature performs a brute force search for various repeating n-gram patterns, with and without gaps.  A repeating n-gram without gaps is an unbroken sequence of n symbols that repeats in the cipher text.  A repeating n-gram with gaps is a sequence of n symbols, with some fixed number of positions in between the symbols, that repeats in the cipher text.</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_16.png" height="31" width="297"/></div>
+<div>Click "Search" to see the results.  Here are a few excerpts of the results for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_23.png" height="91" width="456"/></div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_45.png" height="107" width="467"/></div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_24.png" height="434" width="759"/></div>
+<div><br/></div>
+<div>The search looks for repeating n-grams in two orientations by reading the cipher text from left to right, top to bottom.  Then it reads the cipher text from top to bottom, left to right.</div>
+<div><br/></div>
+<div>The "?" symbol represents a gap in the n-gram pattern.  It can be matched by any cipher text symbol.</div>
+<div><br/></div>
+<div>Here is the explanation for the information that appears in the results:</div>
+<ul>
+<li><b>Repeats:</b> This is computed by counting the coverage of all matched n-gram patterns, divided by the n-gram pattern's length.  A round number indicates the n-gram pattern repeated without overlaps.  A non-round number indicates the n-gram pattern intersects with one of its repetitions.  For example, if the 3-gram "abc" is found to occur twice in the cipher text, and they do not intersect, then the Repeats value is: 6 / 3 = 2.  If the 3-gram "abc" is found to occur twice in the cipher text, and they intersect at the symbol "a", then the Repeats value is: 5 / 3 = 1.67.</li>
+<li><b>Orientations:</b> This is the total number of orientations in which the n-gram pattern was found.</li>
+<li><b>Rarity score:</b> This is a relative measurement of how often the cipher text symbols in the n-gram pattern repeat in the cipher text.  The value from range from 0 to 1, where 0 represents the most common symbols, and 1 represents the rarest symbols.  Repetitions of a pattern with a high rarity score are more significant statistically than those with a low rarity score.</li>
+<li><b>Score:</b> This is computed as: Repeats * Rarity score / Pattern length.  The resulting value is an attempt to rank patterns in descending significance.</li>
+</ul>
+<div>Click on the n-gram pattern to highlight the repeats in the cipher text.  Here is an example after clicking "<font face="'Andale Mono'">Bc</font>" and "<font face="'Andale Mono'">O</font><font color="#BEBEBE"><font face="'Andale Mono'">?</font></font><font face="'Andale Mono'">*</font><span style="color: rgb(190, 190, 190);"><font face="'Andale Mono'">?</font></span><font face="'Andale Mono'">C</font>" in the results for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_11.png" height="426" width="215"/><br/></div>
+<div><br/></div>
+<div>At the end of the n-gram search results, the tool displays the cipher text block with visualizations of the scores.  Each block shows a representation of the sum of scores for each position, for a given orientation and n value for the n-gram patterns.  Darker squares represent higher scores.</div>
+<div><br/></div>
+<div>Here is a sample result for the 340, showing repetition scores for all orientations of n-grams for n = 3 and n = 4:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/Screen%20shot%202011-09-30%20at%205.31.53%20AM.jpg" height="430" width="553"/><br/></div>
+<div><br/></div>
+<div>If you hover the mouse pointer over a cipher text symbol, its score sum, and the patterns that contribute to the score sum, are displayed in a tooltip.</div>
+<div><br/></div>
+<a name="dist"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Symbol distances grid:</span></font></b></div>
+<div><br/></div>
+<div>This tool looks at each possible pair of symbols in the cipher text, and looks at the distances between them.  Then, it reports the largest distance found for the pair of symbols.  </div>
+<div><br/></div>
+<div>Sample excerpt for the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/Screen%20shot%202011-09-30%20at%205.39.54%20AM.jpg" height="213" width="548"/><br/></div>
+<div><br/></div>
+<div>If you hover the mouse pointer over a cell of the grid, an explanation is displayed.</div>
+<div><br/></div>
+<div>If the maximum distance is under 10, the cell is shown with a gray background.</div>
+<div><br/></div>
+<div>The idea behind the grid is to try to find pairs of symbols that repeat a lot, but tend to occur near each other.  This suggests that there might be some sort of relationship between the symbols in the pair.</div>
+<div><br/></div>
+<a name="sym"></a>
+<div><b><font size="5"><span style="font-size: 18px;">Symmetry analysis:</span></font></b></div>
+<div><br/></div>
+<div>This feature looks for symmetry in a cipher text block by scanning all possible horizontal and vertical axes and looking for symbols that are reflected about those axes.</div>
+<div><br/></div>
+<div>There are two ways an axis of symmetry is defined by this tool:</div>
+<ul>
+<li>As an entire row or column of the cipher block</li>
+<li>As the space between two rows or columns of the cipher block</li>
+</ul>
+There are two ways the tool looks for symmetrical symbols about an axis:
+<div>
+<ul>
+<li>Mirror: Treats the axis as a mirror.  A matched symbol, that appears on both sides of an axis, will be equidistant from the axis of symmetry.</li>
+<li>Copy:  Treats the axis as a boundary.  The cipher text on one side of an axis is treated as an exact copy of the cipher text that appears on the other side of the axis.</li>
+</ul>
+<div>Sample output for the 340 cipher:<br/></div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_2.png" height="306" width="390"/></div>
+<div><br/></div>
+<div>The columns are:</div>
+<ul>
+<li>Type: This can be horizontal mirror, vertical mirror, horizontal copy, or vertical copy.</li>
+<li>Row/Col: This is the row or column at which the axis of symmetry is defined.</li>
+<li>Between?:  If "No", the row or column itself is the axis of symmetry.  If "Yes", the space between the row or column, and the row or column before it, is the axis of symmetry.</li>
+<li>#Matches: This is the total number of symbols that were found mirrored or copied about the axis of symmetry.</li>
+<li>Symbols: The symbols that were found mirrored or copied about the axis of symmetry.  Clicking the symbols will highlight them in the cipher text.</li>
+</ul>
+Here is an example of clicking the mirrored symbols <font face="'Andale Mono'"><b>Y*z2V&lt;</b></font> in the 340 cipher:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_25.png" height="424" width="213"/><br/></div>
+<div><br/></div>
+<div>The above example shows symmetrical symbols that are reflected about the horizontal axis defined between the 10th and 11th rows of the cipher text block.</div>
+<div><br/></div>
+<div>Here is an example of "copy symmetry" in the 408, occurring with the symbols <font face="'Andale Mono'"><b>IB_Eq:</b></font></div>
+<div><font face="'Andale Mono'"><b><br/></b></font></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_27.png" height="491" width="216"/><font face="'Andale Mono'"><b><br/></b></font></div>
+<div><br/></div>
+<div>The copy symmetry occurs about the vertical axis defined between the 8th and 9th columns.</div>
+<div><br/></div>
+<a name="high"></a>
+<div><b><font size="5"><span style="font-size: 18px;">N-grams:  Highlight all:</span></font></b></div>
+<div><br/></div>
+<div>A new link appears in the N-grams section:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_29.png" height="180" width="490"/><br/></div>
+<div><br/></div>
+<div>When you click "Highlight all", CryptoScope highlights all occurrences of the n-grams, and uses randomized colors to make it easier to see them all.</div>
+<div><br/></div>
+<div>Result of highlighting all 1-grams of the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_35.png" height="433" width="215"/><br/></div>
+<div><br/></div>
+<div>Result of highlighting all 2-grams of the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_12.png" height="425" width="216"/><br/></div>
+<div><br/></div>
+<div>Result of highlighting all 3-grams of the 340:</div>
+<div><br/></div>
+<div>     <img src="new_cryptoscope_features.resources/screenshot_13.png" height="426" width="215"/><br/></div>
+<div><br/></div>
+<div>Note that the color assignment is completely random, so there is a chance that the colors assigned to two different n-grams will happen to be the same.  If you don't like the color assignments, click the "Highlight all" link again to produce new color assignments.</div>
+</body></html>

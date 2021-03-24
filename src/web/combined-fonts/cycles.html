@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher, .cipher2 {
+				font-family: 'untitled2regular';
+				line-height: 22px;
+				font-size: 24pt;
+				color: black;
+				
+				background-color: #white;
+							}
+				td { padding: 5px; }
+				.cipher2 { color: white; }
+				.cipher3 { background-color: aqua; }
+				body { padding: 2em; }
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+<span class="cipher">
+
+H, k, 1, W, )
+<!--lVM<br>
+lVM<br>
+lVM<br>
+lVM<br>
+lMlV<br>
+VMlM<br>-->
+<!--		
+ZpW+6NE<br>
+ZpW+6NEE<br>
+ZpW+6NE<br>
+ZpW+6NEN<br>
+ZpW+6NE<br>
+ZpW++W<br>
+ZE6<br>
+Z+W6EW6E<br>-->
+	</span>
+</body>
+</html>

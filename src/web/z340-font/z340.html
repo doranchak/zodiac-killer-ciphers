@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					body{
+				font-family: 'z340medium';
+							}
+		</style>
+
+	<title>Z340 Medium Specimen</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+	</script>
+</head>
+
+<body>
+	<div style="font-size: 30pt; margin: 1em;">
+		<table>
+		<tr><td>H</td><td>E</td><td>R</td><td>a</td><td>b</td><td>c</td><td>d</td><td>V</td><td>P</td><td>e</td><td>I</td><td>f</td><td>L</td><td>T</td><td>G</td><td>g</td><td>h</td></tr>
+		<tr><td>N</td><td>b</td><td>i</td><td>B</td><td>j</td><td>k</td><td>O</td><td>l</td><td>D</td><td>W</td><td>Y</td><td>m</td><td>n</td><td>o</td><td>K</td><td>p</td><td>q</td></tr>
+		<tr><td>B</td><td>r</td><td>s</td><td>t</td><td>M</td><td>i</td><td>U</td><td>Z</td><td>G</td><td>W</td><td>j</td><td>q</td><td>L</td><td>k</td><td>u</td><td>H</td><td>J</td></tr>
+		<tr><td>S</td><td>b</td><td>b</td><td>v</td><td>d</td><td>c</td><td>w</td><td>o</td><td>V</td><td>x</td><td>b</td><td>O</td><td>i</td><td>i</td><td>R</td><td>K</td><td>g</td></tr>
+		<tr><td>y</td><td>z</td><td>M</td><td>i</td><td>u</td><td>1</td><td>2</td><td>h</td><td>I</td><td>7</td><td>F</td><td>P</td><td>i</td><td>3</td><td>4</td><td>e</td><td>5</td></tr>
+		<tr><td>b</td><td>w</td><td>R</td><td>d</td><td>F</td><td>c</td><td>O</td><td>6</td><td>o</td><td>h</td><td>C</td><td>e</td><td>F</td><td>a</td><td>g</td><td>D</td><td>j</td></tr>
+		<tr><td>k</td><td>7</td><td>i</td><td>K</td><td>Q</td><td>l</td><td>8</td><td>g</td><td>U</td><td>t</td><td>X</td><td>G</td><td>V</td><td>m</td><td>u</td><td>L</td><td>I</td></tr>
+		<tr><td>j</td><td>G</td><td>g</td><td>J</td><td>p</td><td>2</td><td>k</td><td>O</td><td>i</td><td>y</td><td>N</td><td>Y</td><td>u</td><td>i</td><td>9</td><td>L</td><td>z</td></tr>
+		<tr><td>h</td><td>n</td><td>M</td><td>i</td><td>0</td><td>i</td><td>Z</td><td>R</td><td>g</td><td>F</td><td>B</td><td>t</td><td>r</td><td>A</td><td>#</td><td>4</td><td>K</td></tr>
+		<tr><td>6</td><td>u</td><td>c</td><td>U</td><td>V</td><td>i</td><td>d</td><td>J</td><td>i</td><td>O</td><td>b</td><td>v</td><td>n</td><td>F</td><td>B</td><td>r</td><td>6</td></tr>
+		<tr><td>U</td><td>i</td><td>R</td><td>5</td><td>7</td><td>1</td><td>E</td><td>I</td><td>D</td><td>Y</td><td>B</td><td>b</td><td>0</td><td>T</td><td>M</td><td>K</td><td>O</td></tr>
+		<tr><td>g</td><td>n</td><td>t</td><td>c</td><td>R</td><td>J</td><td>I</td><td>o</td><td>7</td><td>T</td><td>4</td><td>M</td><td>m</td><td>i</td><td>3</td><td>B</td><td>F</td></tr>
+		<tr><td>u</td><td>#</td><td>z</td><td>S</td><td>r</td><td>k</td><td>i</td><td>N</td><td>I</td><td>7</td><td>F</td><td>B</td><td>t</td><td>j</td><td>8</td><td>w</td><td>R</td></tr>
+		<tr><td>c</td><td>G</td><td>F</td><td>N</td><td>d</td><td>p</td><td>7</td><td>g</td><td>4</td><td>0</td><td>m</td><td>t</td><td>V</td><td>4</td><td>1</td><td>i</td><td>i</td></tr>
+		<tr><td>r</td><td>B</td><td>X</td><td>f</td><td>o</td><td>s</td><td>4</td><td>z</td><td>C</td><td>E</td><td>a</td><td>V</td><td>U</td><td>Z</td><td>7</td><td>6</td><td>i</td></tr>
+		<tr><td>I</td><td>t</td><td>m</td><td>x</td><td>u</td><td>B</td><td>K</td><td>j</td><td>O</td><td>b</td><td>d</td><td>m</td><td>p</td><td>M</td><td>Q</td><td>G</td><td>g</td></tr>
+		<tr><td>R</td><td>t</td><td>T</td><td>i</td><td>L</td><td>f</td><td>#</td><td>C</td><td>n</td><td>i</td><td>F</td><td>c</td><td>W</td><td>B</td><td>I</td><td>q</td><td>L</td></tr>
+		<tr><td>i</td><td>i</td><td>q</td><td>W</td><td>C</td><td>u</td><td>W</td><td>t</td><td>P</td><td>O</td><td>S</td><td>H</td><td>T</td><td>5</td><td>j</td><td>q</td><td>b</td></tr>
+		<tr><td>I</td><td>F</td><td>e</td><td>h</td><td>W</td><td>n</td><td>v</td><td>1</td><td>B</td><td>y</td><td>Y</td><td>O</td><td>B</td><td>o</td><td>6</td><td>C</td><td>t</td></tr>
+		<tr><td>a</td><td>M</td><td>D</td><td>H</td><td>N</td><td>b</td><td>e</td><td>S</td><td>u</td><td>Z</td><td>O</td><td>w</td><td>A</td><td>I</td><td>K</td><td>8</td><td>i</td></tr>
+		</table>
+</div>
+	<div style="font-size: 60pt; margin: 1em;">
+		<table>
+		<tr><td>H</td><td>E</td><td>R</td><td>a</td><td>b</td><td>c</td><td>d</td><td>V</td><td>P</td><td>e</td><td>I</td><td>f</td><td>L</td><td>T</td><td>G</td><td>g</td><td>h</td></tr>
+		<tr><td>N</td><td>b</td><td>i</td><td>B</td><td>j</td><td>k</td><td>O</td><td>l</td><td>D</td><td>W</td><td>Y</td><td>m</td><td>n</td><td>o</td><td>K</td><td>p</td><td>q</td></tr>
+		<tr><td>B</td><td>r</td><td>s</td><td>t</td><td>M</td><td>i</td><td>U</td><td>Z</td><td>G</td><td>W</td><td>j</td><td>q</td><td>L</td><td>k</td><td>u</td><td>H</td><td>J</td></tr>
+		<tr><td>S</td><td>b</td><td>b</td><td>v</td><td>d</td><td>c</td><td>w</td><td>o</td><td>V</td><td>x</td><td>b</td><td>O</td><td>i</td><td>i</td><td>R</td><td>K</td><td>g</td></tr>
+		<tr><td>y</td><td>z</td><td>M</td><td>i</td><td>u</td><td>1</td><td>2</td><td>h</td><td>I</td><td>7</td><td>F</td><td>P</td><td>i</td><td>3</td><td>4</td><td>e</td><td>5</td></tr>
+		<tr><td>b</td><td>w</td><td>R</td><td>d</td><td>F</td><td>c</td><td>O</td><td>6</td><td>o</td><td>h</td><td>C</td><td>e</td><td>F</td><td>a</td><td>g</td><td>D</td><td>j</td></tr>
+		<tr><td>k</td><td>7</td><td>i</td><td>K</td><td>Q</td><td>l</td><td>8</td><td>g</td><td>U</td><td>t</td><td>X</td><td>G</td><td>V</td><td>m</td><td>u</td><td>L</td><td>I</td></tr>
+		<tr><td>j</td><td>G</td><td>g</td><td>J</td><td>p</td><td>2</td><td>k</td><td>O</td><td>i</td><td>y</td><td>N</td><td>Y</td><td>u</td><td>i</td><td>9</td><td>L</td><td>z</td></tr>
+		<tr><td>h</td><td>n</td><td>M</td><td>i</td><td>0</td><td>i</td><td>Z</td><td>R</td><td>g</td><td>F</td><td>B</td><td>t</td><td>r</td><td>A</td><td>#</td><td>4</td><td>K</td></tr>
+		<tr><td>6</td><td>u</td><td>c</td><td>U</td><td>V</td><td>i</td><td>d</td><td>J</td><td>i</td><td>O</td><td>b</td><td>v</td><td>n</td><td>F</td><td>B</td><td>r</td><td>6</td></tr>
+		<tr><td>U</td><td>i</td><td>R</td><td>5</td><td>7</td><td>1</td><td>E</td><td>I</td><td>D</td><td>Y</td><td>B</td><td>b</td><td>0</td><td>T</td><td>M</td><td>K</td><td>O</td></tr>
+		<tr><td>g</td><td>n</td><td>t</td><td>c</td><td>R</td><td>J</td><td>I</td><td>o</td><td>7</td><td>T</td><td>4</td><td>M</td><td>m</td><td>i</td><td>3</td><td>B</td><td>F</td></tr>
+		<tr><td>u</td><td>#</td><td>z</td><td>S</td><td>r</td><td>k</td><td>i</td><td>N</td><td>I</td><td>7</td><td>F</td><td>B</td><td>t</td><td>j</td><td>8</td><td>w</td><td>R</td></tr>
+		<tr><td>c</td><td>G</td><td>F</td><td>N</td><td>d</td><td>p</td><td>7</td><td>g</td><td>4</td><td>0</td><td>m</td><td>t</td><td>V</td><td>4</td><td>1</td><td>i</td><td>i</td></tr>
+		<tr><td>r</td><td>B</td><td>X</td><td>f</td><td>o</td><td>s</td><td>4</td><td>z</td><td>C</td><td>E</td><td>a</td><td>V</td><td>U</td><td>Z</td><td>7</td><td>6</td><td>i</td></tr>
+		<tr><td>I</td><td>t</td><td>m</td><td>x</td><td>u</td><td>B</td><td>K</td><td>j</td><td>O</td><td>b</td><td>d</td><td>m</td><td>p</td><td>M</td><td>Q</td><td>G</td><td>g</td></tr>
+		<tr><td>R</td><td>t</td><td>T</td><td>i</td><td>L</td><td>f</td><td>#</td><td>C</td><td>n</td><td>i</td><td>F</td><td>c</td><td>W</td><td>B</td><td>I</td><td>q</td><td>L</td></tr>
+		<tr><td>i</td><td>i</td><td>q</td><td>W</td><td>C</td><td>u</td><td>W</td><td>t</td><td>P</td><td>O</td><td>S</td><td>H</td><td>T</td><td>5</td><td>j</td><td>q</td><td>b</td></tr>
+		<tr><td>I</td><td>F</td><td>e</td><td>h</td><td>W</td><td>n</td><td>v</td><td>1</td><td>B</td><td>y</td><td>Y</td><td>O</td><td>B</td><td>o</td><td>6</td><td>C</td><td>t</td></tr>
+		<tr><td>a</td><td>M</td><td>D</td><td>H</td><td>N</td><td>b</td><td>e</td><td>S</td><td>u</td><td>Z</td><td>O</td><td>w</td><td>A</td><td>I</td><td>K</td><td>8</td><td>i</td></tr>
+		</table>
+</div>
+	<div style="font-size: 120pt; margin: 1em;">
+		<table>
+		<tr><td>H</td><td>E</td><td>R</td><td>a</td><td>b</td><td>c</td><td>d</td><td>V</td><td>P</td><td>e</td><td>I</td><td>f</td><td>L</td><td>T</td><td>G</td><td>g</td><td>h</td></tr>
+		<tr><td>N</td><td>b</td><td>i</td><td>B</td><td>j</td><td>k</td><td>O</td><td>l</td><td>D</td><td>W</td><td>Y</td><td>m</td><td>n</td><td>o</td><td>K</td><td>p</td><td>q</td></tr>
+		<tr><td>B</td><td>r</td><td>s</td><td>t</td><td>M</td><td>i</td><td>U</td><td>Z</td><td>G</td><td>W</td><td>j</td><td>q</td><td>L</td><td>k</td><td>u</td><td>H</td><td>J</td></tr>
+		<tr><td>S</td><td>b</td><td>b</td><td>v</td><td>d</td><td>c</td><td>w</td><td>o</td><td>V</td><td>x</td><td>b</td><td>O</td><td>i</td><td>i</td><td>R</td><td>K</td><td>g</td></tr>
+		<tr><td>y</td><td>z</td><td>M</td><td>i</td><td>u</td><td>1</td><td>2</td><td>h</td><td>I</td><td>7</td><td>F</td><td>P</td><td>i</td><td>3</td><td>4</td><td>e</td><td>5</td></tr>
+		<tr><td>b</td><td>w</td><td>R</td><td>d</td><td>F</td><td>c</td><td>O</td><td>6</td><td>o</td><td>h</td><td>C</td><td>e</td><td>F</td><td>a</td><td>g</td><td>D</td><td>j</td></tr>
+		<tr><td>k</td><td>7</td><td>i</td><td>K</td><td>Q</td><td>l</td><td>8</td><td>g</td><td>U</td><td>t</td><td>X</td><td>G</td><td>V</td><td>m</td><td>u</td><td>L</td><td>I</td></tr>
+		<tr><td>j</td><td>G</td><td>g</td><td>J</td><td>p</td><td>2</td><td>k</td><td>O</td><td>i</td><td>y</td><td>N</td><td>Y</td><td>u</td><td>i</td><td>9</td><td>L</td><td>z</td></tr>
+		<tr><td>h</td><td>n</td><td>M</td><td>i</td><td>0</td><td>i</td><td>Z</td><td>R</td><td>g</td><td>F</td><td>B</td><td>t</td><td>r</td><td>A</td><td>#</td><td>4</td><td>K</td></tr>
+		<tr><td>6</td><td>u</td><td>c</td><td>U</td><td>V</td><td>i</td><td>d</td><td>J</td><td>i</td><td>O</td><td>b</td><td>v</td><td>n</td><td>F</td><td>B</td><td>r</td><td>6</td></tr>
+		<tr><td>U</td><td>i</td><td>R</td><td>5</td><td>7</td><td>1</td><td>E</td><td>I</td><td>D</td><td>Y</td><td>B</td><td>b</td><td>0</td><td>T</td><td>M</td><td>K</td><td>O</td></tr>
+		<tr><td>g</td><td>n</td><td>t</td><td>c</td><td>R</td><td>J</td><td>I</td><td>o</td><td>7</td><td>T</td><td>4</td><td>M</td><td>m</td><td>i</td><td>3</td><td>B</td><td>F</td></tr>
+		<tr><td>u</td><td>#</td><td>z</td><td>S</td><td>r</td><td>k</td><td>i</td><td>N</td><td>I</td><td>7</td><td>F</td><td>B</td><td>t</td><td>j</td><td>8</td><td>w</td><td>R</td></tr>
+		<tr><td>c</td><td>G</td><td>F</td><td>N</td><td>d</td><td>p</td><td>7</td><td>g</td><td>4</td><td>0</td><td>m</td><td>t</td><td>V</td><td>4</td><td>1</td><td>i</td><td>i</td></tr>
+		<tr><td>r</td><td>B</td><td>X</td><td>f</td><td>o</td><td>s</td><td>4</td><td>z</td><td>C</td><td>E</td><td>a</td><td>V</td><td>U</td><td>Z</td><td>7</td><td>6</td><td>i</td></tr>
+		<tr><td>I</td><td>t</td><td>m</td><td>x</td><td>u</td><td>B</td><td>K</td><td>j</td><td>O</td><td>b</td><td>d</td><td>m</td><td>p</td><td>M</td><td>Q</td><td>G</td><td>g</td></tr>
+		<tr><td>R</td><td>t</td><td>T</td><td>i</td><td>L</td><td>f</td><td>#</td><td>C</td><td>n</td><td>i</td><td>F</td><td>c</td><td>W</td><td>B</td><td>I</td><td>q</td><td>L</td></tr>
+		<tr><td>i</td><td>i</td><td>q</td><td>W</td><td>C</td><td>u</td><td>W</td><td>t</td><td>P</td><td>O</td><td>S</td><td>H</td><td>T</td><td>5</td><td>j</td><td>q</td><td>b</td></tr>
+		<tr><td>I</td><td>F</td><td>e</td><td>h</td><td>W</td><td>n</td><td>v</td><td>1</td><td>B</td><td>y</td><td>Y</td><td>O</td><td>B</td><td>o</td><td>6</td><td>C</td><td>t</td></tr>
+		<tr><td>a</td><td>M</td><td>D</td><td>H</td><td>N</td><td>b</td><td>e</td><td>S</td><td>u</td><td>Z</td><td>O</td><td>w</td><td>A</td><td>I</td><td>K</td><td>8</td><td>i</td></tr>
+		</table>
+</div>
+</body>
+</html>

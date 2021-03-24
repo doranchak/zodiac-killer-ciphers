@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher {
+				font-family: 'untitled2regular';
+				line-height: 0.8em;
+				font-size: 24pt;
+							}
+					.pt {
+				font-family: 'courier';
+				line-height: 0.8em;
+				font-size: 24pt;
+				color: #999;
+							}
+				td { padding: 5px; };
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+<table><tr>
+<td>
+	<span class="cipher">HER&#62;pl^VPk|1LTG2d</span><br>
+	<span class="pt">PS2COPSPULLEDAGOO</span><br>
+	<span class="cipher">Np+B(#O%DWY.&#60;*Kf)</span><br>
+	<span class="pt">FABOT3MINAFTERILE</span><br>
+	<span class="cipher">By:cM+UZGW()L#zHJ</span><br>
+	<span class="pt">FTTHECABIWASWALKI</span><br>
+	<span class="cipher">Spp7^l8*V3pO++RK2</span><br>
+	<span class="pt">NGDOWNTHEHILLTOTH</span><br>
+	<span class="cipher">_9M+ztjd|5FP+&#38;4k/</span><br>
+	<span class="pt">EPARKWHENTHISCOPC</span><br>
+	<span class="cipher">p8R^FlO-*dCkF&#62;2D(</span><br>
+	<span class="pt">ARPULLEDUP+ONEOFT</span><br>
+	<span class="cipher">#5+Kq%;2UcXGV.zL|</span><br>
+	<span class="pt">HEMCALLEDMEOVER+A</span><br>
+	<span class="cipher">(G2Jfj#O+_NYz+@L9</span><br>
+	<span class="pt">SKEDIFISAWANYONEA</span><br>
+	<span class="cipher">d&#60;M+b+ZR2FBcyA64K</span><br>
+	<span class="pt">CTINGSUSPICIOUSOR</span><br>
+	<span class="cipher">-zlUV+^J+Op7&#60;FBy-</span><br>
+	<span class="pt">STRANGEINTHELAST5</span><br>
+	</td><td>
+	<span class="cipher">U+R/5tE|DYBpbTMKO</span><br>
+	<span class="pt">TO10MIN+ISAIDYEST</span><br>
+	<span class="cipher">2&#60;clRJ|*5T4M.+&#38;BF</span><br>
+	<span class="pt">HEREWASTHISMANWHO</span><br>
+	<span class="cipher">z69Sy#+N|5FBc(;8R</span><br>
+	<span class="pt">WASRUNNIGBYWAVEIN</span><br>
+	<span class="cipher">lGFN^f524b.cV4t++</span><br>
+	<span class="pt">GAGUN&amp;THECOPSPEEL</span><br>
+	<span class="cipher">yBX1*:49CE&#62;VUZ5-+</span><br>
+	<span class="pt">EDRUBBER+WENTAROU</span><br>
+	<span class="cipher">|c.3zBK(Op^.fMqG2</span><br>
+	<span class="pt">NDTHECORNERASIDIR</span><br>
+	<span class="cipher">RcT+L16C&#60;+FlWB|)L</span><br>
+	<span class="pt">ECTEDTHEM+IDISAPP</span><br>
+	<span class="cipher">++)WCzWcPOSHT/()p</span><br>
+	<span class="pt">-EAREDINTOTHEPARK</span><br>
+	<span class="cipher">|FkdW&#60;7tB_YOB*-Cc</span><br>
+	<span class="pt">ABLOCK+AHALFAWAYN</span><br>
+	<span class="cipher">&#62;MDHNpkSzZO8A|K;+</span><br>
+	<span class="pt">EVERTOBESEENAGAIN</span><br>	
+	</td>
+</tr>
+
+</body>
+</html>

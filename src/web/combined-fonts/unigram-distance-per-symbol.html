@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher {
+				font-family: 'untitled2regular';
+				line-height: 0.8em;
+				font-size: 24pt;
+							}
+				td, th { padding: 0px; padding-left: 1em; }
+				.n { font-size: 125%;}
+				
+				th { text-decoration: underline;}
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+
+<table><tr valign="top"><td>
+
+<h1>Z408</h1>
+<table style="margin-right: 1em">
+<tr><th><u>Symbol</u></th><th><u>Sigma</u></th></tr>
+<tr><td class="cipher">_</td><td class="n">-2.43</td></tr>
+<tr><td class="cipher">l</td><td class="n">-1.09</td></tr>
+<tr><td class="cipher">N</td><td class="n">-1.01</td></tr>
+<tr><td class="cipher">6</td><td class="n">1.05</td></tr>
+<tr><td class="cipher">P</td><td class="n">1.06</td></tr>
+<tr><td class="cipher">W</td><td class="n">1.06</td></tr>
+<tr><td class="cipher">X</td><td class="n">1.06</td></tr>
+<tr><td class="cipher">H</td><td class="n">1.07</td></tr>
+<tr><td class="cipher">7</td><td class="n">1.17</td></tr>
+<tr><td class="cipher">9</td><td class="n">1.19</td></tr>
+<tr><td class="cipher">U</td><td class="n">1.43</td></tr>
+<tr><td class="cipher">k</td><td class="n">1.45</td></tr>
+<tr><td class="cipher">=</td><td class="n">1.46</td></tr>
+</table>
+</td><td style="margin-left: 1em; border-left: thin solid black;">
+	<h1>Z340</h1>
+	<table>
+		<tr><th><u>Symbol</u></th><th><u>Sigma</u></th><th><u>Symbol</u></th><th><u>Sigma</u></th></tr>
+<tr><td class="cipher">5</td><td class="n">-1.66</td>  <td class="cipher">7</td><td class="n">1.15</td></tr>
+<tr><td class="cipher">4</td><td class="n">-1.51</td>  <td class="cipher">:</td><td class="n">1.17</td></tr>
+<tr><td class="cipher">F</td><td class="n">-1.34</td>  <td class="cipher">Y</td><td class="n">1.25</td></tr>
+<tr><td class="cipher">b</td><td class="n">-1.06</td>  <td class="cipher">|</td><td class="n">1.26</td></tr>
+<tr><td class="cipher">E</td><td class="n">1.00</td>   <td class="cipher">1</td><td class="n">1.26</td></tr>
+<tr><td class="cipher">T</td><td class="n">1.01</td>   <td class="cipher">Z</td><td class="n">1.28</td></tr>
+<tr><td class="cipher">_</td><td class="n">1.01</td>   <td class="cipher">N</td><td class="n">1.37</td></tr>
+<tr><td class="cipher">K</td><td class="n">1.03</td>   <td class="cipher">D</td><td class="n">1.41</td></tr>
+<tr><td class="cipher">3</td><td class="n">1.05</td>   <td class="cipher">k</td><td class="n">1.54</td></tr>
+<tr><td class="cipher">8</td><td class="n">1.07</td>   <td class="cipher">P</td><td class="n">1.56</td></tr>
+<tr><td class="cipher">d</td><td class="n">1.09</td>   <td class="cipher">></td><td class="n">1.70</td></tr>
+<tr><td class="cipher">S</td><td class="n">1.10</td>   <td class="cipher">H</td><td class="n">1.79</td></tr>
+<tr><td class="cipher">p</td><td class="n">1.15</td></tr>
+</table>
+</td></tr></table>
+
+</body>
+</html>

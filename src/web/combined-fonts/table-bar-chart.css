@@ -1,0 +1,379 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+#q-graph {
+  display: block;
+  /* fixes layout wonkiness in FF1.5 */
+  position: relative;
+  width: 600px;
+  height: 300px;
+  margin: 1.1em 0 0;
+  padding: 0;
+  background: transparent;
+  font-size: 11px;
+}
+
+#q-graph caption {
+  caption-side: top;
+  width: 600px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  top: -40px;
+  position: relative;
+  z-index: 10;
+  font-weight: bold;
+}
+
+#q-graph tr, #q-graph th, #q-graph td {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#q-graph td {
+  transition: all .3s ease;
+}
+#q-graph td:hover {
+  background-color: #4d4d4d;
+  opacity: .9;
+  color: white;
+}
+
+#q-graph thead tr {
+  left: 100%;
+  top: 50%;
+  bottom: auto;
+  margin: -2.5em 0 0 5em;
+}
+
+#q-graph thead th {
+  width: 7.5em;
+  height: auto;
+  padding: 0.5em 1em;
+}
+
+#q-graph thead th.sent {
+  top: 0;
+  left: 0;
+  line-height: 2;
+}
+
+#q-graph thead th.paid {
+  top: 2.75em;
+  line-height: 2;
+  left: 0;
+}
+
+#q-graph tbody tr {
+  height: 479px;
+  padding-top: 2px;
+  border-right: 1px dotted #C4C4C4;
+  color: #AAA;
+}
+
+#q-graph #q1 {
+  left: 16px;
+}
+#q-graph #q2 {
+  left: 32px;
+}
+#q-graph #q3 {
+  left: 48px;
+}
+#q-graph #q4 {
+  left: 64px;
+}
+#q-graph #q5 {
+  left: 80px;
+}
+#q-graph #q6 {
+  left: 96px;
+}
+#q-graph #q7 {
+  left: 112px;
+}
+#q-graph #q8 {
+  left: 128px;
+}
+#q-graph #q9 {
+  left: 144px;
+}
+#q-graph #q10 {
+  left: 160px;
+}
+#q-graph #q11 {
+  left: 176px;
+}
+#q-graph #q12 {
+  left: 192px;
+}
+#q-graph #q13 {
+  left: 208px;
+}
+#q-graph #q14 {
+  left: 224px;
+}
+#q-graph #q15 {
+  left: 240px;
+}
+#q-graph #q16 {
+  left: 256px;
+}
+#q-graph #q17 {
+  left: 272px;
+}
+#q-graph #q18 {
+  left: 288px;
+}
+#q-graph #q19 {
+  left: 304px;
+}
+#q-graph #q20 {
+  left: 320px;
+}
+#q-graph #q21 {
+  left: 336px;
+}
+#q-graph #q22 {
+  left: 352px;
+}
+#q-graph #q23 {
+  left: 368px;
+}
+#q-graph #q24 {
+  left: 384px;
+}
+#q-graph #q25 {
+  left: 400px;
+}
+#q-graph #q26 {
+  left: 416px;
+}
+#q-graph #q27 {
+  left: 432px;
+}
+#q-graph #q28 {
+  left: 448px;
+}
+#q-graph #q29 {
+  left: 464px;
+}
+#q-graph #q30 {
+  left: 480px;
+}
+#q-graph #q31 {
+  left: 496px;
+}
+#q-graph #q32 {
+  left: 512px;
+}
+#q-graph #q33 {
+  left: 528px;
+}
+#q-graph #q34 {
+  left: 544px;
+}
+#q-graph #q35 {
+  left: 560px;
+}
+#q-graph #q36 {
+  left: 576px;
+}
+#q-graph #q37 {
+  left: 592px;
+}
+#q-graph #q38 {
+  left: 608px;
+}
+#q-graph #q39 {
+  left: 624px;
+}
+#q-graph #q40 {
+  left: 640px;
+}
+#q-graph #q41 {
+  left: 656px;
+}
+#q-graph #q42 {
+  left: 672px;
+}
+#q-graph #q43 {
+  left: 688px;
+}
+#q-graph #q44 {
+  left: 704px;
+}
+#q-graph #q45 {
+  left: 720px;
+}
+#q-graph #q46 {
+  left: 736px;
+}
+#q-graph #q47 {
+  left: 752px;
+}
+#q-graph #q48 {
+  left: 768px;
+}
+#q-graph #q49 {
+  left: 784px;
+}
+#q-graph #q50 {
+  left: 800px;
+}
+#q-graph #q51 {
+  left: 816px;
+}
+#q-graph #q52 {
+  left: 832px;
+}
+#q-graph #q53 {
+  left: 848px;
+}
+#q-graph #q54 {
+  left: 864px;
+}
+#q-graph #q55 {
+  left: 880px;
+}
+#q-graph #q56 {
+  left: 896px;
+}
+#q-graph #q57 {
+  left: 912px;
+}
+#q-graph #q58 {
+  left: 928px;
+}
+#q-graph #q59 {
+  left: 944px;
+}
+#q-graph #q60 {
+  left: 960px;
+}
+#q-graph #q61 {
+  left: 976px;
+}
+#q-graph #q62 {
+  left: 992px;
+}
+#q-graph #q63 {
+  left: 1008px;
+}
+
+#q-graph #q5OLD {
+  left: 100px;
+  border-right: none;
+}
+
+#q-graph tbody th {
+  bottom: -1.75em;
+  vertical-align: top;
+  font-weight: normal;
+  color: #333;
+}
+
+#q-graph .bar {
+  width: 13px;
+  border: 1px solid;
+  border-bottom: none;
+  color: #000;
+}
+
+#q-graph .bar p {
+  margin: 5px 0 0;
+  padding: 0;
+  opacity: .4;
+}
+
+#q-graph .sent {
+  left: 13px;
+  background-color: #39cccc;
+  border-color: transparent;
+}
+
+#q-graph .paid {
+  left: 77px;
+  background-color: #7fdbff;
+  border-color: transparent;
+}
+
+#ticks {
+  position: relative;
+  top: -300px;
+  left: 2px;
+  width: 596px;
+  height: 300px;
+  z-index: 1;
+  margin-bottom: -300px;
+  font-size: 10px;
+  font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+#ticks .tick {
+  position: relative;
+  border-bottom: 1px dotted #C4C4C4;
+  width: 900px;
+}
+
+#ticks .tick p {
+  position: absolute;
+  left: -5em;
+  top: -0.8em;
+  margin: 0 0 0 0.5em;
+}
+
+#ticks2 {
+  position: relative;
+  top: -482px;
+  left: 2px;
+  width: 596px;
+  height: 300px;
+  z-index: 1;
+  margin-bottom: -300px;
+  font-size: 10px;
+  font-family: "fira-sans-2", Verdana, sans-serif;
+}
+
+#ticks2 .tick {
+  position: relative;
+  border-bottom: 1px dotted #C4C4C4;
+  width: 1100px;
+}
+
+#ticks2 .ticktop {
+  position: relative;
+  border-bottom: 1px dotted #C4C4C4;
+  border-top: 1px dotted #C4C4C4;
+  width: 1100px;
+}
+
+
+#ticks2 .tick p {
+  position: absolute;
+  left: -5em;
+  top: -0.8em;
+  margin: 0 0 0 0.5em;
+}
+
+#ticks2 .ticktop p {
+  position: absolute;
+  left: -5em;
+  top: -0.8em;
+  margin: 0 0 0 0.5em;
+}
+
+

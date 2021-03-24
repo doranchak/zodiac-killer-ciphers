@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher, .cipher2 {
+				font-family: 'untitled2regular';
+				line-height: 28px;
+				font-size: 24pt;
+				color: #bbb;
+				
+				background-color: #white;
+							}
+				td { padding: 5px; }
+				.cipher2 { color: black; }
+				.cipher3 { background-color: aqua; }
+				body { padding: 2em; }
+				.plain { color: green; padding-right: 1em; }
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+	
+<TABLE><tr><td>	
+<span class="cipher">
+<span class="plain">D</span><span class="cipher2">fz</span> z <span class="cipher2">fz fz</span><br>
+<span class="plain">E</span><span class="cipher2">ZpW+6NE ZpW+6NE</span> E <span class="cipher2">ZpW+6NE ZpW+6NE</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N <span class="cipher2">ZpW+6NE</span> ZpW+<br>
+<span class="plain">F</span><span class="cipher2">JQ JQ JQ JQ</span> J <span class="cipher2">JQ</span><br>
+<span class="plain">H</span><span class="cipher2">M) M) M) M) M) M) M) M)</span><br>
+<span class="plain">I</span><span class="cipher2">9PUk 9PUk 9PUk 9PUk 9PUk 9PUk 9PUk <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9PUk</span> 9P99U99PP9Uk<br>
+<span class="plain">N</span><span class="cipher2">O^D( O^D( O^D( O^D( O^D</span> O^D O<br>
+<span class="plain">O</span><span class="cipher2">X!Td X!Td X!Td X!T</span> XTdT!XXd!dXTX<br>
+<span class="plain">R</span><span class="cipher2">tr\ tr\ tr\ tr\ tr</span> t\trr<br>
+<span class="plain">S</span><span class="cipher2">F@K7 F@K</span> @K <span class="cipher2">F@K7 F@K</span> F7F@<br>
+<span class="plain">T</span><span class="cipher2">HI5L HI5</span> IL <span class="cipher2">HI5L HI5L HI5L HI5L</span> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I5LHL5IIHI<br>
+<!--lVM<br>
+lVM<br>
+lVM<br>
+lVM<br>
+lMlV<br>
+VMlM<br>-->
+<!--		
+ZpW+6NE<br>
+ZpW+6NEE<br>
+ZpW+6NE<br>
+ZpW+6NEN<br>
+ZpW+6NE<br>
+ZpW++W<br>
+ZE6<br>
+Z+W6EW6E<br>-->
+	</span>
+</body>
+</html>

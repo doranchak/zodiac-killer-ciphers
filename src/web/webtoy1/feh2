@@ -1,0 +1,374 @@
+Only in .: .DS_Store
+diff -w ./akwilks.html ../../web/webtoy/akwilks.html
+228d227
+< 				var match = "";
+237d235
+< 								match += ch;
+249c247
+< 					html += "<br>Match: " + match + "<br>";
+---
+> 					html += "<br>";
+Common subdirectories: ./alphabet and ../../web/webtoy/alphabet
+Common subdirectories: ./alphabet-20px and ../../web/webtoy/alphabet-20px
+Common subdirectories: ./alphabet2 and ../../web/webtoy/alphabet2
+Only in .: backups
+Only in .: deploy.zip
+Only in .: feh
+Only in .: feh2
+diff -w ./index.html ../../web/webtoy/index.html
+8c8
+< 	.cipher {width: 396px; table-layout: fixed; background-color: #eee; border-collapse: collapse;}
+---
+> 	.cipher {width: 396px; table-layout: fixed; background-color: #fff; border-collapse: collapse;}
+125a126,215
+> 
+> .a_darker { background-image: url(alphabet/darker/a.jpg) }
+> .b_darker { background-image: url(alphabet/darker/b.jpg) }
+> .c_darker { background-image: url(alphabet/darker/c.jpg) }
+> .d_darker { background-image: url(alphabet/darker/d.jpg) }
+> .e_darker { background-image: url(alphabet/darker/e.jpg) }
+> .f_darker { background-image: url(alphabet/darker/f.jpg) }
+> .g_darker { background-image: url(alphabet/darker/g.jpg) }
+> .h_darker { background-image: url(alphabet/darker/h.jpg) }
+> .i_darker { background-image: url(alphabet/darker/i.jpg) }
+> .j_darker { background-image: url(alphabet/darker/j.jpg) }
+> .k_darker { background-image: url(alphabet/darker/k.jpg) }
+> .l_darker { background-image: url(alphabet/darker/l.jpg) }
+> .m_darker { background-image: url(alphabet/darker/m.jpg) }
+> .n_darker { background-image: url(alphabet/darker/n.jpg) }
+> .o_darker { background-image: url(alphabet/darker/o.jpg) }
+> .p_darker { background-image: url(alphabet/darker/p.jpg) }
+> .q_darker { background-image: url(alphabet/darker/q.jpg) }
+> .r_darker { background-image: url(alphabet/darker/r.jpg) }
+> .s_darker { background-image: url(alphabet/darker/s.jpg) }
+> .t_darker { background-image: url(alphabet/darker/t.jpg) }
+> .u_darker { background-image: url(alphabet/darker/u.jpg) }
+> .v_darker { background-image: url(alphabet/darker/v.jpg) }
+> .w_darker { background-image: url(alphabet/darker/w.jpg) }
+> .x_darker { background-image: url(alphabet/darker/x.jpg) }
+> .y_darker { background-image: url(alphabet/darker/y.jpg) }
+> .z_darker { background-image: url(alphabet/darker/z.jpg) }
+> .ba_darker { background-image: url(alphabet/darker/ba.jpg) }
+> .bb_darker { background-image: url(alphabet/darker/bb.jpg) }
+> .bc_darker { background-image: url(alphabet/darker/bc.jpg) }
+> .bd_darker { background-image: url(alphabet/darker/bd.jpg) }
+> .be_darker { background-image: url(alphabet/darker/be.jpg) }
+> .bf_darker { background-image: url(alphabet/darker/bf.jpg) }
+> .bg_darker { background-image: url(alphabet/darker/bg.jpg) }
+> .bh_darker { background-image: url(alphabet/darker/bh.jpg) }
+> .bi_darker { background-image: url(alphabet/darker/bi.jpg) }
+> .bj_darker { background-image: url(alphabet/darker/bj.jpg) }
+> .bk_darker { background-image: url(alphabet/darker/bk.jpg) }
+> .bl_darker { background-image: url(alphabet/darker/bl.jpg) }
+> .bm_darker { background-image: url(alphabet/darker/bm.jpg) }
+> .bn_darker { background-image: url(alphabet/darker/bn.jpg) }
+> .bo_darker { background-image: url(alphabet/darker/bo.jpg) }
+> .bp_darker { background-image: url(alphabet/darker/bp.jpg) }
+> .bq_darker { background-image: url(alphabet/darker/bq.jpg) }
+> .br_darker { background-image: url(alphabet/darker/br.jpg) }
+> .bs_darker { background-image: url(alphabet/darker/bs.jpg) }
+> .bt_darker { background-image: url(alphabet/darker/bt.jpg) }
+> .bu_darker { background-image: url(alphabet/darker/bu.jpg) }
+> .bv_darker { background-image: url(alphabet/darker/bv.jpg) }
+> .bw_darker { background-image: url(alphabet/darker/bw.jpg) }
+> .bx_darker { background-image: url(alphabet/darker/bx.jpg) }
+> .by_darker { background-image: url(alphabet/darker/by.jpg) }
+> .bz_darker { background-image: url(alphabet/darker/bz.jpg) }
+> .n1_darker { background-image: url(alphabet/darker/n1.jpg) }
+> .n2_darker { background-image: url(alphabet/darker/n2.jpg) }
+> .n3_darker { background-image: url(alphabet/darker/n3.jpg) }
+> .n4_darker { background-image: url(alphabet/darker/n4.jpg) }
+> .n5_darker { background-image: url(alphabet/darker/n5.jpg) }
+> .n6_darker { background-image: url(alphabet/darker/n6.jpg) }
+> .n7_darker { background-image: url(alphabet/darker/n7.jpg) }
+> .n8_darker { background-image: url(alphabet/darker/n8.jpg) }
+> .n9_darker { background-image: url(alphabet/darker/n9.jpg) }
+> .caret_darker { background-image: url(alphabet/darker/caret.jpg) }
+> .sq_darker { background-image: url(alphabet/darker/sq.jpg) }
+> .sq_darker { background-image: url(alphabet/darker/sq.jpg) }
+> .sqe_darker { background-image: url(alphabet/darker/sqe.jpg) }
+> .sqd_darker { background-image: url(alphabet/darker/sqd.jpg) }
+> .sql_darker { background-image: url(alphabet/darker/sql.jpg) }
+> .sqr_darker { background-image: url(alphabet/darker/sqr.jpg) }
+> .phi_darker { background-image: url(alphabet/darker/phi.jpg) }
+> .theta_darker { background-image: url(alphabet/darker/theta.jpg) }
+> .zodiac_darker { background-image: url(alphabet/darker/zodiac.jpg) }
+> .perp_darker { background-image: url(alphabet/darker/perp.jpg) }
+> .pf_darker { background-image: url(alphabet/darker/pf.jpg) }
+> .idl_darker { background-image: url(alphabet/darker/idl.jpg) }
+> .idr_darker { background-image: url(alphabet/darker/idr.jpg) }
+> .gt_darker { background-image: url(alphabet/darker/gt.jpg) }
+> .dot_darker { background-image: url(alphabet/darker/dot.jpg) }
+> .lt_darker { background-image: url(alphabet/darker/lt.jpg) }
+> .plus_darker { background-image: url(alphabet/darker/plus.jpg) }
+> .slash_darker { background-image: url(alphabet/darker/slash.jpg) }
+> .dash_darker { background-image: url(alphabet/darker/dash.jpg) }
+> .funnyi_darker { background-image: url(alphabet/darker/funnyi.jpg) }
+> .backslash_darker { background-image: url(alphabet/darker/backslash.jpg) }
+> .tao_darker { background-image: url(alphabet/darker/tao.jpg) }
+> .sidek_darker { background-image: url(alphabet/darker/sidek.jpg) }
+> .bar_darker { background-image: url(alphabet/darker/bar.jpg) }
+> 
+> .show td { font-family: courier, monospace; color: #090; font-weight: bold; font-size: 16pt; padding-left: 4px; text-align: center;}
+> 
+170c260
+< <i>Can you crack this famous unsolved cipher, created by the <a href="http://en.wikipedia.org/wiki/Zodiac_Killer">Zodiac Killer</a> over 40 years ago?  Try it!  
+---
+> <span id="top"><i>Can you crack this famous unsolved cipher, created by the <a href="http://en.wikipedia.org/wiki/Zodiac_Killer">Zodiac Killer</a> over 40 years ago?  Try it!  
+172c262
+< statistics.  Go to <a href="http://zodiackillerciphers.com">zodiackillerciphers.com</a> for more info.</i>
+---
+> statistics.  Go to <a href="http://zodiackillerciphers.com">zodiackillerciphers.com</a> for more info.</i></span>
+218,224d307
+< 		<tr valign="top">
+< 			<td colspan="2">
+< <script type="text/javascript"><!--
+< amazon_ad_tag = "zodikillciph-20"; amazon_ad_width = "728"; amazon_ad_height = "90";//--></script>
+< <script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>				
+< 			</td>
+< 		</tr>
+Common subdirectories: ./new_cryptoscope_features.resources and ../../web/webtoy/new_cryptoscope_features.resources
+Only in .: shit
+diff -w ./stats.html ../../web/webtoy/stats.html
+272a273,275
+> 	<option value="ePCC0Og1Z%5DT+M%5DLeb%0AB%60oSk+PiTLj+V%5C%3BP0%0A%3F%5CiT%3Bh%5E17%3FeB3SEH%5E%0A%5D+MekOK196IdJWQD_%0AhFE8bI6Jjab%5DB+LZj%0A1Z%3BPk+pTfkm078+R%60%0AL%3D%3F%3A-LXOkg++2fI@%3B%0Ae+2V%5DIJ8QdKjc%60Fp-%0AEJ1%5EPH5@LJ%5E+OBVPT%0AN6dmjT4A+jKefF%3FG1%0ADH%5DA+%3AdmX4EgBLX%3DX%0APTK7I1%5DTXh0p6+9KZ%0A%5D0E%5B01fFJog+36iC%3D%0A_a+Oi120_Om%3F%3AS4U%5B%0A%5E%3Ao+G4%3A5oVfkgeFXQ%0A%3B%5CkmZJOiQLV%3D+X@id%0AX7U%5BT240+7+Xf30O6%0ABTW4K%3D54+PYea39KK%0A%3BH+R+V%601%3A02f0C6IS%0A%5D%5CiF%3A%5EDbVhW%3A3o%5BNY%0A">
+> 		340-character cipher by pi (suppressed repeated n-grams)
+> 	</option>
+279c282
+<     <option value="AENz0K0M0[NAM">
+---
+>     <option value="AENz8K8M8tNAM">
+282c285
+< 	<option value="C9J%7C%23Ok%5BAMf8?ORTG%0AX6FDVj%25HCELzPW9">
+---
+> 	<option value="C9J%7C%23OktAMf8oORTG%0AX6FDVj%25HCELzPW9">
+310,313d312
+< <script type="text/javascript"><!--
+< amazon_ad_tag = "zodikillciph-20"; amazon_ad_width = "728"; amazon_ad_height = "90";//--></script>
+< <script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>
+< 
+diff -w ./stats.js ../../web/webtoy/stats.js
+391c391
+< 	d("perma").innerHTML = "<a href=\"http://zodiackillerciphers.com/webtoy/stats.html?cipher=" + escape(d("input").value) + "\">(Permalink)</a>";
+---
+> 	d("perma").innerHTML = "<a href=\"http://oranchak.com/zodiac/webtoy/stats.html?cipher=" + escape(d("input").value) + "\">(Permalink)</a>";
+489a490,492
+> //				s += "&nbsp;";
+> 				
+> 				
+Common subdirectories: ./typewriter and ../../web/webtoy/typewriter
+diff -w ./zodiac.js ../../web/webtoy/zodiac.js
+299a300,320
+> 	), new Array(
+> 		"TLCtBOMD>F+O2HODU",
+> 		"yMl^#;+2VbGRPU*2O",
+> 		"G(+(cFTfzOzBW4;RS",
+> 		"Ppl.BLTtUfF5p(BS+",
+> 		"t5/|EB+kfzz;)C)(d",
+> 		"__EFyAbNlyJDNBRc<",
+> 		"+JH|z9pcN&t54(*pc",
+> 		"2GWL#H@-7-FZ<M<V#",
+> 		"GK|GB4c7L(#K*4l8F",
+> 		"V1>lqK|U+cJCOpPYO",
+> 		"d6KZkVOzY+1b5+KB*",
+> 		"SWF9++4fkdCy5C.3.",
+> 		"%|6+/9c+B|c8+HpB^",
+> 		"%d2Y+:.Rlz8N_3.F^",
+> 		"+zZ:D-2O|GXl+jWS+",
+> 		"*<K+2z>k7U(TMEZ)T",
+> 		"<p)cyR8+2Rp5>XKFF",
+> 		"MBL2L<RW)cNYRkA|+",
+> 		"p^-+Wp|p/M*&|J56M",
+> 		"OV^4j-9+#d^.VqB1+"
+302a324,325
+> //	cipher[0]=cipher[2];
+> 
+750a774,782
+> 	/* break cipher into 17-column rows */
+> 	function split(cipher) {
+> 		var a = new Array();
+> 		for (var i=0; i<cipher.length/17; i++) {
+> 			a[i] = cipher.substring(i*17, i*17+17);
+> 		}
+> 		return a;
+> 	}
+> 	
+1509a1542,1549
+> 	/** get image corresponding to given string of cipher letters */
+> 	function getImgDarker(s) {
+> 		var result = "";
+> 		for (var i=0; i<s.length; i++) {
+> 			result += "<img src=\"alphabet/darker/" + getName(s.substring(i,i+1)) + ".jpg\">";
+> 		}
+> 		return result;
+> 	}
+1569a1610,1778
+> 	/* hide the given symbol */
+> 	function hide(row, col) {
+> 		document.getElementById(row+"_"+col).style.visibility="hidden";
+> 	}
+> 	/* show the given symbol */
+> 	function show(row, col) {
+> 		document.getElementById(row+"_"+col).style.visibility="";
+> 	}
+> 
+> 	/* darken the symbols at the given row,col */
+> 	function darkenrc(row, col) {
+> 		var e = document.getElementById(row+"_"+col);
+> 		if (e == null) return;
+> 		e.className += "_darker";
+> 	}
+> 	/* darken all the symbols specified by the given array */
+> 	function darken(rc) {
+> 		var maxrow = -1;
+> 		var minrow = 100000;
+> 		var maxcol = -1;
+> 		var mincol = 100000;
+> 		for (var i=0; i<rc.length; i++) {
+> 			var r = rc[i][0];
+> 			var c = rc[i][1];
+> 			maxrow = Math.max(maxrow, r);
+> 			minrow = Math.min(minrow, r);
+> 			maxcol = Math.max(maxcol, c);
+> 			mincol = Math.min(mincol, c);
+> 			darkenrc(r,c);
+> 		}
+> 		if (maxrow >= minrow && maxcol >= mincol) {
+> 			for (var r=0; r<minrow-1; r++) {
+> 				for (var c=0; c<cipher[which][r].length; c++) {
+> 					hide(r, c);
+> 				}
+> 			}
+> 			for (var r=(minrow==0 ? 0 : minrow-1); r<=maxrow+1 && r<cipher[which].length; r++) {
+> 				for (var c=0; c<mincol-1; c++) {
+> 					hide(r,c);
+> 				}
+> 				for (var c=maxcol+2; c<cipher[which][r].length; c++) {
+> 					hide(r,c);
+> 				}
+> 			}
+> 			for (var r=maxrow+2; r<cipher[which].length; r++) {
+> 				for (var c=0; c<cipher[which][r].length; c++) {
+> 					hide(r, c);
+> 				}
+> 			}
+> 		}
+> 	}
+> 	/* highlight the path in the grid, then output the symbols, word, and the needed rotations/mirrors to make the word clearer */
+> 	function showWord(rc, word) {
+> 		render();
+> 		darken(rc);
+> 		var c=cipher[which];
+> 		var html = "<table class=\"show\">";
+> 		html += "<tr>";
+> 		for (var i=0; i<rc.length; i++) {
+> 			html += "<td>"+getImgDarker(c[rc[i][0]].charAt(rc[i][1])) + "</td>";
+> 		}
+> 		html += "</tr>"
+> 		html += "<tr>";
+> 		for (var i=0; i<rc.length; i++) {
+> 			html += "<td><img src=\"" + translate(c[rc[i][0]].charAt(rc[i][1]), word.charAt(i)) + "\"></td>";
+> 		}
+> 		html += "</tr>"
+> 		html += "<tr>"
+> 		for (var i=0; i<word.length; i++) {
+> 			html += "<td>" + word.charAt(i) + "</td>";
+> 		}
+> 		html += "</tr>"
+> 		html += "</table>";
+> 		document.getElementById("top").innerHTML = html;
+> 	}
+> 	/* return the image that demonstrates the given symbol-to-interpretation mapping. */
+> 	
+> 	var translations = [];
+> 	translations["!H"] = "funnyi-h";
+> 	translations["#O"] = "sqe";
+> 	translations["%O"] = "sqe";
+> 	translations["&B"] = "pf-b";
+> 	translations["&D"] = "pf-d";
+> 	translations["&P"] = "pf";
+> 	translations["&Q"] = "pf-q";
+> 	translations[")I"] = "theta";
+> 	translations["*O"] = "sqe";
+> 	translations["+X"] = "x";
+> 	translations["-I"] = "bar";
+> 	translations[".O"] = "o";
+> 	translations["/I"] = "bar";
+> 	translations["0R"] = "r";
+> 	translations["7A"] = "a";
+> 	translations["7D"] = "n9-d";
+> 	translations["8A"] = "a";
+> 	translations["8D"] = "n9-d";
+> 	translations["9A"] = "a";
+> 	translations["9D"] = "n9-d";
+> 	translations[":H"] = "idr-h";
+> 	translations[";H"] = "idl-h";
+> 	translations["<L"] = "lt-l";
+> 	translations["<V"] = "v";
+> 	translations["=K"] = "k";
+> 	translations[">L"] = "lt-l";
+> 	translations[">V"] = "v";
+> 	translations["@O"] = "sqe";
+> 	translations["CN"] = "c-n";
+> 	translations["CU"] = "c-u";
+> 	translations["CV"] = "c-v";
+> 	translations["EM"] = "e-m";
+> 	translations["EW"] = "e-w";
+> 	translations["HI"] = "h-i";
+> 	translations["IH"] = "i-h";
+> 	translations["JY"] = "j-y";
+> 	translations["ME"] = "m-e";
+> 	translations["MW"] = "m-w";
+> 	translations["NZ"] = "n-z";
+> 	translations["PB"] = "p-b";
+> 	translations["PD"] = "p-d";
+> 	translations["PQ"] = "p-q";
+> 	translations["UN"] = "u-n";
+> 	translations["VL"] = "lt-l";
+> 	translations["WE"] = "w-e";
+> 	translations["WM"] = "w-m";
+> 	translations["XT"] = "plus";
+> 	translations["YT"] = "y-t";
+> 	translations["ZN"] = "z-n";
+> 	translations["\\I"] = "bar";
+> 	translations["^L"] = "lt-l";
+> 	translations["^V"] = "v";
+> 	translations["_O"] = "sqe";
+> 	translations["bB"] = "b";
+> 	translations["cC"] = "c";
+> 	translations["cN"] = "c-n";
+> 	translations["cU"] = "c-u";
+> 	translations["cV"] = "c-v";
+> 	translations["dD"] = "d";
+> 	translations["eE"] = "e";
+> 	translations["eM"] = "e-m";
+> 	translations["eW"] = "e-w";
+> 	translations["fF"] = "f";
+> 	translations["jJ"] = "j";
+> 	translations["jY"] = "j-y";
+> 	translations["kK"] = "k";
+> 	translations["lL"] = "l";
+> 	translations["pB"] = "p-b";
+> 	translations["pD"] = "p-d";
+> 	translations["pP"] = "p";
+> 	translations["pQ"] = "p-q";
+> 	translations["qQ"] = "q";
+> 	translations["rR"] = "r";
+> 	translations["tT"] = "t";
+> 	translations["yT"] = "y-t";
+> 	translations["yY"] = "y";
+> 	translations["zO"] = "o";
+> 	translations["zT"] = "plus";
+> 	translations["zZ"] = "z";
+> 	
+> 	function translate(symbol, plaintext) {
+> 		var val = translations[symbol + plaintext];
+> 		var tr;
+> 		if (val == null) tr = getName(symbol);
+> 		else tr = val;
+> 		return "alphabet/darker/" + tr + ".jpg";
+> 	}
+> 	
+> 	
+> 	
+> 	

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher, .cipher2 {
+				font-family: 'untitled2regular';
+				line-height: 0.8em;
+				font-size: 24pt;
+							}
+				td { padding: 5px; }
+				.cipher2 { color: white; }
+				.cipher3 { background-color: aqua; }
+				body { padding: 2em; }
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+<table><tr valign="top"><td><center>
+<h1 style="background-color: #eee; color: #c00; font-family: arial">Z408</h1>
+<span class="cipher">
+AB<span class="cipher2">.</span>DEFGH<span class="cipher3">I</span>JKLMNOP<span class="cipher3">Q</span>RSTUVWXYZ<br>
+<span class="cipher2">..</span>cd<span class="cipher3">e</span>f<span class="cipher2">..</span><span class="cipher3">!</span>jkl<span class="cipher2">...</span>pq<span class="cipher3">r</span><span class="cipher2">.</span>t<span class="cipher2">.</span>^<span class="cipher2">....</span><br>
+<span class="cipher2">..........</span><span class="cipher3">=</span><span class="cipher2">...............</span><br>
+<br>
++/<span class="cipher3">\</span><br>
+z()65<br>
+978<br>
+_@%#<br>
+</span></td><td><center>
+<h1 style="background-color: #eee; color: #c00; font-family: arial">Z340</h1>
+<span class="cipher">
+AB<span class="cipher3">C</span>DEFGH<span class="cipher3">:</span>JKLMNOP<span class="cipher2">.</span>RSTUVWXYZ<br>
+<span class="cipher2">.</span><span class="cipher3">b</span>cd<span class="cipher2">.</span>f<span class="cipher2">..</span><span class="cipher3">;</span>jkl<span class="cipher2">...</span>pq<span class="cipher2">..</span>t<span class="cipher2">.</span>^<span class="cipher2">..</span><span class="cipher3">y</span><span class="cipher2">.</span><br>
+<span class="cipher2">...............</span><span class="cipher3">&amp;</span><span class="cipher2">..........</span><br>
+<br>
++/<span class="cipher3">|-.&lt;&gt;</span><br>
+z()6<span class="cipher3">2314</span>5<br>
+978<br>
+_@%<span class="cipher3">*</span>#<br>
+</span></td></tr></table>
+</body>
+</html>

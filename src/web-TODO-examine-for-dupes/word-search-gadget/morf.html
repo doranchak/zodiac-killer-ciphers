@@ -1,0 +1,106 @@
+<html>
+<head>
+	<style>
+		* { font-family: courier; color: #ccc; white-space: nowrap}
+		.hi { font-weight: bold; color: black; }
+	</style>
+	<script>
+	var cipher = "HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)By:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/p8R^FlO-*dCkF>2D(#5+Kq%;2UcXGV.zL|(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKO2<clRJ|*5T4M.+&BFz69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()p|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+";
+
+	var pointers = [0,0,0,0,0,0];
+
+	var group1cipher = ["N","A","M"];
+	var group2cipher = ["E","K","z"];
+	var group1plain = ["A","L","N"];
+	var group2plain = ["H","F","M","R"];
+
+	function encodestr(str) {
+		if (!str) return null;
+		var s1 = str.replace(/[&]/g,"&amp;");
+		return s1.replace(/[<]/g,"&lt;");
+	}
+
+	function next() {
+		var html = "Key: [";
+		for (var i=0; i<group1cipher.length; i++) html += group1cipher[i] + "=" + decode(group1cipher[i]) + ",";
+		for (var i=0; i<group2cipher.length; i++) html += group2cipher[i] + "=" + decode(group2cipher[i]) + (i==group2cipher.length-1 ? "" : ",");
+		html += "] Decoded: [";
+		for (var i=0; i<cipher.length; i++) {
+			var ch = cipher[i];
+			if (match(ch)) {
+				html += "<span class=\"hi\">" + decode(ch) + "</span>";
+			} else html += encodestr(ch);
+		}
+		html += "]<br>";
+		return html;
+		
+	}
+	
+	function go() {
+		var html = "";
+		var i;
+		var counter = 0; var shit = "";
+		var stop = false;
+		while(true) {
+			html += next();
+			i=5;
+			
+			var go = true; 
+			while (go) {
+				pointers[i]++; 
+				while(pointers[i] > max(i)) {
+					/*counter++; shit += pointers + "; ";
+					if (counter = 1000) {
+						document.getElementById("results").innerHTML = shit;
+						break;
+					}*/
+					pointers[i--]=0;
+					if (i<0) { stop = true; break; }
+					pointers[i]++;
+				}
+				if (stop) break;
+				
+				go = dupes();
+				if (!go) alert(pointers);
+			}
+			counter++;
+			
+			if (stop) break;
+		}
+		alert(counter);
+//		html += "Count: " + counter;
+		document.getElementById("results").innerHTML = html;
+		
+	}
+	
+	function dupes() {
+		if (pointers[0] == pointers[1] || pointers[1] == pointers[2] || pointers[0] == pointers[2]) return true;
+		return pointers[3] == pointers[4] || pointers[4] == pointers[5] || pointers[3] == pointers[5];
+	}
+	
+	function max(i) {
+		if (i<3) return 2;
+		return 3;
+	}
+	
+	function match(ch) {
+		for (var i=0; i<group1cipher.length; i++) if (group1cipher[i] == ch) return true;
+		for (var i=0; i<group2cipher.length; i++) if (group2cipher[i] == ch) return true;
+		return false;		
+	}
+	
+	function decode(ch) {
+		for (var i=0; i<group1cipher.length; i++) if (group1cipher[i] == ch) {
+			return group1plain[pointers[i]];
+		}
+		for (var i=0; i<group2cipher.length; i++) if (group2cipher[i] == ch) {
+			return group2plain[pointers[3+i]];
+		}
+	}
+	
+	</script>
+</head>
+<body>
+	<span id="results">
+	</span>
+</html>

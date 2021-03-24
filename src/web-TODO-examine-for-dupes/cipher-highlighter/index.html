@@ -1,0 +1,317 @@
+<html>
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<style>
+	.dimmed {
+	  position: relative;
+	}
+	.dimmed:after {
+	  content: " ";
+	  z-index: 10;
+	  display: block;
+	  position: absolute;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  background: rgba(100, 200, 100, 0.25);
+	}
+	#perm {
+		color: #66f;
+		font-size: 80%;
+	}
+	* {font-family: arial, verdana;}
+	.cipherDISABLED {background-color: #fff; max-height: 500px; height: 500px; 
+	}
+	.cipher2 {background-color: #fff; max-height: 500px; height: 500px; border-spacing: 5px;
+	    border-collapse: separate;
+	}
+	.cipher tr { line-height: 0px;}
+	.cipher2 td { font-size: 0pt; line-height: 0px; height: 0px; padding: 4px; }
+	.cipher td { font-size: 0pt; line-height: 0px; height: 0px; }
+	.prime2 { border: 4px solid #009; }
+	.even2 { border: 4px solid #900; }
+	.ffound {width: 300px;}
+	#decoder { font-family: courier; font-size: 8pt; color: #999;}
+	.interesting { font-size: 10pt; color: #090;}
+	.statbar img { border: thin solid #ddd;}
+	.normal { font-size: 8pt}
+	.rresults {white-space: nowrap;}
+	
+	ul.results {
+		list-style-type: none;
+	}
+	
+	ul.results li {
+		padding: 3 3 3 3;
+		border: thin solid gray;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.li_on {
+		background-color: #99f;
+	}
+	.li_off {
+		background-color: #fff;
+	}
+	#results {
+		padding-left: 1em;
+	}
+	.coverage {     
+		font-family: Helvetica;
+		font-weight: bold;
+		margin-top: 5em;
+		font-size: 30pt;
+		color: #66f;
+		text-align: right;
+	}
+	.reset {
+		margin-top: 1em;
+	}
+	
+	#rt {
+		border-collapse: collapse;
+		border: thin solid black;
+	}
+	#rt td,th {
+		text-align: center;
+		padding: 5px;
+		white-space: nowrap;
+	}
+	#rt th {
+		font-size: 70%;
+	}
+    .pt {
+       font-color: #090;
+	font-weight: bold;
+	font-size: 20pt;
+	font-family: courier;
+    }
+
+.show td { font-family: courier, monospace; color: #090; font-weight: bold; font-size: 16pt; padding-left: 4px; text-align: center;}
+
+  .index { color: gray; font-size: 8pt; font-weight: normal;}
+	</style>
+</head>
+
+<body onload="init(); render();" onkeypress="return keypress(event)"> 
+	<a name="top"></a>
+<center> 
+
+<script type="text/javascript" src="animate.js"> </script> 
+<script type="text/javascript" src="zodiac.js"> </script> 
+<script type="text/javascript" src="tests.js"> </script> 
+<script type="text/javascript">
+
+  function showUpdates() {
+	var e = document.getElementById("updates");
+	if (e.style.display == "none") e.style.display="block";
+	else e.style.display="none";
+  }
+
+	function showProb(count, prob) {
+		document.getElementById("prob").innerHTML = "Count: <b>" + count + "</b>, Relative probability: <b>" + prob + "</b>";
+	}
+	function clearProb() {
+		document.getElementById("prob").innerHTML = "";
+	}
+
+</script>
+</center>
+
+	<table class="outer">
+		<tr valign="top">
+			<td class="wrap" align="right" width="340px">
+				<div id="cipher">Please wait... Loading images... This should not take long...</div>
+			</td>
+			<td id="results" class="results">
+<!--				<div id="wordshow"></div>
+				<div id="results">-->
+<!--				<button onmouseover="showProb(2,2.589325E-11); darkenrc(1,5); darkenrc(1,6); darkenrc(1,10); darkenrc(7,6); darkenrc(7,7); darkenrc(7,11); " onmouseout="clearProb(); lightenrc(1,5); lightenrc(1,6); lightenrc(1,10); lightenrc(7,6); lightenrc(7,7); lightenrc(7,11); ">#O???Y</button>
+				<button onmouseover="showProb(2,4.1108127E-11); darkenrc(13,6); darkenrc(13,8); darkenrc(13,10); darkenrc(11,8); darkenrc(11,10); darkenrc(11,12); " onmouseout="clearProb(); lightenrc(13,6); lightenrc(13,8); lightenrc(13,10); lightenrc(11,8); lightenrc(11,10); lightenrc(11,12); ">5?4?.</button>
+				<button onmouseover="showProb(2,5.8259814E-11); darkenrc(18,11); darkenrc(18,13); darkenrc(18,15); darkenrc(5,6); darkenrc(5,8); darkenrc(5,10); " onmouseout="clearProb(); lightenrc(18,11); lightenrc(18,13); lightenrc(18,15); lightenrc(5,6); lightenrc(5,8); lightenrc(5,10); ">O?*?C</button>
+				<button onmouseover="showProb(3,1.0193137E-10); darkenrc(15,15); darkenrc(15,16); darkenrc(0,14); darkenrc(0,15); darkenrc(7,1); darkenrc(7,2); " onmouseout="clearProb(); lightenrc(15,15); lightenrc(15,16); lightenrc(0,14); lightenrc(0,15); lightenrc(7,1); lightenrc(7,2); ">G2</button>
+				<button onmouseover="showProb(2,2.5692576E-10); darkenrc(10,14); darkenrc(11,0); darkenrc(11,2); darkenrc(15,13); darkenrc(15,16); darkenrc(16,1); " onmouseout="clearProb(); lightenrc(10,14); lightenrc(11,0); lightenrc(11,2); lightenrc(15,13); lightenrc(15,16); lightenrc(16,1); ">M??2?c</button>
+				<button onmouseover="showProb(2,3.1719227E-10); darkenrc(12,8); darkenrc(12,9); darkenrc(12,10); darkenrc(4,8); darkenrc(4,9); darkenrc(4,10); " onmouseout="clearProb(); lightenrc(12,8); lightenrc(12,9); lightenrc(12,10); lightenrc(4,8); lightenrc(4,9); lightenrc(4,10); ">|5F</button>
+				<button onmouseover="showProb(2,9.32157E-10); darkenrc(8,9); darkenrc(8,10); darkenrc(8,11); darkenrc(12,10); darkenrc(12,11); darkenrc(12,12); " onmouseout="clearProb(); lightenrc(8,9); lightenrc(8,10); lightenrc(8,11); lightenrc(12,10); lightenrc(12,11); lightenrc(12,12); ">FBc</button>
+				<button onmouseover="showProb(2,1.087268E-9); darkenrc(15,15); darkenrc(15,16); darkenrc(16,3); darkenrc(0,14); darkenrc(0,15); darkenrc(1,2); " onmouseout="clearProb(); lightenrc(15,15); lightenrc(15,16); lightenrc(16,3); lightenrc(0,14); lightenrc(0,15); lightenrc(1,2); ">G2???+</button>
+				<button onmouseover="showProb(3,1.1185886E-9); darkenrc(8,9); darkenrc(8,10); darkenrc(12,10); darkenrc(12,11); darkenrc(9,13); darkenrc(9,14); " onmouseout="clearProb(); lightenrc(8,9); lightenrc(8,10); lightenrc(12,10); lightenrc(12,11); lightenrc(9,13); lightenrc(9,14); ">FB</button>
+				<button onmouseover="showProb(2,1.9329212E-9); darkenrc(13,13); darkenrc(13,16); darkenrc(14,1); darkenrc(11,10); darkenrc(11,13); darkenrc(11,15); " onmouseout="clearProb(); lightenrc(13,13); lightenrc(13,16); lightenrc(14,1); lightenrc(11,10); lightenrc(11,13); lightenrc(11,15); ">4??+?B</button>
+				<button onmouseover="showProb(3,3.0694067E-9); darkenrc(4,2); darkenrc(4,3); darkenrc(8,2); darkenrc(8,3); darkenrc(2,4); darkenrc(2,5); " onmouseout="clearProb(); lightenrc(4,2); lightenrc(4,3); lightenrc(8,2); lightenrc(8,3); lightenrc(2,4); lightenrc(2,5); ">M+</button>
+				<button onmouseover="showProb(2,5.3692255E-9); darkenrc(8,5); darkenrc(8,9); darkenrc(8,10); darkenrc(12,6); darkenrc(12,10); darkenrc(12,11); " onmouseout="clearProb(); lightenrc(8,5); lightenrc(8,9); lightenrc(8,10); lightenrc(12,6); lightenrc(12,10); lightenrc(12,11); ">+???FB</button>
+				<button onmouseover="showProb(2,2.9932593E-8); darkenrc(14,12); darkenrc(14,13); darkenrc(2,6); darkenrc(2,7); " onmouseout="clearProb(); lightenrc(14,12); lightenrc(14,13); lightenrc(2,6); lightenrc(2,7); ">UZ</button>
+				<button onmouseover="showProb(2,6.7348346E-8); darkenrc(16,15); darkenrc(16,16); darkenrc(2,11); darkenrc(2,12); " onmouseout="clearProb(); lightenrc(16,15); lightenrc(16,16); lightenrc(2,11); lightenrc(2,12); ">)L</button>
+				<button onmouseover="showProb(2,7.6627444E-8); darkenrc(5,1); darkenrc(5,2); darkenrc(12,15); darkenrc(12,16); " onmouseout="clearProb(); lightenrc(5,1); lightenrc(5,2); lightenrc(12,15); lightenrc(12,16); ">8R</button>
+				<button onmouseover="showProb(2,8.14915E-8); darkenrc(3,2); darkenrc(3,3); darkenrc(9,10); darkenrc(9,11); " onmouseout="clearProb(); lightenrc(3,2); lightenrc(3,3); lightenrc(9,10); lightenrc(9,11); ">p7</button>
+				<button onmouseover="showProb(2,9.166856E-8); darkenrc(2,10); darkenrc(2,11); darkenrc(17,14); darkenrc(17,15); " onmouseout="clearProb(); lightenrc(2,10); lightenrc(2,11); lightenrc(17,14); lightenrc(17,15); ">()</button>
+				<button onmouseover="showProb(2,9.166856E-8); darkenrc(5,16); darkenrc(6,0); darkenrc(1,4); darkenrc(1,5); " onmouseout="clearProb(); lightenrc(5,16); lightenrc(6,0); lightenrc(1,4); lightenrc(1,5); ">(#</button>
+				<button onmouseover="showProb(3,1.2370695E-7); darkenrc(17,0); darkenrc(17,1); darkenrc(13,15); darkenrc(13,16); darkenrc(3,12); darkenrc(3,13); " onmouseout="clearProb(); lightenrc(17,0); lightenrc(17,1); lightenrc(13,15); lightenrc(13,16); lightenrc(3,12); lightenrc(3,13); ">++</button>
+				<button onmouseover="showProb(2,1.7241175E-7); darkenrc(11,13); darkenrc(11,14); darkenrc(4,12); darkenrc(4,13); " onmouseout="clearProb(); lightenrc(11,13); lightenrc(11,14); lightenrc(4,12); lightenrc(4,13); ">+&</button>
+				<button onmouseover="showProb(2,1.8707871E-7); darkenrc(1,5); darkenrc(1,6); darkenrc(7,6); darkenrc(7,7); " onmouseout="clearProb(); lightenrc(1,5); lightenrc(1,6); lightenrc(7,6); lightenrc(7,7); ">#O</button>
+				<button onmouseover="showProb(2,2.2636524E-7); darkenrc(1,0); darkenrc(1,1); darkenrc(19,4); darkenrc(19,5); " onmouseout="clearProb(); lightenrc(1,0); lightenrc(1,1); lightenrc(19,4); lightenrc(19,5); ">Np</button>
+				<button onmouseover="showProb(2,2.6939338E-7); darkenrc(2,0); darkenrc(2,1); darkenrc(9,14); darkenrc(9,15); " onmouseout="clearProb(); lightenrc(2,0); lightenrc(2,1); lightenrc(9,14); lightenrc(9,15); ">By</button>
+				<button onmouseover="showProb(2,3.6667424E-7); darkenrc(12,8); darkenrc(12,9); darkenrc(4,8); darkenrc(4,9); " onmouseout="clearProb(); lightenrc(12,8); lightenrc(12,9); lightenrc(4,8); lightenrc(4,9); ">|5</button>
+				<button onmouseover="showProb(2,3.6667424E-7); darkenrc(12,9); darkenrc(12,10); darkenrc(4,9); darkenrc(4,10); " onmouseout="clearProb(); lightenrc(12,9); lightenrc(12,10); lightenrc(4,9); lightenrc(4,10); ">5F</button>
+				<button onmouseover="showProb(2,3.6667424E-7); darkenrc(16,10); darkenrc(16,11); darkenrc(5,4); darkenrc(5,5); " onmouseout="clearProb(); lightenrc(16,10); lightenrc(16,11); lightenrc(5,4); lightenrc(5,5); ">Fl</button>
+				<button onmouseover="showProb(2,9.05461E-7); darkenrc(15,8); darkenrc(15,9); darkenrc(9,9); darkenrc(9,10); " onmouseout="clearProb(); lightenrc(15,8); lightenrc(15,9); lightenrc(9,9); lightenrc(9,10); ">Op</button>
+				<button onmouseover="showProb(2,1.0775735E-6); darkenrc(8,10); darkenrc(8,11); darkenrc(12,11); darkenrc(12,12); " onmouseout="clearProb(); lightenrc(8,10); lightenrc(8,11); lightenrc(12,11); lightenrc(12,12); ">Bc</button>
+				<button onmouseover="showProb(2,2.758588E-6); darkenrc(10,1); darkenrc(10,2); darkenrc(3,13); darkenrc(3,14); " onmouseout="clearProb(); lightenrc(10,1); lightenrc(10,2); lightenrc(3,13); lightenrc(3,14); ">+R</button>
+				<button onmouseover="showProb(2,4.310294E-6); darkenrc(7,7); darkenrc(7,8); darkenrc(3,11); darkenrc(3,12); " onmouseout="clearProb(); lightenrc(7,7); lightenrc(7,8); lightenrc(3,11); lightenrc(3,12); ">O+</button>-->
+<!--				</div>-->
+			</td>
+		</tr>
+	</table>
+
+	<div id="prob"></div>
+	
+<div style="visibility: hidden">
+	<img src="alphabet2/a.jpg">
+	<img src="alphabet2/b.jpg">
+	<img src="alphabet2/bb.jpg">
+	<img src="alphabet2/bc.jpg">
+	<img src="alphabet2/bd.jpg">
+	<img src="alphabet2/bf.jpg">
+	<img src="alphabet2/bj.jpg">
+	<img src="alphabet2/bk.jpg">
+	<img src="alphabet2/bl.jpg">
+	<img src="alphabet2/bp.jpg">
+	<img src="alphabet2/bq.jpg">
+	<img src="alphabet2/by.jpg">
+	<img src="alphabet2/c.jpg">
+	<img src="alphabet2/caret.jpg">
+	<img src="alphabet2/d.jpg">
+	<img src="alphabet2/dash.jpg">
+	<img src="alphabet2/dot.jpg">
+	<img src="alphabet2/e.jpg">
+	<img src="alphabet2/f.jpg">
+	<img src="alphabet2/g.jpg">
+	<img src="alphabet2/gt.jpg">
+	<img src="alphabet2/h.jpg">
+	<img src="alphabet2/i.jpg">
+	<img src="alphabet2/idl.jpg">
+	<img src="alphabet2/idr.jpg">
+	<img src="alphabet2/j.jpg">
+	<img src="alphabet2/k.jpg">
+	<img src="alphabet2/l.jpg">
+	<img src="alphabet2/lt.jpg">
+	<img src="alphabet2/m.jpg">
+	<img src="alphabet2/n.jpg">
+	<img src="alphabet2/n1.jpg">
+	<img src="alphabet2/n2.jpg">
+	<img src="alphabet2/n3.jpg">
+	<img src="alphabet2/n4.jpg">
+	<img src="alphabet2/n5.jpg">
+	<img src="alphabet2/n6.jpg">
+	<img src="alphabet2/n7.jpg">
+	<img src="alphabet2/n8.jpg">
+	<img src="alphabet2/n9.jpg">
+	<img src="alphabet2/o.jpg">
+	<img src="alphabet2/p.jpg">
+	<img src="alphabet2/perp.jpg">
+	<img src="alphabet2/pf.jpg">
+	<img src="alphabet2/phi.jpg">
+	<img src="alphabet2/plus.jpg">
+	<img src="alphabet2/r.jpg">
+	<img src="alphabet2/s.jpg">
+	<img src="alphabet2/slash.jpg">
+	<img src="alphabet2/sq.jpg">
+	<img src="alphabet2/sqd.jpg">
+	<img src="alphabet2/sqe.jpg">
+	<img src="alphabet2/sql.jpg">
+	<img src="alphabet2/sqr.jpg">
+	<img src="alphabet2/t.jpg">
+	<img src="alphabet2/theta.jpg">
+	<img src="alphabet2/u.jpg">
+	<img src="alphabet2/v.jpg">
+	<img src="alphabet2/w.jpg">
+	<img src="alphabet2/x.jpg">
+	<img src="alphabet2/y.jpg">
+	<img src="alphabet2/z.jpg">
+	<img src="alphabet2/zodiac.jpg">
+	<img src="alphabet2/br.jpg">
+	<img src="alphabet2/backslash.jpg">
+	<img src="alphabet2/q.jpg">
+	<img src="alphabet2/be.jpg">
+	<img src="alphabet2/funnyi.jpg">
+	<img src="alphabet2/tao.jpg">
+	
+<img src="alphabet/darker/a.jpg">
+<img src="alphabet/darker/b.jpg">
+<img src="alphabet/darker/c.jpg">
+<img src="alphabet/darker/d.jpg">
+<img src="alphabet/darker/e.jpg">
+<img src="alphabet/darker/f.jpg">
+<img src="alphabet/darker/g.jpg">
+<img src="alphabet/darker/h.jpg">
+<img src="alphabet/darker/i.jpg">
+<img src="alphabet/darker/j.jpg">
+<img src="alphabet/darker/k.jpg">
+<img src="alphabet/darker/l.jpg">
+<img src="alphabet/darker/m.jpg">
+<img src="alphabet/darker/n.jpg">
+<img src="alphabet/darker/o.jpg">
+<img src="alphabet/darker/p.jpg">
+<img src="alphabet/darker/q.jpg">
+<img src="alphabet/darker/r.jpg">
+<img src="alphabet/darker/s.jpg">
+<img src="alphabet/darker/t.jpg">
+<img src="alphabet/darker/u.jpg">
+<img src="alphabet/darker/v.jpg">
+<img src="alphabet/darker/w.jpg">
+<img src="alphabet/darker/x.jpg">
+<img src="alphabet/darker/y.jpg">
+<img src="alphabet/darker/z.jpg">
+<img src="alphabet/darker/bb.jpg">
+<img src="alphabet/darker/bc.jpg">
+<img src="alphabet/darker/bd.jpg">
+<img src="alphabet/darker/be.jpg">
+<img src="alphabet/darker/bf.jpg">
+<img src="alphabet/darker/bj.jpg">
+<img src="alphabet/darker/bk.jpg">
+<img src="alphabet/darker/bl.jpg">
+<img src="alphabet/darker/bp.jpg">
+<img src="alphabet/darker/bq.jpg">
+<img src="alphabet/darker/br.jpg">
+<img src="alphabet/darker/by.jpg">
+<img src="alphabet/darker/n1.jpg">
+<img src="alphabet/darker/n2.jpg">
+<img src="alphabet/darker/n3.jpg">
+<img src="alphabet/darker/n4.jpg">
+<img src="alphabet/darker/n5.jpg">
+<img src="alphabet/darker/n6.jpg">
+<img src="alphabet/darker/n7.jpg">
+<img src="alphabet/darker/n8.jpg">
+<img src="alphabet/darker/n9.jpg">
+<img src="alphabet/darker/caret.jpg">
+<img src="alphabet/darker/sq.jpg">
+<img src="alphabet/darker/sq.jpg">
+<img src="alphabet/darker/sqe.jpg">
+<img src="alphabet/darker/sqd.jpg">
+<img src="alphabet/darker/sql.jpg">
+<img src="alphabet/darker/sqr.jpg">
+<img src="alphabet/darker/phi.jpg">
+<img src="alphabet/darker/theta.jpg">
+<img src="alphabet/darker/zodiac.jpg">
+<img src="alphabet/darker/perp.jpg">
+<img src="alphabet/darker/pf.jpg">
+<img src="alphabet/darker/idl.jpg">
+<img src="alphabet/darker/idr.jpg">
+<img src="alphabet/darker/gt.jpg">
+<img src="alphabet/darker/dot.jpg">
+<img src="alphabet/darker/lt.jpg">
+<img src="alphabet/darker/plus.jpg">
+<img src="alphabet/darker/slash.jpg">
+<img src="alphabet/darker/dash.jpg">
+<img src="alphabet/darker/funnyi.jpg">
+<img src="alphabet/darker/backslash.jpg">
+<img src="alphabet/darker/tao.jpg">
+<img src="alphabet/darker/sidek.jpg">
+<img src="alphabet/darker/bar.jpg">
+	
+	
+	</div>
+	
+
+<div id="debug"></div>
+</html>

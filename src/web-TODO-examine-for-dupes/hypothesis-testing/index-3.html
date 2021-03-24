@@ -1,0 +1,337 @@
+<html>
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<style>
+	#dump {
+		margin-top: 1em;
+	}
+	.nav {
+		height: 30px;
+		width: auto;
+		display:table-cell;
+		vertical-align: middle;
+	}
+	div#br3 img {
+		width: 13px;
+		height: 13px;
+	}
+	div#br3 span {
+		padding: .25em .25em .25em .25em;
+		margin: 2px 2px 2px 2px;
+		vertical-align: center;
+	}
+	#sequence {
+		width: 440px;
+		text-align: center;
+	}
+	#cipher { width: 458px; }
+	span { display: inline-block; }
+	.dimmed {
+	  position: relative;
+	}
+	.dimmed:after {
+	  content: " ";
+	  z-index: 10;
+	  display: block;
+	  position: absolute;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  background: rgba(100, 200, 100, 0.25);
+	}
+	#perm {
+		color: #66f;
+		font-size: 80%;
+	}
+	* {font-family: arial, verdana;}
+	.cipherDISABLED {background-color: #fff; max-height: 500px; height: 500px; 
+	}
+	.cipher2 {background-color: #fff; max-height: 500px; height: 500px; border-spacing: 5px;
+	    border-collapse: separate;
+	}
+	.cipher tr { line-height: 0px;}
+	.cipher2 td { font-size: 0pt; line-height: 0px; height: 0px; padding: 4px; }
+	.cipher td { font-size: 0pt; line-height: 0px; height: 0px; }
+	.prime2 { border: 4px solid #009; }
+	.even2 { border: 4px solid #900; }
+	.ffound {width: 300px;}
+	#decoder { font-family: courier; font-size: 8pt; color: #999;}
+	.interesting { font-size: 10pt; color: #090;}
+	.statbar img { border: thin solid #ddd;}
+	.normal { font-size: 8pt}
+	.rresults {white-space: nowrap;}
+	
+	ul.results {
+		list-style-type: none;
+	}
+	
+	ul.results li {
+		padding: 3 3 3 3;
+		border: thin solid gray;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.li_on {
+		background-color: #99f;
+	}
+	.li_off {
+		background-color: #fff;
+	}
+	#results {
+		padding-top: 1em;
+	}
+	.reset {
+		margin-top: 1em;
+	}
+	
+	#rt {
+		border-collapse: collapse;
+		border: thin solid black;
+	}
+	#rt td,th {
+		text-align: center;
+		padding: 5px;
+		white-space: nowrap;
+	}
+	#rt th {
+		font-size: 70%;
+	}
+	
+	#buttons {margin-top: 1em}
+	.button {
+		font-size: 80%;
+		font-weight: bold;
+		color: #aaa;
+		padding: .5em .5em .5em .5em;
+		margin: 3px 3px 3px 3px;
+		border: 1px solid #aaa;
+		text-align: center;
+	}
+	#button-cycle-0 img, #button-cycle-0 img, #button-cycle-1 img, #button-cycle-2 img, #button-cycle-3 img, #button-cycle-4 img, #button-cycle-5 img, #button-cycle-6 img, #button-cycle-7 img, #button-cycle-8 img, #button-cycle-9 img, #button-cycle-10 img, #button-cycle-11 img, #button-cycle-12 img, #button-cycle-13 img, #button-cycle-14 img, #button-cycle-15 img, #button-cycle-16 img, #button-cycle-17 img, #button-cycle-18 img, #button-cycle-19 img {
+		width: 15;
+		height: 15;
+	}
+	.button-on {
+		font-size: 80%;
+		font-weight: bold;
+		color: #000;
+		background-color: #dfd;
+		padding: .5em .5em .5em .5em;
+		margin: 3px 3px 3px 3px;
+		border: 1px solid #000;
+		text-align: center;
+	}
+
+
+.show td { font-family: courier, monospace; color: #090; font-weight: bold; font-size: 16pt; padding-left: 4px; text-align: center;}
+
+  .index { color: gray; font-size: 8pt; font-weight: normal;}
+	</style>
+</head>
+
+<body onload="hypothesisOnLoad()" onkeypress="return keypress(event)"> 
+	<a name="top"></a>
+<center> 
+
+<script type="text/javascript" src="zodiac.js"> </script> 
+<script type="text/javascript" src="ciphers.js"> </script> 
+<script type="text/javascript" src="ciphers-data-3.js"> </script> 
+<script type="text/javascript">
+
+  function showUpdates() {
+	var e = document.getElementById("updates");
+	if (e.style.display == "none") e.style.display="block";
+	else e.style.display="none";
+  }
+
+	function showProb(count, prob) {
+		document.getElementById("prob").innerHTML = "Count: <b>" + count + "</b>, Relative probability: <b>" + prob + "</b>";
+	}
+	function clearProb() {
+		document.getElementById("prob").innerHTML = "";
+	}
+
+</script>
+</center>
+
+	<table class="outer">
+		<tr valign="top">
+			<td class="wrap">
+				<div id="cipher">Please wait... Loading images... This should not take long...</div>
+				<div id="sequence"></div>
+			</td>
+			<!--<td class="results">
+				<div id="wordshow"></div>
+				<div id="results">
+				</div>
+			</td>-->
+			<td>
+			<div class="nav">
+			<span id="dropdown"></span><br>
+				<a href="javascript:prevCipher()" style="border: 0px"><img style="border: 0px" src="Button_backarrow_small.png"></a>
+				<a href="javascript:nextCipher()" style="border: 0px"><img style="border: 0px" src="Button_nextarrow_small.png"></a><br>
+			</div>
+			<div id="buttons">
+			</div>
+			<div id="dump">
+				<a href="dump-3.txt" target="_new">Show all ciphers</a>
+			</div>
+			</td>
+		</tr>
+	</table>
+
+	<div id="prob"></div>
+	
+<div style="visibility: hidden">
+	<img src="alphabet2/a.jpg">
+	<img src="alphabet2/b.jpg">
+	<img src="alphabet2/bb.jpg">
+	<img src="alphabet2/bc.jpg">
+	<img src="alphabet2/bd.jpg">
+	<img src="alphabet2/bf.jpg">
+	<img src="alphabet2/bj.jpg">
+	<img src="alphabet2/bk.jpg">
+	<img src="alphabet2/bl.jpg">
+	<img src="alphabet2/bp.jpg">
+	<img src="alphabet2/bq.jpg">
+	<img src="alphabet2/by.jpg">
+	<img src="alphabet2/c.jpg">
+	<img src="alphabet2/caret.jpg">
+	<img src="alphabet2/d.jpg">
+	<img src="alphabet2/dash.jpg">
+	<img src="alphabet2/dot.jpg">
+	<img src="alphabet2/e.jpg">
+	<img src="alphabet2/f.jpg">
+	<img src="alphabet2/g.jpg">
+	<img src="alphabet2/gt.jpg">
+	<img src="alphabet2/h.jpg">
+	<img src="alphabet2/i.jpg">
+	<img src="alphabet2/idl.jpg">
+	<img src="alphabet2/idr.jpg">
+	<img src="alphabet2/j.jpg">
+	<img src="alphabet2/k.jpg">
+	<img src="alphabet2/l.jpg">
+	<img src="alphabet2/lt.jpg">
+	<img src="alphabet2/m.jpg">
+	<img src="alphabet2/n.jpg">
+	<img src="alphabet2/n1.jpg">
+	<img src="alphabet2/n2.jpg">
+	<img src="alphabet2/n3.jpg">
+	<img src="alphabet2/n4.jpg">
+	<img src="alphabet2/n5.jpg">
+	<img src="alphabet2/n6.jpg">
+	<img src="alphabet2/n7.jpg">
+	<img src="alphabet2/n8.jpg">
+	<img src="alphabet2/n9.jpg">
+	<img src="alphabet2/o.jpg">
+	<img src="alphabet2/p.jpg">
+	<img src="alphabet2/perp.jpg">
+	<img src="alphabet2/pf.jpg">
+	<img src="alphabet2/phi.jpg">
+	<img src="alphabet2/plus.jpg">
+	<img src="alphabet2/r.jpg">
+	<img src="alphabet2/s.jpg">
+	<img src="alphabet2/slash.jpg">
+	<img src="alphabet2/sq.jpg">
+	<img src="alphabet2/sqd.jpg">
+	<img src="alphabet2/sqe.jpg">
+	<img src="alphabet2/sql.jpg">
+	<img src="alphabet2/sqr.jpg">
+	<img src="alphabet2/t.jpg">
+	<img src="alphabet2/theta.jpg">
+	<img src="alphabet2/u.jpg">
+	<img src="alphabet2/v.jpg">
+	<img src="alphabet2/w.jpg">
+	<img src="alphabet2/x.jpg">
+	<img src="alphabet2/y.jpg">
+	<img src="alphabet2/z.jpg">
+	<img src="alphabet2/zodiac.jpg">
+	<img src="alphabet2/br.jpg">
+	<img src="alphabet2/backslash.jpg">
+	<img src="alphabet2/q.jpg">
+	<img src="alphabet2/be.jpg">
+	<img src="alphabet2/funnyi.jpg">
+	<img src="alphabet2/tao.jpg">
+	
+<img src="alphabet/darker/a.jpg">
+<img src="alphabet/darker/b.jpg">
+<img src="alphabet/darker/c.jpg">
+<img src="alphabet/darker/d.jpg">
+<img src="alphabet/darker/e.jpg">
+<img src="alphabet/darker/f.jpg">
+<img src="alphabet/darker/g.jpg">
+<img src="alphabet/darker/h.jpg">
+<img src="alphabet/darker/i.jpg">
+<img src="alphabet/darker/j.jpg">
+<img src="alphabet/darker/k.jpg">
+<img src="alphabet/darker/l.jpg">
+<img src="alphabet/darker/m.jpg">
+<img src="alphabet/darker/n.jpg">
+<img src="alphabet/darker/o.jpg">
+<img src="alphabet/darker/p.jpg">
+<img src="alphabet/darker/q.jpg">
+<img src="alphabet/darker/r.jpg">
+<img src="alphabet/darker/s.jpg">
+<img src="alphabet/darker/t.jpg">
+<img src="alphabet/darker/u.jpg">
+<img src="alphabet/darker/v.jpg">
+<img src="alphabet/darker/w.jpg">
+<img src="alphabet/darker/x.jpg">
+<img src="alphabet/darker/y.jpg">
+<img src="alphabet/darker/z.jpg">
+<img src="alphabet/darker/bb.jpg">
+<img src="alphabet/darker/bc.jpg">
+<img src="alphabet/darker/bd.jpg">
+<img src="alphabet/darker/be.jpg">
+<img src="alphabet/darker/bf.jpg">
+<img src="alphabet/darker/bj.jpg">
+<img src="alphabet/darker/bk.jpg">
+<img src="alphabet/darker/bl.jpg">
+<img src="alphabet/darker/bp.jpg">
+<img src="alphabet/darker/bq.jpg">
+<img src="alphabet/darker/br.jpg">
+<img src="alphabet/darker/by.jpg">
+<img src="alphabet/darker/n1.jpg">
+<img src="alphabet/darker/n2.jpg">
+<img src="alphabet/darker/n3.jpg">
+<img src="alphabet/darker/n4.jpg">
+<img src="alphabet/darker/n5.jpg">
+<img src="alphabet/darker/n6.jpg">
+<img src="alphabet/darker/n7.jpg">
+<img src="alphabet/darker/n8.jpg">
+<img src="alphabet/darker/n9.jpg">
+<img src="alphabet/darker/caret.jpg">
+<img src="alphabet/darker/sq.jpg">
+<img src="alphabet/darker/sq.jpg">
+<img src="alphabet/darker/sqe.jpg">
+<img src="alphabet/darker/sqd.jpg">
+<img src="alphabet/darker/sql.jpg">
+<img src="alphabet/darker/sqr.jpg">
+<img src="alphabet/darker/phi.jpg">
+<img src="alphabet/darker/theta.jpg">
+<img src="alphabet/darker/zodiac.jpg">
+<img src="alphabet/darker/perp.jpg">
+<img src="alphabet/darker/pf.jpg">
+<img src="alphabet/darker/idl.jpg">
+<img src="alphabet/darker/idr.jpg">
+<img src="alphabet/darker/gt.jpg">
+<img src="alphabet/darker/dot.jpg">
+<img src="alphabet/darker/lt.jpg">
+<img src="alphabet/darker/plus.jpg">
+<img src="alphabet/darker/slash.jpg">
+<img src="alphabet/darker/dash.jpg">
+<img src="alphabet/darker/funnyi.jpg">
+<img src="alphabet/darker/backslash.jpg">
+<img src="alphabet/darker/tao.jpg">
+<img src="alphabet/darker/sidek.jpg">
+<img src="alphabet/darker/bar.jpg">
+	
+	
+	</div>
+	
+
+<div id="debug"></div>
+<div id="dumpc"></div>
+</html>

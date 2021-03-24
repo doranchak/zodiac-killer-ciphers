@@ -1,0 +1,203 @@
+<html>
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<style>
+	.dimmed {
+	  position: relative;
+	}
+	.dimmed:after {
+	  content: " ";
+	  z-index: 10;
+	  display: block;
+	  position: absolute;
+	  height: 100%;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  background: rgba(100, 200, 100, 0.25);
+	}
+	#perm {
+		color: #66f;
+		font-size: 80%;
+	}
+	* {font-family: arial, verdana;}
+	.cipherDISABLED {background-color: #fff; max-height: 500px; height: 500px; 
+	}
+	.cipher2 {background-color: #fff; max-height: 500px; height: 500px; border-spacing: 5px;
+	    border-collapse: separate;
+	}
+	.cipher tr { line-height: 0px;}
+	.cipher2 td { font-size: 0pt; line-height: 0px; height: 0px; padding: 4px; }
+	.cipher td { font-size: 0pt; line-height: 0px; height: 0px; }
+	.prime2 { border: 4px solid #009; }
+	.even2 { border: 4px solid #900; }
+	.ffound {width: 300px;}
+	#decoder { font-family: courier; font-size: 8pt; color: #999;}
+	.interesting { font-size: 10pt; color: #090;}
+	.statbar img { border: thin solid #ddd;}
+	.normal { font-size: 8pt}
+	.rresults {white-space: nowrap;}
+	
+	ul.results {
+		list-style-type: none;
+	}
+	
+	ul.results li {
+		padding: 3 3 3 3;
+		border: thin solid gray;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.li_on {
+		background-color: #99f;
+	}
+	.li_off {
+		background-color: #fff;
+	}
+	#results {
+		padding-top: 1em;
+	}
+	.reset {
+		margin-top: 1em;
+	}
+	
+	#rt {
+		border-collapse: collapse;
+		border: thin solid black;
+	}
+	#rt td,th {
+		text-align: center;
+		padding: 5px;
+		white-space: nowrap;
+	}
+	#rt th {
+		font-size: 70%;
+	}
+
+
+.show td { font-family: courier, monospace; color: #090; font-weight: bold; font-size: 16pt; padding-left: 4px; text-align: center;}
+
+  .index { color: gray; font-size: 8pt; font-weight: normal;}
+
+#panel {
+	margin-left: 630px;
+}
+#plaintable td {
+	width: 20px; height: 20px;
+	font-family: courier;
+	font-size: 18pt;
+	color: #0a0;
+}
+
+.p0 {}
+.p1 {
+	background-color: rgb(255, 200, 200);
+}
+.p2 {
+	background-color: rgb(200, 255, 200);
+}
+.p3 {
+	background-color: rgb(200, 200, 255);
+}               
+#cipher {
+	margin-top: 1em;
+}
+#plaintext {
+	margin-bottom: 1em;
+}
+#navigate {
+	margin-top: 1em;
+}
+.header {
+	width: 100%;
+	background-color: #ccf;	
+	padding: 1em;
+	font-family: Arial;
+	font-size: 110%;
+	font-weight: bold;
+}       
+#container {
+	margin-left: 2em;
+}       
+#soltable {
+	margin-left: 2em;
+}
+.dropdown-check-list {
+  display: inline-block;
+  margin-top: 1em;
+}
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 50px 5px 10px;
+  border: 1px solid #ccc;
+}
+.dropdown-check-list .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  padding: 5px;
+  right: 10px;
+  top: 20%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.dropdown-check-list .anchor:active:after {
+  right: 8px;
+  top: 21%;
+}
+.dropdown-check-list ul.items {
+  padding: 2px;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.dropdown-check-list ul.items li {
+  list-style: none;
+}
+
+
+	</style>
+</head>
+
+<body onload="onload()"> 
+<script type="text/javascript" src="zodiac.js"></script> 
+<script type="text/javascript" src="map.js"></script> 
+<script type="text/javascript" src="solutions.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+
+/*$(document).ready(function() {
+    $("img").on("click", function(event) {
+        var x = event.pageX - this.offsetLeft;
+        var y = event.pageY - this.offsetTop;
+        alert("X Coordinate: " + x + " Y Coordinate: " + y);
+    });
+});*/
+
+</script>
+
+<canvas id="canvas3" width="622" height="700" style="position: absolute; left: 0; top: 0; z-index: 3; cursor: none;"></canvas>
+<canvas id="canvas2" width="622" height="700" style="position: absolute; left: 0; top: 0; z-index: 2; cursor: none;"></canvas>
+<canvas id="canvas1" width="622" height="700" style="position: absolute; left: 0; top: 0; z-index: 1; cursor: none;"></canvas>
+<a href="#"><img id="map" src="map-hr-scaled.png" style="opacity: 1.0; position: absolute; left: 0; top: 0; z-index: 0; margin: 0; padding: 0"></a>
+<div id="panel">
+	<div id="pos"></div>
+	<div class="header" style="display: none; margin-top: 1em;" id="header"></div>
+	<div id="container"><div style="display: none;" id="cipher"></div>
+	<div id="plaintext"></div>
+	<div id="description"></div>
+	<div id="radians"></div>
+	<div id="navigate"></div>
+    <div id="options"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="table-bar-chart.css">
+
+	<style type="text/css">
+					.cipher, .cipher2 {
+				font-family: 'untitled2regular';
+				line-height: 22px;
+				font-size: 12pt;
+				color: black;
+				
+				background-color: #white;
+							}
+				td { padding: 5px; }
+				.cipher2 { color: white; }
+				.cipher3 { background-color: aqua; }
+				body { padding: 2em; }
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+
+
+<table id="q-graph">
+<caption></caption>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+	<tr class="qtr" id="q1">
+	<th scope="row">M</th>
+	<td class="sent bar" style="height: 320px;"><span class="cipher">q</span></td>
+	</tr>
+	<tr class="qtr" id="q2">
+	<th scope="row">I</th>
+	<td class="sent bar" style="height: 280px;"><span class="cipher">9</span></td>
+	</tr>
+	<tr class="qtr" id="q3">
+	<th scope="row">G</th>
+	<td class="sent bar" style="height: 240px;"><span class="cipher">R</span></td>
+	</tr>
+	<tr class="qtr" id="q4">
+	<th scope="row">L</th>
+	<td class="sent bar" style="height: 240px;"><span class="cipher">B</span></td>
+	</tr>
+	<tr class="qtr" id="q5">
+	<th scope="row">I</th>
+	<td class="sent bar" style="height: 220px;"><span class="cipher">P</span></td>
+	</tr>
+	<tr class="qtr" id="q6">
+	<th scope="row">T</th>
+	<td class="sent bar" style="height: 220px;"><span class="cipher">I</span></td>
+	</tr>
+	<tr class="qtr" id="q7">
+	<th scope="row">L</th>
+	<td class="sent bar" style="height: 220px;"><span class="cipher">%</span></td>
+	</tr>
+	<tr class="qtr" id="q8">
+	<th scope="row">C</th>
+	<td class="sent bar" style="height: 200px;"><span class="cipher">e</span></td>
+	</tr>
+	<tr class="qtr" id="q9">
+	<th scope="row">U</th>
+	<td class="sent bar" style="height: 200px;"><span class="cipher">Y</span></td>
+	</tr>
+	<tr class="qtr" id="q10">
+	<th scope="row">I</th>
+	<td class="sent bar" style="height: 200px;"><span class="cipher">U</span></td>
+	</tr>
+	<tr class="qtr" id="q11">
+	<th scope="row">L</th>
+	<td class="sent bar" style="height: 200px;"><span class="cipher">#</span></td>
+	</tr>
+	<tr class="qtr" id="q12">
+	<th scope="row">I</th>
+	<td class="sent bar" style="height: 180px;"><span class="cipher">k</span></td>
+	</tr>
+	<tr class="qtr" id="q13">
+	<th scope="row">O</th>
+	<td class="sent bar" style="height: 180px;"><span class="cipher">X</span></td>
+	</tr>
+	<tr class="qtr" id="q14">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 180px;"><span class="cipher">W</span></td>
+	</tr>
+	<tr class="qtr" id="q15">
+	<th scope="row">B</th>
+	<td class="sent bar" style="height: 180px;"><span class="cipher">V</span></td>
+	</tr>
+	<tr class="qtr" id="q16">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 180px;"><span class="cipher">E</span></td>
+	</tr>
+	<tr class="qtr" id="q17">
+	<th scope="row">Y</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">_</span></td>
+	</tr>
+	<tr class="qtr" id="q18">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">Z</span></td>
+	</tr>
+	<tr class="qtr" id="q19">
+	<th scope="row">H</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">M</span></td>
+	</tr>
+	<tr class="qtr" id="q20">
+	<th scope="row">T</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">L</span></td>
+	</tr>
+	<tr class="qtr" id="q21">
+	<th scope="row">T</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">H</span></td>
+	</tr>
+	<tr class="qtr" id="q22">
+	<th scope="row">W</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">A</span></td>
+	</tr>
+	<tr class="qtr" id="q23">
+	<th scope="row">A</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">8</span></td>
+	</tr>
+	<tr class="qtr" id="q24">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">6</span></td>
+	</tr>
+	<tr class="qtr" id="q25">
+	<th scope="row">T</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">5</span></td>
+	</tr>
+	<tr class="qtr" id="q26">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">+</span></td>
+	</tr>
+	<tr class="qtr" id="q27">
+	<th scope="row">H</th>
+	<td class="sent bar" style="height: 160px;"><span class="cipher">)</span></td>
+	</tr>
+	<tr class="qtr" id="q28">
+	<th scope="row">R</th>
+	<td class="sent bar" style="height: 140px;"><span class="cipher">t</span></td>
+	</tr>
+	<tr class="qtr" id="q29">
+	<th scope="row">R</th>
+	<td class="sent bar" style="height: 140px;"><span class="cipher">r</span></td>
+	</tr>
+	<tr class="qtr" id="q30">
+	<th scope="row">O</th>
+	<td class="sent bar" style="height: 140px;"><span class="cipher">T</span></td>
+	</tr>
+	<tr class="qtr" id="q31">
+	<th scope="row">N</th>
+	<td class="sent bar" style="height: 140px;"><span class="cipher">O</span></td>
+	</tr>
+	<tr class="qtr" id="q32">
+	<th scope="row">A</th>
+	<td class="sent bar" style="height: 140px;"><span class="cipher">G</span></td>
+	</tr>
+	<tr class="qtr" id="q33">
+	<th scope="row">P</th>
+	<td class="sent bar" style="height: 140px;"><span class="cipher">=</span></td>
+	</tr>
+	<tr class="qtr" id="q34">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">p</span></td>
+	</tr>
+	<tr class="qtr" id="q35">
+	<th scope="row">O</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">d</span></td>
+	</tr>
+	<tr class="qtr" id="q36">
+	<th scope="row">V</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">c</span></td>
+	</tr>
+	<tr class="qtr" id="q37">
+	<th scope="row">N</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">^</span></td>
+	</tr>
+	<tr class="qtr" id="q38">
+	<th scope="row">A</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">S</span></td>
+	</tr>
+	<tr class="qtr" id="q39">
+	<th scope="row">E</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">N</span></td>
+	</tr>
+	<tr class="qtr" id="q40">
+	<th scope="row">F</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">J</span></td>
+	</tr>
+	<tr class="qtr" id="q41">
+	<th scope="row">S</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">F</span></td>
+	</tr>
+	<tr class="qtr" id="q42">
+	<th scope="row">N</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">D</span></td>
+	</tr>
+	<tr class="qtr" id="q43">
+	<th scope="row">S</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">@</span></td>
+	</tr>
+	<tr class="qtr" id="q44">
+	<th scope="row">K</th>
+	<td class="sent bar" style="height: 120px;"><span class="cipher">/</span></td>
+	</tr>
+	<tr class="qtr" id="q45">
+	<th scope="row">A</th>
+	<td class="sent bar" style="height: 100px;"><span class="cipher">l</span></td>
+	</tr>
+	<tr class="qtr" id="q46">
+	<th scope="row">R</th>
+	<td class="sent bar" style="height: 100px;"><span class="cipher">\</span></td>
+	</tr>
+	<tr class="qtr" id="q47">
+	<th scope="row">F</th>
+	<td class="sent bar" style="height: 100px;"><span class="cipher">Q</span></td>
+	</tr>
+	<tr class="qtr" id="q48">
+	<th scope="row">S</th>
+	<td class="sent bar" style="height: 100px;"><span class="cipher">K</span></td>
+	</tr>
+	<tr class="qtr" id="q49">
+	<th scope="row">O</th>
+	<td class="sent bar" style="height: 100px;"><span class="cipher">!</span></td>
+	</tr>
+	<tr class="qtr" id="q50">
+	<th scope="row">D</th>
+	<td class="sent bar" style="height: 80px;"><span class="cipher">z</span></td>
+	</tr>
+	<tr class="qtr" id="q51">
+	<th scope="row">N</th>
+	<td class="sent bar" style="height: 80px;"><span class="cipher">(</span></td>
+	</tr>
+	<tr class="qtr" id="q52">
+	<th scope="row">D</th>
+	<td class="sent bar" style="height: 60px;"><span class="cipher">f</span></td>
+	</tr>
+	<tr class="qtr" id="q53">
+	<th scope="row">S</th>
+	<td class="sent bar" style="height: 60px;"><span class="cipher">7</span></td>
+	</tr>
+	<tr class="qtr" id="q54">
+	<th scope="row">X</th>
+	<td class="sent bar" style="height: 20px;"><span class="cipher">j</span></td>
+	</tr>
+</tbody>
+</table>
+
+<div id="ticks">
+<div class="tick" style="height: 59px;"><p>15</p></div>
+<div class="tick" style="height: 59px;"><p>12</p></div>
+<div class="tick" style="height: 59px;"><p>9</p></div>
+<div class="tick" style="height: 59px;"><p>6</p></div>
+<div class="tick" style="height: 59px;"><p>3</p></div>
+</div>
+
+<!--
+16 q 320 
+14 9 280
+12 R
+12 B
+11 P
+11 I
+11 %
+10 e
+10 Y
+10 U
+10 #
+ 9 k
+ 9 X
+ 9 W
+ 9 V
+ 9 E
+ 8 _
+ 8 Z
+ 8 M
+ 8 L
+ 8 H
+ 8 A
+ 8 8
+ 8 6
+ 8 5
+ 8 +
+ 8 )
+ 7 t
+ 7 r
+ 7 T
+ 7 O
+ 7 G
+ 7 =
+ 6 p
+ 6 d
+ 6 c
+ 6 ^
+ 6 S
+ 6 N
+ 6 J
+ 6 F
+ 6 D
+ 6 @
+ 6 /
+ 5 l
+ 5 \
+ 5 Q
+ 5 K
+ 5 !
+ 4 z
+ 4 (
+ 3 f
+ 3 7
+ 1 j
+
+-->
+
+</body>
+</html>

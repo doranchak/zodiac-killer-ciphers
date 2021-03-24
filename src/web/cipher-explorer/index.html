@@ -1,0 +1,368 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>-->
+	<script type="text/javascript" src="jquery/jquery-1.11.0.js"></script>
+	  <link rel="stylesheet" type="text/css" href="spectrum.css">
+	      <script type="text/javascript" src="spectrum.js?v=1"></script>
+<!--	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+ <!--   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="http://code.jquery.com/resources/demos/style.css">	-->
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+<!--    <link rel="stylesheet" href="http://code.jquery.com/resources/demos/style.css">	-->
+<!--	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+	<script src="jquery/jquery-ui.js?v=1"></script>
+	<script src="html2canvas.js?v=1"></script>
+	<script src="canvas2image.js?v=1"></script>
+	<script>
+		$( function() {
+		    $( "#menu" ).menu();
+		  } );
+		
+		
+	</script>	
+	
+	<link rel='stylesheet' href='spectrum.css' />
+	
+
+	<style>
+		.ky { border-bottom: thin solid white;}
+		#key { margin-left: 2em;}
+		#key h2 {font-family: Arial;}
+		.c {
+			font-family: 'untitled2regular';
+			line-height: 0.8em;
+			font-size: 22pt;
+			padding-right: 0.75em;
+			padding-left: 2px;
+		}
+		.p {
+			font-family: courier;
+			font-size: 21pt;
+			color: #393;
+			padding-right: 2px;
+		}
+		#ngu {font-size: 125%;}
+		#ngsize {font-family: arial,Helvetica,sans-serif;}
+		#ngsizeval {font-size: 12pt;}
+		#ngsize {margin-bottom: 1em;}
+		textarea {font-family: 'untitled2regular'; font-size: 22pt; line-height: 0.93em; width: 120%; letter-spacing: 5px;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;		
+		}
+		#m1, #m2, #m3, #m4 {padding: 3px; border: thin solid white;}
+		#m1 {border: thin solid #c99;}
+		#m2, #m3, #m4 {opacity: 0.3; filter: alpha(opacity=30);}
+		#mode {border: 1px solid #bbb; padding: 5px; margin-bottom: 1em; }
+	    #ml {font-family: Arial,Helvetica,sans-serif;padding-bottom: 0.5em; display: block; width: 100%; }
+	 	#form {display: none; width: 100%;}
+		.cp {font-family: Arial,Helvetica,sans-serif;}
+		#cpr {font-size: 125%; margin-left: 3em;}
+		.menu { padding-right: 1em; }
+		#menu { margin-bottom: 1em; }
+		.ui-menu { width: 150px; }
+	    .full-spectrum .sp-palette {
+	max-width: 200px;
+	}
+ 	.cipher table {
+		border-collapse: collapse;
+		
+	}
+		.cipher td {
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 22pt;
+	color: #bbb;
+	border-collapse: collapse;
+	padding: 2px;
+				}
+			
+    .cipher td.dark {
+	color: #000;
+	}				
+	
+	</style>
+</head>
+
+<body onload="init(); render();" onkeypress="return keypress(event)"> 
+	<a name="top"></a>
+
+<!--<script type="text/javascript" src="animate.js"> </script> -->
+<script type="text/javascript" src="zodiac.js?v=2"> </script> 
+<script type="text/javascript" src="tests.js?v=1"> </script> 
+
+	<table class="outer">
+		<tr valign="top">
+			<td class="menu">
+				<ul id="menu">
+				  <li><div>Ciphers</div>
+				    <ul>
+				      <li><div>Z408</div></li>
+				      <li><div>Z408 Plaintext</div></li>
+				      <li><div>Z340</div></li>
+				      <li><div>Z340 Untransposed</div></li>
+				      <li><div>Z340 Plaintext</div></li>
+				      <li><div>Z340 Plaintext Untransposed</div></li>
+				      <li><div>Z13</div></li>
+				      <li><div>Z32</div></li>
+				    </ul>
+				  </li>
+				  <li><div>File</div>
+				    <ul>
+				      <li><div>Save as image</div></li>
+					</ul>
+				  </li>	
+				  <li><div>Edit</div>
+				    <ul>
+				      <li><div>Edit cipher text</div></li>
+				      <li><div>Copy cipher text</div></li>
+				      <li><div>Clear highlights</div></li>
+				      <!--<li><div>Change width</div>-->
+				    </ul>
+				  </li>
+				  <li><div>Help</div>
+			        <ul>
+			          <li onclick="window.location='https://www.youtube.com/watch?v=Dw-akzf4Zmw'"><div>Tutorial video</div></li>
+				    </ul>
+				  </li>
+				</ul>
+				<br>
+				<div id="mode"><center>
+					<span id="ml">Mode:</span>
+					<img id="m1" onclick="changeMode(1)" title="Click symbols to highlight/unhighlight them" src="cursor_318-113955.jpg">
+					<img id="m2" onclick="changeMode(2)" title="Click and drag to paint highlights" src="brush.png"><br>
+					<img id="m3" onclick="changeMode(3)" title="Click to select corners of rectangular region to highlight" src="selection.png">
+					<img id="m4" onclick="changeMode(4)" title="Click to select ngram patterns" src="ngrams.png"><br>
+					<input type="checkbox" id="erase">Erase 
+					</center>
+				</div>
+				<div id="ngsize" style="display:none"><center>
+					<span>N-gram size:</span><input size="2" id="ngsizeval" value="1" onchange="updateNgramsize()"><br>
+					<input id="ngu" type="button" value="Update">
+					</center>
+				</div>
+				
+				<table class="cp">
+					<tr><td align="right">Text: </td><td><input type='text' id="fg"/></td></tr>
+					<tr><td align="right">Background: </td><td><input type='text' id="bg"/></td></tr>
+				</table>
+				<input id="cpr" type="button" onclick="randomColor()" value="Random">
+			</td>
+			<td class="wrap" width="340px">
+				<div id="cipher"></div>
+				<div id="form" >
+					<textarea id="input" rows="22" cols="100"></textarea><br>
+					<input type="button" onclick="editCipherDone()" value="Update">
+					<input type="button" onclick="editCipherCancel()" value="Cancel">
+				</div>
+			</td>
+			<td>
+				<div id="key" style="display:none;">
+					<center><u><h2>Key:</h2></u></center>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">A</span><span class="c">A</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">B</span><span class="c">B</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">b</span><span class="c">b</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">C</span><span class="c">C</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">c</span><span class="c">c</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">D</span><span class="c">D</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">d</span><span class="c">d</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">E</span><span class="c">E</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">e</span><span class="c">e</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">F</span><span class="c">F</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">f</span><span class="c">f</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">G</span><span class="c">G</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">H</span><span class="c">H</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">I</span><span class="c">I</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">J</span><span class="c">J</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">j</span><span class="c">j</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">K</span><span class="c">K</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">k</span><span class="c">k</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">L</span><span class="c">L</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">l</span><span class="c">l</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">M</span><span class="c">M</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">N</span><span class="c">N</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">O</span><span class="c">O</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">P</span><span class="c">P</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">p</span><span class="c">p</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">Q</span><span class="c">Q</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">q</span><span class="c">q</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">R</span><span class="c">R</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">r</span><span class="c">r</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">S</span><span class="c">S</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">T</span><span class="c">T</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">t</span><span class="c">t</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">U</span><span class="c">U</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">V</span><span class="c">V</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">W</span><span class="c">W</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">X</span><span class="c">X</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">Y</span><span class="c">Y</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">y</span><span class="c">y</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">Z</span><span class="c">Z</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">z</span><span class="c">z</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">!</span><span class="c">!</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">#</span><span class="c">#</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">%</span><span class="c">%</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">&amp;</span><span class="c">&amp;</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">(</span><span class="c">(</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">)</span><span class="c">)</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">*</span><span class="c">*</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">+</span><span class="c">+</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">-</span><span class="c">-</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">.</span><span class="c">.</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">/</span><span class="c">/</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">0</span><span class="c">0</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">1</span><span class="c">1</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">2</span><span class="c">2</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">3</span><span class="c">3</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">4</span><span class="c">4</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">5</span><span class="c">5</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">6</span><span class="c">6</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">7</span><span class="c">7</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">8</span><span class="c">8</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">9</span><span class="c">9</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">:</span><span class="c">:</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">;</span><span class="c">;</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">&lt;</span><span class="c">&lt;</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">=</span><span class="c">=</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">></span><span class="c">></span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">?</span><span class="c">?</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">@</span><span class="c">@</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">[</span><span class="c">[</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">\</span><span class="c">\</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">^</span><span class="c">^</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">_</span><span class="c">_</span></span>
+					<span class="ky" onmouseover="moky(this)" onmouseout="muky(this)" onclick="keyclick(this)"><span class="p">|</span><span class="c">|</span></span>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	
+
+<div id="debug"></div>
+<div style="display:none" id="img-out"></div>
+
+<script>
+$("#fg").spectrum({
+    color: "#000",
+    showInput: true,
+    className: "full-spectrum",
+    showInitial: true,
+    showPalette: true,
+    showSelectionPalette: true,
+    maxSelectionSize: 10,
+    preferredFormat: "hex",
+    localStorageKey: "spectrum.demo",
+    move: function (color) {
+        
+    },
+    show: function () {
+    
+    },
+    beforeShow: function () {
+    
+    },
+    hide: function () {
+    
+    },
+    change: function(color) {
+        currentFG=color;
+    },
+    palette: [
+        ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+        "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+        ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+        "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+        ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+        "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+        "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+        "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+        "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+        "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+        "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+        "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+        "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+        "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+    ]
+});
+$("#bg").spectrum({
+    color: "#fff",
+    showInput: true,
+    className: "full-spectrum",
+    showInitial: true,
+    showPalette: true,
+    showSelectionPalette: true,
+    maxSelectionSize: 10,
+    preferredFormat: "hex",
+    localStorageKey: "spectrum.demo",
+    move: function (color) {
+        
+    },
+    show: function () {
+    
+    },
+    beforeShow: function () {
+    
+    },
+    hide: function () {
+    
+    },
+    change: function(color) {
+        currentBG=color;
+    },
+    palette: [
+        ["rgb(0, 0, 0)", "rgb(67, 67, 67)", "rgb(102, 102, 102)",
+        "rgb(204, 204, 204)", "rgb(217, 217, 217)","rgb(255, 255, 255)"],
+        ["rgb(152, 0, 0)", "rgb(255, 0, 0)", "rgb(255, 153, 0)", "rgb(255, 255, 0)", "rgb(0, 255, 0)",
+        "rgb(0, 255, 255)", "rgb(74, 134, 232)", "rgb(0, 0, 255)", "rgb(153, 0, 255)", "rgb(255, 0, 255)"], 
+        ["rgb(230, 184, 175)", "rgb(244, 204, 204)", "rgb(252, 229, 205)", "rgb(255, 242, 204)", "rgb(217, 234, 211)", 
+        "rgb(208, 224, 227)", "rgb(201, 218, 248)", "rgb(207, 226, 243)", "rgb(217, 210, 233)", "rgb(234, 209, 220)", 
+        "rgb(221, 126, 107)", "rgb(234, 153, 153)", "rgb(249, 203, 156)", "rgb(255, 229, 153)", "rgb(182, 215, 168)", 
+        "rgb(162, 196, 201)", "rgb(164, 194, 244)", "rgb(159, 197, 232)", "rgb(180, 167, 214)", "rgb(213, 166, 189)", 
+        "rgb(204, 65, 37)", "rgb(224, 102, 102)", "rgb(246, 178, 107)", "rgb(255, 217, 102)", "rgb(147, 196, 125)", 
+        "rgb(118, 165, 175)", "rgb(109, 158, 235)", "rgb(111, 168, 220)", "rgb(142, 124, 195)", "rgb(194, 123, 160)",
+        "rgb(166, 28, 0)", "rgb(204, 0, 0)", "rgb(230, 145, 56)", "rgb(241, 194, 50)", "rgb(106, 168, 79)",
+        "rgb(69, 129, 142)", "rgb(60, 120, 216)", "rgb(61, 133, 198)", "rgb(103, 78, 167)", "rgb(166, 77, 121)",
+        "rgb(91, 15, 0)", "rgb(102, 0, 0)", "rgb(120, 63, 4)", "rgb(127, 96, 0)", "rgb(39, 78, 19)", 
+        "rgb(12, 52, 61)", "rgb(28, 69, 135)", "rgb(7, 55, 99)", "rgb(32, 18, 77)", "rgb(76, 17, 48)"]
+    ]
+});
+
+$( "#menu" ).menu({
+  	select: function( event, ui ) {
+		var item = ui.item.text().trim();
+		if (item == "Z408") switchCipher(0);
+		else if (item == "Z408 Plaintext") switchCipher(1);
+		else if (item == "Z340") switchCipher(2);
+		else if (item == "Z340 Untransposed") switchCipher(3);
+		else if (item == "Z340 Plaintext") switchCipher(4);
+		else if (item == "Z340 Plaintext Untransposed") switchCipher(5);
+		else if (item == "Z13") switchCipher(6);
+		else if (item == "Z32") switchCipher(7);
+		
+		else if (item == "Edit cipher text") editCipher();
+		else if (item == "Copy cipher text") copyCipher();
+		else if (item == "Clear highlights") init();
+		else if (item == "Save as image") saveAsImage();
+//		console.log("item: [" + item.trim() + "]");
+	}
+});		
+
+</script>
+<br><br>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- cipher-explorer -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2102076319100660"
+     data-ad-slot="8670613621"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</html>

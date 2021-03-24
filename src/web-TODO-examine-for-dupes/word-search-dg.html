@@ -1,0 +1,226 @@
+<style>
+td { font-family: courier; font-size: 10pt;}
+.a { font-weight normal; color: #ccc;}
+.b { font-weight: bold; color: #000;}
+.w { margin: 3px 3px 3px 3px; line-height: 150%;}
+
+table {border-spacing: 0px;}
+
+</style>
+<script>
+var cipher = ["NOIDONTTHINKSOIBE", 
+"LIEVETHISSOLUTION", 
+"HELPSEXPLAINSTHEP", 
+"OETSPENSOLUTIONAN", 
+"DTHEIDEATHEYHADIN", 
+"MINEBEHINDITSCONS", 
+"TRUCTIONKEEPINMIN", 
+"ETHATTHEPOETSPENI", 
+"SSIXTYEIGHTCHARAC", 
+"TERSANDPENNSTATES", 
+"INHISTIMESSEVENTE", 
+"ENTHATSIXTYEIGHTI", 
+"SMORSEBINARYFORNI", 
+"NENOLONGDRAGGEDOU", 
+"TEXPLANATIONSTRAI", 
+"GHTTOTHEPOSSIBLES", 
+"OLUTIONANDWHATIBE", 
+"LIEVECANTHAPPENBY", 
+"CHANCETHEZTHREEFO", 
+"RTYANDTHEMYNAMEIS", 
+"CIPHERISAWORDGAME", 
+"ANDPUZZLESOMETHIN", 
+"GLIKEACROSTICSAND", 
+"SECRETWRITINGHIDI", 
+"NGINASHORTSUBSTIT", 
+"UTIONCIPHERTHEPOE", 
+"TSPENROYALTUTORSE", 
+"TCONTOPANDTHEZTHR", 
+"EEFORTYFLIPPEDVER", 
+"TICALLYISTHERESTO", 
+"FTHESUBSTITUTIONC", 
+"IPHERATTHEBOTTOMT", 
+"HEPLAINTEXTSTARTS", 
+"AROUNDTHELASTSIXL", 
+"INESWHATRUNSTHROU", 
+"GHTHEPLAINTEXTDIA", 
+"GONALLYISAMAZING "];
+
+var words = [
+["STOLID",[ 24,10,23,9,22,8,21,7,20,6,19,5]],
+["TRITE",[ 7,1,6,1,5,1,4,1,3,1]],
+["GLENN",[  15,0,16,1,17,2,18,3,19,4]],
+["DEITY",[  4,5,5,5,6,5,7,5,8,5]],
+["CEDAR",[  22,12,21,12,20,12,19,12,18,12]],
+["HAZES",[ 16,11,17,10,18,9,19,8,20,7]],
+["ETHAN",[ 6,10,7,11,8,12,9,13,10,14]],
+["THAN",[ 7,11,8,12,9,13,10,14]],
+["THAN",[ 1,13,2,14,3,15,4,16]],
+["SIDE",[ 11,6,10,6,9,6,8,6]],
+["HEAD",[ 30,2,31,3,32,4,33,5]],
+["LONG",[ 32,3,33,2,34,1,35,0]],
+["LINE",[ 15,14,16,14,17,14,18,14]],
+["TELL",[ 5,11,4,10,3,9,2,8]],
+["NEED",[ 3,6,2,5,1,4,0,3]],
+["MIND",[ 20,15,21,15,22,15,23,15]],
+["TRUE",[ 24,9,25,10,26,11,27,12]],
+["POOR",[ 25,7,26,6,27,5,28,4]],
+["NEAR",[ 17,14,18,13,19,12,20,11]],
+["MEET",[ 19,13,18,13,17,13,16,13]],
+["TEST",[ 6,0,7,0,8,0,9,0]],
+["TREE",[ 30,12,29,12,28,12,27,12]],
+["SEND",[ 19,16,20,16,21,16,22,16]],
+["COAL",[ 25,5,26,6,27,7,28,8]],
+["STAR",[ 10,9,11,9,12,9,13,9]],
+["LOTS",[ 21,7,22,8,23,9,24,10]],
+["KEEN",[ 6,8,7,7,8,6,9,5]],
+["POET",[ 32,2,33,2,34,2,35,2]],
+["TILL",[ 0,6,1,7,2,8,3,9]],
+["DISH",[ 13,8,14,9,15,10,16,11]],
+["SHIT",[ 3,3,4,2,5,1,6,0]],
+["NEST",[ 10,1,9,1,8,1,7,1]],
+["SHUT",[ 24,13,25,12,26,11,27,10]],
+["SITS",[ 29,14,30,13,31,12,32,11]],
+["TIED",[ 7,5,6,5,5,5,4,5]],
+["TIED",[ 31,13,30,13,29,13,28,13]],
+["SHOE",[ 10,4,11,3,12,2,13,1]],
+["RATS",[ 13,9,12,9,11,9,10,9]],
+["TIES",[ 9,0,10,0,11,0,12,0]],
+["FIST",[ 28,7,29,7,30,7,31,7]],
+["MAID",[ 19,13,20,14,21,15,22,16]],
+["HIPS",[ 4,9,5,10,6,11,7,12]],
+["TIPS",[ 0,7,1,7,2,7,3,7]],
+["NINA",[ 5,15,6,15,7,15,8,15]],
+["BOLT",[ 12,6,13,5,14,4,15,3]],
+["RIOT",[ 29,12,30,13,31,14,32,15]],
+["PITS",[ 9,7,10,6,11,5,12,4]],
+["GLEN",[ 15,0,16,1,17,2,18,3]],
+["THEE",[ 30,8,31,8,32,8,33,8]],
+["THEE",[ 26,10,27,11,28,12,29,13]],
+["IDLE",[ 28,9,27,9,26,9,25,9]],
+["ROSA",[ 13,9,14,10,15,11,16,12]],
+["STEM",[ 33,13,34,12,35,11,36,10]],
+["SLOT",[ 1,8,2,8,3,8,4,8]],
+["TRIO",[ 27,4,26,5,25,6,24,7]],
+["DOME",[ 4,14,5,14,6,14,7,14]],
+["TINS",[ 31,6,32,5,33,4,34,3]],
+["IONS",[ 4,15,5,14,6,13,7,12]],
+["OTTO",[ 3,13,2,13,1,13,0,13]],
+["OTTO",[ 0,13,1,13,2,13,3,13]],
+["RUGS",[ 25,10,24,11,23,12,22,13]],
+["TINA",[ 16,13,15,12,14,11,13,10]],
+["VETO",[ 28,14,29,13,30,12,31,11]],
+["LUSH",[ 32,3,33,3,34,3,35,3]],
+["HAZE",[ 16,11,17,10,18,9,19,8]],
+["SANE",[ 5,12,4,13,3,14,2,15]],
+["OATS",[ 31,14,32,13,33,12,34,11]],
+["RITE",[ 6,1,5,1,4,1,3,1]],
+["TEES",[ 6,4,5,5,4,6,3,7]],
+["RAVE",[ 8,14,9,13,10,12,11,11]],
+["ORCS",[ 27,5,26,5,25,5,24,5]],
+["NASA",[ 32,6,31,5,30,4,29,3]],
+["NEON",[ 27,3,26,3,25,3,24,3]],
+["SPIT",[ 3,7,2,7,1,7,0,7]],
+["ANTI",[ 9,13,10,14,11,15,12,16]],
+["IDOL",[ 36,13,35,14,34,15,33,16]],
+["KURT",[ 22,3,21,4,20,5,19,6]],
+["OMEN",[ 20,10,19,9,18,8,17,7]],
+["PANE",[ 15,8,14,7,13,6,12,5]],
+["AIRS",[ 11,4,10,3,9,2,8,1]],
+["SOAR",[ 15,10,14,10,13,10,12,10]],
+["SINE",[ 26,1,25,2,24,3,23,4]],
+["STOK",[ 9,11,8,10,7,9,6,8]],
+["TIRE",[ 33,6,32,5,31,4,30,3]],
+["TIRE",[ 25,1,24,2,23,3,22,4]],
+["HAIG",[ 32,0,33,0,34,0,35,0]],
+["LOOS",[ 29,4,28,3,27,2,26,1]],
+["ISBN",[ 10,6,11,6,12,6,13,6]],
+["SIRE",[ 36,8,35,8,34,8,33,8]],
+["NICS",[ 6,16,7,16,8,16,9,16]],
+["MALC",[ 19,9,20,8,21,7,22,6]],
+["SIDI",[ 15,10,14,9,13,8,12,7]],
+["SIDI",[ 11,6,12,7,13,8,14,9]],
+["SAAD",[ 36,8,35,7,34,6,33,5]],
+["NILS",[ 0,0,1,1,2,2,3,3]],
+["TOTS",[ 30,10,31,11,32,12,33,13]],
+["LILT",[ 1,11,2,10,3,9,4,8]],
+["CLAM",[ 22,6,21,7,20,8,19,9]],
+["OTIS",[ 21,10,22,10,23,10,24,10]],
+["TREM",[ 9,14,8,14,7,14,6,14]],
+["LUNA",[ 33,9,34,9,35,9,36,9]],
+["PETR",[ 9,7,10,8,11,9,12,10]],
+["HEMS",[ 8,9,9,8,10,7,11,6]],
+["TARN",[ 10,5,11,4,12,3,13,2]],
+["NEUE",[ 19,4,20,4,21,4,22,4]],
+["HAST",[ 19,7,20,8,21,9,22,10]],
+["CLOG",[ 18,0,17,0,16,0,15,0]],
+["DECO",[ 19,5,18,5,17,5,16,5]],
+["NITS",[ 33,4,32,5,31,6,30,7]],
+["ROOS",[ 32,14,31,14,30,14,29,14]],
+["OMER",[ 5,14,6,14,7,14,8,14]],
+["TOTE",[ 32,10,31,11,30,12,29,13]],
+["PHAN",[ 21,3,20,3,19,3,18,3]],
+["GOON",[ 13,11,14,10,15,9,16,8]],
+["AEEU",[ 24,4,23,4,22,4,21,4]],
+["REMO",[ 8,14,7,14,6,14,5,14]],
+["NUTT",[ 24,0,25,0,26,0,27,0]],
+["EDIS",[ 8,6,9,6,10,6,11,6]],
+["ERNE",[ 7,0,6,1,5,2,4,3]],
+["LOON",[ 14,4,13,3,12,2,11,1]],
+["ROPY",[ 23,7,24,7,25,7,26,7]],
+["NOSH",[ 14,6,13,5,12,4,11,3	]]]
+function render() {
+	
+	var html = "<table><tr valign=top><td>";
+	
+    html += "<table>";
+	for (var row=0; row<cipher.length; row++) {
+		html += "<tr>"
+		for (var col=0; col<cipher[row].length; col++) {
+			html += "<td id=\"" + row + "_" + col + "\" class=\"a\">" + cipher[row].charAt(col) + "</td>";
+		}
+		html += "</tr>"
+	}
+	html += "</table></td><td style=\"padding-left: 1em\">" + renderWords() + "</td></tr></table>"
+	document.getElementById("c").innerHTML = html;
+	
+}
+
+function renderWords() {
+	var html = "";
+	for (var i=0; i<words.length; i++) {
+		var word = words[i][0];
+		var path = words[i][1];
+		html += "<span class=\"w\" onmouseover=\"h(" + i + ")\">" + word + "</span> "
+	}
+	return html;
+}
+
+
+function h(i) {
+	reset();
+	mark(words[i][1]);
+}
+
+function reset() {
+	for (var row=0; row<cipher.length; row++) {
+		for (var col=0; col<cipher[row].length; col++) {
+			var id = row + "_" + col;
+			document.getElementById(id).className = "a";
+		}
+	}
+	
+}
+
+function mark(vals) {
+	for (var i=0; i<vals.length; i+=2) {
+		var id = vals[i] + "_" + vals[i+1];
+		document.getElementById(id).className = "b";
+	}
+}
+</script>
+
+<body onload="render()">
+<div id="c">
+</div>
+</body>

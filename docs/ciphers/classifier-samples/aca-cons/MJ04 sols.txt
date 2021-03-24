@@ -1,0 +1,93 @@
+a1 there are people on this planet 
+a2 zen says the archer who aims for
+a3 its surprising that sophocles wr
+a4 the reading of all good books is
+a5 in theory there is no difference
+a6 amoebas at the start were not co
+a7 chess players were asked to disp
+a8 from a city progress planning co
+a9 query are single dwellers percei
+a10 magnetic properties of loadstone
+a11 good judgment comes from bad exp
+a12 study reported in medical journa
+a13 resolution i will not sit in the
+a14 famous chinese saying yi fon fun
+a15 if you went to work yesterday i 
+a16 the state of rajasthan is an imp
+a17 yes it was james conant who said
+a18 differences of habit and languag
+a19 anaerobic bacteria cannot defend
+a20 place with earths cleanest air a
+a21 when girl made meat pies idle yo
+a22 cats are obviously much smarter 
+a23 eager bright brash young lawyer 
+a24 phlegmatic cornfield watchdog ho
+a25 new gnu wry wren frolic along wa
+p1  jeepderivesfromgeneralpurposetha
+p2  astuteobservationofferedonavehic
+p3  maythesevensummerstarsshineonyou
+p4  mycomputeroperatingsystemissoout
+p5  greeceandaustraliaaretheonlynati
+p6  museumsolicitscustomdisplayssign
+p7  homecomputersarebeingcalledupont
+P8  thetroublewithmostfolksisntsomuc
+p9  zoologicalmenagerietroopofkangar
+p10  propagandaisasblatantasswastikas
+p11  someabundantchemicalelementsrema
+p12  amirepoixisjustasavorymixofsaute
+psp1  cruelcraftycajunconscajolesunwar
+psp2  lustyroustaboutshustleflatspastp
+c1  isbluenavy
+c2  nightmares
+c3  hefirstday
+c4  magicsword
+c5  blueradish
+c6  englishcop
+c7  nohitgames
+c8  fluidwater
+c9  strovewild
+c10 windfactors
+c11 tiredwoman
+c12 gnudochaseit
+c13 beansprout
+c14 hostgerman
+csp1 realshifty
+csp2 atrickysolve  
+X1  SI MI PADRE SE TIRASE DE LO AL  
+X2  LE PLUS GRAND BONJEUR QUE ME C  
+X3  LA FORZA CHE PER LA VERDE MICC  
+X4  NEMO QUAM BENE VIVAT, SED QUAM  
+X5  HUSTRUN TILL SIN *KTA MAN: "JA  
+X6  CRET TO TUSINDE OG TO SKREVET   
+X8  JEWENIGERDIELEUTEDAVONWISSENWI  
+X9  ILFAUTETREBIENHEROSPOURLETRE A  
+X10 DERPFEIFERVONHAMELNDENMANTELUNDDI  
+xsp1 warumnicht
+e1 themorecorruptthestatethemorenum
+e2 ifatfirstyoudontsucceedthenskydiv
+e3 having a dog teaches a boy resp
+e4 maine farmers almanac defines a b
+e5 never feel remorse for what you
+e6 acarefuldriveristheonewhoiustsawa
+e7 sometimes i have one leg behead me
+e8 why is it that change is inevitable
+e9 whensomeoneasksyouaquestionyoumay
+e10 anadultapersonwhohasstoppedgrowin
+e11 uncle harry was so lazy that he
+E12  DIVORCEWASNOTASDIFFICULTTOGETINTH  
+E13 (EXTRAVAGANTCLAIMS) GARLIC BELONGS TO THE LILY
+e14 thegeneralityofprincesiftheyweres
+e16 (shockwave) equipped with an oversized
+e17 warisagreataffairofstatetherealmo
+e19 'VENUSTRAN'SITSTHEFA'CEOFTHESU
+e20 fromtheintroductiontotectonicevolutionofsouth
+e21 decipheringisinmyopiniononeofthem
+e22 (tropical gardens) membersofthemusaceaeorbananafamily
+E23  INVAINISEEKTOFLEETOLIONSLOFTYHEIG  
+e25  EVENTSPLAYCATANDMOUSEWITH
+ac743 itisbettertokeepyourmouthshutanda
+ac744  IDEAS COME WHEN WE DO NOT EXPECT
+ac746 countrygentlemenwilxlfindusingmym
+ac747 inthebookpassporttomagoniajacques
+ac748 infifteenmillionyearsbecauseofth
+
