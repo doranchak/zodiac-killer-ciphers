@@ -16,6 +16,7 @@ It will bring up web server at:
 
 	http://localhost:8080
 
-Invoke the sample endpoint:
+Invoke the sample endpoints:
 
 	http://localhost:8080/hello?name=Smeg
+	http://localhost:8080/greeting?name=SmeggyJSON
