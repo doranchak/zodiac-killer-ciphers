@@ -1,5 +1,4 @@
 var WIDTH=17;
-var HEIGHT=0;
 
 /* many thanks to http://mspeight.blogspot.com/2007/05/how-to-disable-backspace-in-ie-and.html for this delete/backspace trapper */
 if (typeof window.event != 'undefined') // IE
@@ -261,31 +260,17 @@ else
 //z408 solution
 //"ILIKEKILLINGPEOPLEBECAUSEITISSOMUCHFUNITISMOREFUNTHANKILLINGWILDGAMEINTHEFORRESTBECAUSEMANISTHEMOATDANGERTUEANAMALOFALLTOKILLSOMETHINGGIVESMETHEMOATTHRILLINGEXPERENCEITISEVENBETTERTHANGETTINGYOURROCKSOFFWITHAGIRLTHEBESTPARTOFITIATHAEWHENIDIEIWILLBEREBORNINPARADICESNDALLTHEIHAVEKILLEDWILLBECOMEMYSLAVESIWILLNOTGIVEYOUMYNAMEBECAUSEYOUWILLTRYTOSLOIDOWNORSTOPMYCOLLECTINGOFSLAVESFORMYAFTERLIFEEBEORIETEMETHHPITI"
 //z340
-//"HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)By:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/p8R^FlO-*dCkF>2D(#5+Kq%;2UcXGV.zL|(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKO2<clRJ|*5T4M.+&BFz69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()p|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+"
-// z340 mean sigma 0.42876895529129533
-//"HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)2<clRJ|*5T4M.+&BFz69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKOBy:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()pp8R^FlO-*dCkF>2D(#5+Kq%;2UcXGV.zL|"
-//z340 mean sigma 0.4690438940801294
-//"HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)p8R^FlO-*dCkF>2D(z69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKOBy:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()p2<clRJ|*5T4M.+&BF#5+Kq%;2UcXGV.zL|"
-// z340 mean sigma 0.5869620666091453
-//"++)WCzWcPOSHT/()p2<clRJ|*5T4M.+&BF>MDHNpkSzZO8A|K;+lGFN^f524b.cV4t++By:cM+UZGW()L#zHJp8R^FlO-*dCkF>2D(_9M+ztjd|5FP+&4k/d<M+b+ZR2FBcyA64KSpp7^l8*V3pO++RK2(G2Jfj#O+_NYz+@L9U+R/5tE|DYBpbTMKO|FkdW<7tB_YOB*-CcHER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L#5+Kq%;2UcXGV.zL|z69Sy#+N|5FBc(;8R-zlUV+^J+Op7<FBy-"
-//z340 kasiski version
-//"HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)FP+&4k/p8R^FlO-*dCkF>2D(#5+Kq%;2UcBy:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2XGV.zL|(G2Jfj#O+_NYz+@L9d<M+b+ZR2F_9M+ztjd|5FP+&4k/p8R^FlO-*dCkF>2D(BcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DY#5+Kq%;2UcXGV.zL|(G2Jfj#O+_NYz+@L9BpbTMKO2<clRJ|*5T4M.+&BFz69Sy#+N|5d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-FBc(;8RlGFN^f524b.cV4t++yBX1*:49CEU+R/5tE|DYBpbTMKO2<clRJ|*5T4M.+&BF>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+z69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++FlWB|)L++)WCzWcPOSHT/()p|FkdW<7tB_yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2YOB*-Cc>MDHNpkSzZO8A|K;+HER>pl^VPkRcT+L16C<+FlWB|)L++)WCzWcPOSHT/()p|1LTG2dNp+B(#O%DWY.<*Kf)By:cM+UZGW|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5"
-//"OB+M|C|lU%DB(SqZOT-BRBc^>Fdcc5Ek+HL2pWc*R++P;lVtXz4BzW2D.9L(pK8z2)7@(1qGlE7MFVccp+J/6ycBL9zOcLYRG(1CHGU+:yy3+TyVbM8K^+LWK(F+Ldft>bUpp+*;O:S2*%5+Rk-4|F4Dj/#<V5D.</b;-KjB5GO.6c+.+S2)WFd.Z8pJ+G-(pU)Fyf|_zO.<C&Vp*F#O>)l+|_9OMZT|+BWl^Tc+*YBM5+PVJ3tldFH^MFPUzA*|l5O1ZN2MRNB5R|t+fBRT6>+#N29zO|EFYJ8+4kpp^fK<2+-KX2CK#&7k4<+z<+N)CW^(pk_dR4HzNGAYS|B#"
+"HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)By:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/p8R^FlO-*dCkF>2D(#5+Kq%;2UcXGV.zL|(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKO2<clRJ|*5T4M.+&BFz69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()p|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+"
 //z340 period 19
 //"H+M8|CV@K+l#2E.B)>EB+*5k.L-RR+4>f|pMR(UVFFz9z/JNbVM)|D>#Z3P>Ldl5||.UqLFHpOGp+2|<Ut*5cZG+kNl%WO&D(MVE5FV52+dp^D(+4(G++|TB4-R)WkVW)+k#2b^D4ct+cW<SPYLR/5J+JYM(+|TC7zk.#Kp+fZ+B.;+c+ztZ|<z28KjROp+8y.LWBO1*H_Rq#2pb&RB31c_8LKJ9^%OF7TBlXz6PYATfSMF;+B<MFG1BCOO|G)p+l2_cFKzF*K<SBK2BpzOUNyBO6N:(+H*;dy7t-cYAy29^4OFT-+N:^j*Xz6-<Sf9pl/CpclddG+4Ucy5C^W(c"
 //z340 period 26
 //"HWpF+YUby4B|7;EYpPKzVT#tK)t+R.7+q++M++(LB><^&%@^KN+O+_p*l4;LJO|yp+YlK8k29+25B^)O^f*/UdO<FX.WBV)Vpc<pcB1fC*PB38XM7lc*Mz-kypRG+<R(:qWC|:O^VbFJ;4Gcc1c+F.+B|892P>LM+lzZy*RCROMT+ROLR-5lEcSDGUK-|2UTG>THH2Z2*(F+4FV+TNdG_dGBRMNUL/pNW9C2c/.^Z1(kp(MkJy5+f56)S+)+FfAt&5-CpzBLz>j6EB2+<|Z(#t2#4|F4|+FO#zjDOKDzbcFk8OHd(+-Y6..ldA%J|#_zB9c3WW|DS55NlpSVzB<K"
-//z340 period 39
-//"H+FLU54c7EUP|VTtTtRZ+(+4++B>G&G^M+L_pW42J.y1Yl(kJ++B6O^)/fO&XCBVLpjpB1<*P#8#7F*+-kzRO<z:FC|H^+F64lc1JF_B99W>LSlNySCBMTpOY-yE|DGp-zU#>)H27*+++VLNd^d@RNU+pNlCL/|Z+kp8k9555)S+*FdtF-WzBV><EB+CZ(32M|c|zO#pD+D(cW8OO(bY;.cA%+#+B83P|D+5ZpRzOKWR+RblBS;YKK2TGKH+.2qFMF(T<_%BKNO/*9;cO^p(KM2y2f^)f+UA<5.p)zc6c2f|BtX4l4MFyjGKRbqk:dV-J.Gdc|.z|c2WM5zl*VR<"
 //z340 rot90 ccw + vertical flip
 //"HNBS_p#(d-U2zly|R+|>Epyp985G<z+<6GBcc+FMR+:pMR+2MlRc9FX.T)kD>Bc7+^KJ+U/lSN13+WdHp(M^zFqfbV5Ry^*zLCWNl#+ltl%j++tJ#f:B1z<p^OU8jO;#Z^E|+54K6W7kV%Z*d-2ORJ|*N29(CctSPDGV|*U+2+D5|4CO<PBzkWW35dc_FOYT5bEp+O_Z|Y(pFCXNBpB4F.>^FSYO1.)OPkGYc7pMBcV.lHO8L<L++FVzy<b.cVUfWTBAT*#+&>.+AFT+(4ZMB/*|GKzR42z@6BM&;t5q|(-K2fHKkDLL4yKB8+-G))C;d)J2/(|9K-OFR++2Lpc+"
 //z340 mr lowe scytale operations (vertical pattern)
 //"H+>5^|kBLT2ON<BRO*W4<+fFB6cyUNWFL(HRSG7^823.+4K+_B+*j95>+Zk+pc^zO(d^FMD2#cKL;CcFVBLL(+JC#c_Sz/LpdF+WZtFYy*4c-MUN^SOO<|y+UR/lEPY1bGK2+l#|DT..KBz:S++G5)cz8lpNl5VbOVR+yM1t4|EPU4-|R3lK*pkf2GR++%6U+GWz)+2WjW+OYT@)|Md+72_cB6C>lH+k+Z7AB;ERptVD|pTMdpc(J%5YM*&)y9M#Z|(B#;JpF^f*4pc+t29Xz:dCFV&5/8.FB-OC.>q(5Tq12<Xl.||G)fzOPNH+(9<kb<RBBOA-KzDVpJzp8FK-"
 //"H+FLU54c7EUP|VTtTtRZ+(+4++B>G&G^M+L_pW42J.y1Yl(kJ++B6O^)/fO&XCBVLpjpB1<*P#8#7F*+-kzRO<z:FC|H^+F64lc1JF_B99W>LSlNySCBMTpOY-yE|DGp-zU#>)H27*+++VLNd^d@RNU+pNlCL/|Z+kp8k9555)S+*FdtF-WzBV><EB+CZ(32M|c|zO#pD+D(cW8OO(bY;.cA%+#+B83P|D+5ZpRzOKWR+RblBS;YKK2TGKH+.2qFMF(T<_%BKNO/*9;cO^p(KM2y2f^)f+UA<5.p)zc6c2f|BtX4l4MFyjGKRbqk:dV-J.Gdc|.z|c2WM5zl*VR<"
-//z340 flipped 
-//"d2GTL1|kPV^lp>REH)fK*<.YWD%O#(B+pNJHz#L)(WGZU+Mc:yB2KR++Op3V*8l^7ppS/k4&+PF5|djtz+M9_(D2>FkCd*-OlF^R8p|Lz.VGXcU2;%qK+5#9L@+zYN_+O#jfJ2G(K46AycBF2RZ+b+M<d-yBF<7pO+J^+VUlz-OKMTbpBYD|Et5/R+UFB&+.M4T5*|JRlc<2R8;(cBF5|N+#yS96z++t4Vc.b425f^NFGl+-5ZUV>EC94:*1XBy2GqMf.^pO(KBz3.c|L)|BWlF+<C61L+TcRp)(/THSOPcWzCW)++cC-*BOY_Bt7<WdkF|+;K|A8OZzSkpNHDM>"
-//z340 flipped + period 29
-//"d(32+Rb2f^)d2BV>5ZpR^p(kG+*F#+B8NO/FTp8k9bY;F(T|LNlCL+D(GKH+1J^d@M|clBS;|H7*+<EB+zOKkzp-zdtF-3P|P#pOY-555.cAVLSlNy/|ZcW8^)/F_BRNU|zOl(k^+F++VLCZpW4RO<U#>)Wz>G&8#7FyE|)SRZ+pjpBSCB+kEUP|fO&99W+pH+FLJ++64lcN)M5z2J.z:FCHfc|.G^M+*+-DK:dV(+4+1<*M*yjGKVTtXCB><BtX4U54B6O.2zc6l*Vy1YYK+UAz|c2L_WRM2y-J.G+BD+9;cORbqTt%+_%BKl4Mc7OO(qFMc2fR<#pDK2T<5.pW"
+		//flipped "d2GTL1|kPV^lp>REH)fK*<.YWD%O#(B+pNJHz#L)(WGZU+Mc:yB2KR++Op3V*8l^7ppS/k4&+PF5|djtz+M9_(D2>FkCd*-OlF^R8p|Lz.VGXcU2;%qK+5#9L@+zYN_+O#jfJ2G(K46AycBF2RZ+b+M<d-yBF<7pO+J^+VUlz-OKMTbpBYD|Et5/R+UFB&+.M4T5*|JRlc<2R8;(cBF5|N+#yS96z++t4Vc.b425f^NFGl+-5ZUV>EC94:*1XBy2GqMf.^pO(KBz3.c|L)|BWlF+<C61L+TcRp)(/THSOPcWzCW)++cC-*BOY_Bt7<WdkF|+;K|A8OZzSkpNHDM>"
 		// flipped + period 15
 		//"dEB+*5k.L(MVE5FV52c+ztZ2H+M8|CV@K<Ut*5cZG|TC7zG)pclddG+4dl5||.UqLcW<STfN:^j*Xz6-z/JNbVM)R)WkLKJy7t-cYAy-RR+4>f|p+dp1*HBpzOUNyBO+l#2E.B)+kN|<z2p+l2_cFKUcy5C^W(cFHk.#KSMF;+B<MF<Sf9pl/C|DPYLR/9^%OF7TB29^4OFT-+MVW)+k_Rq#2pb&R6N:(+H*;>^D(+4(8KjROp+8zF*K<SBKl%WO&Dp+fZ+B.;+G1BCOO|pOGp+2|5J+JYM(+lXz6PYA>#Z3P>L#2b^D4ct+B31c_8R(UVFFz9G++|TB4-y.LWBO"		
 		// flipped + period 15 + period row 10
@@ -293,20 +278,6 @@ else
 		// period col 2, period 18, period row 15
 	//"H+M8|CV@Kz/JNbVM)+B.;+B31c_81*H_Rq|DR(UVFFz9<Ut*5cZ#2pb&RG1BCOO|TfSMG+kNpOGp+2|G++|TBF;+B<MF6N:(+H*;2B4-R)Wk^D(+4(5J+JYpzOUNyBO<Sf9pl/CNM(+|TC7zPYLR/8KjR:^j*Xz6-+l#2E.B)>Op+8y.LWBO|<z29^%OF7TBlXz6PYALKJp+l2_cFKzF*K<SBKG)y7t-cYAy29^4OFT-+dpclddG+4Ucy5C^W(cMEB+*5k.L-RR+4>f|pFH>#Z3P>Ldl5||.UqL+dpl%WO&D(MVE5FV52cW<SVW)+k#2b^D4ct+c+ztZk.#Kp+fZ"
 //		"IDEYETGEHDTHENODOS_HRTDLSDEEMTOGCNAREEHTSDFIHOAULIDODAERHENH__ADTIEPCNHENDAPBHTHEHTTONHNTMIHVATWTVEPWOE_ENHILIIHTPHUHOSTEWYEOHAHETOBLTITOAHEDLST__HEADSMNEOLILTMITNTWTFECEIBUTEOLTHHIDAPROW__ELETEAPBSASRIHTWKTNGTNEDNESHSUFTAAGNRELDI__AYYIDNRLITHINEHENHTHAEASAOSTTOENOSHLOCTE__DOTTELOSITGBNRLEHAROHURDMDBKHHENEWRAEWOTR__LNHSMEMIMHSEDEEYETEUARW"
-//"+A|d4SNp(+EHp_z>||7|(RB4S+HfN6OO_pRlcpV&c4clTzVccWFG^4+K+BB+yJB+6PtLcVcCKC)RF^)F3H*EfO#+-B>FLCkV|zT4p++|;#8(bzB+Ep9||22<F>ZK5OyG.zO2F+J+;Bt&OKU*)CWD+ZR+/+-*RSlFM|9T#bGNt<Oj#G9zV8Mc1RUMzpBW<+MFk/%52cT+K6fd2_^-yMRkt)M+2Y/.W+.X(5*.5.+85:)^X42((B|PY18^p3d%lYK>pqzl<yfN+O.FkMD;FZ:-ljD(ABC*TYWZ#9L<NH75WVUOb5LBqDGPS<cRL+l2Jz2K^1pL*-+BypUOkdJdUG7@"		
-//"Hp:7zl;-2-BMc45GL|>E+c^t-2+Fpp.(t-2+FMRBMlj-U_B7b+;++R+kD>(+8d*cNc<T&8+|c)dHp#U*|dXYyFMBRycTWWNl-ZV5CGzABKFlB.+C<p^%G3FkV+6y-zGX3Lz7kVDWpPF.@4-26F1z1WtSPW(-+>zLKU<9N*B6cBzkY)+&2L9-+cS^:KCP_Z|.L+4D|dzRlyf4(<-Y-1<#Rk((<l/R#59-+S-8L*zK/#GMU5J+2CpFHBATKH2p52+Vt|N4E^lT*|GfJ_8+Jb+E*|b>.W/-K2)S9RKf+^|55.VfB(C;dBpM^qjZJDTFcUM|)c+Nyp+F%#R+Y4BVZq)p"
-//"Hl|2BD*yU)J^3RMd+plCDKU.G#Y9bF6lJ<UtBKl5+6+BR^btX9U|B^G+<B+(Hp(_-DSAE^1d((K:ZLSlpK+|&8Ok(qcz2Ozd+B4U+F+EpORT&9Nclf.+1CZcK.2L+|)cT|<YCHz|RVLN#YfcG#p8O2z54R-F#%XLJ++<ZcKVOBR|b2J4BS|(G5c+*E5.(fR1F)(P/F7OcNZK>PTpO.)M(zp*+_tFk^*>5;G|f_@MRy-+py/DT<|MFy5;F2Vy:>-3OMc6lLCO(ktB>pO;pkG+%<B+(H7V+9jP/Fd2+2V(jNL+2Az^7-5YMc*.z#F8N44B4V+zpqTC(+zS)dB*Mk8+"
-// shuffle
-//"z+zR2dG-S6)+)|JyO@6pyL:%U.|*&2<++SlyJB-HD<NfB|l+O^cB+T4>T^M5KcqO8UD>.jMzCF.DWf##MPC)5;5N+|XY&GNFJ.^(k3lW4d>kz55(RK#pFC2yMV-2(7LOAT9ZRd4zBSF;OXJlz1PON<FOk6KpBZ#G/zt%:+;-FZ)pR+(p+UUVK+pTt(|8|^+c1cY2q*+GEMSH+FGZt7V2+2W85W1cR_cE4B7.L/Y+_*W+B*|93ORB_pM4c+L^5b.9(|GRkt+c*blkcz2^</lB#Hp(9dWBVpV+p+VcF<|-fz2f+bF|Np>*dKOREAYPBUHTK+LCDKyCM4jL<8+BOF)l"
-// ryan garlick
-//"OKMTbpBYDd2GTL1|kPDWY.<*Kf)5T4M.+&BFR8;(cBF5|JHz#L)(WGV3pO++RK24b.cV4t+++-5ZUV>EC/k4&+PF5|*dCkF>2D(Op^.fMqG2L)|BWlF+<|Lz.VGXcU+_NYz+@L9POSHT/()pcC-*BOY_BK46AycBF2+Op7<FBy-zZO8A|K;+|Et5/R+UV^lp>REHNp+B(#O%2<clRJ|*N+#yS96zZU+Mc:yBSpp7^l8*lGFN^f5294:*1XBydjtz+M9_p8R^FlO-|c.3zBK(C61L+TcR2;%qK+5#(G2Jfj#O++)WCzWct7<WdkF|RZ+b+M<d-zlUV+^J>MDHNpkS" 
-// largo
-//"KBS<K*FzKFc_2l+pJ*H+(:N6FByNUOzpB)TFO4^92yAYc-t7yN;lp9fS<O6zX*j^:pd-^C5ycU4+Gddlc+HC/E2#l+-@VC|8MBE+(W4+RR-L.k5*+(R>)B.NJ/zKzFFVU#>Mc|f>|5ldL>P3ZOpD|)MVbtU<92+pG%lHFpqU.|VM(D&OWD^Nk+GZc5*+G|4+(WVpd+L5VF5E2#k+)YPkW)R-4BT|+5(RL.kS<Wc2tc4D^bpK#<|z7CT|+(MYJ+J/z*1Ztz+c+;.B+Zf+HKLOBWL.y8+pORjK8fT8_c13B+&bp2#qR_GAYP6zXlBT7FO%^922|OOCB1GRM<B+;FMS"
-//shuffle - leo ron and rob
-//"y+4|tRON2BG6+cAp.R<Jl9|9)VcPFz|l*+p)3+V|4RG(Z+c+8+z92C2GSzU()d7E;|k^LA32j#<)p+FJl%|z>cyT1Zd2O2cjq2pC((J.RBY1YBp|Hc-GR^9<MFlLtHFWkOKzF*7Hb;TO*+dE4T:755z)bS-CV#FY<DK<HfM5^BX(Npc>t+*L+_@fOWb2NROBS(D1^-_l#k^+.MU+#LEOLV+F*lUK-zpF+LcC84+Nk.YBOOD<tZVlUU%+BqpMPKOz5f4+/R6W+BS+c(GKNp.W_84M:.BMfBy5/+BJpPKB6#X&5y>+T-W*c/|pd|dy|+D2Z;W8GMKRF&TFVzk>^C5+"
-// shuffle - lou bob and ted
-//"1O2MFElR+BH5+(#N*4+K7jU2z*^OF|T&AP^|+Dp1+(/-dp+R#&+V+N.2MS:O/BMpy557WL2JDc<_Ud<+zyMVVT9+)cb43K;Rc*_GyBJZB(tAFP+WtTED(KM.<kU<52L2tF94|#|5WpFdM9ccZd#<8;DC<JX9.+J)Ekp)-+8FOBOB5+4fp;M^LOUztZ2|+pY17F8cS:#YWc_Y2+pRz*4RckGBSRkWV.+qR2fcGl|/N6OTKf%*-4lWC)+ckK|5.Y-b+dq|+FC|HVT%pBy8HPj)^3LlpXzllU-(Kz>C|RfV^6(l^N.>*NB+GCbLG@O++6OZFzzLBKFS(zOG>>yH+BBp"
-"ABCDEFGHIJKLCMBNOKPJQIRSTUSVBQWOXEBYZSabWAVVBcNdeWIRfgRDZGhRifOABSjkiRYeekilmQDcUQnohpDGqrAApRshRdgtuirHRvwFKTSSxXRINqCFnBYKyBzwSRytZCgQuI0NsqXSO12LI3TdilF45IyBoUkxfrBr35bsGXlwPSldikIC3g2K2DJA0M05F2dgBW6hfuUnEwIIUAuiO7Lq3vSWwHXeUo0ainrOJaeHTYssX5JqF3f6RoxOaxeh53gnkxGpvArTNXnJrYezSPOKSFTEugDkxl1k65dSIiyk602yNDrxSbkL7HkxtpITB5DGhh6fOpY3cp5y"
 	);
 
 
@@ -594,7 +565,7 @@ else
 //						cell.onmouseout = new Function("u('" + id + "')");
 //			 		  cell.setAttribute("onmouseout","u('" + id + "')");
 						cell.setAttribute("onclick","tog(event, " + row + "," + col + ")");
-						cell.setAttribute("title","row " + row + " col " + col + " pos " + (cipher[which][0].length * row + col) + " symbol " + (cipher[which][row][col]));
+						cell.setAttribute("title","row " + row + " col " + col + " pos " + (cipher[which][0].length * row + col));
 //						cell.setAttribute("ondblclick","dbl(" + row + "," + col + ")");
 //						cell.onclick = function() { var temp=new Function("g('" + letter + "','" + id + "')"); temp(); };
 //						cell.onclick = new Function("g(\"" + (letter == "\\" ? "\\\\" : letter) + "\",\"" + id + "\")");
@@ -791,7 +762,6 @@ else
 		var d1 = new Date();
 		var d = renderGridAll();
 		renderCipherInfo(d);
-		HEIGHT = cipher[which].length;
 	}
 	
 	function renderInteresting() {
@@ -972,6 +942,7 @@ else
 	function keypress(event) {
 		var key = window.event ? event.keyCode : event.which;
 		if (getKey) {
+      //alert("key: " + key);
       if (key < 32 || key > 126)
 				letter = "";
 			else
@@ -1337,8 +1308,7 @@ else
 			matches(result, (r0+dr0), (c0+dc0), dr0, dc0, (r1+dr1), (c1+dc1), dr1, dc1);
 		}
 	}          
-
-	// get all ngrams from the given cipher
+	
 	function ngrams(line, n) {
 		var map = {};
 		var ngram; var count;
@@ -1350,23 +1320,6 @@ else
 			map[ngram] = count;
 		}
 		return map;
-	}  
-
-	// given a map of ngrams, return a new map of start positions for each repeating ngram
-	function ngramRepeatPositions(line, map) {
-		var positions = {};
-		for (var key in map) {
-			if (map[key] < 2) continue;
-			if (!positions[key]) positions[key] = [];
-			var i=0;
-			while (true) {
-				i = line.indexOf(key, i);
-				if (i > -1) positions[key].push(i);
-				else break;
-				i++;
-			}
-		}    
-		return positions;
 	}
 	
 	// transposed ngrams
@@ -1617,23 +1570,6 @@ else
 		}
 		return u;
 	}
-        
-    // replace all occurences of symbol c with plaintext p
-	function decode(c, p) {
-		for (var row = 0; row < cipher[which].length; row++) {
-			for (var col = 0; col < cipher[which][row].length; col++) {
-				if (cipher[which][row][col] == c) plaintext(p, row, col);
-			}
-		}
-	} 
-	
-	// write plaintext letter pt at given row,col
-	function plaintext(p, row, col) {
-		var e = document.getElementById(row+"_"+col);
-		e.className = "pt";
-		e.style = "font-size: 20pt; color: #090;";
-		e.innerHTML = p;
-	}
 	
 	function decode408For(ch) {
 		var d = interestingHash[1][0]["decoder"];
@@ -1670,16 +1606,7 @@ else
 		var e = document.getElementById(row+"_"+col);
 		if (e == null) return;
 		e.innerHTML = getImgDarker(cipher[which][row].charAt(col));
-	}         
-	
-	function darkenAll() {
-		for (var row=0; row<HEIGHT; row++) {
-			for (var col=0; col<WIDTH; col++) {
-				darkenrc2(row, col);
-			}
-		}
 	}
-	
 	/* lighten the symbols at the given row,col */
 	function lightenrc(row, col) {
 		var e = document.getElementById(row+"_"+col);
@@ -1693,11 +1620,6 @@ else
 		var W=cipher[which][0].length;
 		darkenrc(parseInt(pos/W), pos%W);
 	}
-	function darkenpos2(pos) {
-		var H=cipher[which].length;
-		var W=cipher[which][0].length;
-		darkenrc2(parseInt(pos/W), pos%W);
-	}
 	function darkenposarray(a) {
 		for (var i=0; i<a.length; i++) {
 			var H=cipher[which].length;
@@ -1708,15 +1630,11 @@ else
 	
 	// assign a random color to the given positions
 	function randcolor(a) {
-		var color = randomRGB();
-		for (var i=0; i<a.length; i++)
-			rgb(a[i], color[0], color[1], color[2]);
-	}
-	function randomRGB() {
 		var r = Math.floor(Math.random()*192) + 64;
 		var g = Math.floor(Math.random()*192) + 64;
 		var b = Math.floor(Math.random()*192) + 64;
-		return [r, g, b];
+		for (var i=0; i<a.length; i++)
+			rgb(a[i], r, g, b);
 	}
 	
 	function rgb(pos, r, g, b) {
@@ -1729,35 +1647,10 @@ else
 		var elem = document.getElementById(row+"_"+col);
 		if (elem) {
 				elem.style.backgroundColor="rgb("+r+","+g+","+b+")";
-				elem.childNodes[0].style.opacity="0.35";
-				//elem.style.paddingBottom="2px";
-		}
-	}            
-	
-	function rgbClear(pos) {
-		var H=cipher[which].length;
-		var W=cipher[which][0].length;
-		var row = parseInt(pos/W);
-		var col = pos%W;
-		
-		var elem = document.getElementById(row+"_"+col);
-		if (elem) {
-				elem.style.backgroundColor="";
-				elem.childNodes[0].style.opacity="";
+				elem.childNodes[0].style.opacity="0.25";
 				//elem.style.paddingBottom="2px";
 		}
 	}
-	
-	// mark rectangle defined by the given upper left and lower right corners
-	function rgbRectangle(r1, c1, r2, c2, color) {
-		if (!color) color = randomRGB();
-		for (var r=r1; r<=r2; r++) {
-			for (var c=c1; c<=c2; c++) {
-				rgb(r*WIDTH+c, color[0], color[1], color[2]);
-			}
-		}
-	}
-	
 	function hsl(pos, h, s, l) {
 		var H=cipher[which].length;
 		var W=cipher[which][0].length;
@@ -1962,17 +1855,7 @@ else
 		return "alphabet/darker/" + tr + ".jpg";
 	}
 
-
-var rgb_current = randomRGB();
 function tog(event, row, col) {
-	//console.log(event.shiftKey + " " + event.altKey + " " + event.ctrlKey);
-	if (event.altKey && event.shiftKey) {
-		rgb_current = randomRGB();
-	}
-	if (event.altKey) {
-		rgb(row*WIDTH+col,rgb_current[0], rgb_current[1], rgb_current[2]);
-		return;
-	}
 	if(event.shiftKey) {
 		dbl(row, col);
 		return;
@@ -1982,7 +1865,7 @@ function tog(event, row, col) {
 	var src = elem.childNodes[0].src;
 	if (src.indexOf("darker") > -1) {
 		lightenrc(row, col);
-	} else darkenrc2(row, col);
+	} else darkenrc(row, col);
 }	
 
 function dbl(row, col) {
@@ -2008,4 +1891,5 @@ function isPrime1(n) {
  for (var i=2;i<=m;i++) if (n%i==0) return false;
  return true;
 }
+	
 	
