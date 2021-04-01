@@ -1685,10 +1685,9 @@ else
 		for (var i=0; i<a.length; i++) {
 			var H=cipher[which].length;
 			var W=cipher[which][0].length;
-			darkenrc(parseInt(a[i]/W), a[i]%W);
+			darkenrc2(parseInt(a[i]/W), a[i]%W);
 		}
 	}
-	
 	// assign a random color to the given positions
 	function randcolor(a) {
 		var color = randomRGB();

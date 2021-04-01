@@ -1,0 +1,147 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500|Work+Sans:900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script type="text/javascript" src="animations.js"></script>
+	<script type="text/javascript" src="words.js"></script>
+	<script> var ms = 1; </script>
+<style>
+
+.kc {
+	padding-right: 3em;
+}
+.p {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	padding-right: 2px;
+	width: 25px;
+	height: 29px;
+	position: relative;
+	top: 4px;
+}
+.p2 {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	padding-right: 2px;
+	width: 25px;
+	height: 29px;
+}
+.p_off {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	opacity: 0.75;
+}
+.keyp {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	color: #090;
+	padding-left: 10px;
+}
+.keyp_off {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	opacity: 0.75;
+	padding-left: 10px;
+}
+
+.keyw {
+	margin-right: 1em;
+	margin-bottom: 7px;
+	float: left;
+	border: 2px solid #eee;
+	padding-top: 6px;
+	padding-left: 8px;
+}
+.keyw_off {
+	margin-right: 1em;
+	margin-bottom: 7px;
+	float: left;
+	border: 2px solid red;
+	padding-top: 6px;
+	padding-left: 8px;
+}
+#keyOLD {
+	position: absolute;
+	top: 17px;
+	left: 630px;
+	width: 300px;
+	float: left;
+}
+.c {
+	font-family: 'untitled2regular';
+	font-size: 31pt;
+	width: 25px;
+	height: 25px;
+	padding-top: 4px;
+	padding-bottom: 10px;
+	padding-left: 4px;
+	padding-right: 2px;
+}
+.c_off {
+	font-family: 'untitled2regular';
+	font-size: 25pt;
+	width: 25px;
+	height: 25px;
+	opacity: 0.75;
+}
+
+.n {
+	font-family: "overpass mono";
+}
+#links {position: absolute; left: 1200px;}
+#sequence {position: absolute; left: 20px; top: 420px}
+
+@keyframes fade1 {
+  from {
+    background: black;
+	color: white;
+  }
+  to {
+    background: white;
+	color: #090;
+  }
+}
+
+.square {
+	width: 25px;
+	height: 32px;
+	background-color: orange;
+}
+
+.zhead {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #009;
+	font-family: "courier new";
+}
+
+</style>
+</head>
+<!--<body onload="drawPlaintext(); makeHighlightLayer(); updateCDark(); drawKey(); setTimeout(makeHighlightLayerKey, 100);">-->
+<body onload="fullPlaintext();">
+<span id="cipher"></span>
+<span id="cipher2"></span>
+<!--<span id="squares"></span>
+<span id="keyhigh"></span>
+<span id="sequence"></span>
+<span id="key"></span>-->
+<span id="links">
+	<a href="javascript:pivots()">pivots</a>
+	<a href="javascript:animateTransposePivots('black', 200)">animateTransposePivots</a>
+</span>
+</body>
+</html>
