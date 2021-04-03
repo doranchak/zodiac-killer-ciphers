@@ -1,5 +1,6 @@
 package com.zodiackillerciphers.pivots;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -14,11 +15,6 @@ public class Pivot {
 	/** the list of positions covered by both */
 	public List<Integer> positions;
 
-	public String toString() {
-		String result = ngram.length() + ", " + ngram + ", " + dumpDirections() + ", "
-				+ dumpPos() + ", " + js();
-		return result;
-	}
 	
 	/** return a score based on the given count map and cipher length.
 	 * the idea is that pivots involving rare symbols are
@@ -85,11 +81,55 @@ public class Pivot {
 		return true;
 	}
 	
+//	public String highlight() {
+//		String js = "pivot ";
+//		for (int pos : positions) {
+//			js += "darkenpos(" + pos + "); ";
+//		}
+//		return js;
+//	}
+
+	public String getNgram() {
+		return ngram;
+	}
+
+	public void setNgram(String ngram) {
+		this.ngram = ngram;
+	}
+
+	public Direction[] getDirections() {
+		return directions;
+	}
+
+	public void setDirections(Direction[] directions) {
+		this.directions = directions;
+	}
+
+	public List<Integer> getPositions() {
+		return positions;
+	}
+
+	public void setPositions(List<Integer> positions) {
+		this.positions = positions;
+	}
 	public String highlight() {
-		String js = "pivot ";
-		for (int pos : positions) {
-			js += "darkenpos(" + pos + "); ";
+		String highlight = "";
+		for (Integer pos : positions) {
+			if (highlight.length() > 0) highlight += ",";
+			highlight += pos;
 		}
-		return js;
+		highlight = "darkenposarray([" + highlight + "])";
+		return highlight;
+	}
+
+	@Override
+	public String toString() {
+		return "Pivot [ngram=" + ngram + ", directions=" + Arrays.toString(directions) + ", positions=" + positions
+				+ ", dumpDirections()=" + dumpDirections() + ", dumpPos()=" + dumpPos() + ", highlight()=" + highlight() + "]";
+	}
+	public String toString2() {
+		String result = ngram.length() + ", " + ngram + ", " + dumpDirections() + ", "
+				+ dumpPos() + ", " + js();
+		return result;
 	}
 }

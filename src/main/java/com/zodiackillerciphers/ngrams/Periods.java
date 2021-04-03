@@ -230,7 +230,11 @@ public class Periods {
 		};
 	}
 
-	/** final transposition matrix for the Z340 solution */
+	/** Final transposition matrix M for the Z340 solution.
+	 * M[r][c] = p
+	 * r,c => row and column of resulting transposition
+	 * p => position from original cipher  
+	 **/
 	public static int[][] transpositionMatrixZ340Solution() {
 		return new int[][] { 
 				{ 0, 19, 38, 57, 76, 95, 114, 133, 152, 1, 20, 39, 58, 77, 96, 115, 134 },
@@ -278,6 +282,45 @@ public class Periods {
 				{ 309, 308, 307, 306, 310, 311, 312, 313, 315, 314, 317, 316, 318, 319, 320, 321, 324 },
 				{ 323, 322, 326, 325, 334, 333, 332, 331, 330, 329, 328, 327, 335, 336, 337, 338, 339 } };
 	}	
+	
+	/** translate position from z340 to transposed (solved/readable) position */
+	public static Map<Integer, Integer> mapPositionFromZ340;
+	/** translate transposed (solved/readable) position back to original position in z340 */
+	public static Map<Integer, Integer> mapPositionToZ340;
+	
+	static {
+		mapPositionFromZ340 = new HashMap<Integer, Integer>();
+		mapPositionToZ340 = new HashMap<Integer, Integer>();
+		
+		int pos1 = 0; // translated from z340
+		int pos2 = 0; // translated to z340
+		for (int row=0; row<transpositionMatrixZ340Solution().length; row++) {
+			for (int col=0; col<transpositionMatrixZ340Solution()[row].length; col++) {
+				pos1 = transpositionMatrixZ340Solution()[row][col];
+				mapPositionFromZ340.put(pos2, pos1);
+				mapPositionToZ340.put(pos1, pos2);
+				pos2++;
+			}
+		}
+		System.out.println("mapPositionFromZ340: " + mapPositionFromZ340);
+		System.out.println("mapPositionToZ340: " + mapPositionToZ340);
+		// test: transposed z340 plaintext should untranspose to the readable solution
+//		String result = "";
+//		String pt = Ciphers.Z340_SOLUTION_TRANSPOSED;
+//		for (int i=0; i<pt.length(); i++) {
+//			result += pt.charAt(mapPositionFromZ340.get(i));
+//		}
+//		System.out.println(result);
+		// test: readable solution should transpose back to the original z340 layout
+//		result = "";
+//		pt = Ciphers.Z340_SOLUTION_UNTRANSPOSED;
+//		for (int i=0; i<pt.length(); i++) {
+//			result += pt.charAt(mapPositionToZ340.get(i));
+//		}
+//		System.out.println(result);
+	}
+	
+	
 	
 	/** untranspose, using modulo 340 method */
 	public static String rewrite2(String cipher, int n) {
@@ -816,7 +859,26 @@ public class Periods {
 		return sb.toString();
 	}
 	
+	public static int matrixPosApply(int pos, int[][] matrix) {
+		int row = pos / 17;
+		int col = pos % 17;
+		return matrix[row][col];
+	}
+	
+	/** what positions (in the solved untransposition) do the pivots correspond to in the original z340 plaintext? */
+	public static void translatePivots() {
+		int[] pivot1 = new int[] { 126, 143, 160, 177, 194, 193, 192, 191, 190 };
+		int[] pivot2 = new int[] { 182, 199, 216, 233, 232, 231, 230 };
+		System.out.println("pivot1");
+		for (int pos : pivot1)
+			System.out.println("darkenpos2(" + mapPositionToZ340.get(pos) + ")");
+		System.out.println("pivot2");
+		for (int pos : pivot2)
+			System.out.println("darkenpos2(" + mapPositionToZ340.get(pos) + ")");
+	}
+	
 	public static void main(String[] args) {
+		translatePivots();
 //		transposeMergeTest();
 		//testEquivalancies();
 		//jarlveMergeTest();
@@ -923,7 +985,7 @@ public class Periods {
 //		NGramsBean bean = new NGramsBean(2, "#####%%&&((((((()))))******++++++++++++++++++++++++-----......///11122222222233444444555555566677788889999::;;;<<<<<<>>>>@AABBBBBBBBBBBBCCCCCDDDDEEEFFFFFFFFFFGGGGGGHHHHJJJJKKKKKKKLLLLLLMMMMMMMNNNNNOOOOOOOOOOPPPRRRRRRRRSSSSTTTTTUUUUUVVVVVVWWWWWWXXYYYYZZZZ^^^^^^___bbbccccccccccdddddffffjjkkkkklllllllpppppppppppqqttttyyyyyzzzzzzzzz||||||||||");
 //		System.out.println(bean);
 //		test("HUzlFly.UzM2Xc>K)*6FAL@4CqDH(4RP@A1-@Eq+O(PR_V-@S+tGElOJUHE29qJ/ZGPCySD1C-Rp_V(d6FAf@4cP:Ey4D&WP3LD/:S2cpd@cTE:PL%R-LU.D3l;)U(3P*d&BS2Zybc(PC+|cPRGN+&_H%%HSZkYKVpcS<*H+q(#^kM6Vd+*pD|fSZCDNOMZj>@_p35l(R--9OD&:Zq_%+1c6#4dXfpd7-q+;fN&Tk9|FSH/H*;9zJU6V_#6>_SqMKL_G/y<c4M/f.)+&VztL8Flz%)C/9BJ)6CA7P*Pj4.f8W4;9zU%M3DZ;b#jR@PjSLPV6*<G@(cj>@9yJ%Dpj", false);
-		test(W168.cipherLine, true);
+//		test(W168.cipherLine, true);
 //		bean.dump();
 //		maxRepeats(Ciphers.Z340, 2);
 		
@@ -937,5 +999,6 @@ public class Periods {
 //		System.out.println(rewrite3undo(rewrite3(Ciphers.Z408, 19),19));
 //		System.out.println(rewrite3undo(Ciphers.Z408, 19));
 //		testSamBlakeCipher();
+		test(Ciphers.Z340, false);
 	}
 }

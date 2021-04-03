@@ -21,14 +21,14 @@ public class PivotUtils {
 	public static boolean DEBUG = false;
 
 	/** suitable defaults */
-	public static List<Pivot> findPivots(String cipher, int minsize) {
+	public static List<Pivot> findPivots(String cipher, int size) {
 		String[] grid = Ciphers.grid(cipher, Pivot.W, true);
 		List<Direction> list = new ArrayList<Direction>();
 		list.add(Direction.N);
 		list.add(Direction.S);
 		list.add(Direction.E);
 		list.add(Direction.W);
-		List<Pivot> pivots = findPivots(grid, minsize, list, false);
+		List<Pivot> pivots = findPivots(grid, size, list, false);
 		pivots = removeSubstrings(pivots);
 		//System.out.println(pivots);
 		return pivots;
@@ -37,11 +37,11 @@ public class PivotUtils {
 	 * find all pivots in the given grid of strings. search the given
 	 * directions.
 	 */
-	public static List<Pivot> findPivots(String[] grid, int minsize,
+	public static List<Pivot> findPivots(String[] grid, int size,
 			List<Direction> searchDirections, boolean allowWrapping) {
 		if (grid == null)
 			return null;
-		if (minsize < 2)
+		if (size < 2)
 			return null;
 		if (searchDirections == null)
 			return null;
@@ -58,7 +58,7 @@ public class PivotUtils {
 			for (int col = 0; col < grid[row].length(); col++) {
 				for (int i = 0; i < searchDirections.size() - 1; i++) {
 					for (int j = i + 1; j < searchDirections.size(); j++) {
-						findPivot(list, grid, row, col, minsize,
+						findPivot(list, grid, row, col, size,
 								searchDirections.get(i),
 								searchDirections.get(j), allowWrapping);
 					}
@@ -70,8 +70,8 @@ public class PivotUtils {
 	}
 	
 	
-	public static void findPivot(List<Pivot> searchResults, String[] grid, int row, int col, int minsize, Direction d1, Direction d2, boolean allowWrapping) {
-		findPivot(searchResults, grid, row, col, row, col, row, col, minsize, d1, null, d2, null, new ArrayList<Integer>(), "", allowWrapping);
+	public static void findPivot(List<Pivot> searchResults, String[] grid, int row, int col, int size, Direction d1, Direction d2, boolean allowWrapping) {
+		findPivot(searchResults, grid, row, col, row, col, row, col, size, d1, null, d2, null, new ArrayList<Integer>(), "", allowWrapping);
 	}
 
 	/** convert row/col to position */
@@ -84,7 +84,7 @@ public class PivotUtils {
 	}
 	
 	/** look for candidate pivots in the given grid at the given position */
-	static void findPivot(List<Pivot> searchResults, String[] grid, int row, int col, int r1, int c1, int r2, int c2, int minsize,
+	static void findPivot(List<Pivot> searchResults, String[] grid, int row, int col, int r1, int c1, int r2, int c2, int size,
 			Direction direction1, DirectionDelta d1, Direction direction2, DirectionDelta d2, List<Integer> seen,
 			String ngram, boolean allowWrapping) {
 		
@@ -116,7 +116,7 @@ public class PivotUtils {
 			pos2 = pos(grid, r2, c2);
 			//System.out.println("after " + r1 + " " + c1 + " " + r2 + " " + c2 + " " + pos1 + " " + pos2);
 		}
-		debug(row + " " + col + " " + r1 + " " + c1 + " " + r2 + " " + c2 + " pos1 " + pos1 + " pos2 " + pos2 + " ms " + minsize + " dir1 " + direction1 + " delta1 " + d1 + " dir2 " + direction2 + " delta2 " + d2 + " ngram " + ngram + " seen " + seen);
+		debug(row + " " + col + " " + r1 + " " + c1 + " " + r2 + " " + c2 + " pos1 " + pos1 + " pos2 " + pos2 + " ms " + size + " dir1 " + direction1 + " delta1 " + d1 + " dir2 " + direction2 + " delta2 " + d2 + " ngram " + ngram + " seen " + seen);
 		
 		if (!starting) {
 			// check exit conditions
@@ -160,7 +160,7 @@ public class PivotUtils {
 		char ch = grid[r1].charAt(c1);
 		ngram += ch;
 		// Do we already have a pivot (or qualifying pivot in progress?)
-		if (ngram.length() >= minsize) {
+		if (ngram.length() == size) {
 			Pivot found = new Pivot();
 			found.ngram = ngram;
 			found.positions = new ArrayList<Integer>(seen);
@@ -191,7 +191,7 @@ public class PivotUtils {
 				// mark current positions as seen.  unmark them when we finish recursing.
 				seen.add(pos1);
 				if (pos2 != pos1) seen.add(pos2);
-				findPivot(searchResults, grid, row, col, r1+delta1.drow, c1+delta1.dcol, r2+delta2.drow, c2+delta2.dcol, minsize, direction1, delta1, direction2, delta2, seen, ngram, allowWrapping);
+				findPivot(searchResults, grid, row, col, r1+delta1.drow, c1+delta1.dcol, r2+delta2.drow, c2+delta2.dcol, size, direction1, delta1, direction2, delta2, seen, ngram, allowWrapping);
 				// "unsee" positions
 				seen.remove(seen.size()-1);
 				if (pos2 != pos1) seen.remove(seen.size()-1);
@@ -345,8 +345,10 @@ public class PivotUtils {
 	
 	public static void testFindPivots() {
 		//String cipher = "HEJ>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)By:cM+JZGW()L#zHJSpp7^l8*V3pO++JK2_9M+ztjd|5FP+&4k/p8J^FlO-*dCkF>2D(#5+Kq%;2JcXGV.zL|(G2Jfj#O+_NYz+@L9d<M+b+ZJ2FBcyA64K-zlJV+^J+Op7<FBy-J+J/5tE|DYBpbTMKO2<clJJ|*5T4M.+&BFz69Sy#+N|5FBc(;8JlGFN^f524b.cV4t++yBX1*:49CE>VJZ5-+|c.3zBK(Op^.fMqG2JcT+L16C<+FlWB|)L++)WCzWcPOSHT/()p|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+";
-		String cipher = "ABCDEFGHIJKLMNBOPQRSQIPTAUVWXYZabMcdeVfgIBhNiIQNjIkMlCEmBnIMopqAUVdIdUnbrcstoQCNXIYnOSqdnTbGbEPuvwDAIuTHDNxyolpFmzEJQ0GLfynvHNTbVMBS1HYT2QATH0bVN1loTzbhOsETUNzaAE3lkx1TTUsHozT4N5To6NYGoDIueGmJCN7UGEUTigIapoFHDVOnpGjVlTu0Tr1Im89bUGaMLHT!XobQPf9bIUA0oom7zAtNnbg\"U5N#NoASIGqGQIm2LG\"I$%aLVGGAoOf5&Q'RGUTVNj'FieMnTtTtVlIKIxOtAHlAUU9MjKss7bnorSUZ";
-		List<Pivot> pivots = findPivots(cipher, 3);
+		String cipher = Ciphers.Z340;
+//		String cipher = Ciphers.Z340_SOLUTION_TRANSPOSED;
+		//String cipher = "ABCDEFGHIJKLMNBOPQRSQIPTAUVWXYZabMcdeVfgIBhNiIQNjIkMlCEmBnIMopqAUVdIdUnbrcstoQCNXIYnOSqdnTbGbEPuvwDAIuTHDNxyolpFmzEJQ0GLfynvHNTbVMBS1HYT2QATH0bVN1loTzbhOsETUNzaAE3lkx1TTUsHozT4N5To6NYGoDIueGmJCN7UGEUTigIapoFHDVOnpGjVlTu0Tr1Im89bUGaMLHT!XobQPf9bIUA0oom7zAtNnbg\"U5N#NoASIGqGQIm2LG\"I$%aLVGGAoOf5&Q'RGUTVNj'FieMnTtTtVlIKIxOtAHlAUU9MjKss7bnorSUZ";
+		List<Pivot> pivots = findPivots(cipher, 4);
 		for (Pivot p : pivots) System.out.println(p);
 	}
 	public static void testFindPivots2() {

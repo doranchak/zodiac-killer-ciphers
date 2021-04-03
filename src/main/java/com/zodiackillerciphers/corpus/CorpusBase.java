@@ -14,6 +14,7 @@ import java.util.Set;
 
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.io.Unzip;
+import com.zodiackillerciphers.lucene.Stats;
 import com.zodiackillerciphers.tests.unicity.PlaintextBean;
 import com.zodiackillerciphers.tests.unicity.SubstitutionMutualEvolve;
 
@@ -43,8 +44,11 @@ public class CorpusBase {
 	
 	public static int currentRandomSelection;
 	
-	/** from the currently selected source, return all ngrams that add up to given length N. */
 	public static List<List<String>> ngrams(int N) {
+		return ngrams(N, true);
+	}
+	/** from the currently selected source, return all ngrams that add up to given length N. */
+	public static List<List<String>> ngrams(int N, boolean overlap) {
 		List<List<String>> results = new ArrayList<List<String>>();
 		for (int i=0; i<tokens.length; i++) {
 			List<String> list = new ArrayList<String>();
@@ -55,6 +59,7 @@ public class CorpusBase {
 				nospaces.append(token);
 				if (nospaces.length() == N) {
 					results.add(list);
+					if (!overlap) i+=list.size(); // if requested, skip ahead to avoid overlap
 					break;
 				} else if (nospaces.length() > N) {
 					break;
@@ -267,21 +272,54 @@ public class CorpusBase {
 	}
 	
 	/** generate the given number of samples of the given length */
-	public static void produceRandomSamplesWithLength(int number, int length) {
+	public static List<CorpusSample> produceRandomSamplesWithLength(int number, int length) {
 		String tab = "	";
 		initSources();
 		Random rand = new Random();
 		int found = 0;
+		List<CorpusSample> list = new ArrayList<CorpusSample>();
 		while (found < number) {
-			randomSource();
-			List<List<String>> candidates = ngrams(length);
-			if (candidates.isEmpty()) continue;
-			List<String> candidate = candidates.get(rand.nextInt(candidates.size()));
-			StringBuffer flat = flatten(candidate);
-			System.out.println(flat + tab + candidate + tab + file);
+			list.add(produceRandomSampleWithLength(length));
 			found++;
 		}
+		return list;
 	}
+	
+	public static CorpusSample produceRandomSampleWithLength(int length) {
+		CorpusSample cs = new CorpusSample();
+		List<List<String>> candidates = new ArrayList<List<String>>();
+		while (candidates.isEmpty()) {
+			randomSource();
+			cs.setSource(file);
+			candidates = ngrams(length);
+		}
+		List<String> candidate = candidates.get(rand.nextInt(candidates.size()));
+		StringBuffer flat = flatten(candidate);
+		cs.setWords(candidate);
+		cs.setNoSpaces(flat.toString());
+		return cs;
+	}
+
+	/** return all samples of the given length, using a single randomly selected source.
+	 * if overlap is true, include all samples even if they overlap */
+	public static List<CorpusSample> produceRandomSamplesWithLength(int length, boolean overlap) {
+		List<List<String>> candidates = new ArrayList<List<String>>();
+		while (candidates.isEmpty()) {
+			randomSource();
+			candidates = ngrams(length, overlap);
+		}
+		List<CorpusSample> list = new ArrayList<CorpusSample>(); 
+		for (List<String> candidate : candidates) {
+			StringBuffer flat = flatten(candidate);
+			CorpusSample cs = new CorpusSample();
+			cs.setSource(file);
+			cs.setWords(candidate);
+			cs.setNoSpaces(flat.toString());
+			list.add(cs);
+		}
+		return list;
+	}
+	
 	
 	public static void testRandomSources() {
 		initSources();
@@ -291,9 +329,21 @@ public class CorpusBase {
 			System.out.println(Arrays.toString(tokens));
 		}
 	}
+	public static void testSamples() {
+		initSources();
+		List<CorpusSample> list = produceRandomSamplesWithLength(340, false);
+		for (CorpusSample cs : list) 
+			System.out.println(cs);
+	}
 	public static void main(String[] args) {
 //		testRandomSources();
-		GUTENBERG_ONLY = true;
-		produceRandomSamplesWithLength(1, 340);
+//		GUTENBERG_ONLY = true;
+//		initSources();
+//		while (true) {
+//			CorpusSample cs = produceRandomSampleWithLength(340);
+//			System.out.println(cs);
+//			System.out.println(Stats.iocAsFloat(cs.noSpaces));
+//		}
+		testSamples();
 	}
 }

@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500|Work+Sans:900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script type="text/javascript" src="animations.js"></script>
+	<script type="text/javascript" src="words.js"></script>
+	<script> var ms = 50; </script>
+<style>
+
+.kc {
+	padding-right: 3em;
+}
+.p {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	padding-right: 2px;
+	width: 25px;
+	height: 29px;
+	position: relative;
+	top: 4px;
+}
+.p2 {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	padding-right: 2px;
+	width: 25px;
+	height: 29px;
+}
+.p_off {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	opacity: 0.75;
+}
+.keyp {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	color: #090;
+	padding-left: 10px;
+}
+.keyp_off {
+	font-family: 'Special Elite', cursive;
+	font-size: 25pt;
+	opacity: 0.75;
+	padding-left: 10px;
+}
+
+.keyw {
+	margin-right: 1em;
+	margin-bottom: 7px;
+	float: left;
+	border: 2px solid #eee;
+	padding-top: 6px;
+	padding-left: 8px;
+}
+.keyw_off {
+	margin-right: 1em;
+	margin-bottom: 7px;
+	float: left;
+	border: 2px solid red;
+	padding-top: 6px;
+	padding-left: 8px;
+}
+#keyOLD {
+	position: absolute;
+	top: 17px;
+	left: 630px;
+	width: 300px;
+	float: left;
+}
+.c {
+	font-family: 'untitled2regular';
+	font-size: 31pt;
+	width: 25px;
+	height: 25px;
+	padding-top: 4px;
+	padding-bottom: 10px;
+	padding-left: 4px;
+	padding-right: 2px;
+}
+.c_off {
+	font-family: 'untitled2regular';
+	font-size: 25pt;
+	width: 25px;
+	height: 25px;
+	opacity: 0.75;
+}
+
+.n {
+	font-family: "overpass mono";
+}
+#links {position: absolute; left: 1200px;}
+#sequence {position: absolute; left: 20px; top: 420px}
+
+@keyframes fade1 {
+  from {
+    background: black;
+	color: white;
+  }
+  to {
+    background: white;
+	color: #090;
+  }
+}
+
+.square {
+	width: 25px;
+	height: 32px;
+	background-color: orange;
+}
+
+.zhead {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #009;
+	font-family: "courier new";
+}
+
+</style>
+</head>
+<!--<body onload="drawPlaintext(); makeHighlightLayer(); updateCDark(); drawKey(); setTimeout(makeHighlightLayerKey, 100);">-->
+<body onload="fullPlaintext(); ">
+<span id="cipher"></span>
+<span id="squares"></span>
+<span id="keyhigh"></span>
+<span id="sequence"></span>
+<span id="key"></span>
+<span id="links">
+	<a href="javascript:grid()">grid</a>
+	<a href="javascript:goDraw(ms)">goDraw</a>
+	<a href="javascript:oneColor('s')">oneColor</a>
+	<a href="javascript:triangles()">triangles</a>
+	<a href="javascript:triangles2()">triangles2</a>
+	<a href="javascript:goDraw2(ms)">goDraw2</a>
+	<a href="javascript:goDraw3(ms)">goDraw3</a>
+	<a href="javascript:oneColor('r');oneColor('t')">oneColor</a>
+	<a href="javascript:section2()">section2</a>
+	<a href="javascript:lifeIs()">lifeIs</a>
+	<a href="javascript:goDraw4(ms)">goDraw4</a>
+	<a href="javascript:oneColor('s')">oneColor</a>
+	<a href="javascript:triangles()">triangles</a>
+	<a href="javascript:triangles2()">triangles2</a>
+	<a href="javascript:goDraw2(ms)">goDraw2</a>
+	<a href="javascript:goDraw3(ms)">goDraw3</a>
+	<a href="javascript:highlightMistake()">highlightMistake</a>
+	<a href="javascript:unhighlightMistake()">unhighlightMistake</a>
+	<a href="javascript:highlightShift1()">highlightShift1</a>
+	<a href="javascript:highlightShift2()">highlightShift2</a>
+	<a href="javascript:highlightShift3()">highlightShift3</a>
+	<a href="javascript:highlightShift4()">highlightShift4</a>
+	<a href="javascript:highlightShift5()">highlightShift5</a>
+	<a href="javascript:highlightShift6()">highlightShift6</a>
+	<a href="javascript:highlightShift7()">highlightShift7</a>
+	<a href="javascript:highlightShift8()">highlightShift8</a>
+	<a href="javascript:oneColor('s');oneColor('t')">oneColor</a>
+	<a href="javascript:section3()">section3</a>
+	<a href="javascript:goReverse(ms)">goReverse</a>
+	<a href="javascript:oneColor('r')">oneColor</a>
+	<a href="javascript:withSpaces(0)">withSpaces0</a>
+	<a href="javascript:withSpaces(1)">withSpaces1</a>
+	<a href="javascript:withSpaces(2)">withSpaces2</a>
+	<a href="javascript:withSpaces(3)">withSpaces3</a>
+	<a href="javascript:withSpaces(4)">withSpaces4</a>
+	<a href="javascript:withSpaces(5)">withSpaces5</a>
+	<a href="javascript:withSpaces(6)">withSpaces6</a>
+	<a href="javascript:withSpaces(7)">withSpaces7</a>
+	<a href="javascript:withSpacesAll()">withSpacesAll</a>
+	<a href="javascript:fullPlaintext('black')">fullPlaintext black</a>
+	<a href="javascript:fullPlaintext('#ccc')">fullPlaintext ccc</a>
+	<a href="javascript:goEncode(ms)">goEncode</a>
+	<a href="javascript:randomWords(100)">randomWords</a>
+	<a href="javascript:keyCompare()">keyCompare</a>
+<!--	<a href="javascript:updateC()">2 updateC</a>
+	<a href="javascript:updateDangertueC()">3 updateDangertueC</a>
+	<a href="javascript:updateDangertueP()">4 updateDangertueP</a>
+	<a href="javascript:drawPlaintextRest()">5 drawPlaintextRest</a>
+	<a href="javascript:updateO()">6 updateO</a>
+	<a href="javascript:drawPlaintext(); updateC(); updateI()">7 updateI</a>
+	<a href="javascript:updateIDangertue()">8 updateIDangertue</a>
+	<a href="javascript:updateIDangertueFix1()">9 updateIDangertueFix1</a>
+	<a href="javascript:updateIDangertueFix1P()">10 updateIDangertueFix1P</a>
+	<a href="javascript:drawPlaintextFix1()">11 drawPlaintextFix1</a>
+	<a href="javascript:drawPlaintextFix2()">12 drawPlaintextFix2</a>
+	<a href="javascript:updateS()">13 updateS</a>
+	<a href="javascript:drawPlaintext(); updateC(); updateF()">14 updateF</a>
+	<a href="javascript:updateFDangertue()">15 updateFDangertue</a>
+	<a href="javascript:updateFDangertueFix1()">16 updateFDangertueFix1</a>
+	<a href="javascript:updateFDangertueFix1P()">17 updateFDangertueFix1P</a>-->
+</span>
+</body>
+</html>

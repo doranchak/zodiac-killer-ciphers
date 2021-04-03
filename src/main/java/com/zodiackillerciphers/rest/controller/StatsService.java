@@ -14,19 +14,7 @@ import com.zodiackillerciphers.pivots.PivotUtils;
 import com.zodiackillerciphers.rest.beans.Cipher;
 import com.zodiackillerciphers.transform.CipherTransformations;
 
-/** services related to retrieving ciphers */
+/** Generate stats on ciphers */
 @RestController
-public class CipherService {
-	/** return cipher with the given name */
-	@GetMapping("/cipher")
-	public Cipher cipher(@RequestParam(value = "name", defaultValue = "z340") String cipherName) {
-		return new Cipher(Ciphers.Z340, "z340", "Zodiac's 340-character cipher");
-	};
-
-	//- convert z340-like transposition back into normal order
-	
-	//- get a random sample of the given length from corpora (whitespace does not contribute to length)
-	
-	//- make a homophonic cipher from the given plaintext (no transposition) 
-
+public class StatsService {
 }
