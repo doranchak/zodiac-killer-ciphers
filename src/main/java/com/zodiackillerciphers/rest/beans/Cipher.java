@@ -22,14 +22,22 @@ public class Cipher {
 	
 	// cipher stream as an integer sequence (generated)
 	int[] cipherNumeric;
+	
+	// if the cipher is in a grid layout, this is the grid width.  0 for non-grid ciphers.
+	int width = 0;
+	
+	// split up grid cipher into rows
+	String[] rows; 
 
 	/** simplest case: each character is a cipher unit.  no word delimiters. */
-	public Cipher(String ciphertextRaw, String name, String description) {
+	public Cipher(String ciphertextRaw, String name, String description, int width) {
 		this.ciphertextRaw = ciphertextRaw;
 		this.name = name;
 		this.description = description;
+		this.width = width;
 		makeCipherUnits(); 
 		makeCipherStream();
+		makeCipherRows();
 	}
 	
 	/** convert raw cipher into array of cipher units */
@@ -53,6 +61,20 @@ public class Cipher {
 				decoderMapNumeric.put(unit, val);
 			}
 			cipherNumeric[i] = val;
+		}
+	}
+	
+	/** convert cipher text into rows */
+	public void makeCipherRows() {
+		if (width == 0) {
+			// this cipher is not in a grid layout, so just make it one row.
+			rows = new String[] { ciphertextRaw };
+			return;
+		}
+		int height = ciphertextRaw.length() / width + (ciphertextRaw.length() % width == 0 ? 0 : 1);
+		rows = new String[height];
+		for (int i=0; i<height; i++) {
+			rows[i] = ciphertextRaw.substring(i*width, i*width + width);
 		}
 	}
 
@@ -110,5 +132,21 @@ public class Cipher {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public String[] getRows() {
+		return rows;
+	}
+
+	public void setRows(String[] rows) {
+		this.rows = rows;
 	}
 }

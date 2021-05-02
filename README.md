@@ -8,15 +8,22 @@ To build:
 
 	mvn clean compile
 
-To bring up Spring Boot:
+To bring up Spring Boot (Java back end that provides service endpoints):
 
 	mvn spring-boot:run
 
 It will bring up web server at:
 
-	http://localhost:8080
+	http://localhost:8080  (The index page there will also link to a lot of static applications and content)
 
 Invoke the sample endpoints:
 
 	http://localhost:8080/hello?name=Smeg
 	http://localhost:8080/greeting?name=SmeggyJSON
+
+Bring up Angular (user interface front end for interacting with the service endpoints):
+
+	Change to this folder: src/main/webapp/angular-src/zkc
+	npm install (if needed)
+	ng serve
+	Then open browser to http://localhost:4200
