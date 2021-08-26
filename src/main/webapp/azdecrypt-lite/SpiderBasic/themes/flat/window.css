@@ -1,0 +1,129 @@
+
+html {
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+  background: url("../../media/background.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}
+
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	overflow:hidden;
+  font:normal 12px arial;
+}
+
+
+.spiderwindow {
+	margin:0;
+	padding:0;
+	-moz-box-shadow:0 0 0 1px #eee inset, 0 0 15px rgba(0,0,0,0.4);
+	-webkit-box-shadow:0 0 0 1px #eee inset, 0 0 15px rgba(0,0,0,0.4);
+	box-shadow:0 0 0 1px #eee inset, 0 0 15px rgba(0,0,0,0.4);
+	background-color:rgba(255,255,255,1);
+	border:1px solid #383838;
+	padding-bottom:28px;
+	position:absolute;
+	z-index:1;
+}
+
+.spiderwindow-title {
+	margin:0;
+	padding:0;
+	background:transparent;
+	color:#000;
+	font:normal 12px/16px "Segoe UI",Arial,sans-serif;
+	height:16px;
+	overflow:hidden;
+	padding:6px 0 6px 28px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	cursor:default;
+}
+
+.spiderwindow-menubar {
+	background:#fff;
+}
+
+.spiderwindow-content {
+  background-color:#f2f2f2;
+	margin:0;
+	padding:0;
+	height:100%;
+  overflow:hidden;
+	position:relative;
+}
+
+.spiderwindow-content p {
+	margin:0;
+	padding:0;
+	margin-bottom:10px;
+}
+.spiderwindow-content img {
+	margin:0;
+	padding:0;
+	background-color:#f1f1f1;
+	border:1px solid #ddd;
+	float:left;
+	margin:0 20px 10px 0;
+	padding:1px;
+}
+
+.spiderwindow-closebutton {
+  background-color:#E62020;
+  background-image: url("close.png"); 
+  background-repeat: no-repeat;
+  background-position: 9px 5px;
+  border:1px solid #ececec;
+  position: absolute;
+  top: 2px;
+  right:2px;
+  height: 22px;
+  width: 30px;
+  color:#ffffff;
+}
+
+.spiderwindow-closebutton:hover {
+  background-color:#c23e3e;
+}
+
+.spiderwindow-closebutton:active {
+  background-color:#b02a2a;
+}
+
+/* Special definition for background windows
+ */
+.spiderwindow-background {
+	margin:0;
+	padding:0;
+	background-color:#ffffff;
+	color:#000;
+	font:normal 12px/18px arial,sans-serif;
+	height:100%;
+  overflow:hidden;
+	position:relative;
+}
+
+/* Resizeable */
+.ui-resizable-handle{display:block;position:absolute;}
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle{display:none;}
+.ui-resizable-n,.ui-resizable-s{height:7px;left:0;width:100%;}
+.ui-resizable-n{cursor:n-resize;top:-5px;}
+.ui-resizable-s{bottom:-5px;cursor:s-resize;}
+.ui-resizable-e,.ui-resizable-w{height:100%;top:0;width:7px;}
+.ui-resizable-e{cursor:e-resize;right:-5px;}
+.ui-resizable-w{cursor:w-resize;left:-5px;}
+.ui-resizable-se,.ui-resizable-sw,
+.ui-resizable-nw,.ui-resizable-ne{height:12px;width:12px;}
+.ui-resizable-se{bottom:-6px;cursor:se-resize;right:-6px;}
+.ui-resizable-sw{bottom:-6px;cursor:sw-resize;left:-6px;}
+.ui-resizable-nw{cursor:nw-resize;left:-6px;top:-6px;}
+.ui-resizable-ne {cursor:ne-resize;right:-6px;top:-6px;}
