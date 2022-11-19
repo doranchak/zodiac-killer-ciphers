@@ -1,0 +1,47 @@
+.matrix {
+    font-family: "courier new";
+    color: black;
+    text-align: center;
+  }
+
+table {
+    border-collapse: collapse;
+    display: inline;
+}
+
+.matrix td {
+    border-collapse: collapse;
+    border: thin solid black;
+    padding: 3px;
+}
+
+.on {
+    animation-name: highlight;
+    animation-duration: 0.45s;
+}
+
+.off {
+    
+}
+
+.mark {
+    background-color: #400040; color: white; font-weight: bold;
+}
+
+@keyframes highlight {
+    from {background-color: #400040; color: white; font-weight: bold;}
+    to {background-color: white; color: black;}
+  }
+
+form {
+    display: inline;
+}
+
+input {
+    display: inline;
+}
+
+.buttons {
+    vertical-align: top;
+    padding-left: 1em;
+}
