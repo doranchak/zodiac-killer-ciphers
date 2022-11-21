@@ -17,7 +17,11 @@ export class Matrix extends React.Component {
             current_row: 0,
             current_col: 0,
             rows_cols: '',
-            currentUnit: 0
+            currentUnit: 0,
+            phase3map: [], // map linear position to phase3 grid location
+            phase3numbers: [], // grid numbers in phase3 order
+            phase4map: [], // map linear position to phase4 grid location
+            phase4numbers: [] // grid numbers in phase4 order
         }
         H = this.state.matrix.length;
         W = this.state.matrix[0].length;
@@ -33,6 +37,8 @@ export class Matrix extends React.Component {
         this.makeVisited = this.makeVisited.bind(this);
         this.number = this.number.bind(this);
         this.clearGrid = this.clearGrid.bind(this);
+        this.makePhase3Map();
+        this.makePhase4Map();
     }
 
     handleClick(e) {
@@ -287,7 +293,84 @@ export class Matrix extends React.Component {
     clearGrid() {
         document.getElementById("matrix").innerHTML = "";
     }
-        
+
+    makePhase3MapOBSOLETE() {
+        var row = 0,col = 0;
+        var rowStart = 0;
+        var colStart = 0;
+        console.log(this.state.height + " " + this.state.width);
+        for (var pos=0; pos<this.state.height*this.state.width; pos++) {
+            console.log(row + " " + col + " " + this.state.matrix[row][col]);
+            this.state.phase3numbers.push(this.state.matrix[row][col]);
+            this.state.phase3map.push([row,col]);
+            col++;
+            row--;
+            if (row < 0) {
+                if (rowStart < this.state.height - 1) {
+                    rowStart++;
+                } else  {
+                    colStart++;
+                }
+                row = rowStart;
+                col = colStart;
+            } else if (col == this.state.width) {
+                if (rowStart < this.state.height - 1) {
+                    rowStart++;
+                } else  {
+                    colStart++;
+                }
+                row = rowStart;
+                col = colStart;
+            }
+        }
+        console.log('phase3 map ', this.state.phase3map);
+        console.log('phase3 nums ', this.state.phase3numbers);
+    }
+
+    makePhase3Map() {
+        for (var rowStart = 0; rowStart < this.state.height; rowStart++) {
+            for (var col=0; col<this.state.width; col++) {
+                var row = rowStart - col;
+                if (row < 0) break;
+                this.state.phase3map.push([row, col]);
+                this.state.phase3numbers.push(this.state.matrix[row][col]);
+            }
+        }
+        for (var colStart = 1; colStart < this.state.width; colStart++) {
+            for (var rowStart = 0; rowStart < this.state.height; rowStart++) {
+                var col = colStart + rowStart;
+                var row = this.state.height - 1 - rowStart;
+                if (col == this.state.width) break;
+                if (row < 0) break;
+                this.state.phase3map.push([row, col]);
+                this.state.phase3numbers.push(this.state.matrix[row][col]);
+            }
+        }
+        console.log('phase3 map ', this.state.phase3map);
+        console.log('phase3 nums ', this.state.phase3numbers);
+    }
+
+    makePhase4Map() {
+        for (var colStart = this.state.width - 1; colStart >= 0; colStart--) {
+            for (var row=0; row<this.state.height; row++) {
+                var col = colStart + row;
+                if (col >= this.state.width) break;
+                this.state.phase4map.push([row, col]);
+                this.state.phase4numbers.push(this.state.matrix[row][col]);
+            }
+        }
+        for (var rowStart = 1; rowStart < this.state.height; rowStart++) {
+            for (var col=0; col<this.state.width; col++) {
+                var row = rowStart + col;
+                if (row >= this.state.height) break;
+                this.state.phase4map.push([row, col]);
+                this.state.phase4numbers.push(this.state.matrix[row][col]);
+            }
+        }
+        console.log('phase4 map ', this.state.phase4map);
+        console.log('phase4 nums ', this.state.phase4numbers);
+    }
+
     render() {
         const m = this.state.matrix;
         var rows = [];
@@ -310,7 +393,7 @@ export class Matrix extends React.Component {
                     <tbody>
                         <tr>
                             <td>
-                                {/* <table id="matrix" className="matrix"><thead></thead><tbody>{rows}</tbody></table> */}
+                                <table id="matrix" className="matrix"><thead></thead><tbody>{rows}</tbody></table>
                             </td>
                             <td className="buttons">
                                 <button onClick={this.direction1}>Direction 1</button><br></br>
@@ -328,7 +411,7 @@ export class Matrix extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-                <CipherWindow matrix={this.state.matrix}>
+                <CipherWindow matrix={this.state.matrix} phase3map={this.state.phase3map} phase3numbers={this.state.phase3numbers} phase4map={this.state.phase4map} phase4numbers={this.state.phase4numbers}>
                 </CipherWindow>
             </div>
         );
