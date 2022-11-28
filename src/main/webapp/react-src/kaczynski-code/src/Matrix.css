@@ -1,7 +1,11 @@
+#root {
+    position: absolute;    
+}
 .matrix {
     font-family: "courier new";
     color: black;
     text-align: center;
+    outline: 0;
   }
 
 table {
@@ -17,11 +21,7 @@ table {
 
 .on {
     animation-name: highlight;
-    animation-duration: 0.45s;
-}
-
-.off {
-    
+    animation-duration: 0.5s;
 }
 
 .mark {

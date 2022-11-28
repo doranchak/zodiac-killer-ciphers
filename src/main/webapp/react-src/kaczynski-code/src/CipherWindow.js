@@ -26,7 +26,7 @@ class CipherWindow extends React.Component {
             windowSize: 20,
             shift: 10,
             writingGridNumbers: true,
-            ms: 1,
+            ms: 70,
             phase3map: props.phase3map,
             phase3numbers: props.phase3numbers,
             phase4map: props.phase4map,
@@ -38,6 +38,7 @@ class CipherWindow extends React.Component {
         this.phase2 = this.phase2.bind(this);
         this.phase3 = this.phase3.bind(this);
         this.phase4 = this.phase4.bind(this);
+        this.phase5 = this.phase5.bind(this);
         this.nextUnit = this.nextUnit.bind(this);
         this.cipherBlock = this.cipherBlock.bind(this);
         this.gridNumber = this.gridNumber.bind(this);
@@ -67,6 +68,11 @@ class CipherWindow extends React.Component {
         if (this.state.currentUnit == p1count + 3*totalLength) return;
         this.nextUnit();
         setTimeout(() => this.phase4(), this.state.ms);
+    }
+    phase5() { // phase 1 again, starting at beginning
+        if (this.state.currentUnit == p1count + 4*totalLength) return;
+        this.nextUnit();
+        setTimeout(() => this.phase5(), this.state.ms);
     }
 
     nextUnit() {
@@ -146,6 +152,10 @@ class CipherWindow extends React.Component {
             pos = pos % totalLength;
             row = this.state.phase4map[pos][0];
             col = this.state.phase4map[pos][1];
+        } else if (phase == 5) {
+            pos = pos % totalLength;
+            row = parseInt(pos/W);
+            col = pos % W;
         }
         return this.state.matrix[row][col];
     }
@@ -154,7 +164,8 @@ class CipherWindow extends React.Component {
         if (pos < totalLength) return 1;
         if (pos < 2*totalLength) return 2;
         if (pos < 3*totalLength) return 3;
-        return 4;
+        if (pos < 4*totalLength) return 4;
+        return 5;
     }
 
     render() {
@@ -165,6 +176,7 @@ class CipherWindow extends React.Component {
                 <button onClick={this.phase2}>Phase II</button>
                 <button onClick={this.phase3}>Phase III</button>
                 <button onClick={this.phase4}>Phase IV</button>
+                <button onClick={this.phase5}>Phase V</button>
                 <div id="cipher">{this.cipherBlock()}</div>
                 <div id="grid-number-block">{this.gridNumberBlock()}</div>        
             </div>

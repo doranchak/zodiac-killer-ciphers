@@ -6,6 +6,10 @@ import CipherWindow from './CipherWindow';
 
 var W;
 var H;
+const centerX = 400;
+const centerY = 200;
+const squareWidth = 26.2; // [26 drifts right,27 drifts left]
+const squareHeight = 25; // [24.5 drifts down, 25.5 drifts up]
 
 export class Matrix extends React.Component {
     constructor(props) {
@@ -21,12 +25,17 @@ export class Matrix extends React.Component {
             phase3map: [], // map linear position to phase3 grid location
             phase3numbers: [], // grid numbers in phase3 order
             phase4map: [], // map linear position to phase4 grid location
-            phase4numbers: [] // grid numbers in phase4 order
+            phase4numbers: [], // grid numbers in phase4 order
+            ms: 70
         }
         H = this.state.matrix.length;
         W = this.state.matrix[0].length;
         this.handleClick = this.handleClick.bind(this);
-        this.direction1 = this.direction1.bind(this);
+        this.phase1 = this.phase1.bind(this);
+        this.phase2 = this.phase2.bind(this);
+        this.phase3 = this.phase3.bind(this);
+        this.phase4 = this.phase4.bind(this);
+        this.phase5 = this.phase5.bind(this);
         this.direction1cipher = this.direction1cipher.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -37,24 +46,122 @@ export class Matrix extends React.Component {
         this.makeVisited = this.makeVisited.bind(this);
         this.number = this.number.bind(this);
         this.clearGrid = this.clearGrid.bind(this);
+        this.moveViewport = this.moveViewport.bind(this);
         this.makePhase3Map();
         this.makePhase4Map();
     }
 
     handleClick(e) {
-        this.toggle(e.target);
+        // this.toggle(e.target);
         //console.log(this.state.highlights);
     }
-    direction1() {
+
+    moveViewport(row, col) {
+        var x = centerX - col * squareWidth;
+        var y = centerY - row * squareHeight;
+        var elem = document.getElementById("root");
+        elem.style.left = x + "px";
+        elem.style.top = y + "px";
+    }
+
+    phase1() {
+        this.hideButtons();
+        this.state.current_row = 4;
+        this.state.current_col = 0;
+        this.moveViewport(this.state.current_row, this.state.current_col);
+        setTimeout(() => this.phase1Loop(), 1000);
+    }
+    phase1Loop() {
         this.toggle(document.getElementById(this.state.current_row + "_" + this.state.current_col));
-        //console.log(this.state.current_col, this.state.current_row, this.state.width, this.state.height);
+        this.moveViewport(this.state.current_row, this.state.current_col);
         this.state.current_col++;
-        if (this.state.current_col == this.state.width) {
+        if (this.state.current_col == W) {
             this.state.current_row++;
             this.state.current_col = 0;
         }
-        if (this.state.current_row == this.state.height) return;
-        setTimeout(() => this.direction1(), 70);
+        if (this.state.current_row == H) return;
+        setTimeout(() => this.phase1Loop(), this.state.ms);
+    }
+    phase2() {
+        this.hideButtons();
+        this.state.current_row = 0;
+        this.state.current_col = W-1;
+        this.moveViewport(this.state.current_row, this.state.current_col);
+        setTimeout(() => this.phase2Loop(), 1000);
+    }
+    phase2Loop() {
+        this.toggle(document.getElementById(this.state.current_row + "_" + this.state.current_col));
+        this.moveViewport(this.state.current_row, this.state.current_col);
+        this.state.current_row++;
+        if (this.state.current_row == H) {
+            this.state.current_col--;
+            this.state.current_row = 0;
+        }
+        if (this.state.current_col < 0) return;
+        setTimeout(() => this.phase2Loop(), this.state.ms);
+    }
+    phase3() {
+        this.hideButtons();
+        this.state.current_row = 0;
+        this.state.current_col = 0;
+        const [row, col] = this.state.phase3map[0];
+        this.moveViewport(row, col);
+        setTimeout(() => this.phase3Loop(), 1000);
+    }
+    phase3Loop() {
+        const pos = this.state.current_row * W + this.state.current_col;
+        const [row, col] = this.state.phase3map[pos];
+        this.moveViewport(row, col);
+        this.toggle(document.getElementById(row + "_" + col));
+        this.moveViewport();
+        this.state.current_col++;
+        if (this.state.current_col == W) {
+            this.state.current_row++;
+            this.state.current_col = 0;
+        }
+        if (this.state.current_row == H) return;
+        setTimeout(() => this.phase3Loop(), this.state.ms);
+    }
+    phase4() {
+        this.hideButtons();
+        this.state.current_row = 0;
+        this.state.current_col = 0;
+        const [row, col] = this.state.phase4map[0];
+        this.moveViewport(row, col);
+        setTimeout(() => this.phase4Loop(), 1000);
+    }
+    phase4Loop() {
+        const pos = this.state.current_row * W + this.state.current_col;
+        const [row, col] = this.state.phase4map[pos];
+        // console.log(pos + " " + row + " " + col);
+        this.moveViewport(row, col);
+        this.toggle(document.getElementById(row + "_" + col));
+        this.moveViewport();
+        this.state.current_col++;
+        if (this.state.current_col == W) {
+            this.state.current_row++;
+            this.state.current_col = 0;
+        }
+        if (this.state.current_row == H) return;
+        setTimeout(() => this.phase4Loop(), this.state.ms);
+    }
+    phase5() {
+        this.hideButtons();
+        this.state.current_row = 0;
+        this.state.current_col = 0;
+        this.moveViewport(this.state.current_row, this.state.current_col);
+        setTimeout(() => this.phase5Loop(), 1000);
+    }
+    phase5Loop() {
+        this.toggle(document.getElementById(this.state.current_row + "_" + this.state.current_col));
+        this.moveViewport(this.state.current_row, this.state.current_col);
+        this.state.current_col++;
+        if (this.state.current_col == W) {
+            this.state.current_row++;
+            this.state.current_col = 0;
+        }
+        if (this.state.current_row == H) return;
+        setTimeout(() => this.phase5Loop(), this.state.ms);
     }
 
     direction1cipher() {
@@ -86,15 +193,12 @@ export class Matrix extends React.Component {
             var lines = this.state.rows_cols.trim().split("\n");
             for (var i=0; i<lines.length; i++) {
                 var line = lines[i];
-                console.log('line', line);
                 let colors = this.randomColor();
                 var s = line.split(" ");
-                console.log('split', s);
                 for (const ss in s) {
                     var rc = s[ss].split(",");
                     var r = rc[0];
                     const c = rc[1];
-                    //const id = r + "_" + c;
                     this.markColor(r,c, colors[0], colors[1]);
                 }
             }
@@ -175,8 +279,8 @@ export class Matrix extends React.Component {
 
     toggle(e) {
         e.className = "off";
-        setTimeout(() => e.className = "on", 10);
-        //e.className = "on"; // e.className == "on" ? "off" : "on";
+        // setTimeout(() => e.className = "on", 10);
+        e.className = "on"; // e.className == "on" ? "off" : "on";
     }
     mark(row, col) {
         const e = document.getElementById(row+"_"+col);
@@ -346,8 +450,6 @@ export class Matrix extends React.Component {
                 this.state.phase3numbers.push(this.state.matrix[row][col]);
             }
         }
-        console.log('phase3 map ', this.state.phase3map);
-        console.log('phase3 nums ', this.state.phase3numbers);
     }
 
     makePhase4Map() {
@@ -367,8 +469,11 @@ export class Matrix extends React.Component {
                 this.state.phase4numbers.push(this.state.matrix[row][col]);
             }
         }
-        console.log('phase4 map ', this.state.phase4map);
-        console.log('phase4 nums ', this.state.phase4numbers);
+    }
+
+    hideButtons() {
+        document.getElementById("buttons").style.display="none";
+        document.getElementById("cipherwrapper").style.display="none";
     }
 
     render() {
@@ -395,8 +500,13 @@ export class Matrix extends React.Component {
                             <td>
                                 <table id="matrix" className="matrix"><thead></thead><tbody>{rows}</tbody></table>
                             </td>
-                            <td className="buttons">
-                                <button onClick={this.direction1}>Direction 1</button><br></br>
+                            <td className="buttons" id="buttons">
+                                <button onClick={this.phase1}>Phase I</button><br/>
+                                <button onClick={this.phase2}>Phase II</button><br/>
+                                <button onClick={this.phase3}>Phase III</button><br/>
+                                <button onClick={this.phase4}>Phase IV</button><br/>
+                                <button onClick={this.phase5}>Phase V</button>
+                                <br></br>
                                 <form onSubmit={this.handleSubmit}>
                                     <textarea value={this.state.rows_cols} onChange={this.handleChange}></textarea><br></br>
                                     <input type="submit" value="Mark"></input>
