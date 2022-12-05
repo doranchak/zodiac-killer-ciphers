@@ -36,6 +36,7 @@ export class Matrix extends React.Component {
         this.phase3 = this.phase3.bind(this);
         this.phase4 = this.phase4.bind(this);
         this.phase5 = this.phase5.bind(this);
+        this.phase6 = this.phase6.bind(this);
         this.direction1cipher = this.direction1cipher.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -162,6 +163,40 @@ export class Matrix extends React.Component {
         }
         if (this.state.current_row == H) return;
         setTimeout(() => this.phase5Loop(), this.state.ms);
+    }
+
+    phase6() {
+        this.hideButtons();
+        this.state.current_row = 9;
+        this.state.current_col = 4;
+        this.moveViewport(this.state.current_row, this.state.current_col);
+        setTimeout(() => this.phase6Loop(), 1000);
+    }
+    phase6Loop() {
+        this.toggle6(this.state.current_row, this.state.current_col, 0);
+        this.toggle6(this.state.current_row, this.state.current_col, 1);
+        this.toggle6(this.state.current_row, this.state.current_col, 2);
+        this.toggle6(this.state.current_row, this.state.current_col, 3);
+        this.toggle6(this.state.current_row, this.state.current_col, 4);
+        // this.toggle(document.getElementById(this.state.current_row + "_" + this.state.current_col));
+        if (this.state.current_row == 9 || this.state.current_col < 13)
+            this.moveViewport(this.state.current_row, this.state.current_col);
+        this.state.current_col++;
+        if (this.state.current_col == W) {
+            this.state.current_row++;
+            this.state.current_col = 0;
+        }
+        if (this.state.current_row == 10 && this.state.current_col == 17) return;
+        setTimeout(() => this.phase6Loop(), this.state.ms);
+    }
+
+    toggle6(row, col, offset) { // [382, 432]
+        const pos = row*W + col - offset;
+        // if (offset == 0) console.log(pos, row, col);
+        if (pos < 382 || pos > 432) return;
+        const row2 = parseInt(pos/W);
+        const col2 = pos % W;
+        document.getElementById(row2 + '_' + col2).className = 'phase6-' + offset;
     }
 
     direction1cipher() {
@@ -484,7 +519,7 @@ export class Matrix extends React.Component {
             for (var j=0; j<m[i].length; j++) {
                 var key = i + "_" + j;
                 //var cl = this.state.highlights[i][j] ? "on" : "off";
-                cols.push(<td className="off" onMouseOver={this.handleClick} id={key} key={key}>{m[i][j]}</td>);
+                cols.push(<td onMouseOver={this.handleClick} id={key} key={key}>{m[i][j]}</td>);
             }
             var key = i;
             rows.push(<tr key={key}>{cols}</tr>);
@@ -506,6 +541,7 @@ export class Matrix extends React.Component {
                                 <button onClick={this.phase3}>Phase III</button><br/>
                                 <button onClick={this.phase4}>Phase IV</button><br/>
                                 <button onClick={this.phase5}>Phase V</button>
+                                <button onClick={this.phase6}>Phase VI</button>
                                 <br></br>
                                 <form onSubmit={this.handleSubmit}>
                                     <textarea value={this.state.rows_cols} onChange={this.handleChange}></textarea><br></br>

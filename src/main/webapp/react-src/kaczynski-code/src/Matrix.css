@@ -45,3 +45,24 @@ input {
     vertical-align: top;
     padding-left: 1em;
 }
+
+.phase6-0 {
+    background-color: #400040; 
+    color: white; 
+}
+.phase6-1 {
+    background-color: #8f7393; 
+    color: #8e8e8e;
+}
+.phase6-2 {
+    background-color: #bfafc1;
+    color: #515151;
+}
+.phase6-3 {
+    background-color: #e3dce3; 
+    color: #232323; 
+}
+.phase6-4 {
+    color: black;
+    background-color: white;
+}
