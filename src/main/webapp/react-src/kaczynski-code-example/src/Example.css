@@ -1,0 +1,161 @@
+* {
+    font-family: Verdana, sans-serif;
+    font-weight: 500;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 2em;
+}
+.content {
+    /* font-size: 20pt; */
+    border: thin solid black;
+    padding: 5px;
+    text-align: center;
+    width: 55px;
+    max-width: 55px;
+    height: 40px;
+    max-height: 40px;
+    /* overflow: hidden; */
+}
+
+.cipher-on {
+    animation-name: cipher-on;
+    animation-duration: 0.5s;
+}
+
+.cipher-on-static {
+    color: red; 
+    background-color: white;
+}
+
+.cipher-on-modulo {
+    background-color: red; 
+    color: white;
+}
+
+.cipher-off {
+    background-color:white;
+}
+
+@keyframes cipher-on {
+    from {background-color: red; color: red;}
+    to {background-color: white; color: red;}
+}
+
+.grid-0 {
+    color: white;
+    background-color: white;
+}
+
+.grid-1 {
+    color: white;
+    background-color: blue;
+}
+.grid-2 {
+    color: gray;
+    background-color:deepskyblue;
+}
+.grid-3 {
+    color: #006;
+    background-color:lightblue;
+}
+.grid-4 {
+    color: blue;
+    background-color: white;
+}
+
+.grid-on-modulo {
+    background-color: blue; 
+    color: white;
+}
+
+.series-on-modulo {
+    background-color: green; 
+    color: white;
+}
+
+.series-on-modulo-2 {
+    background-color: #90c890; 
+    color: black;
+}
+
+@keyframes grid-on {
+    from {background-color: blue; color: blue;}
+    to {background-color: white; color: blue;}
+}
+
+.row-cipher {
+    color: red;
+    font-size: 20pt;
+}
+.row-grid {
+    color: blue;
+    font-size: 20pt;
+}
+.row-series {
+    color: green;
+    font-size: 20pt;
+}
+.row-plaintext {
+    color: black;
+    background-color: yellow;
+}
+
+.row-plaintext td {
+    font-weight: 800;
+    height: 48px;
+    max-height: 48px;
+}
+
+.row-cipher-prefix {
+    font-size: 20pt;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.row-cipher-prefix td {
+    font-size: 20pt;
+    width: 165px;
+    max-width: 165px;
+}
+
+.row-grid-prefix {
+    font-size: 20pt;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.row-grid-prefix td {
+    width: 165px;
+    max-width: 165px;
+}
+
+.row-series-prefix {
+    font-size: 20pt;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    text-decoration: underline;
+}
+.row-series-prefix td {
+    width: 165px;
+    max-width: 165px;
+}
+
+.row-plaintext-prefix {
+    font-size: 20pt;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.row-plaintext-prefix td {
+    width: 165px;
+    max-width: 165px;
+}
