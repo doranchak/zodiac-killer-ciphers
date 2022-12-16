@@ -38,6 +38,28 @@ table {
     background-color:white;
 }
 
+.plaintext-off {
+    background-color:white;
+}
+
+.plaintext-on-highlight {
+    background-color: sienna;
+    color: white;
+}
+
+.plaintext-on-red {
+    color: red;
+    background-color: yellow;
+}
+
+.wavy {
+    transform: scale(-1, -1);
+    font-weight: 900;
+    -webkit-text-stroke-width: 3px;
+    /* -webkit-text-stroke-color: black;     */
+}
+
+
 @keyframes cipher-on {
     from {background-color: red; color: red;}
     to {background-color: white; color: red;}
