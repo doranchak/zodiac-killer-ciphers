@@ -86,10 +86,10 @@ export class Example extends React.Component {
             // ms: 80,
             ms: 80,
             // msModulo: 150,
-            msModulo: 10,
+            msModulo: 250,
             // msDecode: 150,
             msDecode: 250,
-            msSlower: 100,
+            msSlower: 250,
             // showCipher: true,
             // showGrid: true,
             // showSeries: true,
@@ -113,6 +113,7 @@ export class Example extends React.Component {
         this.every = this.every.bind(this);
         this.mistakes = this.mistakes.bind(this);
         this.substitutions = this.substitutions.bind(this);
+        this.modulo90Sub = this.modulo90Sub.bind(this);
     }
 
     initToggle() {
@@ -707,6 +708,63 @@ export class Example extends React.Component {
         }, delay);
     }
 
+    modulo90Sub() {
+       this.modulo90SubFrame(0, 0);
+    }
+
+    modulo90SubFrame(pos, which) {
+        // 0: highlight series
+        // 1: highlight series + 90 (if needed)
+        // 2: highlight grid number
+        // 3: subtract to make and highlight cipher number
+        // 4: unhighlight all 3 numbers
+
+        if (which > 4) {
+            which = 0;
+            pos++;
+        }
+
+        if (pos == cipherLength) return;
+
+        var idS = `s-cell-${pos}`;
+        var s = this.state.series[pos];
+        var idG = `g-cell-${pos}`;
+        var g = this.state.gridNumbers[pos];
+
+        if (s < g) {
+            s += 90;
+        }
+
+        var idC = `c-cell-${pos}`;
+        var c = this.state.cipher[pos];
+
+        var elemS = document.getElementById(idS);
+        var elemG = document.getElementById(idG);
+        var elemC = document.getElementById(idC);
+
+        if (which == 0) {
+            elemS.className = "content series-on-modulo";
+        } else if (which == 1) {
+            if (pos != 9)
+                elemS.innerHTML = s;
+        } else if (which == 2) {
+            elemG.innerHTML = g;
+            elemG.className = "content grid-on-modulo";
+        } else if (which == 3) {
+            if (pos == 9) 
+                elemC.innerHTML = '?';
+            else
+                elemC.innerHTML = c;
+            elemC.className = "content cipher-on-modulo";
+        } else if (which == 4) {
+            if (pos != 9) elemS.innerHTML = s % 90;
+            elemS.className = "content series-on";
+            elemG.className = "content grid-on";
+            elemC.className = "content cipher-on-static";
+        }
+        setTimeout(() => this.modulo90SubFrame(pos, which+1), this.state.msDecode);
+    }
+
     render() {
         let html = [];
         let rows = [];
@@ -715,19 +773,21 @@ export class Example extends React.Component {
             let cols = [];
             for (let col=0; col<this.state.width; col++) {
                 let pos = row * this.state.width + col;
+                const id = `c-cell-${pos}`;
                 if (this.state.showCipher[pos] && pos < this.state.cipher.length) {
-                    cols.push(<td key={'c-cell-' + pos} className={this.cipherClassName(pos)}>{this.tr(this.state.cipher[pos])}</td>);
-                } else cols.push(<td key={'c-cell-' + pos} className="content cipher-off">&nbsp;</td>);
+                    cols.push(<td key={id} id={id} className={this.cipherClassName(pos)}>{this.tr(this.state.cipher[pos])}</td>);
+                } else cols.push(<td key={id} id={id} className="content cipher-off">&nbsp;</td>);
             }
             rows.push(<tr key={'c-' + row} className="row-cipher"><td className="row-cipher-prefix">Cipher:</td>{cols}</tr>);
             // grid numbers:
             cols = [];
             for (let col=0; col<this.state.width; col++) {
                 let pos = row * this.state.width + col;
+                const id = `g-cell-${pos}`;
                 // if (this.state.showGrid[pos] && pos < this.state.gridNumbers.length) {
                 //     cols.push(<td class="content grid-on">{this.state.gridNumbers[pos]}</td>);
                 // } else cols.push(<td class="content grid-off">&nbsp;</td>);
-                cols.push(<td key={'g-cell-' + pos} className={this.gridClassName(pos)}>{this.tr(this.state.gridNumbers[pos])}</td>);
+                cols.push(<td key={id} id={id} className={this.gridClassName(pos)}>{this.tr(this.state.gridNumbers[pos])}</td>);
             }
             rows.push(<tr key={'g-' + row} className="row-grid"><td className="row-grid-prefix">Grid:</td>{cols}</tr>);
             // series:
@@ -793,6 +853,7 @@ export class Example extends React.Component {
                 <button onClick={this.mistakes}>Mistakes</button>
                 <button onClick={this.substitutions}>Substitutions</button>
                 <button onClick={this.toggleShowGrid}>Toggle grid</button>
+                <button onClick={this.modulo90Sub}>Modulo 90</button>
             </div>
         );
 
