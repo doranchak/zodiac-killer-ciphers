@@ -152,7 +152,7 @@ export class Meanings extends React.Component {
 
     jumpButtons() {
         var buttons = [];
-        for (const number of this.state.series) {
+        for (const number of this.state.series.concat([62])) {
             // console.log(number);
             buttons.push(<button onClick={() => this.jump(number)}>{number}</button>);
         }
