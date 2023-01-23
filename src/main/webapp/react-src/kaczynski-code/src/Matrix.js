@@ -26,7 +26,7 @@ export class Matrix extends React.Component {
             phase3numbers: [], // grid numbers in phase3 order
             phase4map: [], // map linear position to phase4 grid location
             phase4numbers: [], // grid numbers in phase4 order
-            ms: 70
+            ms: 200
         }
         H = this.state.matrix.length;
         W = this.state.matrix[0].length;
@@ -306,8 +306,10 @@ export class Matrix extends React.Component {
         for (var row=0; row<m.length; row++) {
             for (var col=0; col<m[row].length; col++) {
                 const val = m[row][col];
-                if (val != num) continue;
-                this.mark(row,col);
+                if (val == num)
+                    this.mark(row,col);
+                else 
+                    this.markClear(row,col);
             }
         }
     }
@@ -320,6 +322,10 @@ export class Matrix extends React.Component {
     mark(row, col) {
         const e = document.getElementById(row+"_"+col);
         if (e) e.className = "mark";
+    }
+    markClear(row, col) {
+        const e = document.getElementById(row+"_"+col);
+        if (e) e.className = "";
     }
     markColor(row, col, colorBG, colorFG) {
         const e = document.getElementById(row+"_"+col);
@@ -549,7 +555,18 @@ export class Matrix extends React.Component {
                                 </form>
                                 <button onClick={this.oneDigit}>One digit</button><br></br>
                                 <button onClick={this.gridCountOnes}>Count ones</button><br></br>
-                                <button onClick={() => this.number(1)}>Ones</button>
+                                <button onClick={() => this.number(0)}>0</button>
+                                <button onClick={() => this.number(1)}>1</button>
+                                <button onClick={() => this.number(2)}>2</button>
+                                <button onClick={() => this.number(3)}>3</button><br/>
+                                <button onClick={() => this.number(4)}>4</button>
+                                <button onClick={() => this.number(5)}>5</button>
+                                <button onClick={() => this.number(6)}>6</button>
+                                <button onClick={() => this.number(7)}>7</button><br/>
+                                <button onClick={() => this.number(8)}>8</button>
+                                <button onClick={() => this.number(9)}>9</button>
+                                <button onClick={() => this.number(10)}>10</button>
+                                <button onClick={() => this.number(11)}>11</button><br/>
                                 <button onClick={this.clearGrid}>Clear grid</button>
                                 <button onClick={this.renderCipher}>Cipher</button>
                                 <button onClick={this.direction1cipher}>Direction 1 cipher</button>
