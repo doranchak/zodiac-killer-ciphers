@@ -26,7 +26,7 @@ class CipherWindow extends React.Component {
             windowSize: 20,
             shift: 10,
             writingGridNumbers: true,
-            ms: 70,
+            ms: 250,
             phase3map: props.phase3map,
             phase3numbers: props.phase3numbers,
             phase4map: props.phase4map,
