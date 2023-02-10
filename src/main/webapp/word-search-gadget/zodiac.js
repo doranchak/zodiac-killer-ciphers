@@ -252,7 +252,7 @@ else
 		var cipherLength = new Array(2);
 		var cipher = new Array(
 			new Array(
-		"HER>pl^VPk|1LTG2d",
+		"HER>pl^VPk|1LTG2d", // 0
 	  "Np+B(#O%DWY.<*Kf)",
 	  "By:cM+UZGW()L#zHJ",
 	  "Spp7^l8*V3pO++RK2",
@@ -361,7 +361,7 @@ else
 "Fz9G++|TB4-y.LWBO"*/
 
 	), new Array(
-		"9%P/Z/UB%kOR=pX=B",
+		"9%P/Z/UB%kOR=pX=B", // 1
 		"WV+eGYF69HP@K!qYe", 
 		"MJY^UIk7qTtNQYD5)", 
 		"S(/9#BPORAU%fRlqE", 
@@ -386,7 +386,7 @@ else
 		"Z@JTtq_8JI+rBPQW6",
 		"VEXr9WI6qEHM)=UIk"
 	), new Array(
-		"TLCtBOMD>F+O2HODU",
+		"TLCtBOMD>F+O2HODU", // 2
 		"yMl^#;+2VbGRPU*2O",
 		"G(+(cFTfzOzBW4;RS",
 		"Ppl.BLTtUfF5p(BS+",
@@ -407,7 +407,7 @@ else
 		"p^-+Wp|p/M*&|J56M",
 		"OV^4j-9+#d^.VqB1+"
 		), new Array(
-			"MOASDDOPJ",
+			"MOASDDOPJ", // 3
 			"CRUISEXFG",
 			"PJKWPTHGO",
 			"RLEOOAGRF",
@@ -446,7 +446,7 @@ else
 			"ER AGNORW",
 			"XNAMYDNAH"
 			), new Array(
-				"ILIKEKILLINGPEOPL",
+				"ILIKEKILLINGPEOPL", // 4
 								"EBECAUSEITISSOMUC",
 								"HFUNITISMOREFUNTH",
 								"ANKILLINGWILDGAME",
@@ -471,7 +471,7 @@ else
 								"ESFORMYAFTERLIFEE",
 								"BEORIETEMETHHPITI"),
 								new Array(
-									"ILIKEKILLINGPEOPL",
+									"ILIKEKILLINGPEOPL", // 5
 									"9%P/Z/UB%kOR=pX=B",  
 									"EBECAUSEITISSOMUC",
 									"WV+eGYF69HP@K!qYe", 
@@ -520,7 +520,7 @@ else
 									"BEORIETEMETHHPITI",
 									"VEXr9WI6qEHM)=UIk"),
 									new Array(
-										"HITHEREMYNAMEISMI",
+										"HITHEREMYNAMEISMI", // 6
 										"CHELLEIHAVEENJOYE",
 										"DALLTHELINKSTHATA",
 										"LWAYSLEADMEBACKTO",
@@ -540,7 +540,48 @@ else
 										"DYOUASPELLCHECKCO",
 										"NNECTEDTOMYTYPING",
 										"HANDSBUTNOSUCHLUC"
-										
+									), new Array( // 7
+										"IRONCAOOIIERGRTML",
+										"ECHETTATNWNNIAABW",
+										"EITEOHSRTWTWGTAIS",
+										"DCCLOAPAOYCAHHOAM",
+										"BNOHALPLEVFIHSEIU",
+										"CPOOFAASALYIFNMNT",
+										"TVHAUTTMSERTONAGE",
+										"TTMSBPTAHBENAHUGN",
+										"LIOHEHROMFEEIDDEA",
+										"SAASOHOSHACLIFEIS",
+										"SHOUVLRENNECEROAA",
+										"MIEAOSEAVREONHSEF",
+										"ADNDITHEEVFEETTPO",
+										"ATFEOBVMEENEOELHH",
+										"IERRATENYRNOSRVSH",
+										"EENYAEATACONBOUTM",
+										"OERHGRDYIHFAWEEWG",
+										"HHWWYAWEIADIRUTWC",
+										"EFILWILLEBNAEASYE",
+										"NONIECIDARAPDEATH"										
+									), new Array( // 8
+										"IHOPEYOUAREHAVING",
+										"LOTSOFFANINTRYING",
+										"TOCATCHMETHATWASN",
+										"TMEONTHETVSHOWWHI",
+										"CHBRINGOUPAPOINTA",
+										"BOUTMEIAMNOTAFRAI",
+										"DOFTHEGASCHAMBERB",
+										"ECAASEITWILLSENDM",
+										"ETOPARADLCEALLTHE",
+										"SOOHERBECAUSEENOW",
+										"HAVEENOUGHSLAVEST",
+										"OWORVFORMEWHEREEV",
+										"ERYONEELSEHASNOTH",
+										"INGWHENTHEYREACHP",
+										"ARADICESOTHEYAREA",
+										"FRAIDOFDEATHIAMNO",
+										"TAFRAIDBECAUSEIVN",
+										"OWTHATMYNEWLIFEIS",
+										"LIFEWILLBEANEASYO",
+										"NEINPARADICEDEATH"										
 									)
 								
 /*			new Array(

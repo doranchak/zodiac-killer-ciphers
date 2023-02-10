@@ -45,6 +45,8 @@ var z408 = cipher[1].slice();
 var z408s = cipher[4].slice();
 var z408c = cipher[5].slice();
 var btk = cipher[3].slice();
+var z340pt = cipher[7].slice();
+var z340ptun = cipher[8].slice();
 
 var btkwords = [
 "WRONGADDRESS", "TELEPHONECO", "SERVICEMAN", "SPOTVICTIM", "INSURANCE", "FANTASIES", "ANDERSON", "HANDYMAN", "LOSTPET", "GOFORIT", "SERVICE", "DETAILS", 
@@ -413,6 +415,24 @@ function resetbtk() {
 	calculateNearby();
 	document.getElementById("search").value = "WRONGADDRESS";
 	search("WRONGADDRESS", true);
+}
+function reset340pt() {
+	shuffled = false;
+	cipher[0] = z340pt.slice();
+	which = 0;
+	init();
+	calculateNearby();
+	document.getElementById("search").value = "BEST";
+	search("BEST", true);
+}
+function reset340un() {
+	shuffled = false;
+	cipher[0] = z340ptun.slice();
+	which = 0;
+	init();
+	calculateNearby();
+	document.getElementById("search").value = "BEST";
+	search("BEST", true);
 }
 
 
