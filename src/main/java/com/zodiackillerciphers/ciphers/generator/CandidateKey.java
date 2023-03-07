@@ -2567,7 +2567,8 @@ public class CandidateKey extends FloatVectorIndividual implements FrontMember {
 		//testPermutations();
 		//System.out.println(zodiacWordIn("abcdeZD-7k"));
 		//shuffleZodiac(Ciphers.Z340, 10000000);
-		shuffleZodiac2(Ciphers.Z340);
+		//shuffleZodiac2(Ciphers.Z340);
+		System.out.println(measureUnigramDistance(Ciphers.Z340));
 		//System.out.println(ambiguous);
 		//testGenome();
 	}

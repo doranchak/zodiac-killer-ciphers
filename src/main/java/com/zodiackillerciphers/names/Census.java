@@ -23,7 +23,7 @@ import com.zodiackillerciphers.transform.CipherTransformations;
 
 public class Census {
 	
-	public static String PREFIX = "/Users/doranchak/projects/zodiac/zodiac-killer-ciphers/docs/census-names";
+	public static String PREFIX = "/Users/doranchak/projects/zodiac/github/zodiac-killer-ciphers/docs/census-names";
 
 	/** map for all names, used for scoring */
 	public static Map<String, Name> mapFirstMale;
@@ -920,7 +920,7 @@ public class Census {
 	}
 	
 	/** return max frequency of the given name part */
-	static float frequency(String name) {
+	public static float frequency(String name) {
 		float freq = 0;
 		Name n;
 		n = mapFirstMale.get(name.toLowerCase());
@@ -1095,6 +1095,26 @@ public class Census {
 		}
 	}
 	
+	// generate random 13-letter names that fit the distribution of symbols in Z13 
+	public static void buildNamesZ13(int max) {
+		for (int i=0; i<max; i++) {
+			List<Name> list = buildName(13, 1000);
+			float score = 0;
+			String full = "";
+			String fullWithSpaces = "";
+			for (Name name  :list) {
+				full += name.name;
+				fullWithSpaces += name.name + " ";
+				score += name.frequency;
+			}
+			if (MyNameIs.sameDist(full)) {
+				System.out.println(score + " " + fullWithSpaces + " " + list);
+			}
+			
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 //		System.out.println(readLast());
 		//anagramSearch("APETERSPLANTE");
@@ -1117,10 +1137,12 @@ public class Census {
 		
 //		z13Search2Process();
 //		z408last18search();
-		anagramSearchZ408Last18_2();
+//		anagramSearchZ408Last18_2();
 //		findNames("EBEORIETEMETHHPITI");
 //		findNames2("EBEORIETEMETHHPITI", 3, 15, 21);
 //		findNames3("EBEORIETEMETHHPITI", 3);
 //		z13Search4();
+//		System.out.println(buildName(13, -1));
+		buildNamesZ13(1000000);
 	}
 }

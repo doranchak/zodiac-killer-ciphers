@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
+import com.zodiackillerciphers.ciphers.crimo.CrimoCipher;
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.lucene.Stats;
 import com.zodiackillerciphers.stats.StatsWrapper;
@@ -518,6 +519,32 @@ public class UnigramTests {
 	}	
 	
 	
+	/** calculate average distance between occurrences of the given symbol */
+	public static double averageSymbolDistance(String str, String symbol) {
+		double average = 0;
+		int count = 0;
+		int index = str.indexOf(symbol);
+		int indexPrev = index;
+		while (index > -1) {
+			if (index+1 == str.length()) break;
+			index = str.indexOf(symbol, index+1);
+			if (index == -1) break;
+			int diff = index-indexPrev;
+			//System.out.println(indexPrev + " " + index + " " + diff);
+			average += diff;
+			count++;
+			indexPrev = index;
+		}
+		average /= count;
+		return average;
+	}
+	
+	public static void testSymbolDistance() {
+		for (int i=0; i<10; i++) {
+			System.out.println("RESULT FOR " + i + ": " + averageSymbolDistance(CrimoCipher.cipherCrimo9, "" + i));
+		}
+	}
+	
 	public static void main(String[] args) {
 //		System.out.println(countNonRepeatingStrings(Ciphers.Z408));
 //		shuffleNonRepeatingStrings(Ciphers.Z408, 100000000);
@@ -532,8 +559,8 @@ public class UnigramTests {
 //		System.out.println(symbolOrder(Ciphers.Z408));
 //		System.out.println(symbolOrder(Ciphers.Z340));
 		//shuffleSymbolOrder(Ciphers.Z340, 1000000);
-		System.out
-				.println(exclusiveSymbolsIn(Ciphers.Z340, 17, new int[] { 0, 1, 2, 3, 4, 5, 19, 18, 17, 16, 15, 14 }));
+//		System.out
+//				.println(exclusiveSymbolsIn(Ciphers.Z340, 17, new int[] { 0, 1, 2, 3, 4, 5, 19, 18, 17, 16, 15, 14 }));
 //		shuffleExclusiveSymbolsIn(Ciphers.Z340, 17, new int[] { 0, 1, 2, 3, 4, 5, 19, 18, 17, 16, 15, 14 }, 1000000,
 //				Ciphers.countMap(Ciphers.Z340));
 //		exclusiveSymbols(Ciphers.Z340, 17, 1000000);
@@ -557,5 +584,6 @@ public class UnigramTests {
 //		System.out.println(sumNonRepeating(Ciphers.Z340, true));
 //		testShuffleSum(Ciphers.Z408, 1000000);
 //		testShuffleSum(Ciphers.Z340, 1000000);
+		testSymbolDistance();
 	}
 }

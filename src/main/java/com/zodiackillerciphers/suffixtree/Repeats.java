@@ -189,14 +189,16 @@ public class Repeats {
     
 
     public static void main(String[] args) {
+    	System.out.println(lrsBrute("ZpW+6NEZpW+6NEEZpW+6NEZpW+6NENZpW+6NEZpW++WZE6Z+W6EW6E"));
     	/*System.out.println(lrsBrute("l++l+++F+FlF+++++Fl++F+l+F+FlF+++++Fl++F+"));
     	System.out.println(lrsBrute("lMlMFFlFMFlFMlMFFlFMFlFM"));
     	System.out.println(lrsBrute("OMZOMOOMZOMOMZOMOOMZO"));
     	System.out.println(lrsBrute("MMFFFXMFFMMFFFXMFFM"));
+    	System.out.println(lrsBrute("MMFFFXMFFMMFFFXMFFM"));
     	System.out.println(lrsBrute("++U+++++U++++AU++U+++++U+++++A+"));*/
-    	System.out.println(largestPalindromicSequence("12343212343"));
-    	System.out.println(largestPalindromicSequence("1234432123443"));
-    	System.out.println(largestPalindromicSequence("123432112343"));
+//    	System.out.println(largestPalindromicSequence("12343212343"));
+//    	System.out.println(largestPalindromicSequence("1234432123443"));
+//    	System.out.println(largestPalindromicSequence("123432112343"));
     	//jtestShuffle();
     }
 }

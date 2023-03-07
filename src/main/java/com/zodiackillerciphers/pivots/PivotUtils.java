@@ -74,6 +74,14 @@ public class PivotUtils {
 		findPivot(searchResults, grid, row, col, row, col, row, col, size, d1, null, d2, null, new ArrayList<Integer>(), "", allowWrapping);
 	}
 
+	public static PivotSummary findPivotsSummary(String cipher, int size) {
+		PivotSummary summary = new PivotSummary();
+		List<Pivot> list = findPivots(cipher, size);
+		summary.setPivots(list);
+		summary.grid(cipher);
+		return summary;
+	}
+	
 	/** convert row/col to position */
 	static int pos(String[] grid, int row, int col) {
 		return row*grid[0].length() + col;
@@ -348,7 +356,7 @@ public class PivotUtils {
 		String cipher = Ciphers.Z340;
 //		String cipher = Ciphers.Z340_SOLUTION_TRANSPOSED;
 		//String cipher = "ABCDEFGHIJKLMNBOPQRSQIPTAUVWXYZabMcdeVfgIBhNiIQNjIkMlCEmBnIMopqAUVdIdUnbrcstoQCNXIYnOSqdnTbGbEPuvwDAIuTHDNxyolpFmzEJQ0GLfynvHNTbVMBS1HYT2QATH0bVN1loTzbhOsETUNzaAE3lkx1TTUsHozT4N5To6NYGoDIueGmJCN7UGEUTigIapoFHDVOnpGjVlTu0Tr1Im89bUGaMLHT!XobQPf9bIUA0oom7zAtNnbg\"U5N#NoASIGqGQIm2LG\"I$%aLVGGAoOf5&Q'RGUTVNj'FieMnTtTtVlIKIxOtAHlAUU9MjKss7bnorSUZ";
-		List<Pivot> pivots = findPivots(cipher, 4);
+		List<Pivot> pivots = findPivots(cipher, 3);
 		for (Pivot p : pivots) System.out.println(p);
 	}
 	public static void testFindPivots2() {

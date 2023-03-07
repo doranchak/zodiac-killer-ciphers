@@ -1,10 +1,5 @@
 package com.zodiackillerciphers.corpus.crib;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -13,12 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.zodiackillerciphers.ciphers.Ciphers;
 import com.zodiackillerciphers.corpus.CorpusBase;
-import com.zodiackillerciphers.dictionary.WordFrequencies;
-import com.zodiackillerciphers.io.FileUtil;
-import com.zodiackillerciphers.lucene.Stats;
-import com.zodiackillerciphers.tests.unicity.PlaintextBean;
 
 /** generate stats for words that are contractions.  came up in facebook ACA discussion group. */
 public class ContractionStats extends CorpusBase {

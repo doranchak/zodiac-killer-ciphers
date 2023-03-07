@@ -2,6 +2,8 @@ package com.zodiackillerciphers.ciphers.w168;
 
 import java.util.Arrays;
 
+import com.zodiackillerciphers.ciphers.algorithms.columnar.State;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.Variant;
 import com.zodiackillerciphers.lucene.NGramsCSRA;
 import com.zodiackillerciphers.util.PermutationState;
 
@@ -10,23 +12,26 @@ public class StateColumnarVerify implements PermutationState {
 	private int[] elements;
 	private StringBuilder ciphertext;
 	private StringBuilder plaintext;
+	private Variant variant; 
 	private static String TAB = "	";
 	private static int N = 4;
 
-	public StateColumnarVerify(int[] elements, StringBuilder ciphertext, StringBuilder plaintext) {
+	public StateColumnarVerify(Variant variant, int[] elements, StringBuilder ciphertext, StringBuilder plaintext) {
+		this.variant = variant;
 		this.elements = elements;
 		this.ciphertext = ciphertext;
 		this.plaintext = plaintext;
 	}
 
 	public StringBuilder decode() {
-		StringBuilder pt = com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition.decode(ciphertext, elements,
-				false);
+		StringBuilder pt = com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition
+				.decode(new State(variant, null, ciphertext, elements, false));
 		return pt;
 	}
 
 	public StringBuilder encode() {
-		StringBuilder ct = com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition.encode(plaintext, elements);
+		StringBuilder ct = com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition
+				.encode(new State(variant, plaintext, null, elements));
 		return ct;
 	}
 

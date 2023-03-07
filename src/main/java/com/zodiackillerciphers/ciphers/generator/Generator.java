@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import com.zodiackillerciphers.ciphers.algorithms.ColumnarTranspositionRumkin;
 import com.zodiackillerciphers.ciphers.algorithms.Myszkowski;
 import com.zodiackillerciphers.ciphers.algorithms.Vigenere;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTranspositionRumkin;
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.ngrams.NGramsBean;
 import com.zodiackillerciphers.ngrams.Periods;

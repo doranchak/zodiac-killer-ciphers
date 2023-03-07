@@ -12,6 +12,8 @@ import com.zodiackillerciphers.ciphers.algorithms.Vigenere2;
 import com.zodiackillerciphers.dictionary.WordFrequencies;
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.lucene.ZKDecrypto;
+import com.zodiackillerciphers.stats.StatsWrapper;
+import com.zodiackillerciphers.transform.CipherTransformations;
 
 /** https://www.evernote.com/shard/s1/nl/12205879/04857bc5-6490-40c3-8527-f103709f189d/ */
 public class BerengerSauniere {
@@ -41,6 +43,8 @@ public class BerengerSauniere {
 		"VEILLAIT+ET+EN+FIT+U",
 		"NPEIGNE+D'OR.B.S.CUR"
 	};
+	// outer ring, read clockwise
+	public static String cipherOuterOnly = "YENSZNUMGLNYYRFVHENMZFZZFDHZVTQHAKXFPKCZPJITSMRYKVSTVOYNKTRRLUVP";
 
 	/** note: lacks the letter W */
 	public static String[] vig = {
@@ -509,7 +513,31 @@ public class BerengerSauniere {
 		
 	}
 	
-	
+	/** count non-overlapping doubles */
+	public static int doubles(String str) {
+		int total = 0;
+		for (int i=0; i<str.length()-1; i++) {
+			char c1 = str.charAt(i);
+			char c2 = str.charAt(i+1);
+			if (c1 != c2) continue;
+			total++;
+			i++;
+		}
+		return total;
+	}
+
+	/** test outer ring for statistical significance of doubles */
+	public static void testDoubles(int n) {
+		String cipher = cipherOuterOnly;
+		StatsWrapper stats = new StatsWrapper();
+		stats.actual = doubles(cipher);
+		for (int i=0; i<n; i++) {
+			cipher = CipherTransformations.shuffle(cipher);
+			stats.addValue(doubles(cipher));
+		}
+		System.out.println(stats.header());
+		stats.output();
+	}
 	
 	
 	public static void main(String[] args) {
@@ -522,10 +550,11 @@ public class BerengerSauniere {
 		
 		//System.out.println(markIntersections(cipher));
 		//testRingShiftIntersections();
-		bruteForceSearchForChrister();
+		//bruteForceSearchForChrister();
 		//String test = "XGPUCDEPRQDSFELEOAAISROLEDNEEGTXRINEEACUETBPRRXETAITTISANNAPSLNX";
 		//System.out.println(ZKDecrypto.calcscore(test) + " " + test);
 		//process();
 		//System.out.println(caesar("HEYBUBBA", -1));
+		testDoubles(1000000);
 	}
 }

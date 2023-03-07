@@ -1,7 +1,6 @@
 package com.zodiackillerciphers.ciphers;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -689,6 +688,83 @@ public class Z340Solution {
 		}
 	}
 	
+	/** dump homophone sequences */
+	public static void dumpSequences(Map<Character, Character> key, String cipher) {
+		Map<Character, StringBuffer> sequences = new HashMap<Character, StringBuffer>();
+		for (int i=0; i<cipher.length(); i++) {
+			char ct = cipher.charAt(i);
+			char pt = key.get(ct);
+			//if (pt == 'O') pt = 'A';
+			StringBuffer val = sequences.get(pt);
+			if (val == null) {
+				val = new StringBuffer();
+				sequences.put(pt, val);
+			}
+			val.append(ct);
+		}
+		for (Character pt : sequences.keySet()) {
+			System.out.println("<span class=\"plain\">" + pt + "</span><span class=\"cipher\">" + sequences.get(pt).toString().replaceAll("<", "&lt;") + "</span><br>");
+		}
+	}
+	
+	/** what is accuracy of given plaintext compared to the known z340 plaintext? */ 
+	public static double accuracy(String pt) {
+		String zpt = z340SolutionUntransposed();
+		float hits = 0;
+		for (int i=0; i<zpt.length() && i<pt.length(); i++) {
+			if (zpt.charAt(i) == pt.charAt(i)) hits++;
+		}
+		hits /= zpt.length();
+		return hits;
+	}
+	
+	public static void dumpSequences() {
+		System.out.println("<h1>Z340:</h1>");
+		dumpSequences(z340SolutionKey(), Ciphers.Z340);
+		System.out.println("<h1>Z340 UNTRANSPOSED:</h1>");
+		dumpSequences(z340SolutionKey(), Ciphers.Z340T);
+	}
+	
+	/** output keys (in order of occurrence) as html */
+	public static void dumpKeys(String cipher, String plaintext) {
+		Map<Character, String> p2c = new HashMap<Character, String>();
+		for (int i = 0; i < cipher.length(); i++) {
+			char c = cipher.charAt(i);
+			char p = plaintext.charAt(i);
+			String val = p2c.get(p);
+			if (val == null) {
+				val = "";
+			}
+			if (val.indexOf(c) == -1)
+				val += c;
+			p2c.put(p, val);
+		}
+		for (Character p : p2c.keySet()) {
+			System.out.println("<span class=\"homophones\">");
+			System.out.println("<span class=\"p\">" + p + "</span><span class=\"c\">" + encode(p2c.get(p)) + "</span>");
+			System.out.println("</span>");
+		}
+	}
+	static String encode(String str) {
+		return str.replaceAll("&", "&amp;").replaceAll("<", "&lt;");
+	}
+
+	public static void dumpKeys() {
+		dumpKeys(Ciphers.Z408, Ciphers.Z408_SOLUTION.toUpperCase());
+		dumpKeys(Ciphers.Z340, Ciphers.Z340_SOLUTION_TRANSPOSED);
+	}
+	
+	/** dump plaintext resulting from applying known 340 key to jarl's and sam's transpositions */
+	public static void dumpJarlSamTransposition() {
+		String jarl = "H+M8|CV@KEB+*5k.LdR(UVFFz9<>#Z3P>L(MpOGp+2|G+l%WO&D#2b^D(+4(5J+VW)+kp+fZPYLR/8KjRk.#K_Rq#2|<z29^%OF1*HSMF;+BLKJp+l2_cTfBpzOUNyG)y7t-cYA2N:^j*Xz6dpclddG+4-RR+4>f|pz/JNbVM)+l5||.UqL+Ut*5cZGR)VE5FV52cW+|TB4-|TC^D4ct+c+zJYM(+y.LW+B.;+B31cOp+8lXz6Ppb&RG1BCO7TBzF*K<S<MF6N:(+HFK29^4OFTBO<Sf9pl/yUcy5C^W(-+l#2E.B)|DFHkNdpWk<S7ztZBO_8YAO|BK*;-+C>cM";
+		System.out.println(jarl);
+		System.out.println(Ciphers.decode(jarl, z340SolutionKey()));
+		String sam = "H+M8|CV@KEB+*5k.LdR(UVFFz9<>#Z3P>L(MpOGp+2|G+l%WO&D#2b^D(+4(5J+VW)+kp+fZPYLR/8KjRk.#K_Rq#2|<z29^%OF1*HSMF;+BLKJp+l2_cTfBpzOUNyG)y7t-cYA2N:^j*Xz6dpclddG+4-RR+4>f|pz/JNbVM)+l5||.UqL+Ut*5cZGR)VE5FV52cW+|TB4-|TC^D4ct+c+zJYM(+y.LW+B.;+B31cOp+8lXz6Ppb&RG1BCO7TBzF*K<S<MF6N:(+HFK29^4OFTBO<Sf9pl/yUcy5C^W(-+l#2E.B)|kW7BYB-cFd<t_O*C>DNkzOAK+MHpSZ8|;";
+		System.out.println(sam);
+		System.out.println(Ciphers.decode(sam, z340SolutionKey()));
+		
+	}
+	
 	public static void main(String[] args) {
 		//process("/Users/doranchak/Downloads/sam");
 //		process("/Volumes/Smeggabytes/projects/zodiac/cipher collection/sam blake ciphers/part 3/all-results-combined", false, 85);
@@ -710,12 +786,14 @@ public class Z340Solution {
 //		System.out.println(Arrays.toString(toGrid(z340SolutionNext9(), 17)));
 //		System.out.println(z340Solution());
 //		System.out.println(z340Transposition());
-//		System.out.println(z340SolutionUntransposed());
+//		System.out.println(accuracy(z340Solution()));
+//		dumpKeys();
+		dumpJarlSamTransposition();
 //		System.out.println(enumerate(z340SolutionNext9(), 9, 17, 1, 2));
 //		findBestSplit();
 //		zkscores();
 //		fixLine15();
 		//processCiphersForZ13();
-		keysIdenticalMappings();
+		//keysIdenticalMappings();
 	}
 }

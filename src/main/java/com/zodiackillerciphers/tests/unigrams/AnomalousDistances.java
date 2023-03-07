@@ -1,9 +1,12 @@
 package com.zodiackillerciphers.tests.unigrams;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
@@ -257,15 +260,131 @@ public class AnomalousDistances {
 		}
 		stats.output();
 	}
+	
+	/** count unique symbols in given string */
+	public static int countUnique(String str) {
+		if (str == null) return 0;
+		Set<Character> set = new HashSet<Character>();
+		for (int i=0; i<str.length(); i++) set.add(str.charAt(i));
+		return set.size();
+	}
+	
+	/** which substrings of the Z340 have unusually low counts of unique symbols?
+	 * http://www.zodiackillersite.com/viewtopic.php?f=81&t=3444
+	 * For example, many symbols avoid the middle 8 rows. 
+	 **/
+	public static void uniqueUnigrams(String cipher, int shufflesPerLength) {
+		/** reference set: how many unique symbols should we expect in a substring of a Z340 scramble */
+		Map<Integer, StatsWrapper> reference = new HashMap<Integer, StatsWrapper>();
+		String shuffle = cipher;
+		for (int L=17; L<=340; L++) {
+			System.out.println("Computing reference for L=" + L + "...");
+			StatsWrapper stats = new StatsWrapper();
+			stats.name = "Length " + L;
+			for (int i=0; i<shufflesPerLength; i++) {
+				shuffle = CipherTransformations.shuffle(shuffle);
+				stats.addValue(countUnique(shuffle.substring(0, L)));
+			}
+			reference.put(L, stats);
+		}
+		
+		for (int pos1=0; pos1<cipher.length(); pos1++) {
+			for (int pos2=pos1+17; pos2<cipher.length(); pos2++) {
+				String sub = cipher.substring(pos1, pos2);
+				StatsWrapper stats = reference.get(pos2-pos1);
+				stats.actual = countUnique(sub);
+				//if (Math.abs(stats.sigma()) >= 2) {
+					String name = stats.name;
+					stats.name = stats.sigma() + "	" + pos1 + " " + pos2 + " " + name;
+					stats.output();
+					stats.name = name;
+				//}
+			}
+		}
+	}
+	
+	/** find every symbol from the cipher alphabet that isn't found in the given string.
+	 * return sum of symbol frequencies for each such found symbol. 
+	 */
+	public static int phobicUnigrams(Map<Character, Integer> counts, String str, boolean show, List<Character> results) {
+		Set<Character> seen = new HashSet<Character>();
+		for (int i=0; i<str.length(); i++) seen.add(str.charAt(i));
+		
+		int sum = 0;
+		for (Character key : counts.keySet()) {
+			if (seen.contains(key)) continue;
+			if (show)
+				System.out.println(key+" " + counts.get(key));
+			sum += counts.get(key);
+			if (results != null) results.add(key);
+		}
+		return sum;
+	}
+	public static void testPhobicUnigrams() {
+		String cipher = Ciphers.Z340;
+		//System.out.println(phobicUnigrams(Ciphers.countMap(cipher), cipher.substring(7*17,7*17 + 7*17), true));
+		System.out.println(phobicUnigrams(Ciphers.countMap(cipher), cipher.substring(51, 272), true, null));
+//		cipher = CipherTransformations.shuffle(cipher);
+//		System.out.println(phobicUnigrams(Ciphers.countMap(cipher), cipher.substring(7*17,7*17 + 7*17), true));
+	}
 
+	/** which substrings of the Z340 are unusually "unigram phobic"?
+	 * http://www.zodiackillersite.com/viewtopic.php?f=81&t=3444
+	 * For example, many symbols avoid the middle 8 rows.
+	 * 
+	 * use step=1 for all substrings
+	 * use step=17 for just rows
+	 *  
+	 **/
+	public static void phobicUnigrams(String cipher, int shufflesPerLength, int step) {
+		System.out.println(cipher);
+		// best (most phobic) region observed for the given substring length in the given cipher 
+		Map<Integer, StatsWrapper> reference = new HashMap<Integer, StatsWrapper>();
+		Map<Character, Integer> counts = Ciphers.countMap(cipher);
+		
+		for (int pos1=0; pos1<cipher.length(); pos1+=step) {
+			for (int pos2=pos1+17; pos2<=cipher.length(); pos2+=step) {
+				int L = pos2-pos1;
+				String sub = cipher.substring(pos1, pos2);
+				StatsWrapper stats = reference.get(L);
+				List<Character> unigrams = new ArrayList<Character>(); 
+				int value = phobicUnigrams(counts, sub, false, unigrams);
+				if (stats == null || value > stats.actual) {
+					// if this region has the same length as one already observed, and it
+					// has more phobic unigrams, replace the stats 
+					stats = new StatsWrapper();
+					stats.actual = value;
+					reference.put(L, stats);
+					stats.name = pos1 + " " + pos2 + " " + unigrams + " Length " + L;
+				}
+			}
+		}
+		String tab = "	";	
+		String shuffle = cipher;
+		for (int L=17; L<=cipher.length(); L+=step) {
+			StatsWrapper stats = reference.get(L);
+			for (int i=0; i<shufflesPerLength; i++) {
+				shuffle = CipherTransformations.shuffle(shuffle);
+				stats.addValue(phobicUnigrams(counts, shuffle.substring(0, L), false, null));
+			}
+			stats.name = stats.sigma() + tab + stats.name;
+			stats.output();
+		}
+		
+	}
+	
+		
 	public static void main(String[] args) {
+		phobicUnigrams(Ciphers.Z408, 100000, 17);
+//		testPhobicUnigrams();
 //		System.out.println(weightedAverageMaxGap(Ciphers.Z340, null));
 		//System.out.println(weightedAverageMaxGap(Ciphers.cipher[8].cipher, null));
 		//shuffleMaxGap(Ciphers.Z340, 1000000);
 		 //shuffleMaxGap(Ciphers.Z340, 1000);
-		anomalousGaps(Ciphers.Z340, 100000);
+		//anomalousGaps(Ciphers.Z340T, 100000);
 //		anomalousGapsNumberOfShufflesExceedingMinSigma(Ciphers.Z340, 10000, 10000, 1.0);
 //		System.out.println(unigramDistance("HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)2<clRJ|*5T4M.+&BFz69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKOBy:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()pp8R^FlO-*dCkF>2D(#5+Kq%;2UcXGV.zL|"));
+//		System.out.println(unigramDistance(Ciphers.Z340T));
 		//System.out.println(unigramDistancePerSymbol(Ciphers.Z340));
 //		unigramDistancePerSymbolShuffle(Ciphers.Z408, 10000);
 		//System.out.println(unigramDistancePerSymbolShuffle(Ciphers.Z340, 10000, false));
@@ -276,6 +395,6 @@ public class AnomalousDistances {
 //		unigramDistanceShuffle(Ciphers.Z408, 10000000);
 //		unigramDistanceShuffle(Ciphers.Z340, 10000000);
 //		unigramDistanceShuffle("ABCDEDFGHIJKLMNOPQRSTUVWXYZAabcdefghijCkFlmnoEpVqrstuDIvBYJwxAGyKz0MCjZ1Qh234SWk5X67eaEdUqFbr8MmNlZ9tuwQ!ciWzJI07HnpUPvk2DYBGaNdSr\"AjKwC#XbmEZgM0clkrsoFHPIqKQ$LS3XuTEYZAWM%QJ&SkrX4Z1tjwEkrCqK'nV!o2fDaNhpxFZ8zwI3vk\"M(QbrO74ZchYkAlrgUZxsSuC)FXIxYBGRE!M5noJAjLt3zyC6Q7q9UHPk1SF8t*XDIvBE)xYGH&MT2dQm+WPz#SaAxCvBuNrKF%X,ce0-J7dE(MfUibQ'nVxIGHZ4+", 10000000);
-//		unigramDistanceShuffle("ABCDEDFGHIJKLMNOPQRSTUVWXYNAWZabcdefghCiFjNklEmVnopqNDIrBYJstAGuKvwMChNFQfxyzSWi0X12cWEbUnFZo3MNNjN4qNsQ5agWvJIw2HkmUPrixDYBGWNbSo6AhKsC7XZNENeMwajioplFHPInKQ8LSyXNTEYNAWM9QJ9SioXzNFqhsEioCnK!kV5lxdDWNfmtFN3vsIyri6M!QZoO2zNafYiAjoeUNtpSNCAFXItYBGRE5M0klJAhLqyvuC1Q2n4UHPiFSF3qQXDIrBEAtYGH9MTxbQNEWPv7SWAtCrBNNoKF9XMacwEJ2bE!MdUgZQ!kVtIGHNzE", 10000000);		
+//		unigramDistanceShuffle("ABCDEDFGHIJKLMNOPQRSTUVWXYNAWZabcdefghCiFjNklEmVnopqNDIrBYJstAGuKvwMChNFQfxyzSWi0X12cWEbUnFZo3MNNjN4qNsQ5agWvJIw2HkmUPrixDYBGWNbSo6AhKsC7XZNENeMwajioplFHPInKQ8LSyXNTEYNAWM9QJ9SioXzNFqhsEioCnK!kV5lxdDWNfmtFN3vsIyri6M!QZoO2zNafYiAjoeUNtpSNCAFXItYBGRE5M0klJAhLqyvuC1Q2n4UHPiFSF3qQXDIrBEAtYGH9MTxbQNEWPv7SWAtCrBNNoKF9XMacwEJ2bE!MdUgZQ!kVtIGHNzE", 10000000);
 	}
 }

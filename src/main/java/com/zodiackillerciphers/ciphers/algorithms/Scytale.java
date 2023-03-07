@@ -9,6 +9,7 @@ import java.util.Set;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition;
 import com.zodiackillerciphers.lucene.ZKDecrypto;
 import com.zodiackillerciphers.ngrams.NGramsBean;
 import com.zodiackillerciphers.ngrams.Periods;
@@ -81,8 +82,10 @@ public class Scytale {
 		System.out.println("input " + inp);
 		System.out.println("encoded " + en);
 		System.out.println("decoded " + de);
-		
-		StringBuilder col = ColumnarTransposition.encode(new StringBuilder(inp), new int[] {0,1,2,3,4,5,6,7,8,9,10});
+
+		// TODO: fix broken invocation
+		// StringBuilder col = ColumnarTransposition.encode(new StringBuilder(inp), new int[] {0,1,2,3,4,5,6,7,8,9,10});
+		StringBuilder col = new StringBuilder();
 		System.out.println("via columnar: " + col);
 		
 		inp = Ciphers.Z408_SOLUTION.substring(0,340);

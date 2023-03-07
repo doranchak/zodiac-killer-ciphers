@@ -124,7 +124,9 @@ public class Solver {
 //		findRepeats("894RPV YIN 24N1 K34ND TIHS N341 VIPNO K3N94KV V93 ZADD 89AO DIS3 YNIE", 4, 4);
 //		solve("K3N94KV K34ND N341 V93", "894RPV YIN 24N1 K34ND TIHS N341 VIPNO K3N94KV V93 ZADD N341 89AO DIS3 YNIE");;
 //		solve("WQHDNDII KGOVQQF BPQQG","");
-		solve("ABCABCDABEABE", "");
+//		solve("ABCABCDABEABE", "");
+		//solve("AB CDBE EFDCC", "");
+		solve("ABCDBE EFDCC", "");
 		
 	}
 }

@@ -92,7 +92,7 @@
 	<a name="top"></a>
 
 <!--<script type="text/javascript" src="animate.js"> </script> -->
-<script type="text/javascript" src="zodiac.js?v=3"> </script> 
+<script type="text/javascript" src="zodiac.js?v=4"> </script> 
 <script type="text/javascript" src="tests.js?v=1"> </script> 
 
 	<table class="outer">
@@ -107,6 +107,7 @@
 				      <li><div>Z340 Untransposed</div></li>
 				      <li><div>Z340 Plaintext</div></li>
 				      <li><div>Z340 Plaintext Untransposed</div></li>
+				      <li><div>Z340 Plaintext Untransposed, fixed spelling</div></li>
 				      <li><div>Z13</div></li>
 				      <li><div>Z32</div></li>
 				    </ul>
@@ -341,8 +342,9 @@ $( "#menu" ).menu({
 		else if (item == "Z340 Untransposed") switchCipher(3);
 		else if (item == "Z340 Plaintext") switchCipher(4);
 		else if (item == "Z340 Plaintext Untransposed") switchCipher(5);
-		else if (item == "Z13") switchCipher(6);
-		else if (item == "Z32") switchCipher(7);
+		else if (item == "Z340 Plaintext Untransposed, fixed spelling") switchCipher(6);
+		else if (item == "Z13") switchCipher(7);
+		else if (item == "Z32") switchCipher(8);
 		
 		else if (item == "Edit cipher text") editCipher();
 		else if (item == "Copy cipher text") copyCipher();

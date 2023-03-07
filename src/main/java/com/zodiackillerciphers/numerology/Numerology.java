@@ -40,12 +40,22 @@ public class Numerology {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(gematriaSum("GAMEOFTHRONES", true));
-		System.out.println(gematriaSum("HARRYPOTTER", true));
-		System.out.println(gematriaSum("STARWARS", true));
-		System.out.println(gematriaSum("STARTREK", true));
+//		System.out.println(gematriaSum("GAMEOFTHRONES", true));
+//		System.out.println(gematriaSum("HARRYPOTTER", true));
+//		System.out.println(gematriaSum("STARWARS", true));
+//		System.out.println(gematriaSum("STARTREK", true));
+//		System.out.println(gematriaSum("KNOWLEDGE", true));
+//		System.out.println(gematriaSum("HARDWORK", true));
+//		System.out.println(gematriaSum("ATTITUDE", true));
+//		
+		WordFrequencies.init();
+//		for (String word : WordFrequencies.map.keySet()) {
+//			if (gematriaSum(word, false) == 100) {
+//				System.out.println(gematriaSum(word, true));
+//			}
+//		}
 		
-//		wordsForSum(58);
+		wordsForSum(58);
 //		wordsForSum(110);
 	}
 }

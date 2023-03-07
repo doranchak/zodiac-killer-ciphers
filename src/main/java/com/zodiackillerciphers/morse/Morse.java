@@ -23,11 +23,13 @@ import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.io.Text;
 import com.zodiackillerciphers.names.Census;
 import com.zodiackillerciphers.names.Name;
+import com.zodiackillerciphers.tests.LetterFrequencies;
 import com.zodiackillerciphers.tests.unicity.SubstitutionMutualEvolve;
 
 /** exploring ray grant's ideas */
 public class Morse {
 	public static Map<Character, String> morseTable;
+	public static Map<String, Character> morseDecodeTable;
 	static {
 		morseTable = new HashMap<Character, String>();
         morseTable.put('A',"01");
@@ -67,6 +69,11 @@ public class Morse {
         morseTable.put('8', "11100");
         morseTable.put('9', "11110");
         morseTable.put('0', "11111");
+        
+		morseDecodeTable = new HashMap<String, Character>();
+		for (Character key : morseTable.keySet()) {
+			morseDecodeTable.put(morseTable.get(key), key);
+		}
 	}
 
 	/* gareth penn's conversion of the 340 cipher to morse code (dots removed) */
@@ -492,7 +499,17 @@ public class Morse {
 	        }
 	    }
 	    return primeNumbers;
-	}	
+	}
+	
+	static float averageWeightedMorseLetterLength() {
+		float avg = 0;
+		for (int i=0; i<LetterFrequencies.alphabet.length(); i++) {
+			char ch = LetterFrequencies.alphabet.charAt(i);
+			float freq = LetterFrequencies.frequenciesEnglish[i];
+			avg += (freq*morseTable.get(ch).length());
+		}
+		return avg;
+	}
 	
 	public static void main(String[] args) {
 		//process("/Users/doranchak/projects/zodiac/zodiac-killer-ciphers/docs/dictionaries/words-300k.txt", "/Users/doranchak/projects/zodiac/zodiac-killer-ciphers/letters/1966-11-29-the-confession.txt");;
@@ -541,7 +558,8 @@ public class Morse {
 //			if (prime < 100) continue;
 //			findRayWords(prime);
 //		}
-		System.out.println(toMorse("ZODIAC",true,false));
-		System.out.println(toMorse("BOURBON",true,false));
+//		System.out.println(toMorse("ZODIAC",true,false));
+//		System.out.println(toMorse("BOURBON",true,false));
+		System.out.println(averageWeightedMorseLetterLength());
 	}
 }

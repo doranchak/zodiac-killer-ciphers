@@ -10,11 +10,14 @@ import java.util.Set;
 
 import org.apache.lucene.document.Document;
 
+import com.zodiackillerciphers.ciphers.Ciphers;
 import com.zodiackillerciphers.dictionary.WordFrequencies;
+import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.lucene.DictionaryIndexer;
 import com.zodiackillerciphers.lucene.LuceneService;
 import com.zodiackillerciphers.lucene.Results;
 import com.zodiackillerciphers.lucene.Scorer;
+import com.zodiackillerciphers.names.Census;
 
 /** fun with the My Name Is cipher (Z13) */
 public class MyNameIs {
@@ -5302,8 +5305,40 @@ public class MyNameIs {
 		//System.out.println(score + " " + name);
 		System.out.println(html);
 		
-		
-		
+	}
+	
+	/** process and score solutions from file.  test if they are valid solutions and if they are homophonic/non-homophonic */
+	public static void processSolutions(String file) {
+		WordFrequencies.init();
+		Census.init();
+		List<String> names = FileUtil.loadFrom(file);
+		for (String name : names) {
+			String[] parts = name.split(" ");
+			String line = name.toUpperCase().replaceAll(" ", "");
+			Map<Character, Character> decoderMap = Ciphers.decoderMapFor(null, Ciphers.Z13, line);
+			if (decoderMap == null) {
+				System.out.println("INVALID: " + name);
+				continue;
+			}
+			boolean isHomophonic = Ciphers.isHomophonic(decoderMap);
+			
+			float scoreName = 0f;
+			float scoreWords = 1.0f;
+			
+			for (String part : parts) {
+				if (part.length() < 2) continue;
+				part = part.toUpperCase();
+				// word score
+				int freq = WordFrequencies.freq(part);
+				if (freq > 0) 
+					scoreWords *= Math.log10(WordFrequencies.freq(part));
+				// name score
+				float freq2 = Census.frequency(part);
+				if (freq2 > 0) 
+					scoreName += freq2;
+			}
+			System.out.println(isHomophonic + "	" + scoreWords + "	" + scoreName + "	" + name);
+		}
 	}
 	
 	public static void testProcess() {
@@ -6210,8 +6245,9 @@ public class MyNameIs {
 		//bruteName();
 		//find13s();
 //		testProcess2();
-		System.out.println(fitSub(new StringBuffer("ALFREDENEUMAN")));
-		System.out.println(sameDist("ALFREDENEUMAN"));
+//		System.out.println(fitSub(new StringBuffer("ALFREDENEUMAN")));
+//		System.out.println(sameDist("ALFREDENEUMAN"));
+//		processSolutions("/Users/doranchak/projects/zodiac/github/zodiac-killer-ciphers/docs/z13-solutions.txt");
 	}
 	
 }

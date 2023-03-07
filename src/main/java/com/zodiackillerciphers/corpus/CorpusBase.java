@@ -34,6 +34,8 @@ public class CorpusBase {
 	static Set<String> seen = new HashSet<String>();
 	/* currently selected file */
 	public static String file;
+	/* entire file contents */
+	public static String contents;
 	/* tokens read from the file */
 	public static String[] tokens;
 	/* list of word n-grams */
@@ -140,7 +142,7 @@ public class CorpusBase {
 	}
 	// prepare the corpus
 	public static void initSources() {
-		fileList = FileUtil.loadFrom("/Volumes/Smeggabytes/projects/zodiac/docs/all-files.txt");
+		fileList = FileUtil.loadFrom("/Volumes/Share/projects/zodiac/Documents/Corpora/all-files.txt");
 		for (int i=fileList.size()-1; i>=0; i--) {
 			if (fileList.get(i).contains("filetypes[]=txt")) {
 				fileList.remove(i);
@@ -235,7 +237,7 @@ public class CorpusBase {
 				continue; // too big
 			}
 			Unzip.SHOW_INFO = CorpusBase.SHOW_INFO;
-			String contents = Unzip.read(f);
+			contents = Unzip.read(f);
 			tokens = FileUtil.tokenizeAndConvert(contents, KEEP_APOSTROPHE);
 			if (tokens.length < 3) {
 				continue;

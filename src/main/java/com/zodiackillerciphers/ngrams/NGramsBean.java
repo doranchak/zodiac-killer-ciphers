@@ -40,6 +40,8 @@ public class NGramsBean {
 	/** count of factors for all distances */
 	public Map<Integer, Integer> factorCounts;
 	
+	public boolean ignoreSpaces = true;
+	
 	/** NGram beans generated for the reference ciphers.
 	 * key is the cipher name.
 	 * val is another map, whose key is ngram size, and whose val is the ngramsbean describing ngrams of that size.
@@ -67,6 +69,10 @@ public class NGramsBean {
 	
 	
 	public NGramsBean(int n, String s) {
+		this(n, s, true);
+	}
+	public NGramsBean(int n, String s, boolean ignoreSpaces) {
+		this.ignoreSpaces = ignoreSpaces;
 		this.n = n;
 		this.str = s;
 		
@@ -81,7 +87,7 @@ public class NGramsBean {
 		
 		for (int i=0; i<s.length()-n+1; i++) {
 			String ngram = s.substring(i,i+n);
-			if (ngram.contains(" ")) continue; // ignore spaces
+			if (ignoreSpaces && ngram.contains(" ")) continue; // ignore spaces
 			//if (TrigramUtils.ignore(ngram)) continue;
 			Integer val = counts.get(ngram);
 			if (val == null) val = 0;
@@ -634,6 +640,14 @@ public class NGramsBean {
 		factorCounts.put(factor,  val);
 	}
 	
+	/** email subject: Normality assumptions in Z340 histogram result */
+	public static void testRichardBean() {
+		System.out.println(Ciphers.Z340);
+		String cipher = Periods.rewrite3(Ciphers.Z340, 19);
+		System.out.println(cipher);
+		NGramsBean ng = new NGramsBean(2, cipher);
+		ng.dump();
+	}
 	public static void main(String[] args) {
 		//String cipher = "T41M4W189O951XS234E12A14V9E27E24X9X2NTWOO2XT91J2H2R32UXAXE89NRY151E389?5H6D7UA4IOR1V5A10EI6BE3PSV8WC7FJ4J3F12YF9D4Z10GT5K10IPXDW7L3KNNQ11QTWA5TR1012R11M5B11HBE8GLJYSY2UXC6TZ3GN4MOS7IC1H2?498PHIT6TI9TOLK5R5SO3FHT2W95T93PUF429AST245EY851378YO?C5O1M7B9A8?71U3I8P3X8NLXKOZM9I26SWYPJCNI8296HXIT2CP9LHA6ES4RY2M578S62?46MLJPZIW77O33YXVEU6PONN1TRT6K2SQW499O17RSY47198V787412?M2N8LP4321TK23RD3E532A2QW83HH3R5SA19OI637611SR4U?923PJI3S6WXK7OMV9Y7U1NG4DE2CHQ5LRT54AHHPE734582W1E6?7S12O84P8HEC9K2GDBI2NLN6USQ9TJIFT5HMKY7TR1O66NY32795A?9S6P77SO2K5X3I8EIS352F4IT1RHLDS6Q82E31TARVY4961S5E2?4TY4I3W9ORPY724JE2O2N5F7QT8HXJE329OZE57RNY3M8916ZU15?26DCB9JI2ZXKRQ38VE79YWSOPM78HNKNG32ALEHEF5SY4T6361V41E829?3TRP9HGFPZI2ILJ1XKVU8IED5T4N1OSQOWKI9CYW7NE25AML46RVY58261?1J167OKP2OLB1NK4EQWFJI7J9N6O9T3H546LLE92VY82433?4J9W844L3PQIXJ29ZK72I35ZN8O663H6R1AWHQE198575SE4?15P67W8K67IF2WSQ778I2Q7HJZXKGRJ3MTY2942SE59SN2?M16#SP6O@E7SK2I4QFE!#YPN*XZVNE7NE9SXQW95$7ASY3MAI5Y83E44N827&J?46PUI4ZK@O8DX$THW6389L8O&JFN5QSHIES78#2E7W4RVY3912SN595@$91#?834XJ8QK6U74N5PYQ5XGHMWTJNR29AFH16XRRY92656SE4?44PXI59QKWKZ8KI3Y8NZ9BVQ6YBJ7XI53AJIWE96SY1524SP4?M2S2P37O&8Q#WV@J63#23O2T&6T183A@H15149458SE5?";
 		//String cipher = "H+M8|CV@KN:^j*Xz6-BpzOUNyBSMF;+B<2_Rq#2pTfp+fZ+1*H#2b^k.#K(MVVW)+kdll%WO&D->#Z3P>LEB+*5k.LpclddG+4y7t-cYAyp+l2_cFd9^%OF7G)8KjROLKJ5J+J|<z2G++PYLR/<U^D(+4(zpOGp+2|R(UVFFz9Ucy5C^W(c29^4OFT-+zF*K<SBKlXz2PYAKy.LWBOTB|TC7zp+8R)WkYM(++kN|TB5-|Dt*5cZG>/JNbVM)+l)2E.B)<Sf9pl/C6N:(+H*;G1BCOO|OB35c_8MFc+ztZb&RcW<SB.;++dpD5ct+FHE5FV52M5||.UqLRR+5>f|p";
@@ -642,7 +656,8 @@ public class NGramsBean {
 		//String cipher = Ciphers.Z408;
 //		String cipher = "ABCDEFGHIJKLMNOGPQRSTUVBGJHWQBGLXPYZKNMCaSRObNcIBdeeSAfMghiDTZGjkBLQblCUEHPmOMNOGPQLBJnjMgCEiOoGSpKOqPKrUBdsMtYIHtruvVMIJXDZXwxHyCGnMmCeByYQeeSuBxUJtHYCqMArXGmHCaMJUDJnOBPzQLM0CGmHYdASsrHCBiJGMdPDzSNr1OMuHovCaDmJNvbSzTwxMWJIgPa";
 //		cipher = "KBS<K*FzKFc_2l+pJ*H+(:N6FByNUOzpB)TFO4^92yAYc-t7yN;lp9fS<O6zX*j^:pd-^C5ycU4+Gddlc+HC/E2#l+-@VC|8MBE+(W4+RR-L.k5*+(R>)B.NJ/zKzFFVU#>Mc|f>|5ldL>P3ZOpD|)MVbtU<92+pG%lHFpqU.|VM(D&OWD^Nk+GZc5*+G|4+(WVpd+L5VF5E2#k+)YPkW)R-4BT|+5(RL.kS<Wc2tc4D^bpK#<|z7CT|+(MYJ+J/z*1Ztz+c+;.B+Zf+HKLOBWL.y8+pORjK8fT8_c13B+&bp2#qR_GAYP6zXlBT7FO%^922|OOCB1GRM<B+;FMS";
-		String cipher = Ciphers.Z340_SOLUTION_UNTRANSPOSED;
+		//String cipher = Ciphers.Z340_SOLUTION_UNTRANSPOSED;
+		String cipher = "H+M8|CV@KEB+*5k.LdR(UVFFz9<>#Z3P>L(MpOGp+2|G+l%WO&D#2b^D(+4(5J+VW)+kp+fZPYLR/8KjRk.#K_Rq#2|<z29^%OF1*HSMF;+BLKJp+l2_cTfBpzOUNyG)y7t-cYA2N:^j*Xz6dpclddG+4-RR+4Ef|pz/JNb>M)+l5||.VqL+Ut*5cUGR)VE5FVZ2cW+|TB45|TC^D4ct-c+zJYM(+y.LW+B.;+B31cOp+8lXz6Ppb&RG+BCOTBzF1K<SMF6N*(+HK29^:OFTO<Sf4pl/Ucy59^W(+l#2C.B)7<FBy-dkF|W<7t_BOYB*-CM>cHD8OZzSkpNA|K;+";
 		int nr = 1; int i=2;
 		while (nr > 0) {
 			NGramsBean bean = new NGramsBean(i, cipher);
@@ -684,6 +699,8 @@ j			System.out.println(bean);
 				prev = curr;
 			}
 		}*/
+		
+		//testRichardBean();
 	}
 	
 }

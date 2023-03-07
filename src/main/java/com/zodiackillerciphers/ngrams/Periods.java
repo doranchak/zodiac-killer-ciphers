@@ -876,9 +876,60 @@ public class Periods {
 		for (int pos : pivot2)
 			System.out.println("darkenpos2(" + mapPositionToZ340.get(pos) + ")");
 	}
+	public static void testZ340Sections1and2() {
+		String section1 = 
+		"IRONCAOOIIERGRTML" +
+		"ECHETTATNWNNIAABW" +
+		"EITEOHSRTWTWGTAIS" +
+		"DCCLOAPAOYCAHHOAM" +
+		"BNOHALPLEVFIHSEIU" +
+		"CPOOFAASALYIFNMNT" +
+		"TVHAUTTMSERTONAGE" +
+		"TTMSBPTAHBENAHUGN" +
+		"LIOHEHROMFEEIDDEA";
+		String section2 = 
+		"SAASOHOSHACLIFEIS" +
+		"SHOUVLRENNECEROAA" +
+		"MIEAOSEAVREONHSEF" +
+		"ADNDITHEEVFEETTPO" +
+		"ATFEOBVMEENEOELHH" +
+		"IERRATENYRNOSRVSH" +
+		"EENYAEATACONBOUTM" +
+		"OERHGRDYIHFAWEEWG" +
+		"HHWWYAWEIADIRUTWC";
+		System.out.println(Periods.rewrite3(section1, 19));
+		System.out.println(Periods.rewrite3(section2, 19));
+
+	}
+	
+	public static void dumpZ340MatrixFormatted() {
+//		for (int[] row : transpositionMatrixZ340Solution()) {
+//			for (int col : row) {
+//				System.out.print(col + " ");
+//			}
+//			System.out.println();
+//		}
+		
+		System.out.println("From Z340 to readable");
+		for (int row=0; row<20; row++) {
+			for (int col=0; col<17; col++) {
+				System.out.print(String.format("%03d", mapPositionFromZ340.get(row*17+col)) + " ");
+			}
+			System.out.println();
+		}
+		System.out.println("From readable to Z340");
+		for (int row=0; row<20; row++) {
+			for (int col=0; col<17; col++) {
+				System.out.print(String.format("%03d", mapPositionToZ340.get(row*17+col)) + " ");
+			}
+			System.out.println();
+		}
+		
+	}
 	
 	public static void main(String[] args) {
-		translatePivots();
+		dumpZ340MatrixFormatted();
+//		translatePivots();
 //		transposeMergeTest();
 		//testEquivalancies();
 		//jarlveMergeTest();
@@ -886,9 +937,9 @@ public class Periods {
 		//String cipher = "+A|d4SNp(+EHp_z>||7|(RB4S+HfN6OO_pRlcpV&c4clTzVccWFG^4+K+BB+yJB+6PtLcVcCKC)RF^)F3H*EfO#+-B>FLCkV|zT4p++|;#8(bzB+Ep9||22<F>ZK5OyG.zO2F+J+;Bt&OKU*)CWD+ZR+/+-*RSlFM|9T#bGNt<Oj#G9zV8Mc1RUMzpBW<+MFk/%52cT+K6fd2_^-yMRkt)M+2Y/.W+.X(5*.5.+85:)^X42((B|PY18^p3d%lYK>pqzl<yfN+O.FkMD;FZ:-ljD(ABC*TYWZ#9L<NH75WVUOb5LBqDGPS<cRL+l2Jz2K^1pL*-+BypUOkdJdUG7@";
 //		String re = "<p;c)K3;MWN<G2F+O+LBFlcypZU+4+CVYEkMUS#R+2KF8pz5Y|-GG+1+Y++2+;LM:O^|<++F6JS+4F+|H9p-jkJpRcDcFc)NtLVGKTL2B2J%5dM)HEHlkcjp_>/&U*lZO9D|N4:>2y9bk<ROp.OTfcBHBN>lWK7--q*|8P1YJF8z^4OM/tRCW.V.y+|Vbp<p4KT@ZGy(y|++2+XCOKDdL)F*EVB6Rf&f|/(UOlB*W7zd-(Mzl+kRF+#(Bz7c^_#*2dAMz|PScBd5LBBRU5^.^.q+Z#*^BCC6++RXpO>pWT35b|W9SDfG1(5(4%z_P.8TcBKl#Nz2FA)zt(5V+tO<";
 //		String re = Ciphers.cipher[0].cipher;
-//		re = rewrite3(re, 19);
+//		re = rewrite3(re, 19, true);
 //		System.out.println(re);
-//		test(Ciphers.Z408, false);
+		//test(Ciphers.Z340, false);
 //		test("HRp^P|LGdE>lVk1T2N+(ODY<K)pB#%W.*fB:MUG(LzJyc+ZW)#HSp^8Vp+R2p7l*3O+K_Mzj|F+4/9+td5P&kpRFO*CF2(8^l-dk>D#+q;UXVz|5K%2cG.L(2f#+Nz@9GJjO_Y+LdMbZ2By6K<++RFcA4-lV^+p<B-zU+JO7FyUR5EDBbMO+/t|YpTK2cR|54.&F<lJ*TM+Bz9y+|Fc;R6S#N5B(8lF^54.Vt+GNf2bc4+yX*4C>U5+B1:9EVZ-|.zKO^fq2c3B(p.MGRTL6<FW|Lc+1C+lB)+)CWPST(p+WzcOH/)|kW7BYB-cFd<t_O*C>DNkzOAK+MHpSZ8|;", false);
 //		System.out.println(new NGramsBean(2, re).numRepeats());
 //		new NGramsBean(2, re).dump();
@@ -999,6 +1050,7 @@ public class Periods {
 //		System.out.println(rewrite3undo(rewrite3(Ciphers.Z408, 19),19));
 //		System.out.println(rewrite3undo(Ciphers.Z408, 19));
 //		testSamBlakeCipher();
-		test(Ciphers.Z340, false);
+//		test(Ciphers.Z340, false);
+//		testZ340Sections1and2();
 	}
 }

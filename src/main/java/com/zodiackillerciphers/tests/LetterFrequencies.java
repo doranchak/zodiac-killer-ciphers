@@ -182,6 +182,19 @@ public class LetterFrequencies {
 		System.out.println(sum);
 	}
 	
+	/** compute sum of letter frequencies for the given text. */
+	public static float frequencySum(String text) {
+		float sum = 0;
+		text = text.toUpperCase();
+		for (int i = 0; i < text.length(); i++) {
+			char ch = text.charAt(i);
+			if (ch < 65 || ch > 90)
+				throw new IllegalArgumentException("Bad character [" + ch + "] in string [" + text + "]");
+			sum += frequenciesEnglish[ch - 65];
+		}
+		return sum;
+	}	
+	
 	public static void main(String[] args) {
 //		testEntropy();
 		
@@ -200,7 +213,10 @@ public class LetterFrequencies {
 //			System.out.println(randomWord(18));
 		
 //		for (int i=1; i<5; i++) System.out.println(computeIOC(i));
-		
+		System.out.println(frequencySum("cadet"));
+		System.out.println(frequencySum("bings"));
+		System.out.println(frequencySum("flory"));
+		System.out.println(frequencySum("whump"));
 		
 	}
 }

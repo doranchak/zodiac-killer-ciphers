@@ -3,7 +3,7 @@ package com.zodiackillerciphers.corpus.symposium2019.types;
 import java.util.Arrays;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
-import com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition;
 import com.zodiackillerciphers.corpus.symposium2019.CipherBase;
 
 public class Columnar extends CipherBase {
@@ -19,12 +19,16 @@ public class Columnar extends CipherBase {
 			key = ColumnarTransposition.randomKeyWithLength(KEY_LENGTH_OVERRIDE);
 			
 //		say(Arrays.toString(key));
-		StringBuilder col = ColumnarTransposition.encode(new StringBuilder(plaintext), key);
-		return col.toString();
+		// TODO: this was broken due to method change:
+		// StringBuilder col = ColumnarTransposition.encode(new StringBuilder(plaintext), key);
+//		return col.toString();
+		return "";
 	}
 	
 	public static String untranspose(String cipher, int[] key) {
-		return ColumnarTransposition.decode(new StringBuilder(cipher), key, false).toString();
+		// TODO: this was broken due to method change:
+        // return ColumnarTransposition.decode(new StringBuilder(cipher), key, false).toString();
+		return "";
 	}
 	public static void test() {
 		String pt = Ciphers.Z408_SOLUTION.substring(0, 340);

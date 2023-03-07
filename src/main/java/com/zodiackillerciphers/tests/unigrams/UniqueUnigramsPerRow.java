@@ -104,8 +104,29 @@ public class UniqueUnigramsPerRow {
 		}
 		stats.output();
 	}
-
-	public static void main(String[] args) {
+	
+	/**
+	 * calculate sum of repeating symbols per row (for example, if symbol A occurs 3
+	 * times, then there are 2 repeats)
+	 */
+	public static int repeatsPerRow(String cipher, int width) {
+		int reps = 0;
+		int height = cipher.length()/width;
+		for (int row=0; row<height; row++) {
+			Set<Character> seen = new HashSet<Character>(); 
+			for (int col=0; col<width; col++) {
+				char c = cipher.charAt(row*width + col);
+				if (seen.contains(c)) {
+					reps++;
+					continue;
+				}
+				seen.add(c);
+			}
+		}
+		return reps;
+	}
+	
+	public static void test() {
 		//testCount(Ciphers.Z340, 10);
 
 //		for (int width=2; width<=204; width++) {
@@ -149,6 +170,27 @@ public class UniqueUnigramsPerRow {
 			nonRepeatingLinesShuffle("HNBS_p#(d-U2zly|R+|>Epyp985G<z+<6GBcc+FMR+:pMR+2MlRc9FX.T)kD>Bc7+^KJ+U/lSN13+WdHp(M^zFqfbV5Ry^*zLCWNl#+ltl%j++tJ#f:B1z<p^OU8jO;#Z^E|+54K6W7kV%Z*d-2ORJ|*N29(CctSPDGV|*U+2+D5|4CO<PBzkWW35dc_FOYT5bEp+O_Z|Y(pFCXNBpB4F.>^FSYO1.)OPkGYc7pMBcV.lHO8L<L++FVzy<b.cVUfWTBAT*#+&>.+AFT+(4ZMB/*|GKzR42z@6BM&;t5q|(-K2fHKkDLL4yKB8+-G))C;d)J2/(|9K-OFR++2Lpc+", width, 1000000);
 		}
 
+	}
+	
+	public static void shuffleRepeatsPerRow(String cipher, int width, int shuffles) {
+		StatsWrapper stats = new StatsWrapper();
+		stats.actual = repeatsPerRow(cipher, width);
+		for (int i=0; i<shuffles; i++) {
+			cipher = CipherTransformations.shuffle(cipher);
+			stats.addValue(repeatsPerRow(cipher, width));
+		}
+		System.out.println(stats.header());
+		stats.output();
+	}
+	
+	public static void testRepeatsPerRow() {
+		System.out.println(repeatsPerRow(Ciphers.Z408, 17));
+		System.out.println(repeatsPerRow(Ciphers.Z340, 17));
+	}
+
+	public static void main(String[] args) {
+		//testRepeatsPerRow();
+		shuffleRepeatsPerRow(Ciphers.Z408, 17, 1000000);
 	}
 
 }

@@ -12,11 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
-import com.zodiackillerciphers.ngrams.Periods;
-import com.zodiackillerciphers.pivots.Pivot;
-import com.zodiackillerciphers.pivots.PivotUtils;
 import com.zodiackillerciphers.rest.beans.Cipher;
-import com.zodiackillerciphers.transform.CipherTransformations;
+
+
 
 /** services related to retrieving ciphers */
 @RestController
@@ -25,7 +23,13 @@ public class CipherService {
 	/** return cipher with the given name */
 	@GetMapping("/cipher")
 	public Cipher cipher(@RequestParam(value = "name", defaultValue = "z340") String cipherName) {
-		return new Cipher(Ciphers.Z340, "z340", "Zodiac's 340-character cipher", 17);
+		if (cipherName.equals("z340"))
+			return new Cipher(Ciphers.Z340, "z340", "Zodiac's 340-character cipher", 17);
+		else if (cipherName.equals("z340t"))
+			return new Cipher(Ciphers.Z340T, "z340", "Zodiac's 340-character cipher", 17);
+		else if (cipherName.equals("z408"))
+			return new Cipher(Ciphers.Z408, "z408", "Zodiac's 408-character cipher", 17);
+		return null;
 	};
 
 	//- convert z340-like transposition back into normal order

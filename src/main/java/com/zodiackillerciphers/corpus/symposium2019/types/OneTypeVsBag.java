@@ -4,7 +4,6 @@ import java.lang.reflect.Constructor;
 import java.util.Random;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
-import com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition;
 import com.zodiackillerciphers.corpus.symposium2019.CipherBase;
 import com.zodiackillerciphers.corpus.symposium2019.ThreadedGenerator;
 
@@ -52,9 +51,9 @@ public class OneTypeVsBag extends CipherBase {
 		return null;
 	}
 	
-	public static String untranspose(String cipher, int[] key) {
-		return ColumnarTransposition.decode(new StringBuilder(cipher), key, false).toString();
-	}
+//	public static String untranspose(String cipher, int[] key) {
+//		return ColumnarTransposition.decode(new StringBuilder(cipher), key, false).toString();
+//	}
 	public static void test() {
 		String pt = Ciphers.Z408_SOLUTION.substring(0, 340);
 		for (int i=0;i<100; i++) {

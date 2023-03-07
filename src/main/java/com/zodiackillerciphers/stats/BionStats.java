@@ -87,7 +87,10 @@ public class BionStats {
 		return mean;
 	}
 
-	/** digraphic index of coincidence for only the digraphs starting on even(odd)-numbered positions (even: 0, 2, 4, etc) (odd: 1, 3, 5, etc) */
+	/**
+	 * digraphic index of coincidence for only the digraphs starting on
+	 * even(odd)-numbered positions (even: 0, 2, 4, etc) (odd: 1, 3, 5, etc)
+	 */
 	public static double EDI(String s, boolean odd) {
 		
 		Map<String, Long> map = new HashMap<String, Long>();

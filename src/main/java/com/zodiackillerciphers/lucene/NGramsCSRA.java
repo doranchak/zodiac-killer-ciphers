@@ -2,6 +2,7 @@ package com.zodiackillerciphers.lucene;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,6 +16,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
+
+import com.zodiackillerciphers.io.FileUtil;
 
 //import org.apache.log4j.Logger;
 
@@ -68,6 +72,12 @@ public class NGramsCSRA {
 	/** if true, use the "unrolled" ngram maps directly instead of the nested maps */
 	public static boolean useCachedMaps = true;
 	public static Map<String, Double>[] cachedMaps;
+	
+	/** init with defaults */
+	public static void init() {
+		NGramsCSRA.OPTIONAL_PREFIX = "/Users/doranchak/projects/zodiac/zkdecrypto/zkdecrypto/language/";
+		NGramsCSRA.init("EN");
+	}
 	
 	public static void init(String langID) {
 		init(langID, false, false);
@@ -147,6 +157,7 @@ public class NGramsCSRA {
 					classpath = false;
 				}
 			}
+			System.out.println("Loading ngram stats from " + fullPath);
 			input = classpath ? new BufferedReader(new InputStreamReader(is)) : new BufferedReader(new FileReader(new File(fullPath)));
 			String line = null; // not declared within while loop
 			int sum = 0;
@@ -271,6 +282,7 @@ public class NGramsCSRA {
 		if (!useCachedMaps) {
 			if (!has(langID, withSpaces)) {
 				// we don't have ngram stats for this language with spaces, so revert to ngram stats without spaces.
+				System.out.println("WARN: we don't have ngram stats for this language with spaces, so revert to ngram stats without spaces.");
 				withSpaces = false;
 				sb = new StringBuffer(sb.toString().replaceAll(" ", ""));
 			}
@@ -383,15 +395,89 @@ public class NGramsCSRA {
 			}
 		}
 	}
+	/** score all lines in the given file */
+	public static void scoreFile(String path, boolean includeSpaces) {
+		String TAB = "	";
+		NGramsCSRA.OPTIONAL_PREFIX = "/Users/doranchak/projects/zodiac/zkdecrypto/zkdecrypto/language/";
+		init("EN");
+		List<String> list = FileUtil.loadFrom(path);
+		for (String line : list) {
+			float score = NGramsCSRA.zkscore(new StringBuffer(line), "EN", includeSpaces);
+			System.out.println(score + TAB + line);
+		}
+	}
+	
+	/** score all lines in the given file.  file is huge, so continually track the top N results using a heap. */
+	public static void scoreFileTopN(String path, boolean includeSpaces, int N) {
+		String TAB = "	";
+		NGramsCSRA.OPTIONAL_PREFIX = "/Users/doranchak/projects/zodiac/zkdecrypto/zkdecrypto/language/";
+		init("EN");
+		
+		TreeSet<ScoreBean> treeSet = new TreeSet<ScoreBean>();
+		
+		BufferedReader input = null;
+		int counter = 0;
+		try {
+			input = new BufferedReader(
+			           new InputStreamReader(new FileInputStream(path), "UTF-8"));
+			
+			String line = null; // not declared within while loop
+			while ((line = input.readLine()) != null) {
+				counter++;
+				float score = NGramsCSRA.zkscore(new StringBuffer(line), "EN", includeSpaces);
+				ScoreBean bean = new ScoreBean(score, line);
+				boolean print = false;
+				// cases:
+				// 1) heap still has room
+				if (treeSet.size() < N) {
+					treeSet.add(bean);
+					print = true;
+				}
+				// 2) heap full but already has this entry
+				if (treeSet.contains(bean)) 
+					continue;
+				// 3) heap full but new bean is better than heap's worst bean
+				ScoreBean worstBean = treeSet.first();
+				if (worstBean.score < bean.score) {
+					treeSet.remove(worstBean);
+					treeSet.add(bean);
+					print = true;
+				}
+				
+				if (print) {
+					System.out.println(bean);
+				}
+			}
+		} catch (FileNotFoundException ex) {
+			ex.printStackTrace();
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} 
+		
+		try {
+			input.close();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		System.out.println("======== HEAP: ");
+		for (ScoreBean bean : treeSet) {
+			System.out.println(bean);
+		}
+		
+	}
+	
 	
 	public static void main(String[] args) {
-//		NGramsCSRA.OPTIONAL_PREFIX = "/Users/doranchak/projects/zodiac/zodiac-killer-ciphers/tools/zkdecrypto/zkdecrypto/language/";
-//		init("EN");
-//		System.out.println(zkscore(new StringBuffer("THISISATEST"), "EN", false));
+		NGramsCSRA.OPTIONAL_PREFIX = "/Users/doranchak/projects/zodiac/zkdecrypto/zkdecrypto/language/";
+		init("EN");
+		System.out.println(zkscore(new StringBuffer("HE LIES STILL"), "EN", true));
 //		System.out.println(zkscore(new StringBuffer("IOQUWEIOUIO"), "EN", false));
-		lczCipher();
+		//scoreFile("/Users/doranchak/projects/ciphers/W168/sam-plaintexts-combined.txt", true);
+//		scoreFile("/Users/doranchak/projects/ciphers/W168/test.txt", true);
+//		lczCipher();
 //		URL url = NGrams.class.getClassLoader().getResource(".");
 //		LOGGER.debug(url.toString());
-
+//		scoreFileTopN("/Users/doranchak/projects/ciphers/W168/more_enumerations/combined-for-ngram-scores.txt", true, 1000);
 	}
 }

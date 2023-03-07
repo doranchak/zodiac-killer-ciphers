@@ -3,6 +3,8 @@ package com.zodiackillerciphers.ciphers.w168;
 import java.util.Arrays;
 import java.util.TreeSet;
 
+import com.zodiackillerciphers.ciphers.algorithms.columnar.State;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.Variant;
 import com.zodiackillerciphers.lucene.NGramsCSRA;
 import com.zodiackillerciphers.util.PermutationState;
 
@@ -12,6 +14,7 @@ public class StateColumnarBrute implements PermutationState {
 	private int[] elements;
 	private StringBuilder ciphertext;
 	private StringBuilder plaintext;
+	private Variant variant;
 	private static String TAB = "	";
 	private static int N = 4;
 	
@@ -21,7 +24,8 @@ public class StateColumnarBrute implements PermutationState {
 	int maxHeapSize = 10;
 	
 
-	public StateColumnarBrute(int[] elements, StringBuilder ciphertext, StringBuilder plaintext, boolean encode) {
+	public StateColumnarBrute(Variant variant, int[] elements, StringBuilder ciphertext, StringBuilder plaintext, boolean encode) {
+		this.variant = variant;
 		this.encode = encode;
 		this.elements = elements;
 		this.ciphertext = ciphertext;
@@ -32,13 +36,14 @@ public class StateColumnarBrute implements PermutationState {
 	}
 
 	public StringBuilder decode() {
-		StringBuilder pt = com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition.decode(ciphertext, elements,
-				false);
+		StringBuilder pt = com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition
+				.decode(new State(variant, null, ciphertext, elements, false));
 		return pt;
 	}
 
 	public StringBuilder encode() {
-		StringBuilder ct = com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition.encode(plaintext, elements);
+		StringBuilder ct = com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition
+				.encode(new State(variant, plaintext, null, elements));
 		return ct;
 	}
 
@@ -72,7 +77,7 @@ public class StateColumnarBrute implements PermutationState {
 		}
 		
 		//if (print) System.out.println(scorePt + TAB + treeSet + TAB + Arrays.toString(elements) + TAB + pt);
-		if (print) System.out.println(scorePt + TAB + Arrays.toString(elements) + TAB + text);
+		if (print) System.out.println(scorePt + TAB + variant + TAB + Arrays.toString(elements) + TAB + text);
 	}
 
 	@Override

@@ -19,6 +19,7 @@ import java.util.Set;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
+import com.zodiackillerciphers.ciphers.crimo.CrimoCipher;
 import com.zodiackillerciphers.cosine.CosineSimilarity;
 import com.zodiackillerciphers.cosine.CosineSimilarityResult;
 import com.zodiackillerciphers.io.FileUtil;
@@ -1350,7 +1351,7 @@ public class HomophonesNew extends Thread {
 		//testShuffleStats(2, Ciphers.cipher[0].cipher, 10000);
 		//testUnbrokenCycle("HER>pl^VPk|1LTG2dNp+B(#O%DWY.<*Kf)2<clRJ|*5T4M.+&BFz69Sy#+N|5FBc(;8RlGFN^f524b.cV4t++|FkdW<7tB_YOB*-Cc>MDHNpkSzZO8A|K;+(G2Jfj#O+_NYz+@L9d<M+b+ZR2FBcyA64K-zlUV+^J+Op7<FBy-U+R/5tE|DYBpbTMKOBy:cM+UZGW()L#zHJSpp7^l8*V3pO++RK2_9M+ztjd|5FP+&4k/yBX1*:49CE>VUZ5-+|c.3zBK(Op^.fMqG2RcT+L16C<+FlWB|)L++)WCzWcPOSHT/()pp8R^FlO-*dCkF>2D(#5+Kq%;2UcXGV.zL|");
 		//testUnbrokenCycle(Ciphers.Z340);
-		test(2, Ciphers.Z340, false);
+//		test(3, CrimoCipher.cipherCrimo, false);
 		//test(3, Ciphers.Z340, false);
 //		System.out.println(perfectCycleScoreFor(2, Ciphers.Z408, 3, false, 3));
 		//String cipher = "ER>pl^VPk|1TG2dNp+(#%DW.<*Kf)y:cMUZGW)L#zHSp7^l*3O+K2_9M+ztjd|5P+4k/8R^lO-*dkF>D(#5+q%;2UcXV.zL|(2Jfj#_NYz+@L9d<M+bZR2FBc64K-zlUV^J+Op7<FBy-U+R/tE|DYBpbTMKO2<clRJ*TM.+&Bz69Sy#+N|FBc;8RlGFN^f524b.cV4t+BX1*:9CE>VZ5-+|3zBK(O^fMG2RT+L16C<FlWB|)+WCzcPSHT/()pFdW<7t_YOB*-C>MDHpkSzZO8AK;+";
@@ -1365,6 +1366,7 @@ public class HomophonesNew extends Thread {
 		//shuffleCycleTest(Ciphers.Z340, "lM", 1000000);
 		//shuffleCycleTest(Ciphers.Z408, 1000000);
 		
+		System.out.println(perfectCycleScoreFor(2, CrimoCipher.cipherCrimo9, 3, false));
 		
 	}
 

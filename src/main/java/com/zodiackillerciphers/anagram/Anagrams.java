@@ -193,6 +193,7 @@ public class Anagrams {
 		for (String word : WordFrequencies.map.keySet()) {
 			if (word.equals(str)) continue;
 			if (word.length() < minLength) continue;
+			if (word.length() > str.length()) continue;
 			if (anagram(word.toUpperCase(), str)) {
 				//System.out.println(word.length() + ", " + WordFrequencies.freq(word) + ", " + word);
 				list.add(word);
@@ -354,6 +355,28 @@ public class Anagrams {
 		
 	}
 	
+	public static void testAnagrams() {
+		String original = "FINDLABORDAY";
+		String[] anagrams = new String[] {
+				"AND FRAIL BODY", "ROB A LADY FIND", "FRIDAY A BLOND", "BIND FOR A LADY", "A BLONDD FAIRY",
+				"AND BY FLORIDA", "FAIRLY BAD DON", "FIND A BODY LAR", "BALD ON FRIDAY", "AND FRY DIABLO",
+				"BLIND FOR A DAY", "BAD FOR LADY IN", "IF LAND BY ROAD", "BRAIN OF LADY D"
+		};
+		for (String anagram : anagrams) {
+			System.out.println(anagram(anagram.replaceAll(" ", ""), original) + ": " + anagram);
+		}
+		original = "FINDLABORDAYNORTWEST";
+		anagrams = new String[] { "TRY A BAD TORN SNOWFIELD", "BALD TONY A WORST FRIEND", "TORN DOWN FAR BY DETAILS",
+				"FIND TORSO TEN BADLY RAW", "RESTRAINT AND BLOOD FWY", "ONLY WANTED IT FOR DRABS",
+				"WAS A BLOOD RED TINT FNRY", "DRAFTY BLOODWATER INNS", "DRY BLOODWATER INFANTS",
+				"WANT FEDS TRY BLOOD RAIN", "OR TWO AND BRIEFLY STAND", "WORDS OF DANIEL T BRYANT",
+				"STANDARD OF LIBERTY NOW", "WAS TOLD BY A FRIEND TO RN", "WAS TOLD BY A TORN FRIEND",
+				"TWO LADY FRIENDS TO BARN", "LADY FRIENDS WANT TO ROB", "WONT BAND LAYERS OF DIRT" };
+		for (String anagram : anagrams) {
+			System.out.println(anagram(anagram.replaceAll(" ", ""), original) + ": " + anagram);
+		}
+	}
+	
 	public static void main(String[] args) {
 		//System.out.println(anagram("george bush", "he bugs gore"));
 		//lathersSearch();
@@ -372,13 +395,14 @@ public class Anagrams {
 //		for (String word : anagramsFor("HERLGUATAEHLRINL",4)) {
 //			System.out.println(word.length() + ", " + WordFrequencies.percentile(word) + ", " + word);
 //		}
-		anagramsFor("DEAROLDPOOPFACE", 5, 10); 
+//		anagramsFor("DEAROLDPOOPFACE", 5, 10);
+//		System.out.println(anagramsFor("LOSEMHTNIGGORSUAINAM", 9)); 
 		
 		//findWords("/Users/doranchak/projects/zodiac/words-from-wikipedia.txt", "TNNSGPADOSHITPICLTCE", 4);
 		
 		
 		//int[] diffs = differences("DTOSCHISATCLIPGPENN","TNNSGPADOSHITPICLTCE");
 		//System.out.println(diffs[0]+","+diffs[1]);
-		
+		testAnagrams();
 	}
 }

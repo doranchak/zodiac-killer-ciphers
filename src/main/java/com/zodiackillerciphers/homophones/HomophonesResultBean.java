@@ -279,4 +279,10 @@ public class HomophonesResultBean {
 	public void setShuffleProbability(float shuffleProbability) {
 		this.shuffleProbability = shuffleProbability;
 	}
+	public Set<Integer> getMatches() {
+		return matches;
+	}
+	public void setMatches(Set<Integer> matches) {
+		this.matches = matches;
+	}
 }

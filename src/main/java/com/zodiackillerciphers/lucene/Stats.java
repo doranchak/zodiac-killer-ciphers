@@ -1,6 +1,7 @@
 package com.zodiackillerciphers.lucene;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -140,6 +141,18 @@ public class Stats {
 		//System.out.println(sum+","+sb.length());
 		return ((double)sum)/((double)sb.length()*(sb.length()-1));
 	}
+	
+	// ioc based on passed frequencies
+	public static Double ioc(Collection<Integer> values) {
+		long sum = 0;
+		long length = 0;
+		for (Integer val : values) {
+			sum += val*(val-1);
+			length += val;
+		}
+		return ((double)sum)/((double)length*(length-1));
+	}
+	
 	public static float iocAsFloat(String s) {
 		long sum = 0;
 		/* map symbols to frequencies */
@@ -182,7 +195,7 @@ public class Stats {
 		return iocDiff(new StringBuffer(sb));
 	}
 	
-	/** compuate n-gram ioc */
+	/** compute n-gram ioc */
 	public static Double iocNgram(String s, int n) {
 		
 		Map<String, Long> map = new HashMap<String, Long>();
@@ -695,15 +708,21 @@ public class Stats {
 		test = new StringBuffer("abcdefghijklmnopqrstuvwxyzz");
 		System.out.println("chi2flat " + chi2Flat(test));*/
 
-		
-		//System.out.println(iocNgram(Ciphers.cipher[0].cipher, 2));
+//		int n = 2;
+//		System.out.println(iocNgram(Ciphers.Z408, n));
+//		System.out.println(iocNgram(Ciphers.Z408_SOLUTION, n));
+//		System.out.println(iocNgram(Ciphers.Z340, n));
+//		System.out.println(iocNgram(Ciphers.Z340T,n));
+//		System.out.println(iocNgram(Ciphers.Z340_SOLUTION_UNTRANSPOSED, n));
 		//System.out.println(iocDiff("THIS IS THE ZODIAC SPEAKING"));
 		
 		//System.out.println(iocSpread(Ciphers.cipher[0].cipher));
 		
 		//System.out.println(ioc("EVT+DKcWH^p2tPpOF52.2+@+F4Vp-tp2|.6N(F4t1E-z^21l+WTFt*Dz"));
 		//System.out.println(ioc(Ciphers.cipher[0].cipher.substring(0,170)));
-		//System.out.println(ioc(Ciphers.cipher[0].cipher.substring(170)));
+//		System.out.println(ioc("TAITEEEAETEXESLTIEEEEAIISEEEEEEEEEEEDENITEEEETEEEIETEESTEEIEHATSMITAEEIIFTEEEWEIEATEEIIETEEIREAITEEAEANSIEEEEAEEEAEEAIEETEEETNTIEUEETETEEEEETREIESNTEIEN6DETIEEITAENEIEEEEIEEAEEEAIEEEIEEEEEAITEEEANEEEIA6IIITTUECEEEEITIEEEE5EEENEAIEIIHSEETTETUEETESSITSHI4HSHIEEHEETNEDHAEUDIITIEEEESAEINENEEEIIITTSESINEEIIETEEIENESIIIETEEEITIIIEEEIIERTEEEEAMNIIEETEEEIIETUEEEEESEEESHDEREEEEEEINEEESEIIEEETTEIIEEESEEIININETIEEEEIEIAUEIIEEUEAESREIEEEAESSDEEEEI"));
+		System.out.println(ioc(Ciphers.Z340_SOLUTION_TRANSPOSED));
+		System.out.println(ioc(Ciphers.countMap(Ciphers.Z340_SOLUTION_TRANSPOSED).values()));
 //		iocWidthTest(Ciphers.cipher[0].cipher);
 //		iocWidthTestWithShuffles(Ciphers.Z340, 10000, 1, 204);
 //		System.out.println(chi2("THISISATESTOFTHEEMERGENCYBROADCASTSYSTEMILIKELAMPHELLOBRICK"));
@@ -728,7 +747,7 @@ public class Stats {
 		//testMultiplicity(Ciphers.Z408, 17); // 0.6617647
 //		testMultiplicity2(Ciphers.Z340, 17);
 //		testMultiplicity3("ABCDEFGHIJKLMNOGPQRSTUVBGJHWQBGLXPYZKNMCaSRObNcIBdeeSAfMghiDTZGjkBLQblCUEHPmOMNOGPQLBJnjMgCEiOoGSpKOqPKrUBdsMtYIHtruvVMIJXDZXwxHyCGnMmCeByYQeeSuBxUJtHYCqMArXGmHCaMJUDJnOBPzQLM0CGmHYdASsrHCBiJGMdPDzSNr1OMuHovCaDmJNvbSzTwxMWJIgPa", 0f, 0.35f);
-		System.out.println(ioc(Ciphers.Z340_SOLUTION_UNTRANSPOSED));
+//		System.out.println(ioc(Ciphers.Z340_SOLUTION_UNTRANSPOSED));
 	}
 
 }

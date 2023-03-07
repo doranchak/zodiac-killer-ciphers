@@ -10,7 +10,9 @@ import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
 import com.zodiackillerciphers.io.FileUtil;
+import com.zodiackillerciphers.lucene.Stats;
 import com.zodiackillerciphers.ngrams.NGramsBean;
+import com.zodiackillerciphers.ngrams.Periods;
 import com.zodiackillerciphers.stats.StatsWrapper;
 import com.zodiackillerciphers.transform.CipherTransformations;
 import com.zodiackillerciphers.transform.Transformation;
@@ -527,13 +529,88 @@ public class Ngrams {
 		StatsWrapper stats = new StatsWrapper();
 		stats.name = ""+repeats;
 		stats.actual = repeats;
+		// track the distribution of repeats
+		Map<Integer, Integer> counts = new HashMap<Integer, Integer>(); 
 		for (int i=0; i<shuffles; i++) {
 			if (i%10000 == 0) System.out.println(i+"...");
 			cipher = CipherTransformations.shuffle(cipher);
 			NGramsBean ng = new NGramsBean(n, cipher);
-			stats.addValue(ng.numRepeats());
+			int reps = ng.numRepeats();
+			stats.addValue(reps);
+			Integer val = counts.get(reps);
+			if (val == null) val = 0;
+			val++;
+			counts.put(reps, val);
 		}
 		stats.output();
+		System.out.println(counts);
+	}
+	
+	/** test given cipher for ngram ioc */
+	public static void shuffleNgramIoc(String cipher, int n, int shuffles) {
+		StatsWrapper stats = new StatsWrapper();
+		double ioc = Stats.iocNgram(cipher, n);
+		stats.name = n + "gram ioc";
+		stats.actual = ioc;
+		for (int i=0; i<shuffles; i++) {
+			if (i%10000 == 0) System.out.println(i+"...");
+			cipher = CipherTransformations.shuffle(cipher);
+			ioc = Stats.iocNgram(cipher, n);
+			stats.addValue(ioc);
+			
+		}
+		System.out.println(stats.header());
+		stats.output();
+	}
+	/** test given cipher for ngram ioc, max across all periods */
+	public static void shuffleNgramIoc2(String cipher, int n, int shuffles) {
+		StatsWrapper stats = new StatsWrapper();
+		double ioc = Stats.iocNgram(cipher, n);
+		stats.name = n + "gram ioc, all periods";
+		stats.actual = ioc;
+		for (int i=0; i<shuffles; i++) {
+			if (i%10000 == 0) System.out.println(i+"...");
+			cipher = CipherTransformations.shuffle(cipher);
+			
+			ioc = 0;
+			// look for max ioc across all periods
+			for (int p=1; p<=cipher.length(); p++) {
+				String re = Periods.rewrite3(cipher, p);
+				ioc = Math.max(ioc, Stats.iocNgram(re, n));
+			}
+			stats.addValue(ioc);
+			
+		}
+		System.out.println(StatsWrapper.header());
+		stats.output();
+	}
+	
+	/** test given cipher for arbitrary number of repeating ngrams, taking the max across all periods */
+	public static void shuffleNgrams2(String cipher, int n, int shuffles, int repeats) {
+		StatsWrapper stats = new StatsWrapper();
+		stats.name = ""+repeats;
+		stats.actual = repeats;
+		// track the distribution of repeats
+		Map<Integer, Integer> counts = new HashMap<Integer, Integer>(); 
+		for (int i=0; i<shuffles; i++) {
+			if (i%10000 == 0) System.out.println(i+"...");
+			cipher = CipherTransformations.shuffle(cipher);
+			
+			int max = 0;
+			for (int p=1; p<=cipher.length()/2; p++) {
+				String re = Periods.rewrite3(cipher, p);
+				NGramsBean ng = new NGramsBean(n, re);
+				max = Math.max(max, ng.numRepeats());
+			}
+			stats.addValue(max);
+			Integer val = counts.get(max);
+			if (val == null) val = 0;
+			val++;
+			counts.put(max, val);
+			
+		}
+		stats.output();
+		System.out.println(counts);
 	}
 
 	/** return the max number of occurrences in the same column */
@@ -636,7 +713,12 @@ public class Ngrams {
 	
 	public static void main(String[] args) {
 //		topHalfBottomHalfShuffle(Ciphers.Z340, 1000000, 3);
-//		shuffleNgrams(Ciphers.Z340, 2, 10000000, 44);
+		//shuffleNgrams(Ciphers.Z340, 2, 1000000, 37);
+//		shuffleNgrams2(Ciphers.Z340, 2, 1000000, 37);
+		for (int p=1; p<171; p++) {
+			System.out.println(p + " " + Stats.iocNgram(Periods.rewrite3(Ciphers.Z340, p), 2));
+		}
+		shuffleNgramIoc2(Periods.rewrite3(Ciphers.Z340, 19), 2, 1000000);
 //		testSameCol(CipherTransformations.shuffle(Ciphers.Z340));
 //		testSameCol(Ciphers.Z340);
 //		shuffleSameCol(Ciphers.Z408, 17, 1000000);
@@ -659,6 +741,6 @@ public class Ngrams {
 		 //bigramAffinityPhobia(Ciphers.Z408, 1000000);
 //		 trigramAffinityPhobia(Ciphers.Z340, 100000);
 //		// System.out.println(countNGram(Ciphers.Z408, "#B"));
-		testPellingJarlveBeale();
+//		testPellingJarlveBeale();
 	}
 }

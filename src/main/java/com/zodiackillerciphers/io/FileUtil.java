@@ -123,6 +123,9 @@ public class FileUtil {
 		return sb;
 	}
 	
+	public static List<String> loadFrom(File file) {
+		return loadFrom(file.getAbsolutePath());
+	}
 	public static List<String> loadFrom(String path) {
 		return loadFrom(path, 0);
 	}

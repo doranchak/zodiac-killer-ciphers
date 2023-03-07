@@ -358,6 +358,38 @@ public class Z408Last18CorpusScanner extends CorpusBase {
 		}
 	}
 	
+	/** If we let the last 18 end with "THEZODIAC", the rest of it fits this pattern: T_H____A_.  Find
+	 * all phrases that fit that pattern. */
+	public static void searchTheZodiac() {
+		WordFrequencies.init();
+		SubstitutionMutualEvolve.initSources();
+		CorpusBase.SHOW_INFO = false;
+		long samples = 0;
+		long hits = 0;
+		long sources = 0;
+		boolean go = true;
+		while (go) {
+			sources++;
+			go = !SubstitutionMutualEvolve.randomSource();
+			List<List<String>> ngrams = ngrams(9);
+			for (List<String> plaintext : ngrams) {
+				StringBuffer sbWithSpaces = flatten(plaintext, true);
+				StringBuffer sbWithoutSpaces = flatten(plaintext, false);
+				samples++;
+				char c1 = sbWithoutSpaces.charAt(0);
+				char c2 = sbWithoutSpaces.charAt(2);
+				char c3 = sbWithoutSpaces.charAt(7);
+				char c4 = sbWithoutSpaces.charAt(8);
+				if (c1 == c4 && c2 == 'H' && c3 == 'A') System.out.println(sbWithSpaces);
+			}
+		}
+		System.out.println("Sources: " + sources);
+		System.out.println("Samples: " + samples);
+		System.out.println("Hits: " + hits);
+		
+	}
+
+	
 	public static void main(String[] args) {
 //		System.out.println(Anagrams.anagram("EBEORIETEMETHHPITI", "BEEEEEHHIIIMOPRTTT", true));
 //		search2(3);
@@ -370,6 +402,7 @@ public class Z408Last18CorpusScanner extends CorpusBase {
 //		System.out.println(s2);
 //		System.out.println(EditDistance.LD(s1, s2));
 //		differences("TIMOTHIE E PHEIBERTE");
-		testDifferences();
+//		testDifferences();
+		searchTheZodiac();
 	}
 }

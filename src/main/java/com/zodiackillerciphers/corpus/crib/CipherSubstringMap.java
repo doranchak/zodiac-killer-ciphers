@@ -1,9 +1,7 @@
 package com.zodiackillerciphers.corpus.crib;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /** map positions to substrings. */
 public class CipherSubstringMap {

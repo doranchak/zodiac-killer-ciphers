@@ -1,5 +1,6 @@
 package com.zodiackillerciphers.rest.beans;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,6 +30,9 @@ public class Cipher {
 	// split up grid cipher into rows
 	String[] rows; 
 
+	// split up grid cipher into char array
+	String[][] arr; 
+	
 	/** simplest case: each character is a cipher unit.  no word delimiters. */
 	public Cipher(String ciphertextRaw, String name, String description, int width) {
 		this.ciphertextRaw = ciphertextRaw;
@@ -38,6 +42,7 @@ public class Cipher {
 		makeCipherUnits(); 
 		makeCipherStream();
 		makeCipherRows();
+		makeCipherArr();
 	}
 	
 	/** convert raw cipher into array of cipher units */
@@ -76,6 +81,27 @@ public class Cipher {
 		for (int i=0; i<height; i++) {
 			rows[i] = ciphertextRaw.substring(i*width, i*width + width);
 		}
+	}
+
+	/** convert cipher text into array */
+	public void makeCipherArr() {
+		if (width == 0) {
+			// this cipher is not in a grid layout, so just make it one row.
+			// rows = new String[] { ciphertextRaw };
+			arr = new String[][] { { ciphertextRaw } };
+			return;
+		}
+		int height = ciphertextRaw.length() / width + (ciphertextRaw.length() % width == 0 ? 0 : 1);
+		arr = new String[height][width];
+
+		int pos = 0;
+		for (int row = 0; row < height; row++) {
+			arr[row] = new String[width];
+			for (int col = 0; col < width; col++) {
+				arr[row][col] = "" + ciphertextRaw.charAt(pos++);
+			}
+		}
+		//System.out.println(Arrays.toString(arr));
 	}
 
 	public String getCiphertextRaw() {
@@ -148,5 +174,13 @@ public class Cipher {
 
 	public void setRows(String[] rows) {
 		this.rows = rows;
+	}
+
+	public String[][] getArr() {
+		return arr;
+	}
+
+	public void setArr(String[][] arr) {
+		this.arr = arr;
 	}
 }

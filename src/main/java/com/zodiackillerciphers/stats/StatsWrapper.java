@@ -41,11 +41,30 @@ public class StatsWrapper {
 				+ stats.getStandardDeviation() + "	" + actual + "	"
 				+ sigma + "	" + hits);
 	}
+
+	public String outputStr() {
+		double sigma = sigma();
+		return name + "	" + stats.getMin() + "	" + stats.getMax() + "	" + stats.getMean() + "	"
+				+ stats.getPercentile(50) + "	" + stats.getStandardDeviation() + "	" + actual + "	" + sigma
+				+ "	" + hits;
+	}
+	public String outputStr(double actualLocal) {
+		double sigma = sigma(actualLocal);
+		return name + "	" + stats.getMin() + "	" + stats.getMax() + "	" + stats.getMean() + "	"
+				+ stats.getPercentile(50) + "	" + stats.getStandardDeviation() + "	" + actualLocal + "	" + sigma
+				+ "	" + hits;
+	}
+
 	public static String header() {
 		return "name	min	max	mean	median	stddev	actual	sigma	hits";
 	}
 	public double sigma() {
 		double sigma = actual-stats.getMean();
+		sigma /= stats.getStandardDeviation();
+		return sigma;
+	}
+	public double sigma(double actualLocal) {
+		double sigma = actualLocal-stats.getMean();
 		sigma /= stats.getStandardDeviation();
 		return sigma;
 	}

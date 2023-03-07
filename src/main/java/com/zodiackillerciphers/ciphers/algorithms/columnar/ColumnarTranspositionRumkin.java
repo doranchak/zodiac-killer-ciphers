@@ -1,4 +1,4 @@
-package com.zodiackillerciphers.ciphers.algorithms;
+package com.zodiackillerciphers.ciphers.algorithms.columnar;
 
 import java.util.ArrayList;
 import java.util.Arrays;

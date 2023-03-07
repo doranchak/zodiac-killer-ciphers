@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
-import com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition;
 import com.zodiackillerciphers.ngrams.NGramsBean;
 import com.zodiackillerciphers.tests.LetterFrequencies;
 import com.zodiackillerciphers.transform.CipherTransformations;

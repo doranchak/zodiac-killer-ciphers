@@ -466,7 +466,8 @@ public class WordSearch {
 
 		cipherGrid = new char[R][C];
 		visited = new boolean[R][C];
-		String cipher = Ciphers.cipher[0].cipher;  // 340 cipher
+		//String cipher = Ciphers.cipher[0].cipher;  // 340 cipher
+		String cipher = Ciphers.Z340_SOLUTION_UNTRANSPOSED;
 		//String cipher = Ciphers.cipherByDescription("BTK word search puzzle").cipher; // R=38, C=9
 		//String cipher = z408c;
 		
@@ -724,14 +725,15 @@ public class WordSearch {
 	}
 
 	static String darken(List<int[]> path, String word) {
-		String line = "showWord([";
+		String line = "togSelectArray([";
 		for (int i = 0; i < path.size(); i++) {
 			int[] rc = path.get(i);
 			if (i > 0)
 				line += ", ";
 			line += "[" + rc[0] + ", " + rc[1] + "]";
 		}
-		line += "], \"" + word + "\");";
+		//line += "], \"" + word + "\");";
+		line += "]);";
 		return line;
 	}
 
@@ -1219,10 +1221,10 @@ public class WordSearch {
 	}
 
 	public static void main(String[] args) {
-		testShuffleUntilWordAppears();
+		//testShuffleUntilWordAppears();
 		//testSearchAllWords();
 		//processResults("/Users/doranchak/projects/zodiac/word-search-all-words-100mil.txt");
-		//search("MORF");
+//		search("MORF");
 		//searchWikiWords();
 		//searchForPairs();
 
@@ -1232,11 +1234,10 @@ public class WordSearch {
 //		System.out.println("===== last");
 //		
 //		
-//		for (Name name : Census.last) {
-//			// all suffix combinations
-//			for (String suf : Census.SUFFIXES)
-//				search(name.name + suf);
-//		}
+		Census.init();
+		for (Name name : Census.firstMale) {
+				search(name.name);
+		}
 //		System.out.println("===== random combinations");
 //		while (true) {
 //			List<Name> name = Census.buildName(-1, 2000);

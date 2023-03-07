@@ -1,13 +1,19 @@
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomDate {
 	/** generate a random number N, from [1,max], to represent "N days ago".
 	 * values of N are weighted higher, to give preference to more recent dates.
 	 * convert to a date and a GMail URL for loading emails from that day in the starred folder. 
 	 */
-	public static void go(int max, int startWeight, float factor) {
+	public static void randomNDaysAgo(int max, int startWeight, float factor) {
 		int[] weights = new int[max];
 		int sum = 0;
 		float weight = startWeight;
@@ -47,9 +53,32 @@ public class RandomDate {
 			}
 		}
 	}
+	public static Instant randomInstantBetween(Instant startInclusive, Instant endExclusive) {
+	    long startSeconds = startInclusive.getEpochSecond();
+	    long endSeconds = endExclusive.getEpochSecond();
+	    long random = ThreadLocalRandom
+	      .current()
+	      .nextLong(startSeconds, endSeconds);
+
+	    return Instant.ofEpochSecond(random);
+	}
+	/** random date range for twitter searches */
+	public static void randomTwitterRange(int duration, Instant instant) {
+		Date date = Date.from(instant);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String date1 = sdf.format(date);
+		date.setDate(date.getDate()+duration-1);
+		String date2 = sdf.format(date);
+		System.out.println("since:" + date1 + " until:" + date2);
+	}
 	
 	public static void main(String[] args) {
-		//go(365*3, 1000, 1.02f);
-		go(365*9, 1, 1.02f);
+		//randomNDaysAgo(365*3, 1000, 1.02f);
+		//randomNDaysAgo(365*9, 1, 1.02f);
+		
+		Instant instant1 = LocalDate.parse("2012-01-01").atStartOfDay(ZoneId.of("America/New_York")).toInstant();
+		Instant instant2 = LocalDate.now().atStartOfDay(ZoneId.of("America/New_York")).toInstant();
+		Instant instant = randomInstantBetween(instant1, instant2);
+		randomTwitterRange(7, instant);
 	}
 }

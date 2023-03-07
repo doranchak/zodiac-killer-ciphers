@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.zodiackillerciphers.ciphers.algorithms.ColumnarTranspositionRumkin;
 import com.zodiackillerciphers.ciphers.algorithms.InlineTransposition;
 import com.zodiackillerciphers.ciphers.algorithms.RailFence;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTranspositionRumkin;
 import com.zodiackillerciphers.dictionary.WordFrequencies;
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.lucene.NGrams;

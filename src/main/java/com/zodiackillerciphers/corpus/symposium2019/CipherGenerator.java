@@ -14,10 +14,10 @@ import java.util.Random;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
 import com.zodiackillerciphers.ciphers.HomophonicGenerator;
-import com.zodiackillerciphers.ciphers.algorithms.ColumnarTransposition;
 import com.zodiackillerciphers.ciphers.algorithms.RailFence;
 import com.zodiackillerciphers.ciphers.algorithms.Scytale;
 import com.zodiackillerciphers.ciphers.algorithms.Vigenere;
+import com.zodiackillerciphers.ciphers.algorithms.columnar.ColumnarTransposition;
 import com.zodiackillerciphers.homophones.HomophonesNew;
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.lucene.Stats;
