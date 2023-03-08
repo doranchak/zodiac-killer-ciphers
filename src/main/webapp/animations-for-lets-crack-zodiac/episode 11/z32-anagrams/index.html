@@ -1,0 +1,296 @@
+  <script src='http://code.jquery.com/jquery-3.3.1.slim.min.js'></script>  
+  <script type="text/javascript" src="jQuery.Keyframes/dist/jquery.keyframes.js"></script>
+
+	<style>
+		.p {
+			font-family: courier;
+			font-size: 60pt;
+			color: #393;
+			line-height: 0.8em;
+			position: absolute;
+			border: 1px solid white;
+		}
+		.solution {
+			font-size: 60pt;
+		}
+		</style>
+	
+	<script>
+		
+		var startX = 40;
+		var startY = 100;
+		
+		var dx = 48;
+		var dy = 120;
+		
+	    $(document).ready(function() {
+
+	      // Adding a new animation sequences (keyframe)
+/*	      $.keyframe.define([{
+	        name: 'move',
+	        '0%': {
+	          'top': '0px',
+			  'left': '0px'
+	        },
+	        '100%': {
+	          'top': '40px',
+			  'left': '200px'
+	        }
+	      }]);*/
+	  	});
+		
+		var plaintexts = [
+			"LABOR DAY FIND",
+			"A BLOND FRIDAY",
+			"AND FRAIL BODY",
+			"BAD FOR LADY IN",
+			"FAIRLY BAD DON",
+			"AND FRY DIABLO",
+			"BLIND FOR A DAY",
+			"BRAIN OF LADY D",
+"LABOR DAY FIND NORT WEST",
+"TRY A BAD TORN SNOWFIELD",
+"WONT BAND LAYERS OF DIRT",
+"WANT TO ROB LADYS FRIEND",
+"BALD TONY A WORST FRIEND",
+"FAR DOWN BY TORN DETAILS",
+"FIND TEN BADLY RAW ROOTS",
+"DRAFTY BLOODWATER INNS",
+"OR TWO AND BRIEFLY STAND",
+"WORDS OF DANIEL T BRYANT",
+"DRY INFANT BLOOD WATERS",
+"WAS TOLD BY A TORN FRIEND",
+"LABOR DAY FIND 45.609 NORT 58.719 WEST"			
+		];
+		
+		var order = [];
+		var plaintextWhich = 0;
+		function renderPlaintext(which) {
+			var left = startX;
+			var top = startY;
+			var pt = plaintexts[which];
+			
+			var html = "";
+			var id = 0;
+			for (var i=0; i<pt.length; i++) {
+				var p = pt[i];
+				if (p != ' ')
+					html += "<span id=\"pt" + (id++) + "\" class=\"p\" style=\"left: " + left + "px; top: " + top + "px; z-index: " + i + "\">" + pt[i] + "</span>";
+				left += dx;
+			}
+			
+			document.getElementById("plaintexts").innerHTML = html;
+		}
+	    function move() {
+	      $('#pt0').resetKeyframe(function() {
+			  
+	            // move with easing
+	            $('#pt0').playKeyframe({
+	              name: 'move',
+	              duration: "1s",
+	              timingFunction: 'ease',
+	              iterationCount: 1,
+	              direction: 'normal',
+	              fillMode: 'forwards',
+	              complete: callback
+	            });
+
+	      });
+	    }
+		var zIndex = 0;
+	    function moveLetter(id, x, y) {
+			console.log(" - moving " + id + " x " + x + " y " + y);
+			
+			var e = document.getElementById("pt" + id);
+			var top = parseInt(e.style.top);
+			var left = parseInt(e.style.left);
+			e.style.zIndex = zIndex++;
+			
+  	      $.keyframe.define([{
+  	        name: 'move' + id,
+    	        '0%': {
+    			  'top': top,
+    	          'left': left,
+  				'background-color': 'white',
+  				'color': '#393',
+  				'border': '1px solid rgba(255, 255, 255, 0)',
+  				'padding': '0px',
+  				'font-size': '60pt',
+  				'box-shadow': '0px 0px white'
+    	        },
+			  
+  	        '25%': {
+				'background-color': 'yellow',
+				'color': 'black',
+				'border': '1px solid black',
+				'padding': '10px',
+				'font-size': '70pt',	
+				'box-shadow': '5px 5px 10px #666'
+  	        },
+  	        '90%': {
+  				'border': '0px solid white'
+  	        },
+  	        '100%': {
+  			  'top': y,
+  	          'left': x,
+				'background-color': 'white',
+				'color': '#393',
+  				'border': '1px solid rgba(255, 255, 255, 0)',
+				'padding': '0px',
+				'font-size': '60pt',
+				'box-shadow': '0px 0px white'
+  	        }
+  	      }]);
+			
+	      $('#pt' + id).resetKeyframe(function() {
+			  
+	            // move with easing
+	            $('#pt' + id).playKeyframe({
+	              name: 'move' + id,
+	              duration: "1s",
+	              timingFunction: 'ease',
+	              iterationCount: 1,
+	              direction: 'normal',
+	              fillMode: 'forwards',
+					complete: callback(id, x, y)
+	            });
+
+	      });
+	    }
+		
+		function callback(id, x, y) {
+			var e = document.getElementById("pt" + id);
+			e.style.animation = "";
+			e.style.left = x + "px";
+			e.style.top = y + "px";
+			console.log("Done!");
+		}
+		
+		function sleep(ms) {
+		    return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		
+		// return DOM element corresponding to the next unused source letter matching the given letter
+/*		function nextLetter(letter, mask) {
+			var id = 0;
+			while (true) {
+				var e = document.getElementById("pt" + id);
+				if (e == null) return null;
+				if (mask[e.id]) continue;
+				if (e.innerHTML == letter) {
+					mask[e.id] = true;
+					return e;
+				}
+			}
+		}*/
+		
+		async function clearAnimations() {
+			var i = 0;
+			while (true) {
+				var e = document.getElementById("pt" + i);
+				if (e == null) break;
+				e.style.animation = "";
+				i++;
+			}
+		}
+		
+		// assumes current plaintext is already rendered
+		async function anagram(targetPt, up) {
+
+/*			
+			var ptSource = plaintexts[sourcePt];
+			var ptTarget = plaintexts[targetPt];
+			var mask = [];
+			for (var i=0; i<ptTarget.length; i++) {
+				var p = ptTarget[i];
+				if (p==' ') continue;
+				var e = nextLetter(p, mask);
+				
+				var sourceX = parseInt(e.left);
+				var target
+				moveLetter(id, )
+			}
+*/			
+			
+			clearAnimations();
+			await sleep(100);
+			
+			var mask = [];
+			var i = 0;	
+			
+			
+			while (true) {
+				console.log("i " + i);
+				var e = document.getElementById("pt" + i);
+				if (e == null) break;
+				var p1 = e.innerHTML;
+				var xSource = parseInt(e.style.left);
+				var ySource = parseInt(e.style.top);
+				
+				console.log("  p1 " + p1 + " xSource " + xSource);
+				if (p1 != ' ') {
+					for (var j=0; j<plaintexts[targetPt].length; j++) {
+						
+						var xTarget = startX + j * dx;
+						var yTarget = ySource + (up ? -dy : dy);
+						
+						console.log("  j " + j + " mask[j] " + mask[j]);
+						if (mask[j]) continue;
+						var p2 = plaintexts[targetPt][j];
+						console.log("  p2 [" + p2 + "]");
+						if (p1 == p2) {
+							mask[j] = true;
+							moveLetter(i, xTarget, yTarget);
+							await sleep(ms());
+							break;
+						}
+					}
+				}
+				i++;
+			}
+		}
+		function ms() {
+			return parseInt(document.getElementById("ms").value);
+		}
+		
+		
+		</script>
+
+<center>		
+
+<div style="padding-bottom: 1em">
+	<!-- links -->
+	<a href="javascript:renderPlaintext(0)">1</a>
+<!--	<a href="javascript:moveLetter(0, startX+3*dx, startY+dy)">2</a>-->
+	<a href="javascript:anagram(1, false)">a1</a>
+	<a href="javascript:anagram(2, true)">a2</a>
+	<a href="javascript:anagram(3, false)">a3</a>
+	<a href="javascript:anagram(4, true)">a4</a>
+	<a href="javascript:anagram(5, false)">a5</a>
+	<a href="javascript:anagram(6, true)">a6</a>
+	<a href="javascript:anagram(7, false)">a7</a>
+	<a href="javascript:renderPlaintext(8)">2</a>
+	<a href="javascript:anagram(9, false)">a9</a>
+	<a href="javascript:anagram(10, true)">a10</a>
+	<a href="javascript:anagram(11, false)">a11</a>
+	<a href="javascript:anagram(12, true)">a12</a>
+	<a href="javascript:anagram(13, false)">a13</a>
+	<a href="javascript:anagram(14, true)">a14</a>
+	<a href="javascript:anagram(15, false)">a15</a>
+	<a href="javascript:anagram(16, true)">a16</a>
+	<a href="javascript:anagram(17, false)">a17</a>
+	<a href="javascript:anagram(18, true)">a18</a>
+	<a href="javascript:anagram(19, false)">a19</a>
+	Delay: <input id="ms" size="3" value="100"> ms
+</div>
+
+<div id="plaintexts">
+</div>			
+
+<div class="solution">
+	<span style="color: #090">LABOR DAY FIND</span><br>
+	<span style="color: #900">45.609</span> NORT <span style="color: #900">58.719</span> WEST
+</div>	
+
+</center>
+

@@ -1,0 +1,591 @@
+<script
+    type="text/javascript"
+    src="http://code.jquery.com/jquery-1.9.1.js"
+  ></script>
+  
+	<style>
+		
+		@font-face {
+		    font-family: 'untitled2regular';
+		    src: url('z340-z408-combined-font-monospaced-webfont.woff2') format('woff2'),
+		         url('z340-z408-combined-font-monospaced-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}		
+		.ky { border-bottom: thin solid white;}
+		#key { 
+			margin-top: 1em;
+			background-color: #f2f2f2; border: thin solid black;
+		}
+		#key h2 {font-family: Arial;}
+		.c {
+			font-family: 'untitled2regular';
+			line-height: 0.8em;
+			font-size: 22pt;
+			width: 20px;
+			height: 24px;
+			position: relative;
+		}
+		#nums {
+			margin-top: 5px;
+			border-collapse: collapse;
+		}	
+		
+		.num {
+			font-size: 14pt;
+			color: #339;
+			line-height: 0.8em;
+			width: 20px;
+			height: 24px;
+			position: relative;
+			text-align: center;
+			padding-top: 4px;
+		}
+		.p {
+			font-family: courier;
+			font-size: 21pt;
+			color: #393;
+			line-height: 0.8em;
+			width: 20px;
+			height: 24px;
+			position: relative;
+		}
+		.keyp {
+			font-family: courier;
+			font-size: 16pt;
+			color: #393;
+			line-height: 0.8em;
+		}
+		.p2 {
+			font-family: courier;
+			font-size: 21pt;
+			color: #ccc;
+			line-height: 0.8em;
+		}
+		.keyp2 {
+			font-family: courier;
+			font-size: 16pt;
+			color: #393;
+			line-height: 0.8em;
+		}
+		#ngu {font-size: 125%;}
+		#ngsize {font-family: arial,Helvetica,sans-serif;}
+		#ngsizeval {font-size: 12pt;}
+		#ngsize {margin-bottom: 1em;}
+		textarea {font-family: 'untitled2regular'; font-size: 22pt; line-height: 0.93em; width: 120%; letter-spacing: 5px;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;		
+		}
+		#m1, #m2, #m3, #m4 {padding: 3px; border: thin solid white;}
+		#m1 {border: thin solid #c99;}
+		#m2, #m3, #m4 {opacity: 0.3; filter: alpha(opacity=30);}
+		#mode {border: 1px solid #bbb; padding: 5px; margin-bottom: 1em; }
+	    #ml {font-family: Arial,Helvetica,sans-serif;padding-bottom: 0.5em; display: block; width: 100%; }
+	 	#form {display: none; width: 100%;}
+		.cp {font-family: Arial,Helvetica,sans-serif;}
+		#cpr {font-size: 125%; margin-left: 3em;}
+		.menu { padding-right: 1em; }
+		#menu { margin-bottom: 1em; }
+		.ui-menu { width: 150px; }
+	    .full-spectrum .sp-palette {
+	max-width: 200px;
+	}
+ 	.cipher table {
+		border-collapse: collapse;
+		
+	}
+	.cipher td {
+		border: 1px solid #f0f0f0;
+	}
+		.cipherr td {
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 22pt;
+	color: #bbb;
+	border-collapse: collapse;
+	padding: 2px;
+				}
+			
+    .cipherr td.dark {
+	color: #000;
+	}				
+    td.key {
+	color: #3c78d8;
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 16pt;
+	border-collapse: collapse;
+	padding: 2px;
+	}				
+	
+	@keyframes fadeIn {
+	  0% {opacity:0;}
+	  100% {opacity:1;}
+	}
+	
+	@keyframes blend {
+		from {color: #ffd966;}
+		to {color: black;}
+	}
+
+	@keyframes decode {
+		from {background-color: red; color: red;}
+		to {background-color: white; color: #393;}
+	}
+	@keyframes decode2 {
+		from {background-color: red; color: red;}
+		to {background-color: white; color: black;}
+	}
+	@keyframes decode3 {
+		from {background-color: #339; color: white;}
+		to {background-color: white; color: #339;}
+	}
+	@keyframes decode4 {
+		from {background-color: #339; color: white;}
+		to {background-color: white; color: #339;}
+	}
+
+	@keyframes padding-left {
+		from {padding-left: 0px;}
+		to {padding-left: 15px;}
+	}
+
+		
+	</style>
+	
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+		    color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+		
+		function makeRandomBlends(num) {
+			for (var i=0; i<num; i++) {
+				console.log("@keyframes blend" + i + "{");
+				console.log("	from {color: " + getRandomColor() + "};");
+				console.log("	to {color: black};");
+				console.log("}");
+			}
+		}
+		
+		function randomBlendActivate(num) {
+			for (var i=0; i<num; i++) {
+				var col = Math.floor(Math.random() * 17);
+				var row = Math.floor(Math.random() * 20);
+				var blend = Math.floor(Math.random() * 100);
+				document.getElementById(row+"_"+col).style="animation: blend" + blend + " 2s;";
+			}
+		}
+		
+		var plaintexts = [
+			"DREA?A?O??EDO"
+		];
+		var cipher = "AENz0K0M0[NAM";
+		var cipherAlphabet = "0AMNEzK[";
+		var diffs = [
+			4,3,4,3,3,3,1,1,3,4,1,1
+		];
+		
+		function keyFor(plaintext) {
+			var key = {};
+			for (var i=0; i<plaintext.length; i++) {
+				key[cipher[i]] = plaintext[i];
+			}
+			return key;
+		}
+		
+		function decode(c, p) {
+//			console.log("decode " + c + " " + p);
+			for (var i=0; i<cipher.length; i++) {
+				if (cipher[i] == c) {
+					var elem = document.getElementById("c"+i);
+					if (p != '?') {
+						elem.innerHTML = p;
+						elem.className = "p";
+						animateDecode(elem, 0);
+					} else
+					animateDecode(elem, 1);
+				}
+			}
+			for (var i=0; i<cipherAlphabet.length; i++) {
+				if (cipherAlphabet[i] == c) {
+					var elem = document.getElementById("pt"+i);
+					elem.innerHTML = p;
+					elem.className = "keyp";
+					animateDecode(elem, 0);
+					return;
+				}
+			}
+		}
+		
+		function animateDecode(elem, which) {
+			if (which == 0) elem.style = "animation: decode 1s;";
+			else elem.style = "animation: decode2 1s;";
+		}
+		
+		function decodePlaintext(which, ms) {
+			var key = keyFor(plaintexts[which]);
+			setTimeout(function() {decodePlaintextTimer(key, 0, ms, which)}, ms);
+			
+		}
+		function decodePlaintextTimer(key, i, ms, which) {
+			if (i == cipherAlphabet.length) {
+				if (1==2) {
+					if (which == 0) {
+						setTimeout(function() {
+							animatePadding(4);
+							animatePadding(8);
+						}, 2000);
+					} else if (which == 1) {
+						setTimeout(function() {
+							animatePadding(1);
+							animatePadding(6);
+						}, 2000);
+					} else if (which == 2) {
+						setTimeout(function() {
+							animatePadding(5);
+						}, 2000);
+					} else if (which == 3) {
+						setTimeout(function() {
+							animatePadding(5);
+							animatePadding(9);
+						}, 2000);
+					} else if (which == 4) {
+						setTimeout(function() {
+							animatePadding(5);
+							animatePadding(7);
+						}, 2000);
+					} else if (which == 5) {
+						setTimeout(function() {
+							animatePadding(5);
+						}, 2000);
+					} else if (which == 6) {
+						setTimeout(function() {
+							animatePadding(7);
+						}, 2000);
+					} else if (which == 7) {
+						setTimeout(function() {
+							animatePadding(4);
+							animatePadding(8);
+						}, 2000);
+					}
+				}
+				return;
+			}
+			var c = cipherAlphabet[i];
+			var p = key[c];
+//			console.log("loop " + i + " " + c + " " + p);
+			decode(c, p);
+			i++;
+			setTimeout(function() {decodePlaintextTimer(key, i, ms, which)}, ms);
+		}
+		
+		function letterToNumber(letter, number) {
+			for (var i=0; i<13; i++) {
+				var e = document.getElementById("c"+i);
+				if (e.innerHTML == letter) {
+					e.innerHTML = number;
+					e.className="num";
+					e.style="animation: decode3 2s";
+				}
+			}
+		}
+		async function replaceNumber(which, number) {
+			var e = document.getElementById("c"+which);
+			e.style.animation="";
+			await sleep(200);
+			e.className = "num";
+			e.innerHTML = number;
+			e.style.animation="decode3 2s";
+		}
+		function yellowOn(which) {
+			var e = document.getElementById("c"+which);
+			e.style.backgroundColor = "yellow";
+		}
+		function yellowOff(which) {
+			var e = document.getElementById("c"+which);
+			e.style.backgroundColor = "white";
+		}
+		
+		function animatePadding(which) {
+//			console.log("animatePadding " + which);
+			document.getElementById("c"+which).style = "animation: padding-left 1s;";
+		}
+		
+		function ms() {
+			return document.getElementById("ms").value;
+		}
+		function ms2() {
+			return document.getElementById("ms2").value;
+		}
+		
+		function initForDiffs() {
+			document.getElementById("nums").style.display = "";
+			document.getElementById("keydiv").style.display = "none";
+		}
+		
+		async function highlightDiffs(ms) {
+			initForDiffs();
+			await sleep(1000);
+			var ms = parseInt(ms2());
+			
+			for (var i=0; i<12; i++) {
+				var n1 = document.getElementById("c" + i);
+				var n2 = document.getElementById("c" + (i+1));
+				var d = document.getElementById("d" + i);
+				
+				var diff = Math.abs(parseInt(n1.innerHTML) - parseInt(n2.innerHTML));
+//				console.log(i + ": " + diff);
+				
+				n1.style = "background-color: yellow";
+				n2.style = "background-color: yellow";
+				
+				await sleep(ms);
+				
+				d.innerHTML = diff;
+				d.style = "animation: decode3 2s";
+				n1.style = "background-color: white";
+				n2.style = "background-color: white";
+				
+//				console.log("sleep...");
+				await sleep(ms+100);
+			}
+		}
+		
+		function highlightDiffOccurrences(num) {
+			for (var i=0; i<12; i++) {
+				var n1 = document.getElementById("d" + i);
+				if (n1.innerHTML == num) {
+					n1.style.backgroundColor = "yellow";
+				} else {
+					n1.style.backgroundColor = "white";
+				}
+			}
+			
+		}
+		
+</script>
+
+<center>				
+<table id="cipher" class="cipher" style="border-collapse: collapse"><thead></thead><tfoot></tfoot><tbody><tr id="cr">
+<td id="c0" class="c" title="row 0 col 0 pos 0 symbol A">A</td>
+<td id="c1" class="c" title="row 0 col 1 pos 1 symbol E">E</td>
+<td id="c2" class="c" title="row 0 col 2 pos 2 symbol N">N</td>
+<td id="c3" class="c" title="row 0 col 3 pos 3 symbol z">z</td>
+<td id="c4" class="c" title="row 0 col 4 pos 4 symbol 0">0</td>
+<td id="c5" class="c" title="row 0 col 5 pos 5 symbol K">K</td>
+<td id="c6" class="c" title="row 0 col 6 pos 6 symbol 0">0</td>
+<td id="c7" class="c" title="row 0 col 7 pos 7 symbol M">M</td>
+<td id="c8" class="c" title="row 0 col 8 pos 8 symbol 0">0</td>
+<td id="c9" class="c" title="row 0 col 9 pos 9 symbol [" style="">[</td>
+<td id="c10" class="c" title="row 0 col 10 pos 10 symbol N">N</td>
+<td id="c11" class="c" title="row 0 col 11 pos 11 symbol A">A</td>
+<td id="c12" class="c" title="row 0 col 12 pos 12 symbol M">M</td>
+</tr></tbody></table>
+<div id="numdiv">
+<table id="nums" class="cipher" style="display: none"><thead></thead><tfoot></tfoot><tbody><tr id="cr">
+<td id="d0" class="num">&nbsp;</td>
+<td id="d1" class="num">&nbsp;</td>
+<td id="d2" class="num">&nbsp;</td>
+<td id="d3" class="num">&nbsp;</td>
+<td id="d4" class="num">&nbsp;</td>
+<td id="d5" class="num">&nbsp;</td>
+<td id="d6" class="num">&nbsp;</td>
+<td id="d7" class="num">&nbsp;</td>
+<td id="d8" class="num">&nbsp;</td>
+<td id="d9" class="num">&nbsp;</td>
+<td id="d10" class="num">&nbsp;</td>
+<td id="d11" class="num">&nbsp;</td>
+</tr></tbody></table>	
+</div>
+<div id="keydiv">
+<table id="key" style="border-collapse: collapse"><thead></thead><tfoot></tfoot><tbody>
+	<tr><td colspan="8"><center><u>Key:</u></center></td></tr>
+	<tr>
+<td id="key0" class="key">0</td>
+<td id="key1" class="key">A</td>
+<td id="key2" class="key">M</td>
+<td id="key3" class="key">N</td>
+<td id="key4" class="key">E</td>
+<td id="key5" class="key">z</td>
+<td id="key6" class="key">K</td>
+<td id="key7" class="key">[</td>
+</tr><tr>
+<td id="pt0" class="keyp2">?</td>
+<td id="pt1" class="keyp2">?</td>
+<td id="pt2" class="keyp2">?</td>
+<td id="pt3" class="keyp2">?</td>
+<td id="pt4" class="keyp2">?</td>
+<td id="pt5" class="keyp2">?</td>
+<td id="pt6" class="keyp2">?</td>
+<td id="pt7" class="keyp2">?</td>
+</tr></tbody></table>
+</div>
+
+<div style="padding-top: 1em; font-size: 5pt;">
+<a href="javascript:decodePlaintext(0, ms())">Decode1</a>
+<a href="javascript:letterToNumber('D', 4)">D</a>
+<a href="javascript:letterToNumber('R', 18)">R</a>
+<a href="javascript:letterToNumber('E', 5)">E</a>
+<a href="javascript:letterToNumber('A', 1)">A</a>
+<a href="javascript:letterToNumber('O', 15)">O</a>
+<a href="javascript:replaceNumber(1, 8)">R1</a>
+<a href="javascript:replaceNumber(7, 5); replaceNumber(12, 5)">R2</a>
+<a href="javascript:replaceNumber(4, 4); replaceNumber(6, 4); replaceNumber(8, 4); ">R3</a>
+<a href="javascript:replaceNumber(9, 1)">R4</a>
+<a href="javascript:highlightDiffs()">diffs</a>
+<a href="javascript:highlightDiffOccurrences(1)">d1</a>
+<a href="javascript:highlightDiffOccurrences(3)">d3</a>
+<a href="javascript:highlightDiffOccurrences(4)">d4</a>
+<a href="javascript:highlightDiffOccurrences(-666)">clear</a><br>
+<a href="javascript:yellowOn(4);yellowOn(6);yellowOn(8)">Y</a>
+<a href="javascript:yellowOff(4);yellowOff(6);yellowOff(8)">!Y</a>
+<a href="javascript:replaceNumber(4, 0); replaceNumber(6, 0); replaceNumber(8, 0); ">R5</a> <!-- cancer -->
+<a href="javascript:yellowOn(9)">Y</a>
+<a href="javascript:yellowOff(9)">!Y</a>
+<a href="javascript:replaceNumber(9, 4)">R6</a> <!-- aries -->
+<a href="javascript:yellowOn(0)">Y</a>
+<a href="javascript:yellowOff(0)">!Y</a>
+<a href="javascript:yellowOn(1)">Y</a>
+<a href="javascript:yellowOff(1)">!Y</a>
+<a href="javascript:replaceNumber(1, 13)">R7</a>
+<a href="javascript:yellowOn(1)">Y</a>
+<a href="javascript:yellowOff(1)">!Y</a>
+<a href="javascript:replaceNumber(1, 8)">R8</a>
+<a href="javascript:yellowOn(1)">Y</a>
+<a href="javascript:yellowOff(1)">!Y</a>
+<a href="javascript:replaceNumber(1, 3)">R9</a>
+<a href="javascript:yellowOn(2)">Y</a>
+<a href="javascript:yellowOff(2)">!Y</a>
+<a href="javascript:replaceNumber(2, 0)">R10</a>
+<a href="javascript:replaceNumber(7, 10)">R11</a>
+<a href="javascript:replaceNumber(7, 5)">R12</a>
+<a href="javascript:replaceNumber(7, 0)">R13</a>
+<a href="javascript:replaceNumber(10, 0)">R14</a>
+<a href="javascript:replaceNumber(12, 10)">R15</a>
+<a href="javascript:replaceNumber(12, 5)">R16</a>
+<a href="javascript:replaceNumber(12, 0)">R17</a>
+<a href="javascript:highlightDiffs()">diffs</a>
+<a href="javascript:highlightDiffOccurrences(0)">d0</a>
+<a href="javascript:highlightDiffOccurrences(1)">d1</a>
+<a href="javascript:highlightDiffOccurrences(3)">d3</a>
+<a href="javascript:highlightDiffOccurrences(4)">d4</a>
+<a href="javascript:highlightDiffOccurrences(-666)">clear</a><br>
+
+
+<br>Durations: <input id="ms" value="1000" size="5"><input id="ms2" value="1000" size="5">
+</div>
+
+</center>
+
+<script>
+	var animating = false;
+
+	$('#cipher').on('click', '.p', function () {
+		console.log("got here");
+	    if (animating) {
+	        return;
+	    }
+
+	    var clickedDiv = $(this).closest('td'),
+	        prevDiv = clickedDiv.prev().prev(),
+	        distance = //18.805*1; 
+			clickedDiv.outerWidth() * 2;
+//		clickedDiv.css({"z-index": "1"})	
+//			clickedDiv.style.animate="";
+
+	    if (prevDiv.length) {
+			console.log("yo");
+	        animating = true;
+	        $.when(clickedDiv.animate({
+	            left: -distance
+	        }, 600),
+	        prevDiv.animate({
+	            left: distance
+	        }, 600)).done(function () {
+	            prevDiv.css('left', '0px');
+	            clickedDiv.css('left', '0px');
+//	            clickedDiv.insertBefore(prevDiv);
+				prevDiv.before(clickedDiv.prev());
+	            animating = false;
+	        });
+	    }
+	});		
+	
+	async function rearrange(text, ms) {
+		for (var a=0; a<text.length; a++) {
+			var ca = $("#c" + a)[0].innerHTML;
+//			console.log("ca " + ca);
+			if (ca == text[a]) continue;
+			var b;
+			for (b=a+1; b<text.length; b++) {
+				var cb = $("#c" + b)[0].innerHTML;
+//				console.log("cb " + cb);
+				if (cb == text[a])
+					break;
+			}
+//			console.log("swapping " + a + " " + b);
+			swap(a, b, ms);
+			await sleep(ms+100);
+		}
+	}
+	
+	function sleep(ms) {
+	    return new Promise(resolve => setTimeout(resolve, ms));
+	}		
+	
+	function swap(i, j, ms) {
+		var td1 = $("#c" + i);
+		var td2 = $("#c" + j);
+		td1[0].style.animation = "";
+		td2[0].style.animation = "";
+		
+		td1[0].style.backgroundColor = "yellow";
+		td2[0].style.backgroundColor = "yellow";
+
+        var distance = //18.805*1; 
+		td1.outerWidth() * Math.abs(j-i);
+
+	    if (td1.length) {
+			console.log("yo");
+	        $.when(td2.animate({
+	            left: -distance
+	        }, ms),
+	        td1.animate({
+	            left: distance
+	        }, ms)).done(function () {
+	            td1.css('left', '0px');
+	            td2.css('left', '0px');
+				
+			    var $onePrev = td1.prev(); 
+			    if( $onePrev.length < 1 ) var $oneParent = td1.parent();
+
+			    var $twoPrev = td2.prev();
+			    if( $twoPrev.length < 1 ) var $twoParent = td2.parent();
+  
+			    if( $onePrev.length > 0 ) $onePrev.after( td2 );
+			      else $oneParent.prepend( td2 );
+    
+			    if( $twoPrev.length > 0 ) $twoPrev.after( td1 );
+			      else $twoParent.prepend( td1 );		
+				  
+				  var tmp = td1[0].id;
+				  td1[0].id = td2[0].id;
+				  td2[0].id = tmp;
+		  		td1[0].style.backgroundColor = "";
+		  		td2[0].style.backgroundColor = "";
+
+	        });
+	    }
+
+
+		
+	}
+	
+	</script>

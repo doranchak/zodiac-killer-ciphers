@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500|Work+Sans:900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script type="text/javascript" src="animations.js"></script>
+<style>
+
+.p {
+	font-family: 'Special Elite', cursive;	
+	font-size: 25pt;
+}     
+.c {
+	font-family: 'untitled2regular';
+	font-size: 25pt;
+	width: 25px;
+	height: 25px;
+}                
+
+.n {
+	font-family: "overpass mono";
+}              
+#links {position: absolute; left: 1000px;}
+#sequence {position: absolute; left: 20px; top: 420px}
+
+@keyframes fade1 {
+  from {
+    background: black;
+	color: white;
+  }
+  to {
+    background: white;
+	color: #090;
+  }
+}
+
+</style>
+</head>
+<body onload="drawPlaintext()">
+<span id="cipher"></span>
+<span id="sequence"></span>
+<span id="links">
+	<a href="javascript:updateCDark()">1 updateCDark</a>
+	<a href="javascript:updateC()">2 updateC</a>
+	<a href="javascript:triangles()">2b triangles</a>
+	<a href="javascript:fadeC()">2c fadeC</a>
+	<a href="javascript:updateSloiC()">3 updateSloiC</a>
+	<a href="javascript:updateSloiP()">4 updateSloiP</a>
+	<a href="javascript:updateDownC()">5 updateDownC</a>
+	<a href="javascript:updateDownP()">6 updateDownP</a>
+	<a href="javascript:fixC()">7 fixC</a>
+	<a href="javascript:fixP()">8 fixP</a>
+	<a href="javascript:drawPlaintext()">9 drawPlaintext</a>
+<!--	<a href="javascript:updateDangertueP()">4 updateDangertueP</a>
+	<a href="javascript:drawPlaintextRest()">5 drawPlaintextRest</a>
+	<a href="javascript:updateO()">6 updateO</a>
+	<a href="javascript:drawPlaintext(); updateC(); updateI()">7 updateI</a>
+	<a href="javascript:updateIDangertue()">8 updateIDangertue</a>
+	<a href="javascript:updateIDangertueFix1()">9 updateIDangertueFix1</a>
+	<a href="javascript:updateIDangertueFix1P()">10 updateIDangertueFix1P</a>
+	<a href="javascript:drawPlaintextFix1()">11 drawPlaintextFix1</a>
+	<a href="javascript:drawPlaintextFix2()">12 drawPlaintextFix2</a>
+	<a href="javascript:updateS()">13 updateS</a>
+	<a href="javascript:drawPlaintext(); updateC(); updateF()">14 updateF</a>
+	<a href="javascript:updateFDangertue()">15 updateFDangertue</a>
+	<a href="javascript:updateFDangertueFix1()">16 updateFDangertueFix1</a>
+	<a href="javascript:updateFDangertueFix1P()">17 updateFDangertueFix1P</a>-->
+</span>
+</body>	
+</html>

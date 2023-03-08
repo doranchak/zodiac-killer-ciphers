@@ -1,0 +1,474 @@
+<script
+    type="text/javascript"
+    src="http://code.jquery.com/jquery-1.9.1.js"
+  ></script>
+  
+	<style>
+		
+		@font-face {
+		    font-family: 'untitled2regular';
+		    src: url('z340-z408-combined-font-monospaced-webfont.woff2') format('woff2'),
+		         url('z340-z408-combined-font-monospaced-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}		
+		.ky { border-bottom: thin solid white;}
+		#key { 
+			margin-top: 1em;
+			background-color: #f2f2f2; border: thin solid black;
+		}
+		#key h2 {font-family: Arial;}
+		.c {
+			font-family: 'untitled2regular';
+			line-height: 0.8em;
+			font-size: 22pt;
+			width: 20px;
+			height: 24px;
+			position: relative;
+		}
+		.p {
+			font-family: courier;
+			font-size: 21pt;
+			color: #393;
+			line-height: 0.8em;
+			width: 20px;
+			height: 24px;
+			position: relative;
+		}
+		.keyp {
+			font-family: courier;
+			font-size: 16pt;
+			color: #393;
+			line-height: 0.8em;
+		}
+		.p2 {
+			font-family: courier;
+			font-size: 21pt;
+			color: #ccc;
+			line-height: 0.8em;
+		}
+		.keyp2 {
+			font-family: courier;
+			font-size: 16pt;
+			color: #393;
+			line-height: 0.8em;
+		}
+		#ngu {font-size: 125%;}
+		#ngsize {font-family: arial,Helvetica,sans-serif;}
+		#ngsizeval {font-size: 12pt;}
+		#ngsize {margin-bottom: 1em;}
+		textarea {font-family: 'untitled2regular'; font-size: 22pt; line-height: 0.93em; width: 120%; letter-spacing: 5px;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;		
+		}
+		#m1, #m2, #m3, #m4 {padding: 3px; border: thin solid white;}
+		#m1 {border: thin solid #c99;}
+		#m2, #m3, #m4 {opacity: 0.3; filter: alpha(opacity=30);}
+		#mode {border: 1px solid #bbb; padding: 5px; margin-bottom: 1em; }
+	    #ml {font-family: Arial,Helvetica,sans-serif;padding-bottom: 0.5em; display: block; width: 100%; }
+	 	#form {display: none; width: 100%;}
+		.cp {font-family: Arial,Helvetica,sans-serif;}
+		#cpr {font-size: 125%; margin-left: 3em;}
+		.menu { padding-right: 1em; }
+		#menu { margin-bottom: 1em; }
+		.ui-menu { width: 150px; }
+	    .full-spectrum .sp-palette {
+	max-width: 200px;
+	}
+	.cipher {
+		margin-bottom: 2em;
+	}
+ 	.cipher table {
+		border-collapse: collapse;
+		
+	}
+		.cipherr td {
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 22pt;
+	color: #bbb;
+	border-collapse: collapse;
+	padding: 2px;
+				}
+			
+    .cipherr td.dark {
+	color: #000;
+	}				
+    td.key {
+	color: #3c78d8;
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 16pt;
+	border-collapse: collapse;
+	padding: 2px;
+	}				
+	
+	@keyframes fadeIn {
+	  0% {opacity:0;}
+	  100% {opacity:1;}
+	}
+	
+	@keyframes blend {
+		from {color: #ffd966;}
+		to {color: black;}
+	}
+
+	@keyframes decode {
+		from {background-color: red; color: red;}
+		to {background-color: white; color: #393;}
+	}
+
+	@keyframes padding-left {
+		from {padding-left: 0px;}
+		to {padding-left: 15px;}
+	}
+
+	#names {
+		font-weight: bold;
+		font-size: 12pt;
+		width: 100%;
+		white-space: nowrap;
+		position: relative;
+	}
+	@keyframes blast {
+		from {font-size: 12pt; color: #393;}
+		to {font-size: 50pt; color: white;}
+	}
+
+	@keyframes highlight {
+		from {background-color: #7f6000; color: white;}
+		to {background-color: white; color: #393;}
+	}
+	@keyframes highlight2 {
+		from {background-color: #7f6000; color: white;}
+		to {background-color: white; color: black;}
+	}
+	
+	#links {
+		margin-top: 5em;
+	}
+	
+	#l2n {
+		border-collapse: collapse;
+		text-align: center;
+	}
+	#l2n td.letter {
+		border: thin solid black;
+		font-family: courier;
+		font-size: 21pt;
+		color: #393;
+#		line-height: 0.8em;
+		width: 25px;
+		position: relative;
+#		letter-spacing: -3px;
+	}
+	#l2n td.number {
+		border: thin solid black;
+		position: relative;
+		background-color: #e5e5e5;
+	}
+	#l2n td.blank {
+		font-size: 2pt;
+		height: 10px;
+	}
+	.trshadow {
+		box-shadow: 10px 10px 5px grey;		
+	}
+	
+	.letterhead {
+		text-align:right;
+		color: blue;
+		font-size: 12pt;
+		padding-right: 5px;
+	}
+	.numberhead {
+		text-align:right;
+		color: blue;
+		font-size: 12pt;
+		padding-right: 5px;
+	}
+
+		
+	</style>
+	
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+		    color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+		
+		function makeRandomBlends(num) {
+			for (var i=0; i<num; i++) {
+				console.log("@keyframes blend" + i + "{");
+				console.log("	from {color: " + getRandomColor() + "};");
+				console.log("	to {color: black};");
+				console.log("}");
+			}
+		}
+		
+		function randomBlendActivate(num) {
+			for (var i=0; i<num; i++) {
+				var col = Math.floor(Math.random() * 17);
+				var row = Math.floor(Math.random() * 20);
+				var blend = Math.floor(Math.random() * 100);
+				document.getElementById(row+"_"+col).style="animation: blend" + blend + " 2s;";
+			}
+		}
+		
+		var plaintexts = [
+			"LUISRORYREILY",
+			"LJACOBODONALD",
+			"EDDIERESENDES",
+			"STEVEPETEWEST",
+			"CHIEFOFAFRICA",
+			"AGILEVENETIAN",
+			"OBSCENENELSON",
+			"KANEPOPSPUNKS",
+		   //AENz0K0M0[NAM
+            "SRMJAHALAEMSL",
+		   //AENz0K0M0[NAM
+			"OSHRNDNENJHOE",
+		   //AENz0K0M0[NAM
+			"TVSOENEREBSTR"
+		];
+		var cipher = "AENz0K0M0[NAM";
+		var cipherAlphabet = "0AMNEzK[";
+		var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		
+		var names = [
+			"ARTHUR L ALLEN",
+			"RICK MARSHALL",
+			"LAWRENCE KANE",
+			"DICK GAIKOWSKI",
+			"ROSS SULLIVAN"
+		];
+		
+		function shuffleCipher() {
+			var shuffled = cipher.split("");
+			for (var i=shuffled.length-1; i>=0; i--) {
+				// swap with some element j in [0, i]
+				var j = Math.floor(Math.random()*i);
+				if (i != j) {
+					var tmp = shuffled[i];
+					shuffled[i] = shuffled[j];
+					shuffled[j] = tmp;
+				}
+				//console.log(i + " " + j + " " + shuffled);
+			}
+			return shuffled.join("");
+		}
+		
+		function shuffleCipherUpdate() {
+			var shuffled = shuffleCipher();
+			for (var c=0; c<13; c++) {
+				var e = document.getElementById("c"+c);
+				if (Math.random() < 0.1) {
+					e.className = "p";
+					e.innerHTML = alphabet[Math.floor(Math.random()*alphabet.length)];
+					
+				} else {
+					e.innerHTML = shuffled[c];
+					e.className = "c";
+				}
+			}
+		}
+		
+		function shuffleCipherTimer(ms) {
+			setInterval(function() {
+				shuffleCipherUpdate();
+			}, ms);
+		}
+		
+		function keyFor(plaintext) {
+			var key = {};
+			for (var i=0; i<plaintext.length; i++) {
+				key[cipher[i]] = plaintext[i];
+			}
+			return key;
+		}
+		
+		function decode(c, p) {
+//			console.log("decode " + c + " " + p);
+			for (var i=0; i<cipher.length; i++) {
+				if (cipher[i] == c) {
+					var elem = document.getElementById("c"+i);
+					elem.innerHTML = p;
+					elem.className = "p";
+					animateDecode(elem);
+				}
+			}
+			for (var i=0; i<cipherAlphabet.length; i++) {
+				if (cipherAlphabet[i] == c) {
+					var elem = document.getElementById("pt"+i);
+					elem.innerHTML = p;
+					elem.className = "keyp";
+					animateDecode(elem);
+					return;
+				}
+			}
+		}
+		
+		function animateDecode(elem) {
+			elem.style = "animation: decode 1s;";
+		}
+		
+		function decodePlaintext(which, ms) {
+			var key = keyFor(plaintexts[which]);
+			setTimeout(function() {decodePlaintextTimer(key, 0, ms, which)}, ms);
+			
+		}
+		function decodePlaintextTimer(key, i, ms, which) {
+			if (i == cipherAlphabet.length) {
+				if (which == 0) {
+					setTimeout(function() {
+						animatePadding(4);
+						animatePadding(8);
+					}, 2000);
+				} else if (which == 1) {
+					setTimeout(function() {
+						animatePadding(1);
+						animatePadding(6);
+					}, 2000);
+				} else if (which == 2) {
+					setTimeout(function() {
+						animatePadding(5);
+					}, 2000);
+				} else if (which == 3) {
+					setTimeout(function() {
+						animatePadding(5);
+						animatePadding(9);
+					}, 2000);
+				} else if (which == 4) {
+					setTimeout(function() {
+						animatePadding(5);
+						animatePadding(7);
+					}, 2000);
+				} else if (which == 5) {
+					setTimeout(function() {
+						animatePadding(5);
+					}, 2000);
+				} else if (which == 6) {
+					setTimeout(function() {
+						animatePadding(7);
+					}, 2000);
+				} else if (which == 7) {
+					setTimeout(function() {
+						animatePadding(4);
+						animatePadding(8);
+					}, 2000);
+				}
+				return;
+			}
+			var c = cipherAlphabet[i];
+			var p = key[c];
+//			console.log("loop " + i + " " + c + " " + p);
+			decode(c, p);
+			i++;
+			setTimeout(function() {decodePlaintextTimer(key, i, ms, which)}, ms);
+		}
+		
+		function animatePadding(which) {
+//			console.log("animatePadding " + which);
+			document.getElementById("c"+which).style = "animation: padding-left 1s;";
+		}
+		
+		function blast(which) {
+			var e = document.getElementById("names");
+			e.innerHTML = names[which];
+			e.style = "animation: blast 2s;";
+		}
+		
+		function ms() {
+			return document.getElementById("ms").value;
+		}
+		
+		function highlight(which) {
+			document.getElementById("l" + which).style="animation: highlight 2s";
+			document.getElementById("n" + which).style="animation: highlight2 2s";
+		}
+		function unhighlight(which) {
+			document.getElementById("l" + which).style="";
+			document.getElementById("n" + which).style="";
+		}
+		
+		async function highlightLetters(letters, ms) {
+			var delay = ms;
+			for (var i=0; i<letters.length; i++) {
+				var which = alphabet.indexOf(letters[i]);
+				console.log(letters[i] + " " + which);
+				highlight(which);
+				await sleep(ms);
+				unhighlight(which);
+			}
+		}
+		
+</script>
+
+<center>				
+	
+	<table id="l2n">
+	<tr>
+		<td class="letterhead">Number:</td>
+		<td id="l0" class="letter">0</td>
+		<td id="l1" class="letter">1</td>
+		<td id="l2" class="letter">2</td>
+		<td id="l3" class="letter">3</td>
+		<td id="l4" class="letter">4</td>
+		<td id="l5" class="letter">5</td>
+		<td id="l6" class="letter">6</td>
+		<td id="l7" class="letter">7</td>
+		<td id="l8" class="letter">8</td>
+		<td id="l8" class="letter">9</td>
+	</tr>
+	<tr>
+		<td class="numberhead">Binary:</td>
+		<td id="n0" class="number">0</td>
+		<td id="n1" class="number">1</td>
+		<td id="n2" class="number">10</td>
+		<td id="n3" class="number">11</td>
+		<td id="n4" class="number">100</td>
+		<td id="n5" class="number">101</td>
+		<td id="n6" class="number">110</td>
+		<td id="n7" class="number">111</td>
+		<td id="n8" class="number">1000</td>
+		<td id="n8" class="number">1001</td>
+	</tr>
+	<tr><td class="blank" colspan="10">&nbsp;</td></tr>
+	<tr>
+		<td class="letterhead">Number:</td>
+		<td class="letter">10</td>
+		<td class="letter">11</td>
+		<td class="letter">12</td>
+		<td class="letter">13</td>
+		<td class="letter">14</td>
+		<td class="letter">15</td>
+		<td class="letter">16</td>
+		<td class="letter">17</td>
+		<td class="letter">18</td>
+		<td class="letter">19</td>
+	</tr>
+	<tr>
+		<td class="numberhead">Binary:</td>
+		<td class="number">1010</td>
+		<td class="number">1011</td>
+		<td class="number">1100</td>
+		<td class="number">1101</td>
+		<td class="number">1110</td>
+		<td class="number">1111</td>
+		<td class="number">10000</td>
+		<td class="number">10001</td>
+		<td class="number">10010</td>
+		<td class="number">10011</td>
+	</tr>
+</table>
+	
+</center>
+
+<!--<a href="javascript:highlightLetters('DREAAOEDO', 2100)">Highlight1</a>-->
+

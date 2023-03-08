@@ -1,0 +1,857 @@
+
+	<style>
+		
+		@font-face {
+		    font-family: 'untitled2regular';
+		    src: url('z340-z408-combined-font-monospaced-webfont.woff2') format('woff2'),
+		         url('z340-z408-combined-font-monospaced-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}		
+		.ky { border-bottom: thin solid white;}
+		#key { margin-left: 2em;}
+		#key h2 {font-family: Arial;}
+		.c {
+			font-family: 'untitled2regular';
+			line-height: 0.8em;
+			font-size: 22pt;
+			padding-right: 0.75em;
+			padding-left: 2px;
+		}
+		.p {
+			font-family: courier;
+			font-size: 21pt;
+			color: #393;
+			padding-right: 2px;
+		}
+		#ngu {font-size: 125%;}
+		#ngsize {font-family: arial,Helvetica,sans-serif;}
+		#ngsizeval {font-size: 12pt;}
+		#ngsize {margin-bottom: 1em;}
+		textarea {font-family: 'untitled2regular'; font-size: 22pt; line-height: 0.93em; width: 120%; letter-spacing: 5px;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;		
+		}
+		#m1, #m2, #m3, #m4 {padding: 3px; border: thin solid white;}
+		#m1 {border: thin solid #c99;}
+		#m2, #m3, #m4 {opacity: 0.3; filter: alpha(opacity=30);}
+		#mode {border: 1px solid #bbb; padding: 5px; margin-bottom: 1em; }
+	    #ml {font-family: Arial,Helvetica,sans-serif;padding-bottom: 0.5em; display: block; width: 100%; }
+	 	#form {display: none; width: 100%;}
+		.cp {font-family: Arial,Helvetica,sans-serif;}
+		#cpr {font-size: 125%; margin-left: 3em;}
+		.menu { padding-right: 1em; }
+		#menu { margin-bottom: 1em; }
+		.ui-menu { width: 150px; }
+	    .full-spectrum .sp-palette {
+	max-width: 200px;
+	}
+ 	.cipher table {
+		border-collapse: collapse;
+		
+	}
+		.cipher td {
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 22pt;
+	color: #bbb;
+	border-collapse: collapse;
+	padding: 2px;
+				}
+			
+    .cipher td.dark {
+	color: #000;
+	}				
+	
+	@keyframes fadeIn {
+	  0% {opacity:0;}
+	  100% {opacity:1;}
+	}
+	
+	@keyframes blend {
+		from {color: #ffd966;}
+		to {color: black;}
+	}
+	@keyframes blend0{
+		from {color: #B9580C};
+		to {color: black};
+	​}
+	​@keyframes blend1{
+	​	from {color: #5DDC32};
+	​	to {color: black};
+	​}
+	​@keyframes blend2{
+	​	from {color: #AC57E6};
+	​	to {color: black};
+	​}
+	​@keyframes blend3{
+	​	from {color: #4D415B};
+	​	to {color: black};
+	​}
+	​@keyframes blend4{
+	​	from {color: #DB4A7E};
+	​	to {color: black};
+	​}
+	​@keyframes blend5{
+	​	from {color: #433AAE};
+	​	to {color: black};
+	​}
+	​@keyframes blend6{
+	​	from {color: #0E629A};
+	​	to {color: black};
+	​}
+	​@keyframes blend7{
+	​	from {color: #CE2377};
+	​	to {color: black};
+	​}
+	​@keyframes blend8{
+	​	from {color: #E6C65F};
+	​	to {color: black};
+	​}
+	​@keyframes blend9{
+	​	from {color: #D62EEE};
+	​	to {color: black};
+	​}
+	​@keyframes blend10{
+	​	from {color: #249E40};
+	​	to {color: black};
+	​}
+	​@keyframes blend11{
+	​	from {color: #83F4E7};
+	​	to {color: black};
+	​}
+	​@keyframes blend12{
+	​	from {color: #538108};
+	​	to {color: black};
+	​}
+	​@keyframes blend13{
+	​	from {color: #62C3D7};
+	​	to {color: black};
+	​}
+	​@keyframes blend14{
+	​	from {color: #8A90ED};
+	​	to {color: black};
+	​}
+	​@keyframes blend15{
+	​	from {color: #97FE76};
+	​	to {color: black};
+	​}
+	​@keyframes blend16{
+	​	from {color: #C4240E};
+	​	to {color: black};
+	​}
+	​@keyframes blend17{
+	​	from {color: #4A87CA};
+	​	to {color: black};
+	​}
+	​@keyframes blend18{
+	​	from {color: #D696BC};
+	​	to {color: black};
+	​}
+	​@keyframes blend19{
+	​	from {color: #9805B6};
+	​	to {color: black};
+	​}
+	​@keyframes blend20{
+	​	from {color: #03910E};
+	​	to {color: black};
+	​}
+	​@keyframes blend21{
+	​	from {color: #3CDBEC};
+	​	to {color: black};
+	​}
+	​@keyframes blend22{
+	​	from {color: #8FFD43};
+	​	to {color: black};
+	​}
+	​@keyframes blend23{
+	​	from {color: #247463};
+	​	to {color: black};
+	​}
+	​@keyframes blend24{
+	​	from {color: #BFA4FC};
+	​	to {color: black};
+	​}
+	​@keyframes blend25{
+	​	from {color: #E90B67};
+	​	to {color: black};
+	​}
+	​@keyframes blend26{
+	​	from {color: #13AC24};
+	​	to {color: black};
+	​}
+	​@keyframes blend27{
+	​	from {color: #C0DAD3};
+	​	to {color: black};
+	​}
+	​@keyframes blend28{
+	​	from {color: #91AD97};
+	​	to {color: black};
+	​}
+	​@keyframes blend29{
+	​	from {color: #169647};
+	​	to {color: black};
+	​}
+	​@keyframes blend30{
+	​	from {color: #D28CD7};
+	​	to {color: black};
+	​}
+	​@keyframes blend31{
+	​	from {color: #CBEC4F};
+	​	to {color: black};
+	​}
+	​@keyframes blend32{
+	​	from {color: #DD0D60};
+	​	to {color: black};
+	​}
+	​@keyframes blend33{
+	​	from {color: #3B1D04};
+	​	to {color: black};
+	​}
+	​@keyframes blend34{
+	​	from {color: #E2FFE4};
+	​	to {color: black};
+	}
+	@keyframes blend35{
+		from {color: #20D3E6};
+		to {color: black};
+	}
+	@keyframes blend36{
+		from {color: #4C82E7};
+		to {color: black};
+	}
+	@keyframes blend37{
+		from {color: #8C0E75};
+		to {color: black};
+	}
+	@keyframes blend38{
+		from {color: #E39E8C};
+		to {color: black};
+	}
+	@keyframes blend39{
+		from {color: #F8D6D2};
+		to {color: black};
+	}
+	@keyframes blend40{
+		from {color: #23EABB};
+		to {color: black};
+	}
+	@keyframes blend41{
+		from {color: #F5892F};
+		to {color: black};
+	}
+	@keyframes blend42{
+		from {color: #D3163E};
+		to {color: black};
+	}
+	@keyframes blend43{
+		from {color: #85F879};
+		to {color: black};
+	}
+	@keyframes blend44{
+		from {color: #9EEC00};
+		to {color: black};
+	}
+	@keyframes blend45{
+		from {color: #2CBF26};
+		to {color: black};
+	}
+	@keyframes blend46{
+		from {color: #5F90B2};
+		to {color: black};
+	}
+	@keyframes blend47{
+		from {color: #315394};
+		to {color: black};
+	}
+	@keyframes blend48{
+		from {color: #EBE242};
+		to {color: black};
+	}
+	@keyframes blend49{
+		from {color: #DF9E7B};
+		to {color: black};
+	}
+	@keyframes blend50{
+		from {color: #57DCAB};
+		to {color: black};
+	}
+	@keyframes blend51{
+		from {color: #757B7A};
+		to {color: black};
+	}
+	@keyframes blend52{
+		from {color: #4F15C1};
+		to {color: black};
+	}
+	@keyframes blend53{
+		from {color: #C96580};
+		to {color: black};
+	}
+	@keyframes blend54{
+		from {color: #D825FB};
+		to {color: black};
+	}
+	@keyframes blend55{
+		from {color: #EEC2A3};
+		to {color: black};
+	}
+	@keyframes blend56{
+		from {color: #258569};
+		to {color: black};
+	}
+	@keyframes blend57{
+		from {color: #FBAD5F};
+		to {color: black};
+	}
+	@keyframes blend58{
+		from {color: #DF6743};
+		to {color: black};
+	}
+	@keyframes blend59{
+		from {color: #965B27};
+		to {color: black};
+	}
+	@keyframes blend60{
+		from {color: #AE6930};
+		to {color: black};
+	}
+	@keyframes blend61{
+		from {color: #DD4C55};
+		to {color: black};
+	}
+	@keyframes blend62{
+		from {color: #E61981};
+		to {color: black};
+	}
+	@keyframes blend63{
+		from {color: #537CCB};
+		to {color: black};
+	}
+	@keyframes blend64{
+		from {color: #56EBFD};
+		to {color: black};
+	}
+	@keyframes blend65{
+		from {color: #7938AF};
+		to {color: black};
+	}
+	@keyframes blend66{
+		from {color: #686FE4};
+		to {color: black};
+	}
+	@keyframes blend67{
+		from {color: #C1D61B};
+		to {color: black};
+	}
+	@keyframes blend68{
+		from {color: #F8DA73};
+		to {color: black};
+	}
+	@keyframes blend69{
+		from {color: #5E687C};
+		to {color: black};
+	}
+	@keyframes blend70{
+		from {color: #745AE8};
+		to {color: black};
+	}
+	@keyframes blend71{
+		from {color: #182526};
+		to {color: black};
+	}
+	@keyframes blend72{
+		from {color: #7743C3};
+		to {color: black};
+	}
+	@keyframes blend73{
+		from {color: #5CD1B0};
+		to {color: black};
+	}
+	@keyframes blend74{
+		from {color: #A1203C};
+		to {color: black};
+	}
+	@keyframes blend75{
+		from {color: #B88D5C};
+		to {color: black};
+	}
+	@keyframes blend76{
+		from {color: #CF2284};
+		to {color: black};
+	}
+	@keyframes blend77{
+		from {color: #F413A1};
+		to {color: black};
+	}
+	@keyframes blend78{
+		from {color: #C2C44C};
+		to {color: black};
+	}
+	@keyframes blend79{
+		from {color: #BB358E};
+		to {color: black};
+	}
+	@keyframes blend80{
+		from {color: #3A4C7A};
+		to {color: black};
+	}
+	@keyframes blend81{
+		from {color: #553528};
+		to {color: black};
+	}
+	@keyframes blend82{
+		from {color: #64C0C1};
+		to {color: black};
+	}
+	@keyframes blend83{
+		from {color: #46D9E5};
+		to {color: black};
+	}
+	@keyframes blend84{
+		from {color: #BE5A4D};
+		to {color: black};
+	}
+	@keyframes blend85{
+		from {color: #9BD3B2};
+		to {color: black};
+	}
+	@keyframes blend86{
+		from {color: #18FC6F};
+		to {color: black};
+	}
+	@keyframes blend87{
+		from {color: #D289E3};
+		to {color: black};
+	}
+	@keyframes blend88{
+		from {color: #8EB0CA};
+		to {color: black};
+	}
+	@keyframes blend89{
+		from {color: #ACE71E};
+		to {color: black};
+	}
+	@keyframes blend90{
+		from {color: #82EE0C};
+		to {color: black};
+	}
+	@keyframes blend91{
+		from {color: #C575DB};
+		to {color: black};
+	}
+	@keyframes blend92{
+		from {color: #AD6E34};
+		to {color: black};
+	}
+	@keyframes blend93{
+		from {color: #B7DF63};
+		to {color: black};
+	}
+	@keyframes blend94{
+		from {color: #7E76F6};
+		to {color: black};
+	}
+	@keyframes blend95{
+		from {color: #DD8B36};
+		to {color: black};
+	}
+	@keyframes blend96{
+		from {color: #62CDCA};
+		to {color: black};
+	}
+	@keyframes blend97{
+		from {color: #93C34E};
+		to {color: black};
+	}
+	@keyframes blend98{
+		from {color: #BAF53F};
+		to {color: black};
+	}
+	@keyframes blend99{
+		from {color: #963009};
+		to {color: black};
+	}
+
+		
+	</style>
+	
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+		    color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+		
+		function makeRandomBlends(num) {
+			for (var i=0; i<num; i++) {
+				console.log("@keyframes blend" + i + "{");
+				console.log("	from {color: " + getRandomColor() + "};");
+				console.log("	to {color: black};");
+				console.log("}");
+			}
+		}
+		
+		function randomBlendActivate(num) {
+			for (var i=0; i<num; i++) {
+				var col = Math.floor(Math.random() * 17);
+				var row = Math.floor(Math.random() * 20);
+				var blend = Math.floor(Math.random() * 100);
+				document.getElementById(row+"_"+col).style="animation: blend" + blend + " 2s;";
+			}
+		}
+</script>
+				
+<table class="cipher" style="border-collapse: collapse"><thead></thead><tfoot></tfoot><tbody><tr>
+<td id="0_0" title="row 0 col 0 pos 0 symbol H" class="dark" >H</td>
+<td id="0_1" title="row 0 col 1 pos 1 symbol E" class="dark" >E</td>
+<td id="0_2" title="row 0 col 2 pos 2 symbol R" class="dark" >R</td>
+<td id="0_3" title="row 0 col 3 pos 3 symbol >" class="dark" >&gt;</td>
+<td id="0_4" title="row 0 col 4 pos 4 symbol p" class="dark" >p</td>
+<td id="0_5" title="row 0 col 5 pos 5 symbol l" class="dark" >l</td>
+<td id="0_6" title="row 0 col 6 pos 6 symbol ^" class="dark" >^</td>
+<td id="0_7" title="row 0 col 7 pos 7 symbol V" class="dark" >V</td>
+<td id="0_8" title="row 0 col 8 pos 8 symbol P" class="dark" >P</td>
+<td id="0_9" title="row 0 col 9 pos 9 symbol k" class="dark" >k</td>
+<td id="0_10" title="row 0 col 10 pos 10 symbol |" class="dark" >|</td>
+<td id="0_11" title="row 0 col 11 pos 11 symbol 1" class="dark" >1</td>
+<td id="0_12" title="row 0 col 12 pos 12 symbol L" class="dark" >L</td>
+<td id="0_13" title="row 0 col 13 pos 13 symbol T" class="dark" >T</td>
+<td id="0_14" title="row 0 col 14 pos 14 symbol G" class="dark" >G</td>
+<td id="0_15" title="row 0 col 15 pos 15 symbol 2" class="dark" >2</td>
+<td id="0_16" title="row 0 col 16 pos 16 symbol d" class="dark" >d</td>
+</tr><tr><td id="1_0" title="row 1 col 0 pos 17 symbol N" class="dark" >N</td>
+<td id="1_1" title="row 1 col 1 pos 18 symbol p" class="dark" >p</td>
+<td id="1_2" title="row 1 col 2 pos 19 symbol +" class="dark" >+</td>
+<td id="1_3" title="row 1 col 3 pos 20 symbol B" class="dark" >B</td>
+<td id="1_4" title="row 1 col 4 pos 21 symbol (" class="dark" >(</td>
+<td id="1_5" title="row 1 col 5 pos 22 symbol #" class="dark" >#</td>
+<td id="1_6" title="row 1 col 6 pos 23 symbol O" class="dark" >O</td>
+<td id="1_7" title="row 1 col 7 pos 24 symbol %" class="dark" >%</td>
+<td id="1_8" title="row 1 col 8 pos 25 symbol D" class="dark" >D</td>
+<td id="1_9" title="row 1 col 9 pos 26 symbol W" class="dark" >W</td>
+<td id="1_10" title="row 1 col 10 pos 27 symbol Y" class="dark" >Y</td>
+<td id="1_11" title="row 1 col 11 pos 28 symbol ." class="dark" >.</td>
+<td id="1_12" title="row 1 col 12 pos 29 symbol <" class="dark" >&lt;</td>
+<td id="1_13" title="row 1 col 13 pos 30 symbol *" class="dark" >*</td>
+<td id="1_14" title="row 1 col 14 pos 31 symbol K" class="dark" >K</td>
+<td id="1_15" title="row 1 col 15 pos 32 symbol f" class="dark" >f</td>
+<td id="1_16" title="row 1 col 16 pos 33 symbol )" class="dark" >)</td>
+</tr><tr><td id="2_0" title="row 2 col 0 pos 34 symbol B" class="dark" >B</td>
+<td id="2_1" title="row 2 col 1 pos 35 symbol y" class="dark" >y</td>
+<td id="2_2" title="row 2 col 2 pos 36 symbol :" class="dark" >:</td>
+<td id="2_3" title="row 2 col 3 pos 37 symbol c" class="dark" >c</td>
+<td id="2_4" title="row 2 col 4 pos 38 symbol M" class="dark" >M</td>
+<td id="2_5" title="row 2 col 5 pos 39 symbol +" class="dark" >+</td>
+<td id="2_6" title="row 2 col 6 pos 40 symbol U" class="dark" >U</td>
+<td id="2_7" title="row 2 col 7 pos 41 symbol Z" class="dark" >Z</td>
+<td id="2_8" title="row 2 col 8 pos 42 symbol G" class="dark" >G</td>
+<td id="2_9" title="row 2 col 9 pos 43 symbol W" class="dark" >W</td>
+<td id="2_10" title="row 2 col 10 pos 44 symbol (" class="dark" >(</td>
+<td id="2_11" title="row 2 col 11 pos 45 symbol )" class="dark" >)</td>
+<td id="2_12" title="row 2 col 12 pos 46 symbol L" class="dark" >L</td>
+<td id="2_13" title="row 2 col 13 pos 47 symbol #" class="dark" >#</td>
+<td id="2_14" title="row 2 col 14 pos 48 symbol z" class="dark" >z</td>
+<td id="2_15" title="row 2 col 15 pos 49 symbol H" class="dark" >H</td>
+<td id="2_16" title="row 2 col 16 pos 50 symbol J" class="dark" >J</td>
+</tr><tr><td id="3_0" title="row 3 col 0 pos 51 symbol S" class="dark">S</td>
+<td id="3_1" title="row 3 col 1 pos 52 symbol p" class="dark" >p</td>
+<td id="3_2" title="row 3 col 2 pos 53 symbol p" class="dark" >p</td>
+<td id="3_3" title="row 3 col 3 pos 54 symbol 7" class="dark" >7</td>
+<td id="3_4" title="row 3 col 4 pos 55 symbol ^" class="dark" >^</td>
+<td id="3_5" title="row 3 col 5 pos 56 symbol l" class="dark" >l</td>
+<td id="3_6" title="row 3 col 6 pos 57 symbol 8" class="dark" >8</td>
+<td id="3_7" title="row 3 col 7 pos 58 symbol *" class="dark" >*</td>
+<td id="3_8" title="row 3 col 8 pos 59 symbol V" class="dark" >V</td>
+<td id="3_9" title="row 3 col 9 pos 60 symbol 3" class="dark" >3</td>
+<td id="3_10" title="row 3 col 10 pos 61 symbol p" class="dark" >p</td>
+<td id="3_11" title="row 3 col 11 pos 62 symbol O" class="dark" >O</td>
+<td id="3_12" title="row 3 col 12 pos 63 symbol +" class="dark" >+</td>
+<td id="3_13" title="row 3 col 13 pos 64 symbol +" class="dark" >+</td>
+<td id="3_14" title="row 3 col 14 pos 65 symbol R" class="dark" >R</td>
+<td id="3_15" title="row 3 col 15 pos 66 symbol K" class="dark" >K</td>
+<td id="3_16" title="row 3 col 16 pos 67 symbol 2" class="dark" >2</td>
+</tr><tr><td id="4_0" title="row 4 col 0 pos 68 symbol _" class="dark" >_</td>
+<td id="4_1" title="row 4 col 1 pos 69 symbol 9" class="dark" >9</td>
+<td id="4_2" title="row 4 col 2 pos 70 symbol M" class="dark" >M</td>
+<td id="4_3" title="row 4 col 3 pos 71 symbol +" class="dark" >+</td>
+<td id="4_4" title="row 4 col 4 pos 72 symbol z" class="dark" >z</td>
+<td id="4_5" title="row 4 col 5 pos 73 symbol t" class="dark" >t</td>
+<td id="4_6" title="row 4 col 6 pos 74 symbol j" class="dark" >j</td>
+<td id="4_7" title="row 4 col 7 pos 75 symbol d" class="dark" >d</td>
+<td id="4_8" title="row 4 col 8 pos 76 symbol |" class="dark" >|</td>
+<td id="4_9" title="row 4 col 9 pos 77 symbol 5" class="dark" >5</td>
+<td id="4_10" title="row 4 col 10 pos 78 symbol F" class="dark" >F</td>
+<td id="4_11" title="row 4 col 11 pos 79 symbol P" class="dark" >P</td>
+<td id="4_12" title="row 4 col 12 pos 80 symbol +" class="dark" >+</td>
+<td id="4_13" title="row 4 col 13 pos 81 symbol &amp;" class="dark" >&amp;</td>
+<td id="4_14" title="row 4 col 14 pos 82 symbol 4" class="dark" >4</td>
+<td id="4_15" title="row 4 col 15 pos 83 symbol k" class="dark" >k</td>
+<td id="4_16" title="row 4 col 16 pos 84 symbol /" class="dark" >/</td>
+</tr><tr><td id="5_0" title="row 5 col 0 pos 85 symbol p" class="dark" >p</td>
+<td id="5_1" title="row 5 col 1 pos 86 symbol 8" class="dark" >8</td>
+<td id="5_2" title="row 5 col 2 pos 87 symbol R" class="dark" >R</td>
+<td id="5_3" title="row 5 col 3 pos 88 symbol ^" class="dark" >^</td>
+<td id="5_4" title="row 5 col 4 pos 89 symbol F" class="dark" >F</td>
+<td id="5_5" title="row 5 col 5 pos 90 symbol l" class="dark" >l</td>
+<td id="5_6" title="row 5 col 6 pos 91 symbol O" class="dark" >O</td>
+<td id="5_7" title="row 5 col 7 pos 92 symbol -" class="dark" >-</td>
+<td id="5_8" title="row 5 col 8 pos 93 symbol *" class="dark" >*</td>
+<td id="5_9" title="row 5 col 9 pos 94 symbol d" class="dark" >d</td>
+<td id="5_10" title="row 5 col 10 pos 95 symbol C" class="dark" >C</td>
+<td id="5_11" title="row 5 col 11 pos 96 symbol k" class="dark" >k</td>
+<td id="5_12" title="row 5 col 12 pos 97 symbol F" class="dark" >F</td>
+<td id="5_13" title="row 5 col 13 pos 98 symbol >" class="dark" >&gt;</td>
+<td id="5_14" title="row 5 col 14 pos 99 symbol 2" class="dark" >2</td>
+<td id="5_15" title="row 5 col 15 pos 100 symbol D" class="dark" >D</td>
+<td id="5_16" title="row 5 col 16 pos 101 symbol (" class="dark" >(</td>
+</tr><tr><td id="6_0" title="row 6 col 0 pos 102 symbol #" class="dark" >#</td>
+<td id="6_1" title="row 6 col 1 pos 103 symbol 5" class="dark" >5</td>
+<td id="6_2" title="row 6 col 2 pos 104 symbol +" class="dark" >+</td>
+<td id="6_3" title="row 6 col 3 pos 105 symbol K" class="dark" >K</td>
+<td id="6_4" title="row 6 col 4 pos 106 symbol q" class="dark" >q</td>
+<td id="6_5" title="row 6 col 5 pos 107 symbol %" class="dark" >%</td>
+<td id="6_6" title="row 6 col 6 pos 108 symbol ;" class="dark" >;</td>
+<td id="6_7" title="row 6 col 7 pos 109 symbol 2" class="dark" >2</td>
+<td id="6_8" title="row 6 col 8 pos 110 symbol U" class="dark" >U</td>
+<td id="6_9" title="row 6 col 9 pos 111 symbol c" class="dark" >c</td>
+<td id="6_10" title="row 6 col 10 pos 112 symbol X" class="dark" >X</td>
+<td id="6_11" title="row 6 col 11 pos 113 symbol G" class="dark" >G</td>
+<td id="6_12" title="row 6 col 12 pos 114 symbol V" class="dark" >V</td>
+<td id="6_13" title="row 6 col 13 pos 115 symbol ." class="dark" >.</td>
+<td id="6_14" title="row 6 col 14 pos 116 symbol z" class="dark" >z</td>
+<td id="6_15" title="row 6 col 15 pos 117 symbol L" class="dark" >L</td>
+<td id="6_16" title="row 6 col 16 pos 118 symbol |" class="dark" >|</td>
+</tr><tr><td id="7_0" title="row 7 col 0 pos 119 symbol (" class="dark" >(</td>
+<td id="7_1" title="row 7 col 1 pos 120 symbol G" class="dark" >G</td>
+<td id="7_2" title="row 7 col 2 pos 121 symbol 2" class="dark" >2</td>
+<td id="7_3" title="row 7 col 3 pos 122 symbol J" class="dark" >J</td>
+<td id="7_4" title="row 7 col 4 pos 123 symbol f" class="dark" >f</td>
+<td id="7_5" title="row 7 col 5 pos 124 symbol j" class="dark" >j</td>
+<td id="7_6" title="row 7 col 6 pos 125 symbol #" class="dark" >#</td>
+<td id="7_7" title="row 7 col 7 pos 126 symbol O" class="dark" >O</td>
+<td id="7_8" title="row 7 col 8 pos 127 symbol +" class="dark" >+</td>
+<td id="7_9" title="row 7 col 9 pos 128 symbol _" class="dark" >_</td>
+<td id="7_10" title="row 7 col 10 pos 129 symbol N" class="dark" >N</td>
+<td id="7_11" title="row 7 col 11 pos 130 symbol Y" class="dark" >Y</td>
+<td id="7_12" title="row 7 col 12 pos 131 symbol z" class="dark" >z</td>
+<td id="7_13" title="row 7 col 13 pos 132 symbol +" class="dark" >+</td>
+<td id="7_14" title="row 7 col 14 pos 133 symbol @" class="dark" >@</td>
+<td id="7_15" title="row 7 col 15 pos 134 symbol L" class="dark" >L</td>
+<td id="7_16" title="row 7 col 16 pos 135 symbol 9" class="dark" >9</td>
+</tr><tr><td id="8_0" title="row 8 col 0 pos 136 symbol d" class="dark" >d</td>
+<td id="8_1" title="row 8 col 1 pos 137 symbol <" class="dark" >&lt;</td>
+<td id="8_2" title="row 8 col 2 pos 138 symbol M" class="dark" >M</td>
+<td id="8_3" title="row 8 col 3 pos 139 symbol +" class="dark" >+</td>
+<td id="8_4" title="row 8 col 4 pos 140 symbol b" class="dark" >b</td>
+<td id="8_5" title="row 8 col 5 pos 141 symbol +" class="dark" >+</td>
+<td id="8_6" title="row 8 col 6 pos 142 symbol Z" class="dark" >Z</td>
+<td id="8_7" title="row 8 col 7 pos 143 symbol R" class="dark" >R</td>
+<td id="8_8" title="row 8 col 8 pos 144 symbol 2" class="dark" >2</td>
+<td id="8_9" title="row 8 col 9 pos 145 symbol F" class="dark" >F</td>
+<td id="8_10" title="row 8 col 10 pos 146 symbol B" class="dark" >B</td>
+<td id="8_11" title="row 8 col 11 pos 147 symbol c" class="dark" >c</td>
+<td id="8_12" title="row 8 col 12 pos 148 symbol y" class="dark" >y</td>
+<td id="8_13" title="row 8 col 13 pos 149 symbol A" class="dark" >A</td>
+<td id="8_14" title="row 8 col 14 pos 150 symbol 6" class="dark" >6</td>
+<td id="8_15" title="row 8 col 15 pos 151 symbol 4" class="dark" >4</td>
+<td id="8_16" title="row 8 col 16 pos 152 symbol K" class="dark" >K</td>
+</tr><tr><td id="9_0" title="row 9 col 0 pos 153 symbol -" class="dark" >-</td>
+<td id="9_1" title="row 9 col 1 pos 154 symbol z" class="dark" >z</td>
+<td id="9_2" title="row 9 col 2 pos 155 symbol l" class="dark" >l</td>
+<td id="9_3" title="row 9 col 3 pos 156 symbol U" class="dark" >U</td>
+<td id="9_4" title="row 9 col 4 pos 157 symbol V" class="dark" >V</td>
+<td id="9_5" title="row 9 col 5 pos 158 symbol +" class="dark" >+</td>
+<td id="9_6" title="row 9 col 6 pos 159 symbol ^" class="dark" >^</td>
+<td id="9_7" title="row 9 col 7 pos 160 symbol J" class="dark" >J</td>
+<td id="9_8" title="row 9 col 8 pos 161 symbol +" class="dark" >+</td>
+<td id="9_9" title="row 9 col 9 pos 162 symbol O" class="dark" >O</td>
+<td id="9_10" title="row 9 col 10 pos 163 symbol p" class="dark" >p</td>
+<td id="9_11" title="row 9 col 11 pos 164 symbol 7" class="dark" >7</td>
+<td id="9_12" title="row 9 col 12 pos 165 symbol <" class="dark" >&lt;</td>
+<td id="9_13" title="row 9 col 13 pos 166 symbol F" class="dark" >F</td>
+<td id="9_14" title="row 9 col 14 pos 167 symbol B" class="dark" >B</td>
+<td id="9_15" title="row 9 col 15 pos 168 symbol y" class="dark" >y</td>
+<td id="9_16" title="row 9 col 16 pos 169 symbol -" class="dark" >-</td>
+</tr><tr><td id="10_0" title="row 10 col 0 pos 170 symbol U" class="dark" >U</td>
+<td id="10_1" title="row 10 col 1 pos 171 symbol +" class="dark" >+</td>
+<td id="10_2" title="row 10 col 2 pos 172 symbol R" class="dark" >R</td>
+<td id="10_3" title="row 10 col 3 pos 173 symbol /" class="dark" >/</td>
+<td id="10_4" title="row 10 col 4 pos 174 symbol 5" class="dark" >5</td>
+<td id="10_5" title="row 10 col 5 pos 175 symbol t" class="dark" >t</td>
+<td id="10_6" title="row 10 col 6 pos 176 symbol E" class="dark" >E</td>
+<td id="10_7" title="row 10 col 7 pos 177 symbol |" class="dark" >|</td>
+<td id="10_8" title="row 10 col 8 pos 178 symbol D" class="dark" >D</td>
+<td id="10_9" title="row 10 col 9 pos 179 symbol Y" class="dark" >Y</td>
+<td id="10_10" title="row 10 col 10 pos 180 symbol B" class="dark" >B</td>
+<td id="10_11" title="row 10 col 11 pos 181 symbol p" class="dark" >p</td>
+<td id="10_12" title="row 10 col 12 pos 182 symbol b" class="dark" >b</td>
+<td id="10_13" title="row 10 col 13 pos 183 symbol T" class="dark" >T</td>
+<td id="10_14" title="row 10 col 14 pos 184 symbol M" class="dark" >M</td>
+<td id="10_15" title="row 10 col 15 pos 185 symbol K" class="dark" >K</td>
+<td id="10_16" title="row 10 col 16 pos 186 symbol O" class="dark" >O</td>
+</tr><tr><td id="11_0" title="row 11 col 0 pos 187 symbol 2" class="dark" >2</td>
+<td id="11_1" title="row 11 col 1 pos 188 symbol <" class="dark" >&lt;</td>
+<td id="11_2" title="row 11 col 2 pos 189 symbol c" class="dark" >c</td>
+<td id="11_3" title="row 11 col 3 pos 190 symbol l" class="dark" >l</td>
+<td id="11_4" title="row 11 col 4 pos 191 symbol R" class="dark" >R</td>
+<td id="11_5" title="row 11 col 5 pos 192 symbol J" class="dark" >J</td>
+<td id="11_6" title="row 11 col 6 pos 193 symbol |" class="dark" >|</td>
+<td id="11_7" title="row 11 col 7 pos 194 symbol *" class="dark" >*</td>
+<td id="11_8" title="row 11 col 8 pos 195 symbol 5" class="dark" >5</td>
+<td id="11_9" title="row 11 col 9 pos 196 symbol T" class="dark" >T</td>
+<td id="11_10" title="row 11 col 10 pos 197 symbol 4" class="dark" >4</td>
+<td id="11_11" title="row 11 col 11 pos 198 symbol M" class="dark" >M</td>
+<td id="11_12" title="row 11 col 12 pos 199 symbol ." class="dark" >.</td>
+<td id="11_13" title="row 11 col 13 pos 200 symbol +" class="dark" >+</td>
+<td id="11_14" title="row 11 col 14 pos 201 symbol &amp;" class="dark" >&amp;</td>
+<td id="11_15" title="row 11 col 15 pos 202 symbol B" class="dark" >B</td>
+<td id="11_16" title="row 11 col 16 pos 203 symbol F" class="dark" >F</td>
+</tr><tr><td id="12_0" title="row 12 col 0 pos 204 symbol z" class="dark" >z</td>
+<td id="12_1" title="row 12 col 1 pos 205 symbol 6" class="dark" >6</td>
+<td id="12_2" title="row 12 col 2 pos 206 symbol 9" class="dark" >9</td>
+<td id="12_3" title="row 12 col 3 pos 207 symbol S" class="dark" >S</td>
+<td id="12_4" title="row 12 col 4 pos 208 symbol y" class="dark" >y</td>
+<td id="12_5" title="row 12 col 5 pos 209 symbol #" class="dark" >#</td>
+<td id="12_6" title="row 12 col 6 pos 210 symbol +" class="dark" >+</td>
+<td id="12_7" title="row 12 col 7 pos 211 symbol N" class="dark" >N</td>
+<td id="12_8" title="row 12 col 8 pos 212 symbol |" class="dark" >|</td>
+<td id="12_9" title="row 12 col 9 pos 213 symbol 5" class="dark" >5</td>
+<td id="12_10" title="row 12 col 10 pos 214 symbol F" class="dark" >F</td>
+<td id="12_11" title="row 12 col 11 pos 215 symbol B" class="dark" >B</td>
+<td id="12_12" title="row 12 col 12 pos 216 symbol c" class="dark" >c</td>
+<td id="12_13" title="row 12 col 13 pos 217 symbol (" class="dark" >(</td>
+<td id="12_14" title="row 12 col 14 pos 218 symbol ;" class="dark" >;</td>
+<td id="12_15" title="row 12 col 15 pos 219 symbol 8" class="dark" >8</td>
+<td id="12_16" title="row 12 col 16 pos 220 symbol R" class="dark" >R</td>
+</tr><tr><td id="13_0" title="row 13 col 0 pos 221 symbol l" class="dark" >l</td>
+<td id="13_1" title="row 13 col 1 pos 222 symbol G" class="dark" >G</td>
+<td id="13_2" title="row 13 col 2 pos 223 symbol F" class="dark" >F</td>
+<td id="13_3" title="row 13 col 3 pos 224 symbol N" class="dark" >N</td>
+<td id="13_4" title="row 13 col 4 pos 225 symbol ^" class="dark" >^</td>
+<td id="13_5" title="row 13 col 5 pos 226 symbol f" class="dark" >f</td>
+<td id="13_6" title="row 13 col 6 pos 227 symbol 5" class="dark" >5</td>
+<td id="13_7" title="row 13 col 7 pos 228 symbol 2" class="dark" >2</td>
+<td id="13_8" title="row 13 col 8 pos 229 symbol 4" class="dark" >4</td>
+<td id="13_9" title="row 13 col 9 pos 230 symbol b" class="dark" >b</td>
+<td id="13_10" title="row 13 col 10 pos 231 symbol ." class="dark" >.</td>
+<td id="13_11" title="row 13 col 11 pos 232 symbol c" class="dark" >c</td>
+<td id="13_12" title="row 13 col 12 pos 233 symbol V" class="dark" >V</td>
+<td id="13_13" title="row 13 col 13 pos 234 symbol 4" class="dark" >4</td>
+<td id="13_14" title="row 13 col 14 pos 235 symbol t" class="dark" >t</td>
+<td id="13_15" title="row 13 col 15 pos 236 symbol +" class="dark" >+</td>
+<td id="13_16" title="row 13 col 16 pos 237 symbol +" class="dark" >+</td>
+</tr><tr><td id="14_0" title="row 14 col 0 pos 238 symbol y" class="dark" >y</td>
+<td id="14_1" title="row 14 col 1 pos 239 symbol B" class="dark" >B</td>
+<td id="14_2" title="row 14 col 2 pos 240 symbol X" class="dark" >X</td>
+<td id="14_3" title="row 14 col 3 pos 241 symbol 1" class="dark" >1</td>
+<td id="14_4" title="row 14 col 4 pos 242 symbol *" class="dark" >*</td>
+<td id="14_5" title="row 14 col 5 pos 243 symbol :" class="dark" >:</td>
+<td id="14_6" title="row 14 col 6 pos 244 symbol 4" class="dark" >4</td>
+<td id="14_7" title="row 14 col 7 pos 245 symbol 9" class="dark" >9</td>
+<td id="14_8" title="row 14 col 8 pos 246 symbol C" class="dark" >C</td>
+<td id="14_9" title="row 14 col 9 pos 247 symbol E" class="dark" >E</td>
+<td id="14_10" title="row 14 col 10 pos 248 symbol >" class="dark" >&gt;</td>
+<td id="14_11" title="row 14 col 11 pos 249 symbol V" class="dark" >V</td>
+<td id="14_12" title="row 14 col 12 pos 250 symbol U" class="dark" >U</td>
+<td id="14_13" title="row 14 col 13 pos 251 symbol Z" class="dark" >Z</td>
+<td id="14_14" title="row 14 col 14 pos 252 symbol 5" class="dark" >5</td>
+<td id="14_15" title="row 14 col 15 pos 253 symbol -" class="dark" >-</td>
+<td id="14_16" title="row 14 col 16 pos 254 symbol +" class="dark" >+</td>
+</tr><tr><td id="15_0" title="row 15 col 0 pos 255 symbol |" class="dark" >|</td>
+<td id="15_1" title="row 15 col 1 pos 256 symbol c" class="dark" >c</td>
+<td id="15_2" title="row 15 col 2 pos 257 symbol ." class="dark" >.</td>
+<td id="15_3" title="row 15 col 3 pos 258 symbol 3" class="dark" >3</td>
+<td id="15_4" title="row 15 col 4 pos 259 symbol z" class="dark" >z</td>
+<td id="15_5" title="row 15 col 5 pos 260 symbol B" class="dark" >B</td>
+<td id="15_6" title="row 15 col 6 pos 261 symbol K" class="dark" >K</td>
+<td id="15_7" title="row 15 col 7 pos 262 symbol (" class="dark" >(</td>
+<td id="15_8" title="row 15 col 8 pos 263 symbol O" class="dark" >O</td>
+<td id="15_9" title="row 15 col 9 pos 264 symbol p" class="dark" >p</td>
+<td id="15_10" title="row 15 col 10 pos 265 symbol ^" class="dark" >^</td>
+<td id="15_11" title="row 15 col 11 pos 266 symbol ." class="dark" >.</td>
+<td id="15_12" title="row 15 col 12 pos 267 symbol f" class="dark" >f</td>
+<td id="15_13" title="row 15 col 13 pos 268 symbol M" class="dark" >M</td>
+<td id="15_14" title="row 15 col 14 pos 269 symbol q" class="dark" >q</td>
+<td id="15_15" title="row 15 col 15 pos 270 symbol G" class="dark" >G</td>
+<td id="15_16" title="row 15 col 16 pos 271 symbol 2" class="dark" >2</td>
+</tr><tr><td id="16_0" title="row 16 col 0 pos 272 symbol R" class="dark" >R</td>
+<td id="16_1" title="row 16 col 1 pos 273 symbol c" class="dark" >c</td>
+<td id="16_2" title="row 16 col 2 pos 274 symbol T" class="dark" >T</td>
+<td id="16_3" title="row 16 col 3 pos 275 symbol +" class="dark" >+</td>
+<td id="16_4" title="row 16 col 4 pos 276 symbol L" class="dark" >L</td>
+<td id="16_5" title="row 16 col 5 pos 277 symbol 1" class="dark" >1</td>
+<td id="16_6" title="row 16 col 6 pos 278 symbol 6" class="dark" >6</td>
+<td id="16_7" title="row 16 col 7 pos 279 symbol C" class="dark" >C</td>
+<td id="16_8" title="row 16 col 8 pos 280 symbol <" class="dark" >&lt;</td>
+<td id="16_9" title="row 16 col 9 pos 281 symbol +" class="dark" >+</td>
+<td id="16_10" title="row 16 col 10 pos 282 symbol F" class="dark" >F</td>
+<td id="16_11" title="row 16 col 11 pos 283 symbol l" class="dark" >l</td>
+<td id="16_12" title="row 16 col 12 pos 284 symbol W" class="dark" >W</td>
+<td id="16_13" title="row 16 col 13 pos 285 symbol B" class="dark" >B</td>
+<td id="16_14" title="row 16 col 14 pos 286 symbol |" class="dark" >|</td>
+<td id="16_15" title="row 16 col 15 pos 287 symbol )" class="dark" >)</td>
+<td id="16_16" title="row 16 col 16 pos 288 symbol L" class="dark" >L</td>
+</tr><tr><td id="17_0" title="row 17 col 0 pos 289 symbol +" class="dark" >+</td>
+<td id="17_1" title="row 17 col 1 pos 290 symbol +" class="dark" >+</td>
+<td id="17_2" title="row 17 col 2 pos 291 symbol )" class="dark" >)</td>
+<td id="17_3" title="row 17 col 3 pos 292 symbol W" class="dark" >W</td>
+<td id="17_4" title="row 17 col 4 pos 293 symbol C" class="dark" >C</td>
+<td id="17_5" title="row 17 col 5 pos 294 symbol z" class="dark" >z</td>
+<td id="17_6" title="row 17 col 6 pos 295 symbol W" class="dark" >W</td>
+<td id="17_7" title="row 17 col 7 pos 296 symbol c" class="dark" >c</td>
+<td id="17_8" title="row 17 col 8 pos 297 symbol P" class="dark" >P</td>
+<td id="17_9" title="row 17 col 9 pos 298 symbol O" class="dark" >O</td>
+<td id="17_10" title="row 17 col 10 pos 299 symbol S" class="dark" >S</td>
+<td id="17_11" title="row 17 col 11 pos 300 symbol H" class="dark" >H</td>
+<td id="17_12" title="row 17 col 12 pos 301 symbol T" class="dark" >T</td>
+<td id="17_13" title="row 17 col 13 pos 302 symbol /" class="dark" >/</td>
+<td id="17_14" title="row 17 col 14 pos 303 symbol (" class="dark" >(</td>
+<td id="17_15" title="row 17 col 15 pos 304 symbol )" class="dark" >)</td>
+<td id="17_16" title="row 17 col 16 pos 305 symbol p" class="dark" >p</td>
+</tr><tr><td id="18_0" title="row 18 col 0 pos 306 symbol |" class="dark" >|</td>
+<td id="18_1" title="row 18 col 1 pos 307 symbol F" class="dark" >F</td>
+<td id="18_2" title="row 18 col 2 pos 308 symbol k" class="dark" >k</td>
+<td id="18_3" title="row 18 col 3 pos 309 symbol d" class="dark" >d</td>
+<td id="18_4" title="row 18 col 4 pos 310 symbol W" class="dark" >W</td>
+<td id="18_5" title="row 18 col 5 pos 311 symbol <" class="dark" >&lt;</td>
+<td id="18_6" title="row 18 col 6 pos 312 symbol 7" class="dark" >7</td>
+<td id="18_7" title="row 18 col 7 pos 313 symbol t" class="dark" >t</td>
+<td id="18_8" title="row 18 col 8 pos 314 symbol B" class="dark" >B</td>
+<td id="18_9" title="row 18 col 9 pos 315 symbol _" class="dark" >_</td>
+<td id="18_10" title="row 18 col 10 pos 316 symbol Y" class="dark" >Y</td>
+<td id="18_11" title="row 18 col 11 pos 317 symbol O" class="dark" >O</td>
+<td id="18_12" title="row 18 col 12 pos 318 symbol B" class="dark" >B</td>
+<td id="18_13" title="row 18 col 13 pos 319 symbol *" class="dark" >*</td>
+<td id="18_14" title="row 18 col 14 pos 320 symbol -" class="dark" >-</td>
+<td id="18_15" title="row 18 col 15 pos 321 symbol C" class="dark" >C</td>
+<td id="18_16" title="row 18 col 16 pos 322 symbol c" class="dark" >c</td>
+</tr><tr><td id="19_0" title="row 19 col 0 pos 323 symbol >" class="dark" >&gt;</td>
+<td id="19_1" title="row 19 col 1 pos 324 symbol M" class="dark" >M</td>
+<td id="19_2" title="row 19 col 2 pos 325 symbol D" class="dark" >D</td>
+<td id="19_3" title="row 19 col 3 pos 326 symbol H" class="dark" >H</td>
+<td id="19_4" title="row 19 col 4 pos 327 symbol N" class="dark" >N</td>
+<td id="19_5" title="row 19 col 5 pos 328 symbol p" class="dark" >p</td>
+<td id="19_6" title="row 19 col 6 pos 329 symbol k" class="dark" >k</td>
+<td id="19_7" title="row 19 col 7 pos 330 symbol S" class="dark" >S</td>
+<td id="19_8" title="row 19 col 8 pos 331 symbol z" class="dark" >z</td>
+<td id="19_9" title="row 19 col 9 pos 332 symbol Z" class="dark" >Z</td>
+<td id="19_10" title="row 19 col 10 pos 333 symbol O" class="dark" >O</td>
+<td id="19_11" title="row 19 col 11 pos 334 symbol 8" class="dark" >8</td>
+<td id="19_12" title="row 19 col 12 pos 335 symbol A" class="dark" >A</td>
+<td id="19_13" title="row 19 col 13 pos 336 symbol |" class="dark" >|</td>
+<td id="19_14" title="row 19 col 14 pos 337 symbol K" class="dark" >K</td>
+<td id="19_15" title="row 19 col 15 pos 338 symbol ;" class="dark" >;</td>
+<td id="19_16" title="row 19 col 16 pos 339 symbol +" class="dark" >+</td>
+</tr></tbody></table>
+
+<div style="padding-top: 1em">
+<a href="javascript:randomBlendActivate(20)">Sparkle20!</a>
+<a href="javascript:randomBlendActivate(50)">Sparkle50!</a>
+<a href="javascript:randomBlendActivate(100)">Sparkle100!</a>
+</div>

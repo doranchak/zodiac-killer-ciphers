@@ -1,0 +1,1222 @@
+<script
+    type="text/javascript"
+    src="http://code.jquery.com/jquery-1.9.1.js"
+  ></script>
+  
+	<style>
+		
+		@font-face {
+		    font-family: 'untitled2regular';
+		    src: url('z340-z408-combined-font-monospaced-webfont.woff2') format('woff2'),
+		         url('z340-z408-combined-font-monospaced-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}		
+		.ky { border-bottom: thin solid white;}
+		#key { 
+			margin-top: 1em;
+			background-color: #f2f2f2; border: thin solid black;
+		}
+		#key h2 {font-family: Arial;}
+		.c {
+			font-family: 'untitled2regular';
+			line-height: 0.8em;
+			font-size: 22pt;
+			width: 20px;
+			height: 24px;
+			position: relative;
+		}
+		#nums {
+			margin-top: 5px;
+			border-collapse: collapse;
+		}	
+		
+		.num {
+			font-size: 14pt;
+			color: #339;
+			line-height: 0.8em;
+			width: 20px;
+			height: 24px;
+			position: relative;
+			text-align: center;
+			padding-top: 4px;
+		}
+		.p {
+			font-family: courier;
+			font-size: 21pt;
+			color: #393;
+			line-height: 0.8em;
+			width: 20px;
+			height: 24px;
+			position: relative;
+		}
+		.keyp {
+			font-family: courier;
+			font-size: 16pt;
+			color: #393;
+			line-height: 0.8em;
+		}
+		.pp2 {
+			font-family: courier;
+			font-size: 21pt;
+			color: #ccc;
+			line-height: 0.8em;
+		}
+		.keyp2 {
+			font-family: courier;
+			font-size: 16pt;
+			color: #393;
+			line-height: 0.8em;
+		}
+		#ngu {font-size: 125%;}
+		#ngsize {font-family: arial,Helvetica,sans-serif;}
+		#ngsizeval {font-size: 12pt;}
+		#ngsize {margin-bottom: 1em;}
+		textarea {font-family: 'untitled2regular'; font-size: 22pt; line-height: 0.93em; width: 120%; letter-spacing: 5px;
+	    -webkit-box-sizing: border-box;
+	       -moz-box-sizing: border-box;
+	            box-sizing: border-box;		
+		}
+		#m1, #m2, #m3, #m4 {padding: 3px; border: thin solid white;}
+		#m1 {border: thin solid #c99;}
+		#m2, #m3, #m4 {opacity: 0.3; filter: alpha(opacity=30);}
+		#mode {border: 1px solid #bbb; padding: 5px; margin-bottom: 1em; }
+	    #ml {font-family: Arial,Helvetica,sans-serif;padding-bottom: 0.5em; display: block; width: 100%; }
+	 	#form {display: none; width: 100%;}
+		.cp {font-family: Arial,Helvetica,sans-serif;}
+		#cpr {font-size: 125%; margin-left: 3em;}
+		.menu { padding-right: 1em; }
+		#menu { margin-bottom: 1em; }
+		.ui-menu { width: 150px; }
+	    .full-spectrum .sp-palette {
+	max-width: 200px;
+	}
+ 	.cipher table {
+		border-collapse: collapse;
+		
+	}
+	.cipher td {
+		border: 1px solid #f0f0f0;
+	}
+		.cipherr td {
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 22pt;
+	color: #bbb;
+	border-collapse: collapse;
+	padding: 2px;
+				}
+			
+    .cipherr td.dark {
+	color: #000;
+	}				
+    td.key {
+	color: #3c78d8;
+	font-family: 'untitled2regular';
+	line-height: 0.8em;
+	font-size: 16pt;
+	border-collapse: collapse;
+	padding: 2px;
+	}				
+	
+	@keyframes fadeIn {
+	  0% {opacity:0;}
+	  100% {opacity:1;}
+	}
+	
+	@keyframes blend {
+		from {color: #ffd966;}
+		to {color: black;}
+	}
+
+	@keyframes decode {
+		from {background-color: red; color: red;}
+		to {background-color: white; color: #393;}
+	}
+	@keyframes decode2 {
+		from {background-color: red; color: red;}
+		to {background-color: white; color: black;}
+	}
+	@keyframes decode3 {
+		from {background-color: #339; color: white;}
+		to {background-color: white; color: #339;}
+	}
+	@keyframes decode4 {
+		from {background-color: #339; color: white;}
+		to {background-color: white; color: #339;}
+	}
+	@keyframes decode5 {
+		from {background-color: #339; color: white;}
+		to {background-color: yellow; color: #339;}
+	}
+	@keyframes decode6 {
+		from {background-color: #393; color: white;}
+		to {background-color: white; color: #393;}
+	}
+	@keyframes decode7 {
+		from {background-color: #000; color: white;}
+		to {background-color: white; color: #393;}
+	}
+	@keyframes yellow {
+		from {background-color: white;}
+		to {background-color: yellow;}
+	}
+	@keyframes bg-white {
+		from {background-color: yellow;}
+		to {background-color: white;}
+	}
+	@keyframes west {
+		from {background-color: #0045b6; color: white;}
+		to {background-color: #a4c2f4; color: black;}
+	}
+	.west {
+		background-color: #a4c2f4; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	@keyframes nort {
+		from {background-color: #326b14; color: white;}
+		to {background-color: #00ff00; color: black;}
+	}
+	.nort {
+		background-color: #00ff00; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	@keyframes diablo {
+		from {background-color: #980000; color: white;}
+		to {background-color: #ff0000; color: black;}
+	}
+	.diablo {
+		background-color: #ff0000; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+
+	@keyframes padding-left {
+		from {padding-left: 0px;}
+		to {padding-left: 15px;}
+	}
+
+	/* highlight P */
+	@keyframes p1 {
+		from {background-color: #326b14; color: white;}
+		to {background-color: yellow; color: #393;}
+	}
+	.p1 {
+		background-color: yellow; color: #393;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	/* uncover triangle */
+	@keyframes p2 {
+		from {background-color: #326b14; color: white;}
+		to {background-color: white; color: black;}
+	}
+	.p2 {
+		background-color: white; color: black;
+		font-family: 'untitled2regular';
+		line-height: 0.8em;
+		font-size: 22pt;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	/* replace with dotted triangle */
+	@keyframes p3 {
+		from {background-color: #326b14; color: white;}
+		to {background-color: white; color: black;}
+	}
+	.p3 {
+		background-color: white; color: black;
+		font-family: 'untitled2regular';
+		line-height: 0.8em;
+		font-size: 22pt;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	/* decode to L */
+	@keyframes p4 {
+		from {background-color: #326b14; color: white;}
+		to {background-color: yellow; color: #393;}
+	}
+	.p4 {
+		background-color: yellow; color: #393;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	#transpogrid {
+		margin-top: 10px;
+	}
+	#transpogrid td {
+		border: 1px solid #f0f0f0;
+		text-align: center;
+	}
+	
+	@keyframes find {
+		from {background-color: black; color: white;}
+		to {background-color: #a4c2f4; color: black;}
+	}
+	.find {
+		background-color: #a4c2f4; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	@keyframes labor {
+		from {background-color: black; color: white;}
+		to {background-color: #ff9900; color: black;}
+	}
+	.labor {
+		background-color: #ff9900; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	@keyframes day {
+		from {background-color: black; color: white;}
+		to {background-color: #00ff00; color: black;}
+	}
+	.day {
+		background-color: #00ff00; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+
+	@keyframes nort2 {
+		from {background-color: black; color: white;}
+		to {background-color: #ff0000; color: black;}
+	}
+	.nort2 {
+		background-color: #ff0000; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	
+	@keyframes west2 {
+		from {background-color: black; color: white;}
+		to {background-color: #b4a7d6; color: black;}
+	}
+	.west2 {
+		background-color: #b4a7d6; color: black;
+		font-family: courier;
+		font-size: 21pt;
+		line-height: 0.8em;
+		width: 20px;
+		height: 24px;
+		position: relative;
+	}
+	
+		
+	</style>
+	
+	<script>
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+		    color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+		
+		function makeRandomBlends(num) {
+			for (var i=0; i<num; i++) {
+				console.log("@keyframes blend" + i + "{");
+				console.log("	from {color: " + getRandomColor() + "};");
+				console.log("	to {color: black};");
+				console.log("}");
+			}
+		}
+		
+		function randomBlendActivate(num) {
+			for (var i=0; i<num; i++) {
+				var col = Math.floor(Math.random() * 17);
+				var row = Math.floor(Math.random() * 20);
+				var blend = Math.floor(Math.random() * 100);
+				document.getElementById(row+"_"+col).style="animation: blend" + blend + " 2s;";
+			}
+		}
+		
+		var plaintexts = [
+			"YNSETAI?DOBP?AORTRDFNOPTIYRGAIWN"
+		];
+		var ptAlpha = ""
+		var cipher = "C9J|#Ok[AMf8?ORTGX6FDVj%HCELzPW9";
+		var cipherAlphabet = "C9J|#Ok[AMf8?RTGX6FDVj%HELzPW";
+		var diffs = [
+			4,3,4,3,3,3,1,1,3,4,1,1
+		];
+		
+		function keyFor(plaintext) {
+			var key = {};
+			for (var i=0; i<plaintext.length; i++) {
+				key[cipher[i]] = plaintext[i];
+			}
+			return key;
+		}
+		
+		function decode(c, p) {
+//			console.log("decode " + c + " " + p);
+			for (var i=0; i<cipher.length; i++) {
+				if (cipher[i] == c) {
+					var elem = document.getElementById("c"+i);
+					if (p != '?') {
+						elem.innerHTML = p;
+						elem.className = "p";
+						animateDecode(elem, 0);
+					} else
+					animateDecode(elem, 1);
+				}
+			}
+/*			for (var i=0; i<cipherAlphabet.length; i++) {
+				if (cipherAlphabet[i] == c) {
+					var elem = document.getElementById("pt"+i);
+					elem.innerHTML = p;
+					elem.className = "keyp";
+					animateDecode(elem, 0);
+					return;
+				}
+			}*/
+		}
+		
+		function animateDecode(elem, which) {
+			if (which == 0) elem.style = "animation: decode 1s;";
+			else elem.style = "animation: decode2 1s;";
+		}
+		
+		function decodePlaintext(which, ms) {
+			var key = keyFor(plaintexts[which]);
+			setTimeout(function() {decodePlaintextTimer(key, 0, ms, which)}, ms);
+			
+		}
+		function decodePlaintextTimer(key, i, ms, which) {
+			if (i == cipherAlphabet.length) {
+				if (1==2) {
+					if (which == 0) {
+						setTimeout(function() {
+							animatePadding(4);
+							animatePadding(8);
+						}, 2000);
+					} else if (which == 1) {
+						setTimeout(function() {
+							animatePadding(1);
+							animatePadding(6);
+						}, 2000);
+					} else if (which == 2) {
+						setTimeout(function() {
+							animatePadding(5);
+						}, 2000);
+					} else if (which == 3) {
+						setTimeout(function() {
+							animatePadding(5);
+							animatePadding(9);
+						}, 2000);
+					} else if (which == 4) {
+						setTimeout(function() {
+							animatePadding(5);
+							animatePadding(7);
+						}, 2000);
+					} else if (which == 5) {
+						setTimeout(function() {
+							animatePadding(5);
+						}, 2000);
+					} else if (which == 6) {
+						setTimeout(function() {
+							animatePadding(7);
+						}, 2000);
+					} else if (which == 7) {
+						setTimeout(function() {
+							animatePadding(4);
+							animatePadding(8);
+						}, 2000);
+					}
+				}
+				return;
+			}
+			var c = cipherAlphabet[i];
+			var p = key[c];
+//			console.log("loop " + i + " " + c + " " + p);
+			decode(c, p);
+			i++;
+			setTimeout(function() {decodePlaintextTimer(key, i, ms, which)}, ms);
+		}
+		
+		function letterToNumber(letter, number) {
+			for (var i=0; i<32; i++) {
+				var e = document.getElementById("c"+i);
+				if (e.innerHTML == letter) {
+					e.innerHTML = number;
+					e.className="num";
+					e.style="animation: decode3 2s";
+				}
+			}
+		}
+		
+		async function letterToNumberAll(ms) {
+			var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+			var seen = [];
+			for (var i=0; i<plaintexts[0].length; i++) {
+				var p = plaintexts[0][i];
+				if (p == '?') continue;
+				if (seen[p]) continue;
+				seen[p] = 1;
+				var j;
+				for (j=0; j<alpha.length; j++)
+					if (alpha[j] == p)
+						break;
+				j++;
+				letterToNumber(p, j);
+				await sleep(ms+100);
+			}
+		}
+		async function mod10All(ms) {
+			for (var i=0; i<32; i++) {
+				var e = document.getElementById("c"+i);
+				if (e.className == 'c') continue;
+				var val = parseInt(e.innerHTML);
+				console.log("i " + i + " val [" + val + "]");
+				if (val < 10) continue;
+				while (val >= 10) {
+					val -= 10;
+					replaceNumber(i, val);
+					console.log("- inner i " + i + " val [" + val + "]");
+					await sleep(ms);
+				}
+			}
+		}
+		async function yellowFadeOn(which) {
+			var e = document.getElementById("c"+which);
+			e.style.animation = "yellow 2s";
+		}
+		
+		async function yellowFadeOnAll() {
+			for (var i=20; i<=29; i++) 
+				replaceNumber2(i, document.getElementById("c"+i).innerHTML);			
+			await sleep(2000);
+			for (var i=20; i<=29; i++) {
+				document.getElementById("c"+i).style="background-color: yellow";
+			}
+		}
+		
+		async function yellowFadeOffAll() {
+			for (var i=20; i<=29; i++) 
+				document.getElementById("c"+i).style.animation = "bg-white 2s";
+			await sleep(2000);
+			for (var i=20; i<=29; i++) {
+				document.getElementById("c"+i).style="background-color: white";
+			}
+		}
+		
+		async function replacePtAll() {
+			for (var i=0; i<32; i++) {
+				if (i==20) {
+					i+= 9;
+					continue;
+				}
+				if (document.getElementById("c"+i).className == "c") continue;
+				replacePt(i, plaintexts[0][i]);
+			}
+			await sleep(2000);
+			for (var i=0; i<32; i++) {
+				if (i==20) {
+					i+= 9;
+					continue;
+				}
+				if (document.getElementById("c"+i).className == "c") continue;
+				document.getElementById("c"+i).className="p";
+			}
+		}
+		async function nort() {
+			var which = [14, 15, 16, 31];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("c"+which[i]).style.animation = "nort 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("c"+which[i]).className = "nort";
+			}
+		}
+		async function west() {
+			var which = [2, 3, 4, 30];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("c"+which[i]).style.animation = "west 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("c"+which[i]).className = "west";
+			}
+		}
+		async function diablo() {
+			var which = [5, 6, 8, 9, 10, 11];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("c"+which[i]).style.animation = "diablo 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("c"+which[i]).className = "diablo";
+			}
+		}
+		async function find() {
+			var which = [1, 2, 3, 4];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).style.animation = "find 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).className = "find";
+			}
+		}
+		async function labor() {
+			var which = [13, 14, 15, 16, 17];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).style.animation = "labor 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).className = "labor";
+			}
+		}
+		async function day() {
+			var which = [7, 8, 9];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).style.animation = "day 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).className = "day";
+			}
+		}
+		async function nort2() {
+			var which = [5, 12, 19, 0];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).style.animation = "nort2 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).className = "nort2";
+			}
+		}
+		async function west2() {
+			var which = [6, 18, 10, 11];
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).style.animation = "west2 2s";
+			}
+			await sleep(2000);
+			for (var i=0; i<which.length; i++) {
+				document.getElementById("t"+which[i]).className = "west2";
+			}
+		}
+		
+		
+		function whiten() {
+			var which = [14, 15, 16, 31, 2, 3, 4, 30, 5, 6, 8, 9, 10, 11];
+			for (var i=0; i<which.length; i++) {
+				var e = document.getElementById("c"+which[i]);
+				e.className = "p";
+			}
+			
+		}
+		
+		async function replaceNumber(which, number) {
+			var e = document.getElementById("c"+which);
+			e.style.animation="";
+			await sleep(200);
+			e.className = "num";
+			e.innerHTML = number;
+			e.style.animation="decode3 2s";
+		}
+		async function replacePt(which, pt) {
+			var e = document.getElementById("c"+which);
+			e.style.animation="";
+			await sleep(20);
+			e.className = "p";
+			e.innerHTML = pt;
+			e.style.animation="decode6 2s";
+		}
+		async function replacePt2(which, pt) {
+			var e = document.getElementById("t"+which);
+			e.className = "p";
+			e.innerHTML = pt;
+			e.style.animation="decode6 2s";
+		}
+		async function replacePt3(which, pt) {
+			var e = document.getElementById("t"+which);
+			e.className = "p";
+			e.innerHTML = pt;
+			e.style.animation="decode7 0.5s";
+		}
+		async function replaceNumber2(which, number) {
+			var e = document.getElementById("c"+which);
+			e.style.animation="";
+			await sleep(200);
+			e.className = "num";
+			e.innerHTML = number;
+			e.style.animation="decode5 2s";
+		}
+		function yellowOn(which) {
+			var e = document.getElementById("c"+which);
+			e.style.backgroundColor = "yellow";
+		}
+		function yellowOff(which) {
+			var e = document.getElementById("c"+which);
+			e.style.backgroundColor = "white";
+		}
+		
+		function animatePadding(which) {
+//			console.log("animatePadding " + which);
+			document.getElementById("c"+which).style = "animation: padding-left 1s;";
+		}
+		
+		function ms() {
+			return parseInt(document.getElementById("ms").value);
+		}
+		
+		function initForDiffs() {
+			document.getElementById("nums").style.display = "";
+			document.getElementById("keydiv").style.display = "none";
+		}
+		
+		async function highlightDiffs(ms) {
+			initForDiffs();
+			await sleep(1000);
+			var ms = parseInt(ms());
+			
+			for (var i=0; i<12; i++) {
+				var n1 = document.getElementById("c" + i);
+				var n2 = document.getElementById("c" + (i+1));
+				var d = document.getElementById("d" + i);
+				
+				var diff = Math.abs(parseInt(n1.innerHTML) - parseInt(n2.innerHTML));
+//				console.log(i + ": " + diff);
+				
+				n1.style = "background-color: yellow";
+				n2.style = "background-color: yellow";
+				
+				await sleep(ms);
+				
+				d.innerHTML = diff;
+				d.style = "animation: decode3 2s";
+				n1.style = "background-color: white";
+				n2.style = "background-color: white";
+				
+//				console.log("sleep...");
+				await sleep(ms+100);
+			}
+		}
+		
+		function highlightDiffOccurrences(num) {
+			for (var i=0; i<12; i++) {
+				var n1 = document.getElementById("d" + i);
+				if (n1.innerHTML == num) {
+					n1.style.backgroundColor = "yellow";
+				} else {
+					n1.style.backgroundColor = "white";
+				}
+			}
+			
+		}
+		
+		// highlight P 
+		async function p1() {
+			var e = document.getElementById("c11");
+			e.style.animation = "p1 2s";
+			await sleep(2000);
+			e.className = "p1";
+		}
+		// uncover triangle 
+		async function p2() {
+			var e = document.getElementById("c11");
+			e.innerHTML = cipher[11];
+			e.style.animation = "p2 2s";
+			e.style.fontFamily = 'untitled2regular';
+			e.style.fontSize = "22pt";
+			await sleep(2000);
+			e.className = "p2";
+		}
+		// replace with dotted triangle 
+		async function p3() {
+			var e = document.getElementById("c11");
+			e.innerHTML = "7";
+			e.style.animation = "p3 2s";
+			await sleep(2000);
+			e.className = "p3";
+		}
+		// decode to L 
+		async function p4() {
+			var e = document.getElementById("c11");
+			e.style.fontFamily = 'courier';
+			e.innerHTML = "L";
+			e.style.fontSize = "21pt";
+			e.style.animation = "p4 2s";
+			await sleep(2000);
+			e.className = "p4";
+		}
+		async function p5() {
+			document.getElementById("c11").style.backgroundColor = "white";
+		}
+		
+		async function fillgrid() {
+			var t = 0;
+			for (var i=0; i<32; i++) {
+				var e1 = document.getElementById("c" + i);
+				if (e1.className == "p") {
+					var p = e1.innerHTML;
+					var e2 = document.getElementById("t" + t);
+					e2.innerHTML = p;
+					replacePt(i, p);
+					replacePt2(t, p);
+					t++;
+					await sleep(ms());
+				}
+				
+			}
+		}
+		async function scramblegrid() {
+			var max = 20;
+			for (var i=0; i<100; i++) {
+				var rand1 = Math.floor(Math.random() * max);
+				var rand2 = rand1;
+				while (rand1 == rand2)
+					rand2 = Math.floor(Math.random() * max);
+				
+				var e1 = document.getElementById("t" + rand1);
+				var e2 = document.getElementById("t" + rand2);
+				
+				var p1 = e1.innerHTML;
+				var p2 = e2.innerHTML;
+				
+				replacePt3(rand1, p2);
+				replacePt3(rand2, p1);
+
+				await sleep(250);
+				e1.style.animation = "";
+				e2.style.animation = "";
+			}
+			var final = "TFINDNWDAYSTOLABORER";
+			var locked = [];
+			for (var i=0; i<final.length; i++) locked[i] = false;
+			
+			var done = 0;
+			while (done < max) {
+				var a = Math.floor(Math.random() * max);
+				while (locked[a]) {
+					a = Math.floor(Math.random() * max);
+					console.log("a " + a);
+				}
+				locked[a] = true;
+				var b = Math.floor(Math.random() * max);
+				while (locked[b]) {
+					b = Math.floor(Math.random() * max);
+					console.log("b " + b);
+				}
+				locked[b] = true;
+				replacePt3(a, final[a]);
+				replacePt3(b, final[b]);
+				await sleep(250);
+				done+=2;
+			}
+		}
+		
+		async function scramblenums() {
+			
+			for (var i=0; i<32; i++) {
+				if (i==20) i+=10;
+				document.getElementById("c" + i).style.color="#f2f2f2";
+			}
+			await sleep(2000);
+			
+			var nums = [4,	5,	6,	0,	9,	5,	8,	7,	1,	9];
+			
+			for (var x=0; x<100; x++) {
+				for (var i=nums.length-1; i>=0; i--) {
+					//pick element in index range [0, i]
+					var j = Math.floor(Math.random()*(i+1));
+					var tmp = nums[i];
+					nums[i] = nums[j];
+					nums[j] = tmp;
+				}
+			
+				for (var i=0; i<nums.length; i++) {
+					document.getElementById("c" + (20+i)).innerHTML = nums[i];
+				}
+				await sleep(50);
+			}
+		}
+		
+</script>
+
+<center>				
+<table id="cipher" class="cipher" style="border-collapse: collapse"><thead></thead><tfoot></tfoot><tbody>
+<tr id="cr">
+<td id="c0"  class="c">C</td>
+<td id="c1"  class="c">9</td>
+<td id="c2"  class="c">J</td>
+<td id="c3"  class="c">|</td>
+<td id="c4"  class="c">#</td>
+<td id="c5"  class="c">O</td>
+<td id="c6"  class="c">k</td>
+<td id="c7"  class="c">[</td>
+<td id="c8"  class="c">A</td>
+<td id="c9"  class="c">M</td>
+<td id="c10" class="c">f</td>
+<td id="c11" class="c">8</td>
+<td id="c12" class="c">?</td>
+<td id="c13" class="c">O</td>
+<td id="c14" class="c">R</td>
+<td id="c15" class="c">T</td>
+<td id="c16" class="c">G</td>
+</tr>
+<tr id="cr2">
+<td id="c17" class="c">X</td>
+<td id="c18" class="c">6</td>
+<td id="c19" class="c">F</td>
+<td id="c20" class="c">D</td>
+<td id="c21" class="c">V</td>
+<td id="c22" class="c">j</td>
+<td id="c23" class="c">%</td>
+<td id="c24" class="c">H</td>
+<td id="c25" class="c">C</td>
+<td id="c26" class="c">E</td>
+<td id="c27" class="c">L</td>
+<td id="c28" class="c">z</td>
+<td id="c29" class="c">P</td>
+<td id="c30" class="c">W</td>
+<td id="c31" class="c">9</td>
+</tr>
+</tbody></table>
+<div id="numdiv">
+<table id="nums" class="cipher" style="display: none"><thead></thead><tfoot></tfoot><tbody><tr id="cr">
+<td id="d0" class="num">&nbsp;</td>
+<td id="d1" class="num">&nbsp;</td>
+<td id="d2" class="num">&nbsp;</td>
+<td id="d3" class="num">&nbsp;</td>
+<td id="d4" class="num">&nbsp;</td>
+<td id="d5" class="num">&nbsp;</td>
+<td id="d6" class="num">&nbsp;</td>
+<td id="d7" class="num">&nbsp;</td>
+<td id="d8" class="num">&nbsp;</td>
+<td id="d9" class="num">&nbsp;</td>
+<td id="d10" class="num">&nbsp;</td>
+<td id="d11" class="num">&nbsp;</td>
+</tr></tbody></table>	
+</div>
+<!--<div id="keydiv">
+<table id="key" style="border-collapse: collapse"><thead></thead><tfoot></tfoot><tbody>
+	<tr><td colspan="28"><center><u>Key:</u></center></td></tr>
+	<tr>
+<td id="key0"  class="key">C</td>
+<td id="key1"  class="key">9</td>
+<td id="key2"  class="key">J</td>
+<td id="key3"  class="key">|</td>
+<td id="key4"  class="key">#</td>
+<td id="key5"  class="key">O</td>
+<td id="key6"  class="key">k</td>
+<td id="key7"  class="key">[</td>
+<td id="key8"  class="key">A</td>
+<td id="key9"  class="key">M</td>
+<td id="key10" class="key">f</td>
+<td id="key11" class="key">8</td>
+<td id="key12" class="key">?</td>
+<td id="key13" class="key">R</td>
+<td id="key14" class="key">T</td>
+<td id="key15" class="key">G</td>
+<td id="key16" class="key">X</td>
+<td id="key17" class="key">6</td>
+<td id="key18" class="key">F</td>
+<td id="key19" class="key">D</td>
+<td id="key20" class="key">V</td>
+<td id="key21" class="key">j</td>
+<td id="key22" class="key">%</td>
+<td id="key23" class="key">H</td>
+<td id="key24" class="key">E</td>
+<td id="key25" class="key">L</td>
+<td id="key26" class="key">z</td>
+<td id="key27" class="key">P</td>
+<td id="key28" class="key">W</td>
+</tr><tr>
+<td id="pt0" class="keyp2">?</td>
+<td id="pt1" class="keyp2">?</td>
+<td id="pt2" class="keyp2">?</td>
+<td id="pt3" class="keyp2">?</td>
+<td id="pt4" class="keyp2">?</td>
+<td id="pt5" class="keyp2">?</td>
+<td id="pt6" class="keyp2">?</td>
+<td id="pt7" class="keyp2">?</td>
+<td id="pt8" class="keyp2">?</td>
+<td id="pt9" class="keyp2">?</td>
+<td id="pt10" class="keyp2">?</td>
+<td id="pt11" class="keyp2">?</td>
+<td id="pt12" class="keyp2">?</td>
+<td id="pt13" class="keyp2">?</td>
+<td id="pt14" class="keyp2">?</td>
+<td id="pt15" class="keyp2">?</td>
+<td id="pt16" class="keyp2">?</td>
+<td id="pt17" class="keyp2">?</td>
+<td id="pt18" class="keyp2">?</td>
+<td id="pt19" class="keyp2">?</td>
+<td id="pt20" class="keyp2">?</td>
+<td id="pt21" class="keyp2">?</td>
+<td id="pt22" class="keyp2">?</td>
+<td id="pt23" class="keyp2">?</td>
+<td id="pt24" class="keyp2">?</td>
+<td id="pt25" class="keyp2">?</td>
+<td id="pt26" class="keyp2">?</td>
+<td id="pt27" class="keyp2">?</td>
+<td id="pt28" class="keyp2">?</td>
+</tr></tbody></table>
+</div>-->
+
+<table id="transpogrid" class="transpogrid" style="border-collapse: collapse"><thead></thead><tfoot></tfoot><tbody>
+<tr>
+<td id="t0"  class="p">&nbsp;</td>
+<td id="t1"  class="p">&nbsp;</td>
+<td id="t2"  class="p">&nbsp;</td>
+<td id="t3"  class="p">&nbsp;</td>
+</tr>
+<tr>
+<td id="t4"  class="p">&nbsp;</td>
+<td id="t5"  class="p">&nbsp;</td>
+<td id="t6"  class="p">&nbsp;</td>
+<td id="t7"  class="p">&nbsp;</td>
+</tr>
+<tr>
+<td id="t8"  class="p">&nbsp;</td>
+<td id="t9"  class="p">&nbsp;</td>
+<td id="t10"  class="p">&nbsp;</td>
+<td id="t11"  class="p">&nbsp;</td>
+</tr>
+<tr>
+<td id="t12"  class="p">&nbsp;</td>
+<td id="t13"  class="p">&nbsp;</td>
+<td id="t14"  class="p">&nbsp;</td>
+<td id="t15"  class="p">&nbsp;</td>
+</tr>
+<tr>
+<td id="t16"  class="p">&nbsp;</td>
+<td id="t17"  class="p">&nbsp;</td>
+<td id="t18"  class="p">&nbsp;</td>
+<td id="t19"  class="p">&nbsp;</td>
+</tr>
+</tbody></table>
+
+
+<div style="padding-top: 1em; font-size: 5pt;">
+<a href="javascript:decodePlaintext(0, ms())">Decode1</a>
+<a href="javascript:letterToNumberAll(ms())">l2n</a>
+<a href="javascript:mod10All(ms())">mod10</a>
+<a href="javascript:yellowFadeOnAll()">yell</a>
+<a href="javascript:replacePtAll()">letters</a>
+<a href="javascript:yellowFadeOffAll()">!yell</a>
+<a href="javascript:nort()">nort</a>
+<a href="javascript:west()">west</a>
+<a href="javascript:whiten()">off</a>
+<a href="javascript:p1()">p1</a> <!-- highlight P -->
+<a href="javascript:p2()">p2</a> <!-- uncover triangle -->
+<a href="javascript:p3()">p3</a> <!-- replace with dotted triangle -->
+<a href="javascript:p4()">p4</a> <!-- decode to L -->
+<a href="javascript:p5()">p5</a> <!-- unhighlight L -->
+<a href="javascript:diablo()">diablo</a>
+<a href="javascript:fillgrid()">grid</a>
+<a href="javascript:scramblegrid()">scramble</a>
+<a href="javascript:find()">find</a>
+<a href="javascript:labor()">labor</a>
+<a href="javascript:day()">day</a>
+<a href="javascript:nort2()">nort2</a>
+<a href="javascript:west2()">west2</a>
+<a href="javascript:scramblenums()">scramble2</a>
+<!--<a href="javascript:letterToNumber('D', 4)">D</a>
+<a href="javascript:letterToNumber('R', 18)">R</a>
+<a href="javascript:letterToNumber('E', 5)">E</a>
+<a href="javascript:letterToNumber('A', 1)">A</a>
+<a href="javascript:letterToNumber('O', 15)">O</a>
+<a href="javascript:replaceNumber(1, 8)">R1</a>
+<a href="javascript:replaceNumber(7, 5); replaceNumber(12, 5)">R2</a>
+<a href="javascript:replaceNumber(4, 4); replaceNumber(6, 4); replaceNumber(8, 4); ">R3</a>
+<a href="javascript:replaceNumber(9, 1)">R4</a>
+<a href="javascript:highlightDiffs()">diffs</a>
+<a href="javascript:highlightDiffOccurrences(1)">d1</a>
+<a href="javascript:highlightDiffOccurrences(3)">d3</a>
+<a href="javascript:highlightDiffOccurrences(4)">d4</a>
+<a href="javascript:highlightDiffOccurrences(-666)">clear</a><br>
+<a href="javascript:yellowOn(4);yellowOn(6);yellowOn(8)">Y</a>
+<a href="javascript:yellowOff(4);yellowOff(6);yellowOff(8)">!Y</a>
+<a href="javascript:replaceNumber(4, 0); replaceNumber(6, 0); replaceNumber(8, 0); ">R5</a>
+<a href="javascript:yellowOn(9)">Y</a>
+<a href="javascript:yellowOff(9)">!Y</a>
+<a href="javascript:replaceNumber(9, 4)">R6</a> 
+<a href="javascript:yellowOn(0)">Y</a>
+<a href="javascript:yellowOff(0)">!Y</a>
+<a href="javascript:yellowOn(1)">Y</a>
+<a href="javascript:yellowOff(1)">!Y</a>
+<a href="javascript:replaceNumber(1, 13)">R7</a>
+<a href="javascript:yellowOn(1)">Y</a>
+<a href="javascript:yellowOff(1)">!Y</a>
+<a href="javascript:replaceNumber(1, 8)">R8</a>
+<a href="javascript:yellowOn(1)">Y</a>
+<a href="javascript:yellowOff(1)">!Y</a>
+<a href="javascript:replaceNumber(1, 3)">R9</a>
+<a href="javascript:yellowOn(2)">Y</a>
+<a href="javascript:yellowOff(2)">!Y</a>
+<a href="javascript:replaceNumber(2, 0)">R10</a>
+<a href="javascript:replaceNumber(7, 10)">R11</a>
+<a href="javascript:replaceNumber(7, 5)">R12</a>
+<a href="javascript:replaceNumber(7, 0)">R13</a>
+<a href="javascript:replaceNumber(10, 0)">R14</a>
+<a href="javascript:replaceNumber(12, 10)">R15</a>
+<a href="javascript:replaceNumber(12, 5)">R16</a>
+<a href="javascript:replaceNumber(12, 0)">R17</a>
+<a href="javascript:highlightDiffs()">diffs</a>
+<a href="javascript:highlightDiffOccurrences(0)">d0</a>
+<a href="javascript:highlightDiffOccurrences(1)">d1</a>
+<a href="javascript:highlightDiffOccurrences(3)">d3</a>
+<a href="javascript:highlightDiffOccurrences(4)">d4</a>
+<a href="javascript:highlightDiffOccurrences(-666)">clear</a><br>-->
+
+
+<br>Durations: <input id="ms" value="1000" size="5">
+</div>
+
+</center>
+
+<script>
+	var animating = false;
+
+	$('#cipher').on('click', '.p', function () {
+		console.log("got here");
+	    if (animating) {
+	        return;
+	    }
+
+	    var clickedDiv = $(this).closest('td'),
+	        prevDiv = clickedDiv.prev().prev(),
+	        distance = //18.805*1; 
+			clickedDiv.outerWidth() * 2;
+//		clickedDiv.css({"z-index": "1"})	
+//			clickedDiv.style.animate="";
+
+	    if (prevDiv.length) {
+			console.log("yo");
+	        animating = true;
+	        $.when(clickedDiv.animate({
+	            left: -distance
+	        }, 600),
+	        prevDiv.animate({
+	            left: distance
+	        }, 600)).done(function () {
+	            prevDiv.css('left', '0px');
+	            clickedDiv.css('left', '0px');
+//	            clickedDiv.insertBefore(prevDiv);
+				prevDiv.before(clickedDiv.prev());
+	            animating = false;
+	        });
+	    }
+	});		
+	
+	async function rearrange(text, ms) {
+		for (var a=0; a<text.length; a++) {
+			var ca = $("#c" + a)[0].innerHTML;
+//			console.log("ca " + ca);
+			if (ca == text[a]) continue;
+			var b;
+			for (b=a+1; b<text.length; b++) {
+				var cb = $("#c" + b)[0].innerHTML;
+//				console.log("cb " + cb);
+				if (cb == text[a])
+					break;
+			}
+//			console.log("swapping " + a + " " + b);
+			swap(a, b, ms);
+			await sleep(ms+100);
+		}
+	}
+	
+	function sleep(ms) {
+	    return new Promise(resolve => setTimeout(resolve, ms));
+	}		
+	
+	function swap(i, j, ms) {
+		var td1 = $("#c" + i);
+		var td2 = $("#c" + j);
+		td1[0].style.animation = "";
+		td2[0].style.animation = "";
+		
+		td1[0].style.backgroundColor = "yellow";
+		td2[0].style.backgroundColor = "yellow";
+
+        var distance = //18.805*1; 
+		td1.outerWidth() * Math.abs(j-i);
+
+	    if (td1.length) {
+			console.log("yo");
+	        $.when(td2.animate({
+	            left: -distance
+	        }, ms),
+	        td1.animate({
+	            left: distance
+	        }, ms)).done(function () {
+	            td1.css('left', '0px');
+	            td2.css('left', '0px');
+				
+			    var $onePrev = td1.prev(); 
+			    if( $onePrev.length < 1 ) var $oneParent = td1.parent();
+
+			    var $twoPrev = td2.prev();
+			    if( $twoPrev.length < 1 ) var $twoParent = td2.parent();
+  
+			    if( $onePrev.length > 0 ) $onePrev.after( td2 );
+			      else $oneParent.prepend( td2 );
+    
+			    if( $twoPrev.length > 0 ) $twoPrev.after( td1 );
+			      else $twoParent.prepend( td1 );		
+				  
+				  var tmp = td1[0].id;
+				  td1[0].id = td2[0].id;
+				  td2[0].id = tmp;
+		  		td1[0].style.backgroundColor = "";
+		  		td2[0].style.backgroundColor = "";
+
+	        });
+	    }
+
+
+		
+	}
+	
+	</script>

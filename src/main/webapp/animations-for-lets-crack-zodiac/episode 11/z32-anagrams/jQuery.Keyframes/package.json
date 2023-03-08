@@ -1,0 +1,49 @@
+{
+  "name": "jquerykeyframes",
+  "version": "1.0.8",
+  "description": "jQuery-Keyframes allows dynamic generation of CSS3 keyframes with callback events and other niceness.",
+  "main": "dist/jquery.keyframes.min.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "npm run es6 && npm run browserify && npm run minify && npm run cleanup",
+    "es6": "babel src/jquery.keyframes.js -o dist/jquery.keyframes.es6.js --no-comments",
+    "browserify": "browserify dist/jquery.keyframes.es6.js -o dist/jquery.keyframes.js -t [ babelify --global --presets [ @babel/preset-env ] ]",
+    "cleanup": "rm dist/jquery.keyframes.es6.js",
+    "minify": "uglifyjs --compress --mangle -- dist/jquery.keyframes.js > dist/jquery.keyframes.min.js",
+    "watch": "nodemon --watch example/example.html --watch src --exec 'npm run build'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Keyframes/jQuery.Keyframes.git"
+  },
+  "keywords": [
+    "animation",
+    "keyframes",
+    "jquery",
+    "css3"
+  ],
+  "author": "krazyjakee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Keyframes/jQuery.Keyframes/issues"
+  },
+  "homepage": "https://github.com/Keyframes/jQuery.Keyframes",
+  "dependencies": {
+    "@keyframes/core": "^2.0.2",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "nodemon": "^1.19.4",
+    "uglify-js": "^3.6.9"
+  }
+}

@@ -1,0 +1,168 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500|Work+Sans:900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap" rel="stylesheet">
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script type="text/javascript" src="animations.js"></script>
+<style>
+* {
+	font-family: 'untitled2regular';
+}                
+
+a {
+	font-family: arial;
+}
+center {
+	font-family: 
+	work sans;
+}
+.links {
+	position: absolute; left: 600px;
+}
+.svg-container { z-index: -10000; }
+.h {
+	font-family: 'work sans';
+	font-size: 20pt;
+}
+
+hr {position: absolute; top: -10px; }
+
+.pt {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+#	text-align: center;
+	font-size: 23pt;   
+	color: #090;
+	position: relative;
+	top: -4px;
+}                      
+.pt0 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(4, 4);
+	position: relative;
+	top: -4px;
+}                      
+.pt1 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(3.67, 3.67);
+	position: relative;
+	top: -4px;
+}                      
+.pt2 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(3.33, 3.33);
+	position: relative;
+	top: -4px;
+}                      
+.pt3 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(3, 3);
+	position: relative;
+	top: -4px;
+}                      
+.pt4 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(2.67, 2.67);
+	position: relative;
+	top: -4px;
+}                      
+.pt5 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(2.33, 2.33);
+	position: relative;
+	top: -4px;
+}                      
+.pt6 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(2, 2);
+	position: relative;
+	top: -4px;
+}                      
+.pt7 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(1.67, 1.67);
+	position: relative;
+	top: -4px;
+}                      
+.pt8 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(1.33, 1.33);
+	position: relative;
+	top: -4px;
+}                      
+.pt9 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: bold;
+	font-size: 23pt;   
+	transform-origin: center center;
+	transform: scale(1, 1);
+	position: relative;
+	top: -4px;
+}                      
+.c {
+	width: 21px;
+	height: 21px;
+#	border: thin solid black;
+}
+
+</style>
+</head>
+<body onload="drawCipher(ciphers[0], 17, 21, 21, 100, 40, 2, 2, 'cipher', '#000', false, 0, 0, 0);">
+<div id="cipher"></div><div id="cipher2"></div>
+
+<div class="links">
+	<a href="javascript:decodeAnimation(0)">Decode</a><br>
+	<a href="javascript:goDecode()">Full decode</a><br>
+	<a href="javascript:goDecodeImm()">Full decode (immediate)</a><br>
+	<a href="javascript:goDecode2()">Part 1</a><br>
+	<a href="javascript:goDecode3()">Part 2</a><br>
+	<a href="javascript:goDecode4()">Part 3</a><br>
+	<a href="javascript:goDecode5()">Part 4</a><br>
+	<a href="javascript:goDecode6()">Part 5</a><br>
+	<a href="javascript:goDecode7()">Part 6</a><br>
+	<a href="javascript:goDecode8()">Part 7</a><br>
+	<a href="javascript:goDecode9()">Part 8</a><br>
+<!--	<a href="javascript:goDecode10()">patterns highlight</a><br>-->
+	<a href="javascript:goDecode11()">patterns decode</a><br>
+	<a href="javascript:goDecode12()">i like killing</a><br>
+	<a href="javascript:goDecode13()">scramble remainder</a><br>
+<!--	<a href="javascript:goDecode14()">reset remainder</a><br>-->
+	<a href="javascript:goDecode15()">decode remainder</a><br>
+	<a href="javascript:goDecode16()">decode remainder random order</a><br>
+	<a href="javascript:goDecode17()">split words</a><br>
+</div>
+
+</body>
+</html>
+
+

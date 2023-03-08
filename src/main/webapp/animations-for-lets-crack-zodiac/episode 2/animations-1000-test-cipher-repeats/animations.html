@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- padding-left: 10px; padding-right: 10px; -->
+<head>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:500|Work+Sans:900&display=swap" rel="stylesheet">
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script type="text/javascript" src="animations.js"></script>
+<style>
+* {
+	font-family: 'untitled2regular';
+}
+.svg-container { z-index: -10000; }
+</style>
+</head>
+<body onload="drawCipher(testCiphers[0], 17, 23, 23, 100, 30, 2, 2, 'cipher', '#777', true, 0, 0, 0)">
+<!--<body onload="drawCipher(ciphers[2], 17, 23, 23, 100, 30, 2, 2, 'cipher', '#777', false, 0, 0, 0)">-->
+<!--<body onload="drawQuote(true,0,0,0)">-->
+<div id="cipher"></div>
+<div id="buttons" style="position: absolute; left: 0;">
+<!--<button id="b1" onclick="fadeIn(40)" style="position: absolute; left: 0; font-family: arial">fadeIn</button>
+<button id="b2" onclick="fadeInWithBlur(1000, 20)" style="position: absolute; left: 50px; font-family: arial">fadeInWithBlur</button>
+<button id="b3" onclick="fadeOutRandomButton(40)" style="position: absolute; left: 140px; font-family: arial">fadeOutRadial</button>
+<button id="b4" onclick="decodeAnimationButton(100)" style="position: absolute; left: 230; font-family: arial">decodeAnimation</button>
+<button id="b5" onclick="qCountBigrams('ER', 500)" style="position: absolute; left: 0; font-family: arial">ER</button>
+<button id="b6" onclick="qCountBigrams('TH', 500)" style="position: absolute; left: 50; font-family: arial">TH</button>
+-->
+<!--<button id="b7" onclick="qCountBigramsAll(1000)" style="font-family: arial">qCountBigramsAll</button>
+<button id="b8" onclick="qShuffle(1)" style="font-family: arial">qShuffle</button>
+<button id="b9" onclick="qShuffleAverage(1)" style="font-family: arial">qShuffleAverage</button>-->
+<!--<button onclick="cipherHighlightBigramsAll('#B',0)" style="font-family: arial">go</button>
+<button onclick="cipherHighlightBigramsAll('q_',0)" style="font-family: arial">go</button>
+<button onclick="cipherHighlightBigramsAllTotal(0)" style="font-family: arial">go</button>-->
+<button onclick="testCiphersAverageButton(0)" style="font-family: arial">go</button>
+<!--<button onclick="cipherHighlightBigramsAllTotal(2)" style="font-family: arial">go</button>-->
+</div>
+<div id="bigram"></div>
+<div id="counter"></div>
+<div id="myDiv" style="position: absolute; top: 130px; left: 530px;"></div>
+</body>
+</html>
+
+
