@@ -1,0 +1,23 @@
+.cipher {
+    font-size: 25px;
+}
+.h {
+    background-color: orange;
+}
+.cipher span {
+    padding: 0 0 0 0;
+}
+.pp {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 19px;
+    font-weight: bold;
+}
+td {
+    text-align: center;
+    padding-right: 1em;
+}
+.label {
+    font-size: 12pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}

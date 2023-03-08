@@ -1,0 +1,25 @@
+<div>
+    <label id="length">Sequence length:</label>
+    <input size="3" for="length" #length />
+  
+  <button class="find-button" (click)="find(length.value);">
+      Find Homophone Sequences
+  </button>
+</div>
+  
+<table>
+    <tr>
+        <th>Sequence</th>
+        <th>Full sequence</th>
+        <th>Count</th>
+        <th>Probability</th>
+        <th>Run</th>
+    </tr>
+    <tr *ngFor="let result of summary.results">
+        <td class="cipher">{{result.sequence}}</td>
+        <td class="cipher">{{result.fullsequence.fullSequence}}</td>
+        <td>{{result.count}}</td>
+        <td>{{result.runProbability}}</td>
+        <td>{{result.run}}</td>
+    </tr>
+</table>

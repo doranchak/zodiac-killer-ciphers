@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.cipher {
+    font-family: 'untitled2regular';
+    line-height: 0.8em;
+    font-size: 20pt;
+  }
+
+.cipher span {
+  width: 20px;
+}
+
+ @font-face {
+  font-family: 'untitled2regular';
+  src: url('/assets/z340-z408-combined-font-monospaced-webfont.woff2') format('woff2'),
+       url('/assets/z340-z408-combined-font-monospaced-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

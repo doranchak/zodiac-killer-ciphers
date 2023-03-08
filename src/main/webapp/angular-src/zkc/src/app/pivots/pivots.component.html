@@ -1,0 +1,40 @@
+<!--<label id="ciphertext">Cipher text: </label><br>-->
+<!--<textarea rows="10" cols="80" for="ciphertext" #ciphertext></textarea>-->
+<div>
+  <label id="length">Pivot length:</label>
+  <input size="3" for="length" #length />
+
+<button class="find-button" (click)="find(length.value);">
+    Find Pivots
+  </button>
+</div>
+
+<p>
+<table>
+  <tr>
+    <th>Ngram</th>
+    <th>Directions</th>
+    <th>Positions</th>
+  </tr>
+  <tr *ngFor="let pivot of summary.pivots">
+    <td (click)="selectedPivot(pivot.ngram)" class="cipher">{{pivot.ngram}}</td>
+    <td>{{pivot.directions}}</td>
+    <td>{{pivot.positions}}</td>
+  </tr>
+</table>
+<p></p>
+
+<table class="cipher">
+  <tr *ngFor="let r of summary.grid">
+    <td *ngFor="let c of r">
+      <span class="{{c[1]}}">{{ c[0] }}</span>
+    </td>
+  </tr>
+</table>
+
+<!--<ul class="pivots">
+    <li *ngFor="let pivot of pivots">
+        {{pivot.ngram}}, {{pivot.directions}}, {{pivot.positions}}
+    </li>
+  </ul>-->
+  

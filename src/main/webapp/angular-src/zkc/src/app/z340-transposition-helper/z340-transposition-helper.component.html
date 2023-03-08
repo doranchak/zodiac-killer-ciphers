@@ -1,0 +1,15 @@
+
+<table>
+    <tr>
+        <td><span (click)="h(0,i)" [className]="cl(0,i)" *ngFor="let c of this.split(z340); let i = index" id="a{{i}}">{{c}}<ng-template [ngIf]="(i+1) % 17 == 0"><br></ng-template></span><span class="label">Original Z340</span></td>
+        <td><span (click)="h(1,i)" [className]="cl(1,i)" *ngFor="let c of this.split(z340u); let i = index" id="b{{i}}">{{c}}<ng-template [ngIf]="(i+1) % 17 == 0"><br></ng-template></span><span class="label">Untransposed Z340</span></td>
+        <td><span (click)="h(2,i)" [className]="cl(2,i)" *ngFor="let c of this.split(z340p); let i = index" id="c{{i}}">{{c}}<ng-template [ngIf]="(i+1) % 17 == 0"><br></ng-template></span><span class="label">Plaintext</span></td>
+        <td><span (click)="h(3,i)" [className]="cl(3,i)" *ngFor="let c of this.split(z340pu); let i = index" id="d{{i}}">{{c}}<ng-template [ngIf]="(i+1) % 17 == 0"><br></ng-template></span><span class="label">Untransposed Plaintext</span></td>
+    </tr>
+</table>
+
+<button class="clear-button" (click)="clear();">
+    Clear highlights
+</button>
+
+    

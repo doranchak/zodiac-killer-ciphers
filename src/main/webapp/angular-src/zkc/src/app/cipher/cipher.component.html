@@ -1,0 +1,12 @@
+<div class="cipher" id="cipher">
+    <span *ngFor="let r of g.cipher['rows']">
+        {{r}}<br>
+    </span>
+</div>
+Name: {{name()}}<br>
+Description: {{description()}}<br>
+
+<button (click)="switchCipher('z340')">z340</button>
+<button (click)="switchCipher('z340t')">z340t</button>
+<button (click)="switchCipher('z408')">z408</button>
+

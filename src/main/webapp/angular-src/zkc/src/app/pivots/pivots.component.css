@@ -1,0 +1,13 @@
+table {
+    border-collapse: collapse;
+}
+td {
+    border: thin solid grey;
+}
+.pivot {
+    background-color: yellow;
+}
+
+.cipher table,td {
+    border: none;
+}
