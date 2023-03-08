@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	(function($){$.fn.easyTabs=function(option){var param=jQuery.extend({fadeSpeed:"fast",defaultContent:1,activeClass:'active'},option);$(this).each(function(){var thisId="#"+this.id;if(param.defaultContent==''){param.defaultContent=1;}
+	if(typeof param.defaultContent=="number")
+	{var defaultTab=$(thisId+" .tabs li:eq("+(param.defaultContent-1)+") a").attr('href').substr(1);}else{var defaultTab=param.defaultContent;}
+	$(thisId+" .tabs li a").each(function(){var tabToHide=$(this).attr('href').substr(1);$("#"+tabToHide).addClass('easytabs-tab-content');});hideAll();changeContent(defaultTab);function hideAll(){$(thisId+" .easytabs-tab-content").hide();}
+	function changeContent(tabId){hideAll();$(thisId+" .tabs li").removeClass(param.activeClass);$(thisId+" .tabs li a[href=#"+tabId+"]").closest('li').addClass(param.activeClass);if(param.fadeSpeed!="none")
+	{$(thisId+" #"+tabId).fadeIn(param.fadeSpeed);}else{$(thisId+" #"+tabId).show();}}
+	$(thisId+" .tabs li").click(function(){var tabId=$(this).find('a').attr('href').substr(1);changeContent(tabId);return false;});});}})(jQuery);
+	</script>
+	<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+	<style type="text/css">
+					.cipher, .cipher2 {
+				font-family: 'untitled2regular';
+				line-height: 28px;
+				font-size: 24pt;
+				color: black;
+				
+				background-color: #white;
+							}
+				td { padding: 5px; }
+				.cipher2 { color: black; }
+				.cipher3 { background-color: aqua; }
+				body { padding: 2em; }
+				.plain { color: green; font-size: 20pt; padding-right: 5px; }
+		</style>
+
+	<title>Zodiac Ciphers Font by Largo, adapted by Dave Oranchak</title>
+	
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#container').easyTabs({defaultContent:1});
+		});
+		
+		function encodeStr(rawStr) {
+			var encodedStr = rawStr.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			   return '&#'+i.charCodeAt(0)+';';
+			});
+			return encodedStr;
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Z340:</h1>
+	<span class="plain">A</span><span class="cipher">lO*Kzl*OKzlO*KzOzKzlOKOl*zl*zKOlzOO*zOK</span><br>
+	<span class="plain">B</span><span class="cipher">f_f_ff_</span><br>
+	<span class="plain">C</span><span class="cipher">ppppppppppp</span><br>
+	<span class="plain">D</span><span class="cipher">SA66S6SSA</span><br>
+	<span class="plain">E</span><span class="cipher">|NBBc|4c|NbBc4B|Bbc|4BN|BcN4bc4B4|cBcB|c|BBcN|</span><br>
+	<span class="plain">F</span><span class="cipher">FFFFFFFFFF</span><br>
+	<span class="plain">G</span><span class="cipher">LLLLLL</span><br>
+	<span class="plain">H</span><span class="cipher">++++++++++++++++++++++++</span><br>
+	<span class="plain">I</span><span class="cipher">HPk&lt;yHPkk&lt;y&lt;y&lt;yy&lt;PHk&lt;Hk</span><br>
+	<span class="plain">L</span><span class="cipher">d7tddd7ttd7t</span><br>
+	<span class="plain">M</span><span class="cipher">222222222</span><br>
+	<span class="plain">N</span><span class="cipher">>DY.9>D.Y9DY.9.9>..Y>D</span><br>
+	<span class="plain">O</span><span class="cipher">R^VM^VRMR^VMRV^RMRMR^VV^MRM</span><br>
+	<span class="plain">P</span><span class="cipher">8j8j88</span><br>
+	<span class="plain">R</span><span class="cipher">E1TZXZETTX1EZT1TZ</span><br>
+	<span class="plain">S</span><span class="cipher">UJ&-UJ-UJ-UJ&U--</span><br>
+	<span class="plain">T</span><span class="cipher">G(#%:G(#(#%;G(G##(;G:(G(;</span><br>
+	<span class="plain">U</span><span class="cipher">/q@/q/</span><br>
+	<span class="plain">V</span><span class="cipher">5555555</span><br>
+	<span class="plain">W</span><span class="cipher">W)W)W))WW)W</span><br>
+	<span class="plain">Y</span><span class="cipher">3CC3CCC</span><br>
+	<h1>Z340 UNTRANSPOSED:</h1>
+	<span class="plain">A</span><span class="cipher">K*zOlOKKzO*KlzO*zlzl*zOlzOzK*KOOllO*OzK</span><br>
+	<span class="plain">B</span><span class="cipher">f__fff_</span><br>
+	<span class="plain">C</span><span class="cipher">ppppppppppp</span><br>
+	<span class="plain">D</span><span class="cipher">SA66S6SSA</span><br>
+	<span class="plain">E</span><span class="cipher">|B|b4|BcBNcNc44|Nb||cc|B4|4ccBBcbBBN4cBB|BBcN|</span><br>
+	<span class="plain">F</span><span class="cipher">FFFFFFFFFF</span><br>
+	<span class="plain">G</span><span class="cipher">LLLLLL</span><br>
+	<span class="plain">H</span><span class="cipher">++++++++++++++++++++++++</span><br>
+	<span class="plain">I</span><span class="cipher">Hk&lt;PkPk&lt;HyyyP&lt;H&lt;y&lt;yk&lt;Hk</span><br>
+	<span class="plain">L</span><span class="cipher">d7tdddtt7d7t</span><br>
+	<span class="plain">M</span><span class="cipher">222222222</span><br>
+	<span class="plain">N</span><span class="cipher">.9>>DDY.9Y>.DY..99.Y>D</span><br>
+	<span class="plain">O</span><span class="cipher">MVRVM^VRRR^M^RRMVRVV^MRM^^M</span><br>
+	<span class="plain">P</span><span class="cipher">88jj88</span><br>
+	<span class="plain">R</span><span class="cipher">EZZ1TXEEZTT1XT1TZ</span><br>
+	<span class="plain">S</span><span class="cipher">U&JJU--JUU-J&U--</span><br>
+	<span class="plain">T</span><span class="cipher">(#(GG%#((##%;G:GG(;G(:(#;</span><br>
+	<span class="plain">U</span><span class="cipher">@/q/q/</span><br>
+	<span class="plain">V</span><span class="cipher">5555555</span><br>
+	<span class="plain">W</span><span class="cipher">WW))))WWW)W</span><br>
+	<span class="plain">Y</span><span class="cipher">C3C3CCC</span><br>
+	<h1>A vs O in Z340:</h1>
+	<span class="plain">A and O combined</span><span class="cipher">Rl^VO*KMz^l*VORKMzR^lO*KVzOzMRKzlV^ORMKOlR*MzRl^V*VzKO^MRlzOO*MzOK</span><br>	
+		</body>
+</html>
