@@ -34,6 +34,7 @@ public class Unzip {
 			}
 			zis.close();
 		} catch (Exception e) {
+			System.err.println("Error unzipping file: " + file);
 			e.printStackTrace();
 		}
 		return sb.toString();
@@ -116,6 +117,7 @@ public class Unzip {
 			}
 			zis.close();
 		} catch (Exception e) {
+			System.err.println("Error unzipping file: " + file);
 			e.printStackTrace();
 		}
 		bean.setConverted(sbConverted);

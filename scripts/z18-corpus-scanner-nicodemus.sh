@@ -1,0 +1,1 @@
+java -cp ../target/classes com.zodiackillerciphers.corpus.Z408Last18CorpusScanner nicodemus $1 $2 $3

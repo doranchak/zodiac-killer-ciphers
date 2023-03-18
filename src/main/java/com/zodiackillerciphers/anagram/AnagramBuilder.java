@@ -239,8 +239,9 @@ public class AnagramBuilder {
 		}
 	}
 	
-	static void testAnagram() {
-		AnagramBuilder a = new AnagramBuilder("YNSETAIDOBLAO   90182390!@#!@#....   	RTRDFWN");
+	static void generateAnagrams(String input, int tries) {
+//		AnagramBuilder a = new AnagramBuilder("YNSETAIDOBLAO   90182390!@#!@#....   	RTRDFWN");
+		AnagramBuilder a = new AnagramBuilder(input);
 //		a.buildWordPool();
 //		a.buildLetterPool();
 //		System.out.println(a.frequencySum);
@@ -249,14 +250,21 @@ public class AnagramBuilder {
 //		for (WordBean bean : a.wordPool) {
 //			if (a.fits(bean)) System.out.println(bean + " fits in " + a.input);
 //		}
-		for (int i=0; i<1000; i++) {
-			//System.out.println("=== Anagram #" + i);
-			a.generateAnagram();
-			a.outputAnagram();
+		if (tries == -1)
+			while (true) {
+				a.generateAnagram();
+				a.outputAnagram();
+			}
+		else {
+			for (int i=0; i<tries; i++) {
+				//System.out.println("=== Anagram #" + i);
+				a.generateAnagram();
+				a.outputAnagram();
+			}
 		}
 	}
 	
 	public static void main(String[] args) {
-		testAnagram();
+		generateAnagrams(args[0], Integer.valueOf(args[1]));
 	}
 }

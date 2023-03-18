@@ -27,3 +27,51 @@ Bring up Angular (user interface front end for interacting with the service endp
 	npm install (if needed)
 	ng serve
 	Then open browser to http://localhost:4200
+
+# Scripts
+
+The following are individual programs and utilities that can be run directly via the command line in the `scripts` folder.
+
+## Anagrams
+
+### Anagram Builder
+
+Generate a number of anagrams from the given string.
+
+`./anagram-builder.sh SPIROAGNEW 100`
+
+The above will generate 100 anagrams of SPIROAGNEW, including incomplete anagrams (with leftover letters).
+For unlimited anagrams, use `-1` as the 2nd argument.
+
+## Z18 Corpus Scanner
+
+These programs require a corpus archived in a specific location.  TODO: Document and make more configurable.
+
+### "The Zodiac"
+
+If we let Z18's plaintext end with "THEZODIAC", the rest fits this pattern: `x_H____Ax` (where `x` is any letter A-Z).  Generate samples from a corpus and output the ones that fit the pattern:
+
+`./z18-corpus-scanner-the-zodiac.sh`
+
+### Letter Counts
+
+Generate corpus samples of the given length, that have the given minimum and maximum occurences of the given letter.  Example:
+
+`./z18-corpus-scanner-letter-count.sh 18 E 5 7`:  Produces samples that are 18 letters long and have at least 5 occurrences of `E`, but no more than 7 of them.
+
+### Cragle's Searches
+
+Look for corpus samples of length 18 that have these letters in them: E E E E E E E R N O I
+
+`./z18-corpus-scanner-cragle.sh`
+
+Look for corpus samples of length 18 that have these letters in them: N S S R E E E E E E E, or N S S R E E E E E E E T T T T H H
+
+`./z18-corpus-scanner-cragle2.sh`
+
+### Nicodemus Search
+
+Looks for corpus samples meeting criteria similar to Nicodemus' claims.  
+Example:  Find corpus samples of length 18 that have 9 unique pairs.  5 of them must start with the same letter, and 5 of them must end with the same letter:
+
+`./z18-corpus-scanner-nicodemus.sh 18 9 5`

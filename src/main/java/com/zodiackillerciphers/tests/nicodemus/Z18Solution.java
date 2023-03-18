@@ -20,7 +20,7 @@ public class Z18Solution {
 			
 	}
 	
-	static void process(String str) {
+	public static void process(String str) {
 		/** compute distinct non-overlapping pairs */
 		Set<String> pairs = new HashSet<String>();
 		/** track counts of start and end letters */
@@ -66,8 +66,12 @@ public class Z18Solution {
 		}
 		return maxKey;
 	}
+	public static void test() {
+		process("EBEORIETEMETHHPITI");
+	}
 	
 	public static void main(String[] args) {
-		shuffleTest(10000);
+		test();
+//		shuffleTest(10000);
 	}
 }

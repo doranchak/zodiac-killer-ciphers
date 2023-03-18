@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -388,7 +390,305 @@ public class Z408Last18CorpusScanner extends CorpusBase {
 		System.out.println("Hits: " + hits);
 		
 	}
+	public static void searchForSpecificLetterCount(int length, char letter, int minimum, int maximum) {
+		WordFrequencies.init();
+		SubstitutionMutualEvolve.initSources();
+		CorpusBase.SHOW_INFO = false;
+		long samples = 0;
+		long hits = 0;
+		long sources = 0;
+		boolean go = true;
+		while (go) {
+			sources++;
+			go = !SubstitutionMutualEvolve.randomSource();
+			List<List<String>> ngrams = ngrams(length);
+			for (List<String> plaintext : ngrams) {
+				StringBuffer sbWithSpaces = flatten(plaintext, true);
+				StringBuffer sbWithoutSpaces = flatten(plaintext, false);
+				samples++;
+				Map<Character, Integer> counts = Ciphers.countMap(sbWithoutSpaces.toString());
+				Integer count = counts.get(letter);
+				if (count == null) count = 0;
+				if (count >= minimum && count <= maximum) System.out.println(sbWithSpaces);
+			}
+		}
+		System.out.println("Sources: " + sources);
+		System.out.println("Samples: " + samples);
+		System.out.println("Hits: " + hits);
+	}
+	
+	public static void searchCragle() {
+		WordFrequencies.init();
+		SubstitutionMutualEvolve.initSources();
+		CorpusBase.SHOW_INFO = false;
+		long samples = 0;
+		long hits = 0;
+		long sources = 0;
+		boolean go = true;
+		while (go) {
+			sources++;
+			go = !SubstitutionMutualEvolve.randomSource();
+			List<List<String>> ngrams = ngrams(18);
+			for (List<String> plaintext : ngrams) {
+				StringBuffer sbWithSpaces = flatten(plaintext, true);
+				StringBuffer sbWithoutSpaces = flatten(plaintext, false);
+				samples++;
+				Map<Character, Integer> counts = Ciphers.countMap(sbWithoutSpaces.toString());
+				
+				// Look for samples that have:
+				// - exactly 7 Es
+				// - exactly one each of: R, N, O, and I
+				
+				Integer count = counts.get('E');
+				if (count == null || count != 7) continue;				
+				
+				boolean found = true;
+				for (char ch : new char[] {'R', 'N', 'O', 'I'}) {
+					count = counts.get(ch);
+					if (count == null || count != 1) {
+						found = false;
+						break;
+					}
+				}
+				if (!found) continue;
+				System.out.println(sbWithSpaces);
+				
+			}
+		}
+		System.out.println("Sources: " + sources);
+		System.out.println("Samples: " + samples);
+		System.out.println("Hits: " + hits);
+		
+	}
+	public static void searchCragle2() {
+		WordFrequencies.init();
+		SubstitutionMutualEvolve.initSources();
+		CorpusBase.SHOW_INFO = false;
+		long samples = 0;
+		long hits = 0;
+		long sources = 0;
+		boolean go = true;
+		
+		Map<Character, Integer> match1 = new HashMap<Character, Integer>();
+		match1.put('N', 1);
+		match1.put('S', 2);
+		match1.put('R', 1);
+		match1.put('E', 7);
 
+		Map<Character, Integer> match2 = new HashMap<Character, Integer>();
+		match1.put('T', 4);
+		match1.put('H', 2);
+		
+		while (go) {
+			sources++;
+			go = !SubstitutionMutualEvolve.randomSource();
+			List<List<String>> ngrams = ngrams(18);
+			for (List<String> plaintext : ngrams) {
+				StringBuffer sbWithSpaces = flatten(plaintext, true);
+				StringBuffer sbWithoutSpaces = flatten(plaintext, false);
+				samples++;
+				Map<Character, Integer> counts = Ciphers.countMap(sbWithoutSpaces.toString());
+				
+				// Look for samples that have these letters in them:
+				// - N S S R E E E E E E E
+				// or
+				// - N S S R E E E E E E E T T T T H H
+				
+				boolean found1 = true;
+				boolean found2 = true;
+				for (Character key : match1.keySet()) {
+					int count1 = match1.get(key);
+					int count2 = counts.get(key) == null ? 0 : counts.get(key);
+					if (count1 != count2) {
+						found1 = false;
+						break;
+					}
+				}
+				if (!found1) continue;
+				for (Character key : match2.keySet()) {
+					int count1 = match2.get(key);
+					int count2 = counts.get(key) == null ? 0 : counts.get(key);
+					if (count1 != count2) {
+						found2 = false;
+						break;
+					}
+				}
+				if (!found1 && !found2) continue;
+				
+				String match = found2 ? "MATCH2" : "MATCH1";
+				
+				System.out.println(match + "	" + WordFrequencies.scoreLog(sbWithSpaces.toString()) + "	" + sbWithSpaces);
+				
+			}
+		}
+		System.out.println("Sources: " + sources);
+		System.out.println("Samples: " + samples);
+		System.out.println("Hits: " + hits);
+	}
+	public static void searchCragle3() {
+		WordFrequencies.init();
+		SubstitutionMutualEvolve.initSources();
+		CorpusBase.SHOW_INFO = false;
+		long samples = 0;
+		long hits = 0;
+		long sources = 0;
+		boolean go = true;
+		
+		Map<Character, Integer> match = new HashMap<Character, Integer>();
+		match.put('E', 7);
+		match.put('T', 4);
+		match.put('S', 2);
+		match.put('H', 2);
+		match.put('R', 1);
+		match.put('O', 1);
+		match.put('N', 1);
+		
+		while (go) {
+			sources++;
+			go = !SubstitutionMutualEvolve.randomSource();
+			List<List<String>> ngrams = ngrams(18);
+			for (List<String> plaintext : ngrams) {
+				StringBuffer sbWithSpaces = flatten(plaintext, true);
+				StringBuffer sbWithoutSpaces = flatten(plaintext, false);
+				samples++;
+				Map<Character, Integer> counts = Ciphers.countMap(sbWithoutSpaces.toString());
+				
+				boolean found = true;
+				for (Character key : match.keySet()) {
+					int count1 = match.get(key);
+					int count2 = counts.get(key) == null ? 0 : counts.get(key);
+					if (count1 != count2) {
+						found = false;
+						break;
+					}
+				}
+				if (!found) continue;
+				System.out.println(WordFrequencies.scoreLog(sbWithSpaces.toString()) + "	" + sbWithSpaces);
+			}
+		}
+		System.out.println("Sources: " + sources);
+		System.out.println("Samples: " + samples);
+		System.out.println("Hits: " + hits);
+		
+	}
+	
+	/** Nicodemus' claim about the supposed grid/matrix system in Z18:
+	  
+		- The last 18 decode to:  EB EO RI ET EM ET HH PI TI  (9 pairs of letters)
+		- Unique pairs: EB EO RI ET EM HH PI TI  (8 pairs)   
+	  	- 4 pairs start with E:  EB EO ET EM
+	  	- 3 pairs end with I:  RI PI TI
+	  	- Thus 7 pairs either begin with E or end with I
+	  
+	  	Those pairs can be marked in this grid layout:
+	  
+			    B  O  I  T  M  H
+			--------------------
+			R |       #
+			H |                #
+			E | #  #     #  #
+			P |       #
+			T |       #
+
+		Columns are BOITMH which preserves the order of the 2nd letters of each pair (with no repeats)
+
+		Rows are RHEPT which preserves the order of the 1st letters of each pair (with no repeats) 
+			EXCEPT for E which is moved to the center.
+			
+		He replaces HH with HI, assume it to be an error.
+
+			    B  O  I  T  M
+			-----------------
+			R |       #
+			H |       #      
+			E | #  #     #  #
+			P |       #
+			T |       #
+		
+		The sequence has two occurrences of ET.
+		He replaces the first ET with EI which allows him to complete the cross.
+		 
+			    B  O  I  T  M
+			-----------------
+			R |       #
+			H |       #      
+			E | #  #  #  #  #
+			P |       #
+			T |       #
+			
+		Thus his modified sequence of pairs is: EB EO RI EI EM ET HI PI TI
+
+		How often does this happen with randomly sampled text?
+		
+		We seek:
+
+			- Samples of length 18
+			- 9 unique pairs of letters
+			- 5 must start with same letter
+			- 5 must end with the same letter
+		
+		He allows some mistakes.  Possibilities:
+		
+		- 
+		-  
+		
+
+	 */
+	public static void searchNicodemus(int length, int numUniquePairs, int numStartEndSameLetter) {
+		WordFrequencies.init();
+		SubstitutionMutualEvolve.initSources();
+		CorpusBase.SHOW_INFO = false;
+		long samples = 0;
+		long hits = 0;
+		long sources = 0;
+		boolean go = true;
+		while (go) {
+			sources++;
+			go = !SubstitutionMutualEvolve.randomSource();
+			List<List<String>> ngrams = ngrams(length);
+			for (List<String> plaintext : ngrams) {
+				StringBuffer sbWithSpaces = flatten(plaintext, true);
+				StringBuffer sbWithoutSpaces = flatten(plaintext, false);
+				samples++;
+				
+				if (nicodemusHit(sbWithoutSpaces, numUniquePairs, numStartEndSameLetter))				
+					System.out.println(sbWithSpaces);				
+			}
+		}
+		
+	}
+	
+	static void add(char ch, Map<String, Integer> counts) {
+		String key = "" + ch;
+		Integer val = counts.get(key);
+		if (val == null) val = 0;
+		val++;
+		counts.put(key, val);
+	}
+	
+	public static boolean nicodemusHit(StringBuffer sb, int numUniquePairs, int numStartEndSameLetter) {
+		Set<String> pairs = new HashSet<String>(); 
+		for (int i=0; i<sb.length(); i+=2) {
+			String pair = sb.substring(i,i+2);
+			pairs.add(pair);
+		}
+		if (pairs.size() != numUniquePairs) return false;
+		/** track counts of start and end letters */
+		Map<String, Integer> countStart = new HashMap<String, Integer>(); 
+		Map<String, Integer> countEnd = new HashMap<String, Integer>(); 
+
+		for (String pair : pairs) {
+			add(pair.charAt(0), countStart);
+			add(pair.charAt(1), countEnd);
+		}
+		
+		if (numStartEndSameLetter != Collections.max(countStart.values())) return false;
+		if (numStartEndSameLetter != Collections.max(countEnd.values())) return false;
+		return true;
+	}
+	
+
+	// TODO: either 0 or 7 Es, exactly one N, etc.  try out those kinds of constraints on Z18.
 	
 	public static void main(String[] args) {
 //		System.out.println(Anagrams.anagram("EBEORIETEMETHHPITI", "BEEEEEHHIIIMOPRTTT", true));
@@ -403,6 +703,22 @@ public class Z408Last18CorpusScanner extends CorpusBase {
 //		System.out.println(EditDistance.LD(s1, s2));
 //		differences("TIMOTHIE E PHEIBERTE");
 //		testDifferences();
-		searchTheZodiac();
+		
+		switch (args[0]) {
+			case "the-zodiac": searchTheZodiac();
+				break;
+			case "letter-count":
+				searchForSpecificLetterCount(Integer.parseInt(args[1]), args[2].charAt(0), Integer.parseInt(args[3]),
+						Integer.parseInt(args[4]));
+				break;
+			case "cragle":
+				searchCragle();
+			case "cragle2":
+				searchCragle2();
+			case "cragle3":
+				searchCragle3();
+			case "nicodemus":
+				searchNicodemus(Integer.parseInt(args[1]), Integer.parseInt(args[2]), Integer.parseInt(args[3]));
+		}		
 	}
 }
