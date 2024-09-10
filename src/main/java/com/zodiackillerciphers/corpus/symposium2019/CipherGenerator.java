@@ -98,8 +98,8 @@ public class CipherGenerator {
 					} else if (which == 1) {
 						// columnar transposition:
 						int[] key = ColumnarTransposition.randomKey(20);
-						StringBuilder col = ColumnarTransposition.encode(new StringBuilder(pt), key);
-						hom = HomophonicGenerator.makeHomophonic(col.toString(), ALPHABET_SIZE);
+						// StringBuilder col = ColumnarTransposition.encode(new StringBuilder(pt), key); // TODO: 9/10/2024: this encode call was broken
+						// hom = HomophonicGenerator.makeHomophonic(col.toString(), ALPHABET_SIZE);
 //						hom = Ciphers.fromNumeric(Ciphers.toNumeric(hom, false), false, 5);
 						// doubles = HomophonicGenerator.toDoubles(hom);
 					} else if (which == 2) {

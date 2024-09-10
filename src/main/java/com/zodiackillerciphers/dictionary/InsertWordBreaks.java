@@ -29,6 +29,8 @@ public class InsertWordBreaks {
 	public static StringBuffer findWordBreaks(StringBuffer input, String langID) {
 		return findWordBreaks(input, langID, false);
 	}
+
+	/** TODO: replace with AZDecrypt's score */
 	public static StringBuffer findWordBreaks(StringBuffer input, String langID, boolean returnScore) {
 		input = breakNumbers(input);
 		double best = 0;

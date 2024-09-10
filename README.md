@@ -32,6 +32,7 @@ Bring up Angular (user interface front end for interacting with the service endp
 
 The following are individual programs and utilities that can be run directly via the command line in the `scripts` folder.
 
+***
 ## Anagrams
 
 ### Anagram Builder
@@ -43,7 +44,8 @@ Generate a number of anagrams from the given string.
 The above will generate 100 anagrams of SPIROAGNEW, including incomplete anagrams (with leftover letters).
 For unlimited anagrams, use `-1` as the 2nd argument.
 
-## Z18 Corpus Scanner
+***
+## Corpora related
 
 These programs require a corpus archived in a specific location.  TODO: Document and make more configurable.
 
@@ -76,20 +78,15 @@ Example:  Find corpus samples of length 18 that have 9 unique pairs.  5 of them 
 
 `./z18-corpus-scanner-nicodemus.sh 18 9 5`
 
-### K4 Search
-
-TODO 
-
-`./`
-
 ### Anagrams corpus search
 
 Searches corpus for strings that anagram exactly to the given string.
 Example: Find corpus samples that anagram to the string SPIROAGNEW:
 
-`java -cp ../target/classes com.zodiackillerciphers.corpus.AnagramsSearch SPIROAGNEW`
+`./corpus-anagrams.sh SPIROAGNEW`
 
-### Polybius keyword search
+***
+## Dictionaries, n-grams
 
 Polybius keywords have all duplicate letters removed so only unique letters remain.
 For example, CABBAGE becomes CABGE.
@@ -97,8 +94,51 @@ Given a keyword, find all words that are equivalent.
 
 `java -cp ../target/classes com.zodiackillerciphers.dictionary.KeywordSearch CABGE`
 
-### Insert word breaks (spaces) in strings from a file
+## Insert word breaks (spaces) in strings from a file
 
-Takes the given file, one line at a time, and guesses where word breaks might appear, and prints the results.
+Takes the given file, one line at a time, and guesses where word breaks might appear, and prints the results.  TODO: Replace with AZDecrypt-like score, which seems to work better.
 
 `java -cp ../target/classes com.zodiackillerciphers.dictionary.InsertWordBreaksWrapper file_name`
+
+## Telephone Keypad Solver
+
+`./telephone-keypad-solver.sh <digits>`
+
+Finds dictionary words that can be found for the given sequence of digits on a standard telephone keypad.
+
+***
+## Z408
+
+### Double/Multiple Z408 Key
+
+Allen TX shooter cipher has a line that decodes to GHOST if you apply Z408 key, treat result as cipher text, and apply Z408 key again.  
+
+`./double-z408-key.sh <n> <cipher>`
+
+Applies the Z408 *n* times to the given cipher.
+ 
+***
+## Kryptos
+
+### K4 Corpus Scanner
+
+Looks for length 97 plaintexts where we can also pop in the known K4 cribs.
+
+`./k4-corpus-scanner.sh`
+
+TODO 
+
+`mvn exec:java -Dexec.mainClass="com.zodiackillerciphers.tests.samblake.Kryptos"`
+
+***
+## Other
+
+### Pollard's Rho Integer Factorization
+
+A Pollard's Rho implementation I found.
+
+`./pollards-rho.sh <number>`
+
+Attempts to factor the given number using the Pollard's Rho algorithm.
+
+

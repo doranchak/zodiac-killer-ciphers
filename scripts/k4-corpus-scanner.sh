@@ -1,0 +1,1 @@
+java -cp ../target/classes com.zodiackillerciphers.corpus.K4CorpusScanner
