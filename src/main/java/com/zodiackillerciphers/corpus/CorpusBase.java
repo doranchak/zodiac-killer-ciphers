@@ -142,6 +142,7 @@ public class CorpusBase {
 	}
 	// prepare the corpus
 	public static void initSources() {
+		// TODO: parameterize this
 		fileList = FileUtil.loadFrom("/Volumes/Share/projects/zodiac/Documents/Corpora/all-files.txt");
 		for (int i=fileList.size()-1; i>=0; i--) {
 			if (fileList.get(i).contains("filetypes[]=txt")) {

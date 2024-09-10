@@ -2,7 +2,7 @@
 
 This is a lot of code, experiments, and documentation that I developed over the many years I spent investigating the Zodiac Killer ciphers, and developing my site:  http://zodiackillerciphers.com
 
-Much of the code is throwaway experimental code, but I'm trying to carve out all the useful reusable stuff into Web services that can be easily invoked to perform tasks related to cryptanalysis.
+Much of the code is throwaway experimental code, but I'm trying to carve out all the useful reusable stuff into scripts and Web services that can be easily invoked to perform tasks related to cryptanalysis.
 
 To build:
 
@@ -75,3 +75,30 @@ Looks for corpus samples meeting criteria similar to Nicodemus' claims.
 Example:  Find corpus samples of length 18 that have 9 unique pairs.  5 of them must start with the same letter, and 5 of them must end with the same letter:
 
 `./z18-corpus-scanner-nicodemus.sh 18 9 5`
+
+### K4 Search
+
+TODO 
+
+`./`
+
+### Anagrams corpus search
+
+Searches corpus for strings that anagram exactly to the given string.
+Example: Find corpus samples that anagram to the string SPIROAGNEW:
+
+`java -cp ../target/classes com.zodiackillerciphers.corpus.AnagramsSearch SPIROAGNEW`
+
+### Polybius keyword search
+
+Polybius keywords have all duplicate letters removed so only unique letters remain.
+For example, CABBAGE becomes CABGE.
+Given a keyword, find all words that are equivalent.
+
+`java -cp ../target/classes com.zodiackillerciphers.dictionary.KeywordSearch CABGE`
+
+### Insert word breaks (spaces) in strings from a file
+
+Takes the given file, one line at a time, and guesses where word breaks might appear, and prints the results.
+
+`java -cp ../target/classes com.zodiackillerciphers.dictionary.InsertWordBreaksWrapper file_name`

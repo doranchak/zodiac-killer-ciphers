@@ -1860,7 +1860,25 @@ public class Ciphers {
 		}
 	}
 	
+	/** Our initial decrypt of Z340 section 1 yielded a complete key.  Show what the complete decrypt of Z340 looked like with this key. */
+	public static void testKeyForZ340Section1() {
+		// sam's initial transposition
+		String cipher = "H+M8|CV@KEB+*5k.LdR(UVFFz9<>#Z3P>L(MpOGp+2|G+l%WO&D#2b^D(+4(5J+VW)+kp+fZPYLR/8KjRk.#K_Rq#2|<z29^%OF1*HSMF;+BLKJp+l2_cTfBpzOUNyG)y7t-cYA2N:^j*Xz6dpclddG+4-RR+4>f|pz/JNbVM)+l5||.UqL+Ut*5cZGR)VE5FV52cW+|TB4-|TC^D4ct+c+zJYM(+y.LW+B.;+B31cOp+8lXz6Ppb&RG1BCO7TBzF*K<S<MF6N:(+HFK29^4OFTBO<Sf9pl/yUcy5C^W(-+l#2E.B)|kW7BYB-cFd<t_O*C>DNkzOAK+MHpSZ8|;";
+		// first 9 lines
+		String cipher1 = cipher.substring(0, 9*17);
+		// plaintext that popped out of azdecrypt for first 9 lines after cribbing
+		String plain = "IHOPEYOUAREHAVINGLOTSOFFANINTRYINGTOCATCHMETHATWASNTMEONTHETVSHOWWHICHBRINGOUPAPOINTABOUTMEIAMNOTAFRAIDOFTHEGASCHAMBERBECAASEITWILLSENDMETOPAYALLCEALLTHE";
+		// so our first Z340 key was:
+		Map<Character, Character> decoder = Ciphers.decoderMapFor(cipher1, plain); 
+		System.out.println(decoder);
+		// and full Z340 decrypt was:
+		System.out.println(Ciphers.decode(cipher, decoder));
+		// and here's what it looks like before reversing the transposition:
+		System.out.println(Ciphers.decode(Ciphers.cipher[0].cipher, decoder));
+	}
+	
 	public static void main(String[] args) {
+		testKeyForZ340Section1();
 //		System.out.println(toLargoZ340(Z340));
 //		System.out.println(toLargoZ408(Z408));
 		//System.out.println(Ciphers.cipher[13].cipher.length());
@@ -2046,7 +2064,7 @@ public class Ciphers {
 //		System.out.println(fromDelimited("14,37,4,78,3 35,77 26,47,6,15 11,1,9,77,37 14,99,17,33,7,47,18,26 20,53,17,33,15,2 11,53,9,16 9,7,29,99,24,88,47 47,21 96,21,77,15,26 79,16,77,78 98,7,92 24,7,6,77 10,53,26,4,9 6,99,5,77 9,55,15,35 99,26 29,4,3 1,65 12,7,22 24,99,18 29,22,96 26,35,99,17,33 78,22,20,36 96,7 26,11,99,17,33,47,79 26,18,77,99,32 77,35 78 29,1,3 24,55,4,8,65 7,21 24,16,7,24 6,17,5 8,33,25 53,9,85 15,99,25,12​", ',', ' '));
 //		System.out.println(Arrays.toString(toNumeric("THIS IS A TEST", false)));
 //		dumpZ408Sequences("9%P/Z/UB%kOR=pX=BWV+eGYF69HP@K!qYeMJY^UIk7qTtNQYD5)S(/9#BPORAU%fRlqEk^LMZJdr\\pFHVWe8Y@+qGD9KI)6qX85zS(Ld/P#B@XqEHMU^RRkcZKqpI)Wq!85LMr9#BPDR+j=6\\N(eEUHkFZcpOVWI5+tL)l^R6HI9DR_TYr\\de/@XJQAP5M8RUt%L)NVEKH=GrI!Jk598LMlNA)Z(PzUpkA9#BVW\\+VTtOP^=SrlfUe67DzG%%IMNk)ScE/9%%ZfAP#BVpeXqWq_F#8c+@9A9BH!FBX9zXADd\\7L!=q_ed##6e5PORXQF%GcZ@JTtq_8JI+rBPQW6");
-		System.out.println(decode(Ciphers.Z340T, decoderMapFor(Ciphers.Z408, Ciphers.Z408_SOLUTION)));
+//		System.out.println(decode(Ciphers.Z340T, decoderMapFor(Ciphers.Z408, Ciphers.Z408_SOLUTION)));
 //		System.out.println(fromNumeric("01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 07 16 17 18 19 20 21 22 02 07 10 08 23 17 02 07 12 26 16 24 25 11 14 13 03 27 19 18 15 28 14 29 09 02 30 31 31 19 01 32 13 33 34 35 04 20 25 07 36 37 02 12 17 28 38 03 21 05 08 16 39 15 13 14 15 07 16 17 12 02 10 40 36 13 33 03 05 35 15 41 07 19 42 11 15 43 16 11 46 21 02 30 44 13 45 24 09 08 45 46 47 48 22 13 09 10 26 04 25 26 50 51 08 52 03 07 40 13 39 03 31 02 52 24 17 31 31 19 47 02 51 21 10 45 08 24 03 43 13 01 46 26 07 39 08 03 27 13 10 21 04 10 40 15 02 16 54 17 12 13 53 03 07 39 08 24 30 01 19 44 46 08 03 02 35 10 07 13 30 16 04 54 19 14 46 55 15 13 47 08 41 48 03 27 04 39 10 14 48 28 19 54 20 50 51 13 23 10 09 33 16 27", false));
 //		System.out.println(toNumericWithPadding(Ciphers.Z408, false));
 //		maskZ340();

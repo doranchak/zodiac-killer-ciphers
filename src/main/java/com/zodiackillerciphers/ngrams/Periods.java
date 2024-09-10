@@ -928,7 +928,7 @@ public class Periods {
 	}
 	
 	public static void main(String[] args) {
-		dumpZ340MatrixFormatted();
+//		dumpZ340MatrixFormatted();
 //		translatePivots();
 //		transposeMergeTest();
 		//testEquivalancies();
@@ -939,7 +939,7 @@ public class Periods {
 //		String re = Ciphers.cipher[0].cipher;
 //		re = rewrite3(re, 19, true);
 //		System.out.println(re);
-		//test(Ciphers.Z340, false);
+		test(Ciphers.Z340, false);
 //		test("HRp^P|LGdE>lVk1T2N+(ODY<K)pB#%W.*fB:MUG(LzJyc+ZW)#HSp^8Vp+R2p7l*3O+K_Mzj|F+4/9+td5P&kpRFO*CF2(8^l-dk>D#+q;UXVz|5K%2cG.L(2f#+Nz@9GJjO_Y+LdMbZ2By6K<++RFcA4-lV^+p<B-zU+JO7FyUR5EDBbMO+/t|YpTK2cR|54.&F<lJ*TM+Bz9y+|Fc;R6S#N5B(8lF^54.Vt+GNf2bc4+yX*4C>U5+B1:9EVZ-|.zKO^fq2c3B(p.MGRTL6<FW|Lc+1C+lB)+)CWPST(p+WzcOH/)|kW7BYB-cFd<t_O*C>DNkzOAK+MHpSZ8|;", false);
 //		System.out.println(new NGramsBean(2, re).numRepeats());
 //		new NGramsBean(2, re).dump();

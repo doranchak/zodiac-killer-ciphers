@@ -761,8 +761,7 @@ public class Z340Solution {
 		System.out.println(Ciphers.decode(jarl, z340SolutionKey()));
 		String sam = "H+M8|CV@KEB+*5k.LdR(UVFFz9<>#Z3P>L(MpOGp+2|G+l%WO&D#2b^D(+4(5J+VW)+kp+fZPYLR/8KjRk.#K_Rq#2|<z29^%OF1*HSMF;+BLKJp+l2_cTfBpzOUNyG)y7t-cYA2N:^j*Xz6dpclddG+4-RR+4>f|pz/JNbVM)+l5||.UqL+Ut*5cZGR)VE5FV52cW+|TB4-|TC^D4ct+c+zJYM(+y.LW+B.;+B31cOp+8lXz6Ppb&RG1BCO7TBzF*K<S<MF6N:(+HFK29^4OFTBO<Sf9pl/yUcy5C^W(-+l#2E.B)|kW7BYB-cFd<t_O*C>DNkzOAK+MHpSZ8|;";
 		System.out.println(sam);
-		System.out.println(Ciphers.decode(sam, z340SolutionKey()));
-		
+		System.out.println(Ciphers.decode(sam, z340SolutionKey()));		
 	}
 	
 	public static void main(String[] args) {

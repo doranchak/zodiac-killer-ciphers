@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import com.zodiackillerciphers.ciphers.Ciphers;
+import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.lucene.NGramsCSRA;
 import com.zodiackillerciphers.lucene.ZKDecrypto;
 
@@ -200,6 +202,20 @@ public class InsertWordBreaks {
 			System.out.println();
 		}
 	}
+	
+	public static void findWordBreaks(String fileName) {
+		String lang = "EN";
+		init(lang, true);
+		System.out.println("Loading strings...");
+		List<String> lines = FileUtil.loadFrom(fileName);
+		for (String line : lines) {
+			String withoutSpaces = line.replaceAll(" ", "").toUpperCase();
+			StringBuffer result = findWordBreaks(new StringBuffer(withoutSpaces), lang, true);
+			System.out.println("   Test string: " + withoutSpaces);
+			System.out.println("Guessed breaks: " + result);
+		}
+	}
+	
 	public static void testCompatibleCribs() {
 		init("EN", false);
 		String path = "/Volumes/My Passport - 4TB/projects/zodiac/findCompatibleCribs-3.txt";

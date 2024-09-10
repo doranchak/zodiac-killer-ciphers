@@ -29,7 +29,7 @@ public class AnagramsSearch extends CorpusBase {
 		while (go) {
 			sources++;
 			go = !SubstitutionMutualEvolve.randomSource();
-			System.out.println("File: " + CorpusBase.file);
+//			System.out.println("File: " + CorpusBase.file);
 			List<List<String>> ngrams = ngrams(str.length());
 			for (List<String> plaintext : ngrams) {
 				StringBuffer sbWithSpaces = flatten(plaintext, true);
@@ -37,7 +37,7 @@ public class AnagramsSearch extends CorpusBase {
 				if (found.contains(sbWithSpaces.toString())) continue;
 				if (Anagrams.anagram(str, sbWithoutSpaces.toString(), true)) {
 					System.out.println(
-							WordFrequencies.scoreLog(sbWithSpaces.toString()) + " " + sbWithSpaces + " " + str);
+							WordFrequencies.scoreLog(sbWithSpaces.toString()) + " " + sbWithSpaces + " " + CorpusBase.file);
 					found.add(sbWithSpaces.toString());
 				}
 			}
@@ -199,7 +199,8 @@ public class AnagramsSearch extends CorpusBase {
 //		searchFaycal32_A();
 //		searchFaycal32_B();
 //		searchFaycal32_C();
-		searchDaleHalloween();
+//		searchDaleHalloween();
+		search(args[0]);
 	}
 
 }
