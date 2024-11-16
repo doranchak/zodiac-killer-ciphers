@@ -44,6 +44,14 @@ Generate a number of anagrams from the given string.
 The above will generate 100 anagrams of SPIROAGNEW, including incomplete anagrams (with leftover letters).
 For unlimited anagrams, use `-1` as the 2nd argument.
 
+### Anagrams Test
+
+Read lines from a file, and outputs all lines that can be found as anagrams in the given input string.
+
+If 3rd argument (of any value) is given, then limit to exact anagrams.
+
+`./anagrams-test.sh <input_file_path> <input_string> <exact>`
+
 ***
 ## Corpora related
 
