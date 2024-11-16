@@ -88,6 +88,8 @@ public class SimulatedAnnealing {
 		int count = 0;
 		System.out.println(d() + "	" + threadNum + "	Initial solution energy: "
 				+ currentSolution.energy());
+		System.out.println(d() + "	" + threadNum + "	Initial solution representation: "
+			+ currentSolution.representation());
 		double bestEnergy = currentSolution.energy();
 		currentSolution.temperature = temperature;
 		// Loop until system has cooled

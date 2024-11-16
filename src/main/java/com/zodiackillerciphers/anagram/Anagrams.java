@@ -88,7 +88,7 @@ public class Anagrams {
 	
 	/** return the "leftover" letters when the first text is removed from second text */
 	public static String leftover(String first, String second) {
-		if (!anagram(first, second)) throw new IllegalArgumentException("First string is not found in second.");
+		if (!anagram(first, second)) throw new IllegalArgumentException("First string [" + first + "] is not found in second [" + second + "].");
 		
 		List<Character> all = new ArrayList<Character>();
 		for (char ch : second.toCharArray()) all.add(ch);
@@ -201,7 +201,6 @@ public class Anagrams {
 		}
 		return list;
 	}
-
 	
 	public static void dump(Map<String, List<String>> anagramMap) {
 		for (String key : anagramMap.keySet()) {

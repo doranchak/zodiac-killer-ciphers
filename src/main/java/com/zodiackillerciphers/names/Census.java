@@ -2,7 +2,6 @@ package com.zodiackillerciphers.names;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.Set;
 
 import com.zodiackillerciphers.anagram.Anagrams;
 import com.zodiackillerciphers.ciphers.Ciphers;
-import com.zodiackillerciphers.corpus.CorpusBase;
 import com.zodiackillerciphers.dictionary.WordFrequencies;
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.ngrams.Periods;
@@ -24,6 +22,7 @@ import com.zodiackillerciphers.transform.CipherTransformations;
 public class Census {
 	
 	public static String PREFIX = "/Users/doranchak/projects/zodiac/github/zodiac-killer-ciphers/docs/census-names";
+	public static String TAB = "" + '\t';
 
 	/** map for all names, used for scoring */
 	public static Map<String, Name> mapFirstMale;
@@ -1112,6 +1111,87 @@ public class Census {
 			}
 			
 		}
+	}
+
+	// extract as many random name parts from the given string until no more names can be found
+	public static void nameStuffer(String inputString) {
+		nameStuffer(inputString, Integer.MAX_VALUE);
+	}
+	public static void nameStuffer(String inputString, int numNames) {
+		inputString = inputString.toUpperCase();
+		Random rand = new Random();
+		List<Name> firstMale = readFirstMale(1000);
+		List<Name> firstFemale = readFirstFemale(1000);
+		List<Name> last = readLast(2000);
+		// System.out.println("Name list sizes: " + firstMale.size() + ", " + firstFemale.size() + ", " + last.size());
+
+		// lookup tables for rank/freq info
+		Map<String, Name> mapFirstMale = new HashMap<String, Name>();
+		firstMale.forEach((name) -> mapFirstMale.put(name.name, name));
+		Map<String, Name> mapFirstFemale = new HashMap<String, Name>();
+		firstFemale.forEach((name) -> mapFirstFemale.put(name.name, name));
+		Map<String, Name> mapLast = new HashMap<String, Name>();
+		last.forEach((name) -> mapLast.put(name.name, name));
+
+		for (int i=0; i<numNames; i++) {
+			List<Name> namePoolFirst = new ArrayList<Name>();
+			List<Name> namePoolLast = new ArrayList<Name>();
+			boolean female = rand.nextBoolean();
+			if (female) addToPool(firstFemale, namePoolFirst, inputString);
+			else addToPool(firstMale, namePoolFirst, inputString);
+			addToPool(last, namePoolLast, inputString);
+			// System.out.println("Pool init: " + female + " " + namePoolFirst.size() + " " + namePoolLast.size());
+			String remainingString = inputString;
+
+			List<Name> names = new ArrayList<Name>();
+			// Map<String, Name> mapFirst = female ? mapFirstFemale : mapFirstMale;
+			// List<String> first = female ? firstFemale : firstMale;
+			while (remainingString.length() > 0 && (namePoolFirst.size() > 0 || namePoolLast.size() > 0)) {
+				// System.out.println(" - pool status: " + female + " " + namePoolFirst.size() + " " + namePoolLast.size());
+				Name namePart;
+				boolean which; // if true, use last names, otherwise first names
+				if (namePoolFirst.size() == 0) which = true;
+				else if (namePoolLast.size() == 0) which = false;
+				else which = rand.nextBoolean();
+				List<Name> namePool = which ? namePoolLast : namePoolFirst;
+				namePart = namePool.get(rand.nextInt(namePool.size()));
+				names.add(namePart);
+				remainingString = Anagrams.leftover(namePart.name, remainingString);
+				// System.out.println(" - " + remainingString + TAB + names);
+				removeFromPool(namePoolFirst, remainingString);
+				removeFromPool(namePoolLast, remainingString);
+			}
+			float score = Name.score(names) / names.size();
+			int length = 0;
+			String flat = "";
+			for (Name name : names) {
+				length += name.name.length();
+				if (flat.length() > 0) flat += " ";
+				flat += name.name;
+			}
+			System.out.println(length + TAB + score + TAB + flat);
+		}
+	}
+	// add names to the name pool if they appears as anagrams in the given string
+	public static void addToPool(List<Name> names, List<Name> namePool, String inputString) {
+		names.forEach((name) -> {
+			if (Anagrams.anagram(name.name, inputString)) namePool.add(name);
+		});
+	}
+	// remove names from pool if they don't appear as anagrams in the given string
+	public static void removeFromPool(List<Name> namePool, String inputString) {
+		// System.out.println("New input string: " + inputString + ", current size " + namePool.size());
+		// String removed = "";
+		// String kept = "";
+		for (int i=namePool.size()-1; i>=0; i--)
+			if (!Anagrams.anagram(namePool.get(i).name, inputString)) {
+				// removed += namePool.get(i).name + " ";
+				namePool.remove(i);				
+			} 
+			// else kept += namePool.get(i).name + " ";
+		// System.out.println("Removed " + removed);
+		// System.out.println("Kept " + kept);
+		// System.out.println("New size " + namePool.size());
 	}
 	
 	

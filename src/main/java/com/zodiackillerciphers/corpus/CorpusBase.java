@@ -1,7 +1,5 @@
 package com.zodiackillerciphers.corpus;
 
-import static com.zodiackillerciphers.corpus.CorpusBase.file;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,11 +12,10 @@ import java.util.Set;
 
 import com.zodiackillerciphers.io.FileUtil;
 import com.zodiackillerciphers.io.Unzip;
-import com.zodiackillerciphers.lucene.Stats;
-import com.zodiackillerciphers.tests.unicity.PlaintextBean;
-import com.zodiackillerciphers.tests.unicity.SubstitutionMutualEvolve;
 
 public class CorpusBase {
+	public static String DEFAULT_CORPUS = "/Volumes/Share/projects/zodiac/Documents/Corpora/all-files.txt";
+	// public static String DEFAULT_CORPUS = "/Users/doranchak/Downloads/Episode 21/dale-book-ocr/list.txt";
 	public static String alpha = "BCDEFGHIJKLMNOPQRSTUVWXYZ";
 	public static Random rand = new Random();
 	public static String alphaFull = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -143,7 +140,7 @@ public class CorpusBase {
 	// prepare the corpus
 	public static void initSources() {
 		// TODO: parameterize this
-		fileList = FileUtil.loadFrom("/Volumes/Share/projects/zodiac/Documents/Corpora/all-files.txt");
+		fileList = FileUtil.loadFrom(DEFAULT_CORPUS);
 		for (int i=fileList.size()-1; i>=0; i--) {
 			if (fileList.get(i).contains("filetypes[]=txt")) {
 				fileList.remove(i);

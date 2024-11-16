@@ -11,6 +11,7 @@ import com.zodiackillerciphers.anagram.Anagrams;
 import com.zodiackillerciphers.ciphers.Ciphers;
 import com.zodiackillerciphers.dictionary.WordFrequencies;
 import com.zodiackillerciphers.io.FileUtil;
+import com.zodiackillerciphers.ngrams.AZDecrypt;
 import com.zodiackillerciphers.tests.unicity.SubstitutionMutualEvolve;
 
 /** search corpus for strings that can anagram to the given string */
@@ -114,7 +115,7 @@ public class AnagramsSearch extends CorpusBase {
 				sb.append(' ');
 			}
 			int len = len(sb);
-			if (len >= minLength) System.out.println(len + "	" + sb + "	Leftovers: " + leftover(counts));
+			if (len >= minLength) System.out.println(len + "	" + AZDecrypt.score(sb.toString()) + "	" + sb + "	Leftovers: " + leftover(counts));
 		}
 		
 	}
@@ -184,22 +185,19 @@ public class AnagramsSearch extends CorpusBase {
 		String message = "YNAIDOBLARDF";
 		searchLongestAnagrams(message, 4, 25000, false);
 	}
-	public static void searchDaleHalloween() {
-		String message = "BYFIREBYGUNBYKNIFEBYROPEPARADICESLVES";
-		searchLongestAnagrams(message, 14, 25000, false);
+	public static void searchDaleHalloween(int minLength) {
+		String message = "BYFIREBYGUNBYKNIFEBYROPEPARADICESLAVES";
+		searchLongestAnagrams(message, minLength, Integer.MAX_VALUE, false);
 	}
 	
-	
-
 	public static void main(String[] args) {
 		// search("EMRNPAOLEMSGPCETTO");
-//		searchZodiacLetter();
-//		searchZodiacLetterLeftovers1();
-//		searchZodiacLetterLeftovers2();
-//		searchFaycal32_A();
-//		searchFaycal32_B();
-//		searchFaycal32_C();
-//		searchDaleHalloween();
+		// searchZodiacLetter();
+		// searchZodiacLetterLeftovers1();
+		// searchZodiacLetterLeftovers2();
+		// searchFaycal32_A();
+		// searchFaycal32_B();
+		// searchFaycal32_C();
 		search(args[0]);
 	}
 

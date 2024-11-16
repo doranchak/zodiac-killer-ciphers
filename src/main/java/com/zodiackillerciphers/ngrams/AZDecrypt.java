@@ -14,12 +14,19 @@ public class AZDecrypt {
 	public static Map<String, Integer> ngrams;
 	public static int n;
 	public static void init(String ngramsPath, int ngramsLength) {
+		init(ngramsPath, ngramsLength, false);
+	}
+	public static void init(String ngramsPath, int ngramsLength, boolean spaces) {
 		System.out.println("Loading ngram stats from " + ngramsPath);
-		ngrams = loadNgrams(ngramsPath, ngramsLength);
+		ngrams = loadNgrams(ngramsPath, ngramsLength, spaces);
 		n = ngramsLength;
 	}
 
-	static Map<String, Integer> loadNgrams(String filePath, int n) {
+	static char nextChar(char ch, boolean spaces) {
+		if (spaces && ch == 'Z') return ' ';
+		else return (char) (ch + 1);
+	}
+	static Map<String, Integer> loadNgrams(String filePath, int n, boolean spaces) {
 		int count = 0;
 		Map<String, Integer> counts = new HashMap<String, Integer>(); 
 		StringBuffer key = new StringBuffer();
@@ -30,10 +37,13 @@ public class AZDecrypt {
 			while ((byteData = gis.read()) != -1) {
 				int intValue = byteData & 0xFF; // Convert byte to unsigned int
 				counts.put(key.toString(), intValue);
+				// System.out.println(intValue + " " + key.toString());
 				int pos = n-1;
 				while (true) {
-					key.setCharAt(pos, (char) (key.charAt(pos) + 1));
-					if (key.charAt(pos) >= 'A' && key.charAt(pos) <= 'Z') break;
+					char ch = key.charAt(pos);
+					ch = nextChar(ch, spaces);
+					key.setCharAt(pos, ch);
+					if ((spaces && ch == ' ') || (ch >= 'A' && ch <= 'Z')) break;
 					key.setCharAt(pos, 'A');
 					pos--;
 					if (pos < 0) break;					
@@ -44,22 +54,39 @@ public class AZDecrypt {
 			e.printStackTrace();
 		}
 		System.out.println("Loaded " + count + " " + n + "-grams.");
-//		for (String ngram: counts.keySet())
-//			System.out.println(ngram + " " + counts.get(ngram));
-//		System.out.println(counts.size());
+		// for (String ngram: counts.keySet())
+		// 	System.out.println(ngram + " " + counts.get(ngram));
+		// System.out.println(counts.size());
 		return counts;
 	}
 	
+	public static float score(StringBuffer val) {
+		return score(val, true);
+	}
+	public static float score(StringBuffer val, boolean checkEntropy) {
+		return score(val.toString(),checkEntropy, true);
+	}
+	public static float score(StringBuffer val, boolean checkEntropy, boolean normalize) {
+		return score(val.toString(),checkEntropy, normalize);
+	}
 	public static float score(String val) {
+		return score(val, true);
+	}
+	public static float score(String val, boolean checkEntropy) {
+		return score(val, true, true);
+	}
+	public static float score(String val, boolean checkEntropy, boolean normalize) {
 		String ngram;
 		int num = val.length()-n+1;
 		float score = 0;
 		for (int i=0; i<val.length()-n+1; i++) {
 			ngram = val.substring(i, i+n);
-			score += ngrams.get(ngram);
+			Integer freq = ngrams.get(ngram);
+			// if (freq != null) 
+			score += freq;
 		}
-		score /= num;
-		score *= Stats.entropy(val);
+		if (normalize) score /= num;
+		if (checkEntropy) score *= Stats.entropy(val);
 		return score;
 	}
 

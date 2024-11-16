@@ -1221,6 +1221,20 @@ public class WordFrequencies {
 		}
 		return p;
 	}
+	/** add up log frequencies of all words found in the given text */
+	public static float score(String str, int minLength, StringBuffer info) {
+		if (str == null) return 0;
+		List<WordBean> words = findAllWordsIn(str, minLength, false);
+		float score = 0;
+		for (WordBean word : words) {
+			// score += Math.pow(Math.log10(word.frequency), word.word.length() - minLength + 1); // bigger words = bigger score
+			score += Math.log10(word.frequency);
+			info.append(word.frequency).append(" ").append(word.word.length()).append(" ").append(word.word).append(",");
+		}
+		// return score*Stats.entropy(str).floatValue(); // try to guard against repetitive words
+		return score;
+	}
+
 	/** recursively find the best word divisions of the given non-delimited text
 	 * based on percentile scores of each candidate word.
 	 * min length of words is 3. 
