@@ -1,2 +1,1 @@
-# ./dale-julin-anagrams-name-test.sh /Volumes/doranchak/Downloads-shit/NPD202401.7z https://usdod.io/ BYFIREBYGUNBYKNIFEBYROPEPARADICESLAVES 10
 java -cp ../target/classes:/Users/doranchak/.m2/repository/net/sf/sevenzipjbinding/sevenzipjbinding/16.02-2.01/sevenzipjbinding-16.02-2.01.jar:/Users/doranchak/.m2/repository/net/sf/sevenzipjbinding/sevenzipjbinding-all-platforms/16.02-2.01/sevenzipjbinding-all-platforms-16.02-2.01.jar com.zodiackillerciphers.anagram.dalejulin.DaleJulinAnagrams $*
