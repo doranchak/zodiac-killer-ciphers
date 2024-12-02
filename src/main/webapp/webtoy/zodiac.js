@@ -249,7 +249,7 @@ else
 
 	var which = 0;
 
-		var cipherLength = new Array(2);
+		var cipherLength = new Array(3);
 		var cipher = new Array(
 			new Array(
 		"HER>pl^VPk|1LTG2d",
@@ -298,27 +298,53 @@ else
 		"Z@JTtq_8JI+rBPQW6",
 		"VEXr9WI6qEHM)=UIk"
 	), new Array(
-		"TLCtBOMD>F+O2HODU",
-		"yMl^#;+2VbGRPU*2O",
-		"G(+(cFTfzOzBW4;RS",
-		"Ppl.BLTtUfF5p(BS+",
-		"t5/|EB+kfzz;)C)(d",
-		"__EFyAbNlyJDNBRc<",
-		"+JH|z9pcN&t54(*pc",
-		"2GWL#H@-7-FZ<M<V#",
-		"GK|GB4c7L(#K*4l8F",
-		"V1>lqK|U+cJCOpPYO",
-		"d6KZkVOzY+1b5+KB*",
-		"SWF9++4fkdCy5C.3.",
-		"%|6+/9c+B|c8+HpB^",
-		"%d2Y+:.Rlz8N_3.F^",
-		"+zZ:D-2O|GXl+jWS+",
-		"*<K+2z>k7U(TMEZ)T",
-		"<p)cyR8+2Rp5>XKFF",
-		"MBL2L<RW)cNYRkA|+",
-		"p^-+Wp|p/M*&|J56M",
-		"OV^4j-9+#d^.VqB1+"
-		)
+		"cZKqpI)Wq!85LMr9#",
+		"BPDR+j=6\\N(eEUHkF",
+		"ZcpOVWI5+tL)l^R6H",
+		"I9DR_TYr\\de/@XJQA",
+		"P5M8RUt%L)NVEKH=G",
+		"rI!Jk598LMlNA)Z(P",
+		"zUpkA9#BVW\\+VTtOP", 
+		"^=SrlfUe67DzG%%IM",
+		"Nk)ScE/9%%ZfAP#BV",
+		"peXqWq_F#8c+@9A9B",
+		"%OT5RUc+_dYq_^SqW",
+		"VZeGYKE_TYA9%#Lt_",
+		"H!FBX9zXADd\\7L!=q",
+		"_ed##6e5PORXQF%Gc",
+		"Z@JTtq_8JI+rBPQW6",
+		"VEXr9WI6qEHM)=UIk",
+		"9%P/Z/UB%kOR=pX=B",
+		"WV+eGYF69HP@K!qYe", 
+		"MJY^UIk7qTtNQYD5)", 
+		"S(/9#BPORAU%fRlqE", 
+		"k^LMZJdr\\pFHVWe8Y",
+		"@+qGD9KI)6qX85zS(",
+		"RNt!YElO8qGBTQS#B",
+		"Ld/P#B@XqEHMU^RRk"
+	)
+	// ), new Array(
+	// 	"TLCtBOMD>F+O2HODU",
+	// 	"yMl^#;+2VbGRPU*2O",
+	// 	"G(+(cFTfzOzBW4;RS",
+	// 	"Ppl.BLTtUfF5p(BS+",
+	// 	"t5/|EB+kfzz;)C)(d",
+	// 	"__EFyAbNlyJDNBRc<",
+	// 	"+JH|z9pcN&t54(*pc",
+	// 	"2GWL#H@-7-FZ<M<V#",
+	// 	"GK|GB4c7L(#K*4l8F",
+	// 	"V1>lqK|U+cJCOpPYO",
+	// 	"d6KZkVOzY+1b5+KB*",
+	// 	"SWF9++4fkdCy5C.3.",
+	// 	"%|6+/9c+B|c8+HpB^",
+	// 	"%d2Y+:.Rlz8N_3.F^",
+	// 	"+zZ:D-2O|GXl+jWS+",
+	// 	"*<K+2z>k7U(TMEZ)T",
+	// 	"<p)cyR8+2Rp5>XKFF",
+	// 	"MBL2L<RW)cNYRkA|+",
+	// 	"p^-+Wp|p/M*&|J56M",
+	// 	"OV^4j-9+#d^.VqB1+"
+	// 	)
 	);
 	
 //	cipher[0]=cipher[2];
@@ -373,7 +399,33 @@ else
 		"H!FBX9zXADd\\7L!=q" +
 		"_ed##6e5PORXQF%Gc" +
 		"Z@JTtq_8JI+rBPQW6" +
-		"VEXr9WI6qEHM)=UIk"
+		"VEXr9WI6qEHM)=UIk",
+
+		// in 8/3/1969 Examiner+Chronicle order
+		"Nk)ScE/9%%ZfAP#BV" +
+		"peXqWq_F#8c+@9A9B" +
+		"%OT5RUc+_dYq_^SqW" +
+		"VZeGYKE_TYA9%#Lt_" +
+		"H!FBX9zXADd\\7L!=q" +
+		"_ed##6e5PORXQF%Gc" +
+		"Z@JTtq_8JI+rBPQW6" +
+		"VEXr9WI6qEHM)=UIk"	+
+		"cZKqpI)Wq!85LMr9#" +
+		"BPDR+j=6\\N(eEUHkF" +
+		"ZcpOVWI5+tL)l^R6H" +
+		"I9DR_TYr\\de/@XJQA" +
+		"P5M8RUt%L)NVEKH=G" +
+		"rI!Jk598LMlNA)Z(P" +
+		"zUpkA9#BVW\\+VTtOP" + 
+		"^=SrlfUe67DzG%%IM" +
+		"9%P/Z/UB%kOR=pX=B" + 
+		"WV+eGYF69HP@K!qYe" + 
+		"MJY^UIk7qTtNQYD5)" + 
+		"S(/9#BPORAU%fRlqE" + 
+		"k^LMZJdr\\pFHVWe8Y" +
+		"@+qGD9KI)6qX85zS(" +
+		"RNt!YElO8qGBTQS#B" +
+		"Ld/P#B@XqEHMU^RRk" 
 	);
 
 	var alphabet = new Array("ABCDEFGH|JKLMNOPRSTUVWXYZ123456789plkdfycjqbtz()>^+.<-/#_@*%&;:", "ABDEFGHIJKLMNOPQRSTUVWXYZ56789cdefjklpqrtz!#%()=+/@\\^_"
@@ -1043,6 +1095,7 @@ else
 		if (doStats) {
 			stats[0] = new Array();
 			stats[1] = new Array();
+			stats[2] = new Array();
 			for (var i=0; i<cipher[which].length; i++) {
 				for (var j=0; j<cipher[which][i].length; j++) {
 					c = cipher[which][i].charAt(j);
